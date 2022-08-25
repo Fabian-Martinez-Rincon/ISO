@@ -13,3 +13,13 @@ operativo GNU/Linux, así como con su entorno y comandos principales.
 - `f)` ¿Qué es *POSIX*?
 
 ### `2)` Distribuciones de **GNU/Linux**:
+### `3)` Estructura de GNU/Linux:
+### `4)` Kernel: 
+### `5)` Intérprete de comandos (Shell):
+### `6)` Sistema de Archivos (File System):
+### `7)` Particiones:
+### `8)` rranque (bootstrap) de un Sistema Operativo:
+### `9)` Archivos:
+### `10)` ndique qué comando es necesario utilizar para realizar cada una de las siguientes acciones. Investigue su funcionamiento y parámetros más importantes:
+### `11)` nvestigue su funcionamiento y parámetros más importantes:
+### `12)` nvestigue su funcionamiento y parámetros más importantes:
