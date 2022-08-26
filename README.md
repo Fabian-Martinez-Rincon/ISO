@@ -1,4 +1,6 @@
-![](/Img/nuevo.jpg)
+<h1 align="center"> 🐧 Introducción a Sistemas Operativos</h1>
+
+<p><img width="250" align='right' src="img/1.png"></p>
 
 ## Teoria
 
