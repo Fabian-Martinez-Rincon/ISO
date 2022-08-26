@@ -2,17 +2,17 @@
 
 <p><img width="250" align='right' src="Img/1.png"></p>
 
-## Teoria
+### Teoria
 
 
 
-## Practica
+### Practica
 
 - [Practica 1](/Documentos/Practica1.md)
 
-## 📝 Condiciones de aprobacion
+### 📝 Condiciones de aprobacion
 
-### Para la cursada
+### Para la Cursada
 
 - *Haber resuelto* todas las autoevaluaciones sin importar la nota
 - Haber rendido y aprobado dos parciales, los cuales seran:
@@ -20,7 +20,7 @@
   - `Practica Normal`  
 
 
-### Para la promo
+### Para la Promoción
 - Haber cumplido lo anterior
 - Asistir a las conferencias
 - Realizar todas las autoevaluaciones
