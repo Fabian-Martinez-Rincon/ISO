@@ -1,14 +1,16 @@
 <h1 align="center"> 🐧 Introducción a Sistemas Operativos</h1>
 
-<p><img width="250" align='right' src="Img/1.png"></p>
+<p><img width="250" align='right' src="https://media.giphy.com/media/3og0IV7MOCfnm85iRa/giphy-downsized-large.gif"></p>
+
+
 
 ### Teoria
 
 
-
 ### Practica
 
-- [Practica 1](/Documentos/Practica1.md)
+- Sistemas Operativos Aplicados
+  - [Practica 1](/Documentos/Practica1.md)
 
 ### 📝 Condiciones de aprobacion
 
