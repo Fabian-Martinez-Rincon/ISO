@@ -1,6 +1,8 @@
-
-
 ## 🐧 Practica 1
+
+<p><img width="250" align='right' src="https://media.giphy.com/media/dDwicM3uFUqfC/giphy.gif"></p>
+
+
 
 El objetivo de esta práctica es que el alumno se familiarice con los conceptos básicos del sistema
 operativo GNU/Linux, así como con su entorno y comandos principales.
