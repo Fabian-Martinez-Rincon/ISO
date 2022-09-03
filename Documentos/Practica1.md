@@ -1,6 +1,5 @@
-## 🐧 Practica 1
-
-<p><img width="250" align='right' src="https://media.giphy.com/media/dDwicM3uFUqfC/giphy.gif"></p>
+<h1 align="center"> 🐧  Practica 1</h1>
+<p><img width="280" align='right' src="https://media.giphy.com/media/dDwicM3uFUqfC/giphy.gif"></p>
 
 
 
