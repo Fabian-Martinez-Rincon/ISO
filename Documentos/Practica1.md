@@ -87,6 +87,10 @@ Debian es un sistema operativo libre, desarrollado por un monton de comunistas :
 - **El FileSystem (sistema de archivos)** permite que dentro de un SO se organicen y administren archivos.
 
 `b)` Mencione y explique la estructura básica del Sistema Operativo GNU/Linux.
+- **Bootloader (gestor de arranque):** es un sutil software cuya tarea es cargar el sistema operativo de un ordenador en la memoria.
+- **Servidor grafico:** es responsable de la activación de la tarjeta de vídeo, ratón y teclado, lo que permite al usuario el uso de interfaces gráficas que son llamadas de Gestores de Ventanas y Entornos de Escritorio
+- **Entornos de escritorio:** Estos Entornos de Escritorio proporcionan el fondo de la pantalla, los paneles, las barras de título de las ventanas y mucho más.
+
 
 ---
 
