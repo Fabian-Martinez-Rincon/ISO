@@ -71,7 +71,7 @@ Algunas distribuciones:
 - [Slackware](http://www.slackware.com/)
 
 `b)` ¿En qué se diferencia una distribución de otra?\
-Aunque en la mayoría de los casos la principal diferencia es la GUI, o los programas y herramientas que vienen incluidos. Cada distribución Linux tiene un objetivo, que justifica su existencia. Por ejemplo,distribuciones como Ubuntu se centran en ser lo más amigables posible a la hora de instalarse o descargar programas.
+Aunque en la mayoría de los casos la principal diferencia es la GUI, o los programas y herramientas que vienen incluidos. Cada distribución Linux tiene un objetivo, que justifica su existencia. Por ejemplo, distribuciones como Ubuntu se centran en ser lo más amigables posible a la hora de instalarse o descargar programas.
 
 `c)` ¿Qué es Debian? Acceda al sitio 1 e indique cuáles son los objetivos del proyecto y una breve cronología del mismo.\
 Debian es un sistema operativo libre, desarrollado por un monton de comunistas :D
@@ -96,12 +96,22 @@ Debian es un sistema operativo libre, desarrollado por un monton de comunistas :
 
 ## `4)` Kernel: 
 
-- `a)` ¿Qué es? Indique una breve reseña histórica acerca de la evolución del Kernel de GNU/Linux.
-- `b)` ¿Cuáles son sus funciones principales?
-- `c)` ¿Cuál es la versión actual? ¿Cómo se definía el esquema de versionado del Kernel en versiones anteriores a la 2.4? ¿Qué cambió en el versionado se impuso a partir de la versión 2.6?
-- `d)` ¿Es posible tener más de un Kernel de GNU/Linux instalado en la misma máquina?
-- `e)` ¿Dónde se encuentra ubicado dentro del File System?
-- `f)` ¿El Kernel de GNU/Linux es monolítico? Justifique.
+`a)` ¿Qué es? Indique una breve reseña histórica acerca de la evolución del Kernel de GNU/Linux.\
+Se explica arriba y la historia no me importa :D
+
+`b)` ¿Cuáles son sus funciones principales?
+- **Gestión de la memoria:** supervisa cuánta memoria se utiliza para almacenar qué tipo de elementos, así como el lugar en que los guarda.
+- **Gestión de los procesos:** determina qué procesos pueden usar la unidad central de procesamiento (CPU), cuándo y durante cuánto tiempo.
+- **Controladores de dispositivos:** actúa como mediador o intérprete entre el hardware y los procesos.
+- **Seguridad y llamadas al sistema:** recibe solicitudes de servicio por parte de los procesos.
+
+`c)` ¿Cuál es la versión actual? ¿Cómo se definía el esquema de versionado del Kernel en versiones anteriores a la 2.4? ¿Qué cambió en el versionado se impuso a partir de la versión 2.6?\
+
+`d)` ¿Es posible tener más de un Kernel de GNU/Linux instalado en la misma máquina?\
+
+`e)` ¿Dónde se encuentra ubicado dentro del File System?\
+
+`f)` ¿El Kernel de GNU/Linux es monolítico? Justifique.\
 
 ---
 
