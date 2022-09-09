@@ -1,6 +1,8 @@
 <h1 align="center"> 🐧 Introducción a Sistemas Operativos</h1>
 
-https://user-images.githubusercontent.com/55964635/189261998-e00e8116-9c6b-4c56-a1bb-ca41f0f73388.mp4
+<div align="center"> 
+
+![2160p](https://user-images.githubusercontent.com/55964635/189262998-80c1f755-3695-4171-8a5a-548c95d9f5bb.gif) </div>
 
 <p><img width="250" align='right' src="Img/1.png"></p>
 

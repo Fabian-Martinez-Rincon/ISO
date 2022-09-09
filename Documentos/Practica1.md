@@ -106,6 +106,7 @@ Se explica arriba y la historia no me importa :D
 - **Seguridad y llamadas al sistema:** recibe solicitudes de servicio por parte de los procesos.
 
 `c)` ¿Cuál es la versión actual? ¿Cómo se definía el esquema de versionado del Kernel en versiones anteriores a la 2.4? ¿Qué cambió en el versionado se impuso a partir de la versión 2.6?\
+La versión del kernel actual es 5.16.
 
 `d)` ¿Es posible tener más de un Kernel de GNU/Linux instalado en la misma máquina?\
 
