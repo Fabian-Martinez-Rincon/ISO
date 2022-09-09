@@ -1,5 +1,5 @@
 <h1 align="center"> 🐧  Practica 1</h1>
-<p><img width="280" align='right' src="https://media.giphy.com/media/dDwicM3uFUqfC/giphy.gif"></p>
+<p><img width="280" align='right' src="../Img/1.png"></p>
 
 
 
@@ -106,13 +106,19 @@ Se explica arriba y la historia no me importa :D
 - **Seguridad y llamadas al sistema:** recibe solicitudes de servicio por parte de los procesos.
 
 `c)` ¿Cuál es la versión actual? ¿Cómo se definía el esquema de versionado del Kernel en versiones anteriores a la 2.4? ¿Qué cambió en el versionado se impuso a partir de la versión 2.6?\
-La versión del kernel actual es 5.16.
+La versión del kernel actual es 5.16. Lo demas a nadie le importa 
 
 `d)` ¿Es posible tener más de un Kernel de GNU/Linux instalado en la misma máquina?\
+No, solo puede haber uno.
 
 `e)` ¿Dónde se encuentra ubicado dentro del File System?\
+Se encuentra justo en el medio que reside en la memoria e indica qué debe hacer la CPU.  En el directorio boot
 
 `f)` ¿El Kernel de GNU/Linux es monolítico? Justifique.\
+El kernel de GNU/Linux es monolítico hibrido, esto se refiere a que el núcleo usa mecanismos de arquitectura tando de diseño **monolítico** como **micronúcleo**
+
+- ****
+- ****
 
 ---
 
