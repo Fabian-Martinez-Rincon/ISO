@@ -27,30 +27,66 @@ operativo GNU/Linux, así como con su entorno y comandos principales.
 Linux es un sistema operativo completamente libre y gratuito.
 - **Gratuito:** Además de ser completamente gratuito, cuenta con múltiples distribuciones, cada una con distintas funcionalidades.
 - **Código abierto e independiente:** Cualquiera puede desarrollar y distribuir nuevas funciones, sin necesidad de permisos ni protocolos previos.
-- **Muy estable:** Es muy estable
+- **Muy estable:** Es muy estable :D
 - **Altamente seguro:** Como se trata de un software libre, los "hackers" informáticos no tienen mucho interés en desarrollar virus para Linux. 
-- **Multitarea y multiusuario:** La potencia de este sistema permite ejecutar a la vez numerosos programas y aplicaciones. .
+- **Multitarea y multiusuario:** La potencia de este sistema permite ejecutar a la vez numerosos programas y aplicaciones.
 
-`b)` Mencione otros sistemas operativos y compárelos con GNU/Linux en cuanto a los puntos mencionados en el inciso a.\
+`b)` Mencione otros sistemas operativos y compárelos con GNU/Linux en cuanto a los puntos mencionados en el inciso a.
+- A diferencia de Windows y Mac, Linux no pertenece a ninguna compañía, sino que su desarrollo depende de la colaboración de un gran número de empresas y profesionales.
+- Su uso esta mas enfocado a programadores dado que sus interfaces son menos amigables.
+- Los demás sistemas suelen ser en su mayoría pagos y enfocados mas a lo comercial
+- El manejo de permisos de Linux vuelve mas difícil la creación de un virus para dicho sistema mientras que en Windows es mas común.
+
 `c)` ¿Qué es **GNU**?\
+GNU es un sistema operativo de software libre
+
 `d)` Indique una breve historia sobre la evolución del proyecto *GNU*\
+- El proyecto GNU fue iniciado por Richard M. Stallman con el propósito de crear un sistema operativo completo y libre: el sistema GNU.
+- Se baso principalmente en 4 libertades
+    - **Libertad 1:** la libertad para ejecutar el programa con cualquier fin.
+    - **Libertad 2:** La libertad de estudiar cómo trabaja el programa y de adecuarlo para que haga lo que usuario desee
+    - **Libertad 3:** la libertad de redistribuir el programa de manera de colaborar con el resto de la sociedad.
+    - **Libertad 4:** la libertad de hacer pública y distribuir a terceros la versión mejorada.
+
+Pondria más pero a nadie le importa la historia de linux salu2.
+
 `e)` Explique qué es la multitarea, e indique si *GNU/Linux* hace uso de ella.\
+**Multitarea:** Que permite la ejecución concurrente o simultánea de diversas tareas y procesos.\
+LINUX utiliza la llamada multitarea preventiva, la cual **asegura que todos los programas que se están utilizando en un momento dado serán ejecutados**, siendo el sistema operativo el encargado de ceder tiempo de microprocesador a cada programa.
+
 `f)` ¿Qué es **POSIX**?\
+Es una norma escrita por la IEEE, que define una interfaz estándar del sistema operativo y el entorno, incluyendo un intérprete de comandos (o "shell")
 
 ---
 
 ## `2)` Distribuciones de **GNU/Linux**:
 
-- `a)` ¿Qué es una distribución de GNU/Linux? Nombre al menos 4 distribuciones de GNU/- Linux y cite diferencias básicas entre ellas.
-- `b)` ¿En qué se diferencia una distribución de otra?
-- `c)` ¿Qué es Debian? Acceda al sitio 1 e indique cuáles son los objetivos del proyecto y una breve cronología del mismo
+`a)` ¿Qué es una distribución de GNU/Linux? Nombre al menos 4 distribuciones de GNU/- Linux y cite diferencias básicas entre ellas.\
+Una distribución GNU/Linux es un conjunto de aplicaciones reunidas que permiten brindar mejoras para instalar fácilmente un sistema operativo.
+
+Algunas distribuciones:
+- [Debian](http://www.debian.org/)
+- [Gentoo](http://www.gentoo.org/)
+- [Red Hat Linux](http://www.redhat.com/)
+- [Slackware](http://www.slackware.com/)
+
+`b)` ¿En qué se diferencia una distribución de otra?\
+Aunque en la mayoría de los casos la principal diferencia es la GUI, o los programas y herramientas que vienen incluidos. Cada distribución Linux tiene un objetivo, que justifica su existencia. Por ejemplo,distribuciones como Ubuntu se centran en ser lo más amigables posible a la hora de instalarse o descargar programas.
+
+`c)` ¿Qué es Debian? Acceda al sitio 1 e indique cuáles son los objetivos del proyecto y una breve cronología del mismo.\
+Debian es un sistema operativo libre, desarrollado por un monton de comunistas :D
 
 ---
 
 ## `3)` Estructura de GNU/Linux:
 
-- `a)` Nombre cuales son los 3 componentes fundamentales de GNU/Linux.
-- `b)` Mencione y explique la estructura básica del Sistema Operativo GNU/Linux.
+`a)` Nombre cuales son los 3 componentes fundamentales de GNU/Linux.\
+
+- **El kernel (núcleo)** es el encargado de que el software y el hardware de una computadora puedan trabajar juntos.
+- **El Shell (interprete de comandos)** Un intérprete de comandos es un programa que lee las entradas del usuario y las traduce a instrucciones que el sistema es capaz de entender y utilizar.
+- **El FileSystem (sistema de archivos)** permite que dentro de un SO se organicen y administren archivos.
+
+`b)` Mencione y explique la estructura básica del Sistema Operativo GNU/Linux.
 
 ---
 
