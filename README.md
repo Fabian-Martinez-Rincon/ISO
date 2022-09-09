@@ -2,30 +2,32 @@
 
 <p><img width="250" align='right' src="Img/1.png"></p>
 
-
-
-### Teoria
-
+- [Condiciones de aprobación](/Documentos/)
 
 ### Practica
 
-- Sistemas Operativos Aplicados
-  - [Practica 1](/Documentos/Practica1.md)
-
-### 📝 Condiciones de aprobacion
-
-### Para la Cursada
-
-- *Haber resuelto* todas las autoevaluaciones sin importar la nota
-- Haber rendido y aprobado dos parciales, los cuales seran:
-  - `Sistemas Operativos Aplicados`
-  - `Practica Normal`  
+- [Practica 1](/Documentos/Practica1.md)
+- [Practica 2](/Documentos/Practica2.md)
 
 
-### Para la Promoción
-- Haber cumplido lo anterior
-- Asistir a las conferencias
-- Realizar todas las autoevaluaciones
-- Haber rendido dos parciales teoricos (cada parcial tiene un todal de 20 preguntas) entre los dos parciales tenemos 40 preguntas, el alumno debera tener como minimo 28/40 preguntas correctas
-- Ambos parciales deben tener como minimo 12/20 correctas.
-- No tienen recuperatorio los parciales teoricos 
+---
+
+<h1 align="center"> 🐧  Practica 1</h1>
+
+El objetivo de esta práctica es que el alumno se familiarice con los conceptos básicos del sistema
+operativo GNU/Linux, así como con su entorno y comandos principales.
+
+- [1) Características de GNU/Linux](#1-características-de-gnulinux)
+- [2) Distribuciones de GNU/Linux](#2-distribuciones-de-gnulinux)
+- [3) Estructura de GNU/Linux](#3-estructura-de-gnulinux)
+- [4) Kernel](#4-kernel)
+- [5) Intérprete de comandos (Shell)](#5-intérprete-de-comandos-shell)
+- [6) Sistema de Archivos (File System)](#6-sistema-de-archivos-file-system)
+- [7) Particiones](#7-particiones)
+- [8) Arranque (bootstrap) de un Sistema Operativo](#8-arranque-bootstrap-de-un-sistema-operativo)
+- [9) Archivos](#9-archivos)
+- [10) Indique qué comando es necesario utilizar para realizar cada una de las siguientes acciones.](#10-indique-qué-comando-es-necesario-utilizar-para-realizar-cada-una-de-las-siguientes-acciones-investigue-su-funcionamiento-y-parámetros-más-importantes)
+- [11) Investigue su funcionamiento y parámetros más importantes](#11-nvestigue-su-funcionamiento-y-parámetros-más-importantes)
+- [12) Investigue su funcionamiento y parámetros más importantes](#12-nvestigue-su-funcionamiento-y-parámetros-más-importantes)
+
+---
