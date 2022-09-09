@@ -1,0 +1,15 @@
+<h1 align="center"> Practica 2</h1>
+
+- [1) Editor de textos]()
+- [2) Proceso de Arranque SystemV]()
+- [3) Usuarios]()
+- [4) FileSystem]()
+- [5) Procesos]()
+- [6) Otros comandos de Linux]()
+- [7) Indique qué acción realiza cada uno de los comandos...]()
+- [8) Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones]()
+- [9) Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones]()
+- [10) Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones]()
+- [11) Indique qué acción realiza cada uno de los comandos indicados a continuación....]()
+- [12) Cree una estructura desde el directorio /home que incluya varios directorios....]()
+- [13) Indique qué comando/s es necesario para realizar cada una de las acciones de la siguiente secuencia de paso]()
