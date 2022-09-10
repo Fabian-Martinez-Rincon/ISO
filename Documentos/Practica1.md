@@ -5,7 +5,7 @@
 
 El objetivo de esta práctica es que el alumno se familiarice con los conceptos básicos del sistema
 operativo GNU/Linux, así como con su entorno y comandos principales.
-
+- [Preguntas/Dudas]()
 - [1) Características de GNU/Linux](#1-características-de-gnulinux)
 - [2) Distribuciones de GNU/Linux](#2-distribuciones-de-gnulinux)
 - [3) Estructura de GNU/Linux](#3-estructura-de-gnulinux)
@@ -18,6 +18,11 @@ operativo GNU/Linux, así como con su entorno y comandos principales.
 - [10) Indique qué comando es necesario utilizar para realizar cada una de las siguientes acciones.](#10-indique-qué-comando-es-necesario-utilizar-para-realizar-cada-una-de-las-siguientes-acciones-investigue-su-funcionamiento-y-parámetros-más-importantes)
 - [11) Investigue su funcionamiento y parámetros más importantes](#11-nvestigue-su-funcionamiento-y-parámetros-más-importantes)
 - [12) Investigue su funcionamiento y parámetros más importantes](#12-nvestigue-su-funcionamiento-y-parámetros-más-importantes)
+
+
+## Preguntas/Dudas
+
+- No entendi muy bien el concepto de partición logica ya que es completamente igual que la primaria, pero no tiene el gestor de arranque. Entonces, que ventaja tiene? 
 
 ---
 
@@ -143,7 +148,7 @@ Estas se diferencian entre sí básicamente en la sintaxis de sus comandos y en 
 La principal razon es que es muy remplazable, en caso de que falle, se puede reiniciar y todo tendria que seguir andando.
 
 `f)` ¿Es posible definir un intérprete de comandos distinto para cada usuario? ¿Desde dónde se define? ¿Cualquier usuario puede realizar dicha tarea?\
-Cada usuario posee una shell por defecto , la cual puede definirse por un usuario con derechos privilegiados. Aprendemos a cambiar la shell de un usuario por defecto en GNU/Linux con la herramienta chs
+Cada usuario posee una shell por defecto , la cual puede definirse por un usuario con derechos privilegiados.
 
 ---
 
@@ -165,17 +170,51 @@ A continuación veremos una lista con algunos filesystem utilizados hoy en día:
 
 `c)` ¿Es posible visualizar particiones del tipo FAT y NTFS en GNU/Linux?\
 SI\
-`d)`  ¿Cuál es la estructura básica de los File System en GNU/Linux? Mencione los directorios más importantes e indique qué tipo de información se encuentra en ellos. ¿A qué hace referencia la sigla FHS?
+`d)`  ¿Cuál es la estructura básica de los File System en GNU/Linux? Mencione los directorios más importantes e indique qué tipo de información se encuentra en ellos. ¿A qué hace referencia la sigla FHS?\
+La estructura basica en la que se organizan es **jerarquica de tipo arbol**. El nivel más alto del sistema de ficheros es / o directorio raíz. Todos los demás ficheros y directorios están bajo el directorio raíz. Por ejemplo, /home/jebediah/cheeses.
+
+FHS define los directorios principales y sus contenidos en el sistema operativo LinuxGNU/Linux 
 
 ---
 
 ## `7)` Particiones:
 
-- `a)`  Definición. Tipos de particiones. Ventajas y Desventajas.
-- `b)` ¿Cómo se identifican las particiones en GNU/Linux? (Considere discos **IDE**, **SCSI** y **SATA**).
-- `c)` ¿Cuántas particiones son necesarias como mínimo para instalar GNU/Linux? Nómbrelas indicando tipo de partición, identificación, tipo de File System y punto de montaje.
-- `d)` Ejemplifique diversos casos de particionamiento dependiendo del tipo de tarea que se deba realizar en su sistema operativo.
-- `e)`  ¿Qué tipo de software para particionar existe? Menciónelos y compare
+`a)`  Definición. Tipos de particiones. Ventajas y Desventajas.\
+Particionar un disco duro es realizar una división en él de modo que, a efectos prácticos, el sistema operativo crea que tienes varios discos duros, cuando en realidad sólo hay un único disco físico dividido en varias partes. De este modo, se pueden modificar o borrar particiones sin afectar a los demás datos del disco.\
+Tipos de particiones:
+
+- **Primarias:** puede ser reconocida como una partición de arranque y puede contener un sistema operativo que realice el arranque del equipo.
+- **Extendidas/secundaria** : actúa como una partición primaria; sirve para contener múltiples unidades lógicas en su interior. Fue ideada para romper la limitación de 4 particiones primarias en un solo disco físico
+- **Lógicas:** son aquellas particiones que creamos dentro de las particiones extendidas. Al igual que en las particiones primarias, las particiones lógicas pueden utilizarse para instalar Windows y cualquier otro tipo de archivos. Aunque podemos instalar sistemas operativos en las unidades lógicas, no se les puede dar el estado activo y, por lo tanto, no sirven para arrancar el ordenador desde cero por si mismas. Eso sí, podemos utilizar un gestor de arranque en una partición primaria para arrancar las particiones lógicas.
+- `Ventajas`
+    - **Instalar dos o más sistemas operativos**
+    - **Mejor organización**
+    - **Más seguridad**
+    - **Copias de seguridad**
+    - **Facilidad de reinstalación**
+- ``Desventajas``
+    - **Innecesario para el usuario medio**
+    - **Desorden en los volúmenes**
+    - **Posibilidad de errores**
+    - **Experiencia más lenta**
+
+`b)` ¿Cómo se identifican las particiones en GNU/Linux? (Considere discos **IDE**, **SCSI** y **SATA**).\
+Las particiones en cada disco son representadas añadiendo un número decimal al nombre del disco: sda1 y sda2 representan a la primera y segunda partición en la primera unidad de disco SCSI en el sistema.
+
+`c)` ¿Cuántas particiones son necesarias como mínimo para instalar GNU/Linux? Nómbrelas indicando tipo de partición, identificación, tipo de File System y punto de montaje.\
+Como mınimo es necesario una particion (para el /)\
+La respuesta rápida y fácil es: **recomendable al menos dos, una para el sistema/datos(Primaria) y otra para Swap**. Usualmente se suelen tener tres, una para el sistema/programas (/)(Secundaria), otra para los datos (/home) y otra para swap.
+
+- **Swap:** Una partición SWAP en Linux es un espacio del disco duro utilizado por el sistema operativo como memoria virtual o almacenamiento temporal. Es utilizado cuando no hay espacio suficiente en la memoria RAM para guardar datos de aplicaciones, por lo que la parición SWAP cumple la función de emular RAM en disco
+
+`d)` Ejemplifique diversos casos de particionamiento dependiendo del tipo de tarea que se deba realizar en su sistema operativo.\
+Son las primarias y secundarias, que para mas detalle se encuentra en la pregunta `a)`
+
+`e)`  ¿Qué tipo de software para particionar existe? Menciónelos y compare\
+
+Existen 2 tipos:
+- **Destructivos:** permiten crear y eliminar particiones (fdisk)
+- **No destructivo:** permiten crear, eliminar y modificar particiones
 
 ---
 
