@@ -23,6 +23,8 @@ operativo GNU/Linux, así como con su entorno y comandos principales.
 ## Preguntas/Dudas
 
 - No entendi muy bien el concepto de partición logica ya que es completamente igual que la primaria, pero no tiene el gestor de arranque. Entonces, que ventaja tiene? 
+- Que funcionalidad tiene el locate, porque no funca
+- Falta el ultimo punto (12)
 
 ---
 
@@ -376,25 +378,132 @@ tail ISO2022-1
 
 ## `11)` Investigue su funcionamiento y parámetros más importantes:
 
-- `a)` shutdown
-- `b)` reboot
-- `c)` halt
-- `d)` locate
-- `e)` uname
-- `f)` gmesg
-- `g)` lspci
-- `h)` at
-- `i)` netstat
-- `j)` mount
-- `k)` umount
-- `l)` head
-- `m)` losetup
-- `n)` write
-- `ñ)` mkfs
-- `o)` fdisk (con cuidado) 
+`a)` shutdown\
+El comando de apagado (Shutdown) te permite apagar, reiniciar y detener tu sistema
+
+
+```
+sudo shutdown
+sudo shutdown now
+sudo shutdown [time]
+sudo shutdown 11:50
+sudo shutdown +5
+sudo shutdown +2 "System update"
+sudo shutdown -r
+sudo shutdown +3 –r "Update System"
+sudo shutdown -c
+```
+
+| Options  | Description |
+| ------------- | ------------- |
+| -a  | To control access to the “shutdown” command, it employs the control access file “/etc/shutdown.allow.”  |
+| -k  | Instead of shutting down, deliver warning messages as though the shutdown is actual.  |
+| -P  | Tells the system to power down before shutting down.  |
+| -f  | It skips fsck after reboot.  |
+| -F  | After reboot it forces fsck.  |
+| -H  | This option orders the system to descend into the boot the monitor on computers which provide support to it if -h is also supplied.  |
+
+`b)` reboot\
+Sirve para reiniciar el equipo
+```
+sudo reboot
+```
+
+
+`c)` halt\
+El comando halt detiene la CPU del ordenador
+```
+sudo halt
+```
+
+
+
+`d)` locate\
+El comando locate es una alternativa útil, ya que es más rápido que find para realizar búsquedas. Eso se debe a que sólo escanea tu base de datos de Linux en lugar de todo el sistema. Además, la sintaxis es más fácil de escribir
+```
+sudo apt install locate
+```
+`e)` uname\
+Se usa para verificar la información del sistema
+```
+uname -s
+uname -r
+uname -v
+uname -n
+uname -m
+uname -p
+uname -i
+uname -o
+uname -a
+```
+
+`f)` gmesg (No entiendo porque esta diferente)
+El comando `dmesg` es una utilidad de Linux que muestra mensajes relacionados con el kernel recuperados del búfer de anillo del kernel.
+```
+dmesg
+```
+
+`g)` lspci
+El comando lspci lista todos los componentes tipo pci como son las tarjetas de red, tarjetas de sonido o tarjetas de televisión. 
+```
+lspci
+```
+
+`h)` at
+Ejecuta comandos a la hora especificada.
+
+`i)` netstat
+Los administradores de sistemas utilizan netstat el comando de Linux para ver información sobre las conexiones de red
+```
+sudo apt install net-tools
+```
+
+`j)` mount\
+Se utiliza para montar dispositivos y particiones para su uso por el sistema operativo
+```
+sudo apt install nfs-common
+sudo mkdir -p /mnt/client_ shareddirectory
+sudo mount [nfs_server]:/[nfs_shareddirectory] [client_mountpoint]
+```
+
+`k)` umount\
+El comando umount le permite eliminar un sistema de archivos remoto que esté montando en la actualidad\
+Ejemplo:
+```
+umount --all
+```
+
+`l)` head\
+Este comando sirve principalmente para mostrar al principio de un archivo (de texto) o para reducir a lo especificado los datos mostrados por un comando de Linux
+
+
+`m)` losetup\
+losetup de comandos de Linux se utiliza para fijar el dispositivo de bucle.
+
+**parámetros:**
+
+- -d dispositivo extraíble.
+- -e <cifrado> Iniciar cifrado codificación.
+- -o <número de traducción> Establecer el número de conversión de datos.
+
+`n)` write\
+sirve para enviar un mensaje a otro usuario del sistema.
+
+write usuario
+Escribo aquí lo que
+quiera que le llegue y luego cierro.
+Control-D
+
+`ñ)` mkfs\
+Se utiliza para dar formato a un dispositivo de almacenamiento de bloque con un determinado sistema de archivos
+
+`o)` fdisk (con cuidado) \
+Permite al usuario crear particiones en el disco duro de la misma manera que su contraparte de MS-DOS
 
 ---
 
 # `12)` Investigue su funcionamiento y parámetros más importantes:
 
 - `a)`  Indique en qué directorios se almacenan los comandos mencionados en el ejercicio anterior.
+
+Preguntale a dios.

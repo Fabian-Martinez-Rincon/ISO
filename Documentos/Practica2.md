@@ -4,22 +4,27 @@ El objetivo de esta práctica es que el alumno comprenda los aspectos principale
 permisos, etc
 
 
-- [1) Editor de textos]()
-- [2) Proceso de Arranque SystemV]()
-- [3) Usuarios]()
-- [4) FileSystem]()
-- [5) Procesos]()
-- [6) Otros comandos de Linux]()
-- [7) Indique qué acción realiza cada uno de los comandos...]()
-- [8) Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones]()
-- [9) Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones]()
-- [10) Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones]()
-- [11) Indique qué acción realiza cada uno de los comandos indicados a continuación....]()
-- [12) Cree una estructura desde el directorio /home que incluya varios directorios....]()
-- [13) Indique qué comando/s es necesario para realizar cada una de las acciones de la siguiente secuencia de paso]()
+- [1) Editor de textos](#1-editor-de-textos)
+- [2) Proceso de Arranque SystemV](#2-proceso-de-arranque-systemv)
+- [3) Usuarios](#3-usuarios)
+- [4) FileSystem](#4-filesystem)
+- [5) Procesos](#5-procesos)
+- [6) Otros comandos de Linux](#6-otros-comandos-de-linux-indique-funcionalidad-y-parámetros)
+- [7) Indique qué acción realiza cada uno de los comandos...](#7-ejercicio)
+- [8) Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones](#8-indique-qué-comando-sería-necesario-ejecutar-para-realizar-cada-una-de-las-siguientes-acciones)
+- [9) Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones](#9-indique-qué-comando-sería-necesario-ejecutar-para-realizar-cada-una-de-las-siguientes-acciones)
+- [10) Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones](#10-indique-qué-comando-sería-necesario-ejecutar-para-realizar-cada-una-de-las-siguientes-acciones)
+- [11) Indique qué acción realiza cada uno de los comandos indicados a continuación....](#11-ejercicio)
+- [12) Cree una estructura desde el directorio /home que incluya varios directorios....](#12-ejercicio)
+- [13) Indique qué comando/s es necesario para realizar cada una de las acciones de la siguiente secuencia de paso](#13-indique-qué-comandos-es-necesario-para-realizar-cada-una-de-las-acciones-de-la-siguiente-secuencia-de-pasos-considerando-su-orden-de-aparición)
 
 ## `1)` Editor de textos:
 `(a)` Nombre al menos 3 editores de texto que puede utilizar desde la línea de comandos.\
+
+-  **Vim**
+- **GNU Emacs**
+- **mcedit**
+
 `(b)` ¿En qué se diferencia un editor de texto de los comandos cat, more o less? Enumere los modos de operación que posee el editor de textos vi.\
 `(c)` Nombre los comandos más comunes que se le pueden enviar al editor de textos vi\
 
@@ -69,6 +74,7 @@ exec / usr / sbin /mysqld
 - **who:**
 - **groupdel:**
 - **passwd:**
+
 ## `4)` FileSystem:
 `(a)` ¿Cómo son definidos los permisos sobre archivos en un sistema GNU/Linux?\
 `(b)` Investigue la funcionalidad y parámetros de los siguientes comandos relacionados con los permisos en GNU/Linux:
