@@ -305,28 +305,76 @@ Es un comando para ver (pero no modificar) el contenido de un archivo o comando
 
 
 `c)` Cree un archivo llamado “prueba.exe” en su directorio personal usando el vi. El mismo debe contener su número de alumno y su nombre.\
-`d)` Investigue el funcionamiento del comando file. Pruébelo con diferentes archivos. ¿Qué diferencia nota?
+- Utilice el siguiente comando para crear un archivo (en este ejemplo, .htaccess). También puede editar un archivo existente con el mismo comando. 
 
+```
+vi .htaccess
+```
 
+- Pulse la tecla de la letra i para cambiar al modo de entrada.
+- Inserte el contenido deseado o realice las modificaciones deseadas.
+- Pulse la tecla ESC para salir del modo de entrada.
+- Guarde el nuevo archivo o los cambios realizados con el siguiente comando:
+
+```
+:wq
+```
+
+`d)` Investigue el funcionamiento del comando file. Pruébelo con diferentes archivos. ¿Qué diferencia nota?\
+Permite detectar el tipo y formato de un archivo
+
+```
+file nombreArchivo
+```
 
 ---
 
 ## `10)` Indique qué comando es necesario utilizar para realizar cada una de las siguientes acciones. Investigue su funcionamiento y parámetros más importantes:
 
-- `a)` Cree la carpeta ISO2017
-- `b)` Acceda a la carpeta (cd)
-- `c)` Cree dos archivos con los nombres iso2017-1 e iso2017-2 (touch)
-- `d)` Liste el contenido del directorio actual (ls)
-- `e)` Visualizar la ruta donde estoy situado (pwd)
-- `f)` Busque todos los archivos en los que su nombre contiene la cadena “iso*” (find)
-- `g)` Informar la cantidad de espacio libre en disco (df)
-- `h)` Verifique los usuarios conectado al sistema (who)
-- `i)` Acceder a el archivo iso2017-1 e ingresar Nombre y Apellido
-- `j)` Mostrar en pantalla las últimas líneas de un archivo (tail).
+`a)` Cree la carpeta ISO2017
+```
+mkdir "ISO 2022"
+```
+`b)` Acceda a la carpeta (cd)
+```
+cd 'ISO 2022'
+```
+`c)` Cree dos archivos con los nombres iso2017-1 e iso2017-2 (touch)
+```
+touch ISO2022-1 ISO2022-2
+```
+`d)` Liste el contenido del directorio actual (ls)
+```
+ls
+```
+`e)` Visualizar la ruta donde estoy situado (pwd)
+```
+pwd
+```
+`f)` Busque todos los archivos en los que su nombre contiene la cadena “iso*” (find)
+```
+find ./'ISO 2022' -name "ISO*"
+```
+`g)` Informar la cantidad de espacio libre en disco (df)
+```
+df
+```
+`h)` Verifique los usuarios conectado al sistema (who)
+```
+who
+```
+`i)` Acceder a el archivo iso2017-1 e ingresar Nombre y Apellido
+```
+vi ISO2022-1
+```
+`j)` Mostrar en pantalla las últimas líneas de un archivo (tail).
+```
+tail ISO2022-1
+```
 
 ---
 
-## `11)` nvestigue su funcionamiento y parámetros más importantes:
+## `11)` Investigue su funcionamiento y parámetros más importantes:
 
 - `a)` shutdown
 - `b)` reboot
