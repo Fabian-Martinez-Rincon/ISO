@@ -132,15 +132,14 @@ El Shell (intérprete de comandos) es el programa que recibe lo que se escribe e
 `b)` ¿Cuáles son sus funciones?\
 Una de sus funciones es leer las entradas del usuario y traducirlas a instrucciones que el sistema es capaz de entender y utilizar.
 
-`c)` Mencione al menos 3 intérpretes de comandos que posee GNU/Linux y compárelos entre ellos.\
+`c)` Mencione al menos 3 intérpretes de comandos que posee GNU/Linux y compárelos entre ellos.
 - **Korn-Shell (ksh):**
 - **Bourne-Shell (sh):**
 - **C-Shell (csh):**
 
 Estas se diferencian entre sí básicamente en la sintaxis de sus comandos y en la interacción con el usuario.
 
-`d)` ¿Dónde se ubican (path) los comandos propios y externos al Shell?\
-
+`d)` ¿Dónde se ubican (path) los comandos propios y externos al Shell?
 - **Propios:** Son basicamente los comandos
 - **Externos:** Es cualquier ejecutable
 
@@ -220,24 +219,95 @@ Existen 2 tipos:
 
 ## `8)` Arranque (bootstrap) de un Sistema Operativo:
 
-- `a)` ¿Qué es el BIOS? ¿Qué tarea realiza?
-- `b)` ¿Qué es UEFI? ¿Cuál es su función?
-- `c)` ¿Qué es el MBR? ¿Que es el MBC?
-- `d)` ¿A qué hacen referencia las siglas GPT? ¿Qué sustituye? Indique cuál es su formato.
-- `e)` ¿Cuál es la funcionalidad de un “Gestor de Arranque”? ¿Qué tipos existen? ¿Dónde se instalan? Cite gestores de arranque conocidos.
-- `f)` ¿Cuáles son los pasos que se suceden desde que se prende una computadora hasta que el Sistema Operativo es cargado (proceso de bootstrap)?
-- `g)`  Analice el proceso de arranque en GNU/Linux y describa sus principales pasos
-- `h)` ¿Cuáles son los pasos que se suceden en el proceso de parada (shutdown) de GNU/Linux?
-- `i)` ¿Es posible tener en una PC GNU/Linux y otro Sistema Operativo instalado? Justifique
+`a)` ¿Qué es el BIOS? ¿Qué tarea realiza?\
+BIOS es el responsable de iniciar la carga del SO a través del MBC, el cual es un pequeño código para el arranque del sistema operativo
+
+`b)` ¿Qué es UEFI? ¿Cuál es su función?\
+UEFI  es el código del firmware(sirve para comunicarse con los dispositivos de hardware de un sistema) de un chip en la placa base que proporciona funciones adicionales a las del sistema de entrada/salida básico (BIOS). UEFI ofrece una manera de hacer cosas con el equipo antes de que se cargue un sistema operativo.
+
+`c)` ¿Qué es el MBR? ¿Que es el MBC?\
+MBC, es un pequeño código para el arranque del sistema operativo.
+
+El MBR o **master boot recordes** el primer sector físico de un portador de datos (por ejemplo, un disco duro, una memoria USB) que se utiliza para arrancar (iniciar) los ordenadores. Para esto, el ordenador debe disponer de un BIOS y un sistema operativo x86
+
+`d)` ¿A qué hacen referencia las siglas GPT? ¿Qué sustituye? Indique cuál es su formato.\
+GPT(GUID partition table) especifica la ubicación y formato de la tabla de
+particiones en un disco duro. Sustituye al MBR
+
+**GPT lo hace mediante LBA o dirección de bloque lógica** para referirse a la región en donde se encuentran los datos físicamente almacenados en nuestra unidad de almacenamiento
+
+`e)` ¿Cuál es la funcionalidad de un “Gestor de Arranque”? ¿Qué tipos existen? ¿Dónde se instalan? Cite gestores de arranque conocidos.\
+La finalidad del bootloader o gestor de arranque es la de cargar una imagen de
+Kernel (sistema operativo) de alguna partición para su ejecución
+
+- Se ejecuta luego del código del BIOS
+- Existen 2 modos de instalación:
+    - En el MBR (puede llegar a utilizar MBR gap)
+    - En el sector de arranque de la partición raíz o activa (Volume
+    Boot Record)
+- Tipos GRUB, LILO, NTLDR, GAG, YaST, etc
+- GRand Unified Bootloader: gestor de arranque múltiple más
+utilizado
+
+`f)` ¿Cuáles son los pasos que se suceden desde que se prende una computadora hasta que el Sistema Operativo es cargado (proceso de bootstrap)?
+
+- El BIOS se ejecuta, realizando el **POST**, que incluye rutinas que, fijan valores de las señales internas, y ejecutan test internos (RAM, el teclado, etc).
+- Se lee el primer sector del disco de inicio llamado **MBR**.
+- Se carga en memoria y se ejecuta
+
+`g)`  Analice el proceso de arranque en GNU/Linux y describa sus principales pasos.\
+Ell flujo de control durante el arranque es desde el **[BIOS]()**, al **[gestor de arranque]()** y al núcleo (**[kernel]())**). 
+
+- **Kernel:** Este inicia el planificador (para permitir la **[multitarea]()**) y ejecuta el primer **[espacio de usuario]()** (fuera del espacio del núcleo) y el programa de inicialización (que establece el entorno de usuario y permite la interacción del usuario y el **[inicio de sesión]())**, momento en el que el núcleo se inactiva hasta que sea llamado externamente.
+
+- La etapa del **[cargador de arranque]()** no es totalmente necesaria. Determinadas BIOS pueden cargar y pasar el control a Linux sin hacer uso del cargador. Cada proceso de arranque será diferente dependiendo de la arquitectura del **[procesador]()** y el *BIOS*.
+
+- En el apagado, Init es llamado a cerrar toda las funcionalidades del espacio de usuario de una manera controlada, de nuevo a través de secuencias de comandos, tras lo cual el Init termina y el núcleo ejecuta el apagado.
+
+`h)` ¿Cuáles son los pasos que se suceden en el proceso de parada (shutdown) de GNU/Linux?
+- Se notifica a los usuarios este hecho.
+- Se bloquea el sistema para que nadie más pueda acceder exceptuando el **root**.
+- Se envía la señal **SIGTERM** (señal de terminación) a todos los procesos no definidos en **inittab**(contiene un registro para cada proceso que define los niveles de ejecución para ese proceso) para el siguiente run level, provocando que terminen su ejecución de modo ordenado.
+
+`i)` ¿Es posible tener en una PC GNU/Linux y otro Sistema Operativo instalado? Justifique\
+Si es posible ya lo vimos anteriormente gracias a las particiones de disco instalar múltiples sistema operativos o a través de maquinas virtuales.
 
 ---
 
 ## `9)` Archivos
 
-- `a)` ¿Cómo se identifican los archivos en GNU/Linux?
-- `b)` Investigue el funcionamiento de los editores vi y mcedit, y los comandos cat y more.
-- `c)` Cree un archivo llamado “prueba.exe” en su directorio personal usando el vi. El mismo debe contener su número de alumno y su nombre
-- `d)` Investigue el funcionamiento del comando file. Pruébelo con diferentes archivos. ¿Qué diferencia nota?
+`a)` ¿Cómo se identifican los archivos en GNU/Linux?\
+Un nombre de archivo puede tener entre 1 y 255 caracteres. recomendable emplear los caracteres con significado especial en Linux, que son los siguientes: **= \ ^ ~ ' " ` * ; - ? ( )! & ~ < >**
+
+`b)` Investigue el funcionamiento de los editores vi y mcedit, y los comandos cat y more.
+
+### **VI**
+Es el editor de texto clásico en UNIX. Puede usarse en cualquier tipo de terminal con un mínimo de teclas.
+
+**MODOS DE VI:**
+Existen tres modos o estados de vi:
+
+- **Modo comando:** Este es el modo en el que se encuentra el editor cada vez que se inicia.
+Las teclas ejecutan acciones (comandos) que permiten mover el cursor, ejecutar comandos de edición de texto, salir de **vi**, guardar cambios, etc.
+- **Modo inserción o texto:** Este es el modo que se usa para insertar el texto. Existen varios
+comandos que se pueden utilizar para ingresar a este modo.
+- **Modo línea o ex:** Se escriben comandos en la última línea al final de la pantalla.
+
+### MCEDIT
+
+Al igual que Vi funciona como gestor de archivos
+
+### cat
+Es la abreviatura de concatenar. Esto se refiere al hecho de que cat puede ser utilizado para combinar múltiples archivos en un archivo, también se puede utilizar para crear nuevos archivos y para mostrar el contenido de los archivos existentes.
+
+### more
+Es un comando para ver (pero no modificar) el contenido de un archivo o comando y visualizarlo por páginas.
+
+
+`c)` Cree un archivo llamado “prueba.exe” en su directorio personal usando el vi. El mismo debe contener su número de alumno y su nombre.\
+`d)` Investigue el funcionamiento del comando file. Pruébelo con diferentes archivos. ¿Qué diferencia nota?
+
+
 
 ---
 
