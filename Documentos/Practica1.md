@@ -117,29 +117,55 @@ Se encuentra justo en el medio que reside en la memoria e indica qué debe hace
 `f)` ¿El Kernel de GNU/Linux es monolítico? Justifique.\
 El kernel de GNU/Linux es monolítico hibrido, esto se refiere a que el núcleo usa mecanismos de arquitectura tando de diseño **monolítico** como **micronúcleo**
 
-- ****
-- ****
-
 ---
 
 ## `5)` Intérprete de comandos (Shell):
 
-- `a)` ¿Qué es?\
-[Debian](https://www.debian.org/intro/about)
-- `b)` ¿Cuáles son sus funciones?
-- `c)` Mencione al menos 3 intérpretes de comandos que posee GNU/Linux y compárelos entre ellos.
-- `d)` ¿Dónde se ubican (path) los comandos propios y externos al Shell?
-- `e)` ¿Por qué considera que el Shell no es parte del Kernel de GNU/Linux?
-- `f)` ¿Es posible definir un intérprete de comandos distinto para cada usuario? ¿Desde dónde se define? ¿Cualquier usuario puede realizar dicha tarea?
+`a)` ¿Qué es?\
+El Shell (intérprete de comandos) es el programa que recibe lo que se escribe en la terminal y lo convierte en instrucciones para el sistema operativo.
+
+`b)` ¿Cuáles son sus funciones?\
+Una de sus funciones es leer las entradas del usuario y traducirlas a instrucciones que el sistema es capaz de entender y utilizar.
+
+`c)` Mencione al menos 3 intérpretes de comandos que posee GNU/Linux y compárelos entre ellos.\
+- **Korn-Shell (ksh):**
+- **Bourne-Shell (sh):**
+- **C-Shell (csh):**
+
+Estas se diferencian entre sí básicamente en la sintaxis de sus comandos y en la interacción con el usuario.
+
+`d)` ¿Dónde se ubican (path) los comandos propios y externos al Shell?\
+
+- **Propios:** Son basicamente los comandos
+- **Externos:** Es cualquier ejecutable
+
+`e)` ¿Por qué considera que el Shell no es parte del Kernel de GNU/Linux?\
+La principal razon es que es muy remplazable, en caso de que falle, se puede reiniciar y todo tendria que seguir andando.
+
+`f)` ¿Es posible definir un intérprete de comandos distinto para cada usuario? ¿Desde dónde se define? ¿Cualquier usuario puede realizar dicha tarea?\
+Cada usuario posee una shell por defecto , la cual puede definirse por un usuario con derechos privilegiados. Aprendemos a cambiar la shell de un usuario por defecto en GNU/Linux con la herramienta chs
 
 ---
 
 ## `6)` Sistema de Archivos (File System):
 
-- `a)` ¿Qué es?
-- `b)` Mencione sistemas de archivos soportados por GNU/Linux.
-- `c)` ¿Es posible visualizar particiones del tipo FAT y NTFS en GNU/Linux?
-- `d)`  ¿Cuál es la estructura básica de los File System en GNU/Linux? Mencione los directorios más importantes e indique qué tipo de información se encuentra en ellos. ¿A qué hace referencia la sigla FHS?
+`a)` ¿Qué es?\
+Es la forma en que dentro de un SO se organizan y se administran los archivos.
+- **Métodos de acceso:** cómo se acceden los datos contenidos en el archivo.
+- **Manejo de archivos:** cómo actúan los mecanismos para almacenar, referenciar, compartir y proteger los archivos.
+- **Manejo de la memoria secundaria:** Cómo se administra el espacio para los archivos en memoria secundaria.
+- **Mecanismos de integridad:** con qué métodos se garantiza la incorruptibilidad del archivo.
+
+`b)` Mencione sistemas de archivos soportados por GNU/Linux.\
+A continuación veremos una lista con algunos filesystem utilizados hoy en día:
+- ext2
+- ext3
+- ReiserFS
+- XFS
+
+`c)` ¿Es posible visualizar particiones del tipo FAT y NTFS en GNU/Linux?\
+SI\
+`d)`  ¿Cuál es la estructura básica de los File System en GNU/Linux? Mencione los directorios más importantes e indique qué tipo de información se encuentra en ellos. ¿A qué hace referencia la sigla FHS?
 
 ---
 
