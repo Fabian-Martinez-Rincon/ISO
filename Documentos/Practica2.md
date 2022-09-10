@@ -21,12 +21,917 @@ permisos, etc
 ## `1)` Editor de textos:
 `(a)` Nombre al menos 3 editores de texto que puede utilizar desde la línea de comandos.\
 
--  **Vim**
-- **GNU Emacs**
-- **mcedit**
+-  **Vim:** Es un editor de texto que rompe las bolas pero aprendes
+- **GNU Emacs:** La misma basura que vim pero con calculadora y administrador de archivos
+- **mcedit:** Te permite navegar entre los ficheros con una interfaz.
 
 `(b)` ¿En qué se diferencia un editor de texto de los comandos cat, more o less? Enumere los modos de operación que posee el editor de textos vi.\
+Estos comandos si bien son muy utiles y simples, carecen de algunas funcionalidades, como por ejemplo, abrir un archivo en modo lectura asi no nos tenemos que preocupar de modificarlo.
+
+- [Fuente](https://victorhckinthefreeworld.com/2020/01/02/ni-cat-ni-more-ni-less-usa-vim-para-ver-el-contenido-de-un-archivo-de-texto-en-la-consola/)
+
 `(c)` Nombre los comandos más comunes que se le pueden enviar al editor de textos vi\
+
+<table width="100%" cellpadding="10" cellspacing="0" border="2">
+<caption>
+<b></b>
+</caption>
+<thead>
+<tr>
+<th scope="col" align="left" valign="bottom">
+<p>Comando&nbsp;</p>
+</th><th scope="col" align="left" valign="bottom">
+<p>Significado&nbsp;</p>
+</th>
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td align="left" valign="top">
+<p>
+<b>Empezar</b> <kbd>vi</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>vi</kbd> <b>nombre_de_archivo</b>
+</p>
+</td><td align="left" valign="top">
+<p>Abrir o crear el archivo&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<tt>v</tt><kbd>i</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Abrir un archivo nuevo para nombrarlo
+más tarde&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>vi</kbd> <kbd>-r</kbd> <b>nombre_de_archivo</b>
+</p>
+</td><td align="left" valign="top">
+<p>Recuperar un archivo de una caída
+del sistema&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>view</kbd> <b>nombre_de_archivo</b> <a name="editorvi-ix1350"></a>
+</p>
+</td><td align="left" valign="top">
+<p>Abrir archivo sólo para leer&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>Comandos del cursor&nbsp;</p>
+</td><td align="left" valign="top">
+<p> &nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<tt>h</tt>
+</p>
+</td><td align="left" valign="top">
+<p>Moverse un carácter hacia la izquierda&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>j&nbsp;</p>
+</td><td align="left" valign="top">
+<p>Moverse una línea hacia abajo&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>k&nbsp;</p>
+</td><td align="left" valign="top">
+<p>Moverse una línea hacia arriba&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>l&nbsp;</p>
+</td><td align="left" valign="top">
+<p>Moverse un carácter a la derecha&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>w&nbsp;</p>
+</td><td align="left" valign="top">
+<p>Moverse una palabra a la derecha&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>W&nbsp;</p>
+</td><td align="left" valign="top">
+<p>Moverse una palabra a la derecha (pasados los signos de
+puntuación)&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>b&nbsp;</p>
+</td><td align="left" valign="top">
+<p>Moverse una palabra
+a la izquierda&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>B&nbsp;</p>
+</td><td align="left" valign="top">
+<p>Moverse una palabra
+a la izquierda (pasados los signos de puntuación)&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>e&nbsp;</p>
+</td><td align="left" valign="top">
+<p>Moverse al final de la palabra actual&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>Return&nbsp;</p>
+</td><td align="left" valign="top">
+<p>Moverse una línea hacia abajo&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>Back Space&nbsp;</p>
+</td><td align="left" valign="top">
+<p>Moverse un carácter a la izquierda&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>Space Bar&nbsp;</p>
+</td><td align="left" valign="top">
+<p>Moverse un carácter
+a la derecha&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>H</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Moverse a
+la parte de arriba de la pantalla&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>M</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Moverse al centro de la pantalla&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>L</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Moverse a la parte inferior de la pantalla&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>Ctrl-F&nbsp;</p>
+</td><td align="left" valign="top">
+<p>Paginar una pantalla hacia adelante&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>Ctrl-D&nbsp;</p>
+</td><td align="left" valign="top">
+<p>Desplazarse media pantalla hacia adelante&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>Ctrl-B&nbsp;</p>
+</td><td align="left" valign="top">
+<p>Paginar una pantalla hacia atrás&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>Ctrl-U&nbsp;</p>
+</td><td align="left" valign="top">
+<p>Desplazarse
+media pantalla hacia atrás&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>Insertar
+caracteres y líneas&nbsp;</p>
+</td><td align="left" valign="top">
+<p>&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>a</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Insertar caracteres a la derecha del
+cursor&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>A</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Insertar
+caracteres al final de la línea&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>i</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Insertar
+caracteres a la izquierda del cursor&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>I</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Insertar caracteres al principio de línea&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>o</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Insertar una línea por debajo
+el cursor&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>O</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Insertar
+una línea por encima del cursor&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>Cambiar texto&nbsp;</p>
+</td><td align="left" valign="top">
+<p>&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>cw</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Cambiar una palabra (o parte de una
+palabra) a la derecha del cursor&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>c</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Cambiar una línea&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>C</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Cambiar desde
+el cursor hasta el final de la línea&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>s</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Sustituir cadena por carácter(es) desde
+el cursor hacia adelante&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>r</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Reemplazar
+el carácter marcado por cursor por otro carácter&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>r</kbd> Return</p>
+</td><td align="left" valign="top">
+<p>Partir una línea&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>J</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Unir la línea
+actual con la línea inferior&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>xp</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Transponer el carácter del cursor con el carácter
+a la derecha&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>~</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Cambiar el
+tipo de letra (mayúscula o minúscula) <a name="editorvi-ix1351"></a> <a name="editorvi-ix1352"></a> <a name="editorvi-ix1353"></a> <a name="editorvi-ix1354"></a>
+</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>u</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Deshacer
+el comando anterior&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>U</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Deshacer
+todos los cambios en la línea actual&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>:u</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Deshacer el comando anterior sobre la línea
+última&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>Eliminar texto&nbsp;</p>
+</td><td align="left" valign="top">
+<p>&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>x</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Eliminar el carácter del cursor&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>X</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Eliminar
+el carácter a la izquierda del cursor&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>dw</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Eliminar la palabra (o la parte de la palabra
+a la derecha del cursor)&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>dd</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Eliminar
+la línea que contiene al cursor&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>D</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Eliminar la parte de la línea a la derecha del cursor&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>dG</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Eliminar
+hasta el final de línea&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>d1G</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Eliminar
+desde el principio del archivo hasta el cursor&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>:5,10 d</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Eliminar las líneas de la 5
+a la 10&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>Copiar
+y mover texto&nbsp;</p>
+</td><td align="left" valign="top">
+<p>&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>yy</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Tirar o copiar línea&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>Y</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Tirar o copiar línea&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>p</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Poner la línea tirada o eliminada
+por debajo de la línea actual&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>P</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Poner la línea tirada o eliminada por encima de
+la línea actual&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>:1,2 co 3</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Copiar las líneas de la 1 a la 2 y ponerlas después de la línea
+3&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>:4,5 m 6</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Mover
+las líneas de la 4 a la 5 y ponerlas después de la línea
+6&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>Ajustar
+la numeración de las líneas&nbsp;</p>
+</td><td align="left" valign="top">
+<p>&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>:set nu</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Mostrar
+los números de las líneas&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>:set nonu</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Esconder los números de las líneas&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>&nbsp;</p>
+</td><td align="left" valign="top">
+<p>Establecer la distinción entre
+mayúsculas
+y minúsculas&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>:set ic</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>En
+la búsqueda se ignora la distinción entre mayúsculas
+y minúsculas&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>:set noic</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>En la búsqueda se distingue entre mayúsculas y minúsculas&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>Encontrar
+una línea&nbsp;</p>
+</td><td align="left" valign="top">
+<p>&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>G</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Ir a la última línea
+del archivo&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>1G</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Ir a la
+primera línea del archivo&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>21G</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Ir a la línea 21&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>Buscar y reemplazar&nbsp;</p>
+</td><td align="left" valign="top">
+<p>&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>/</kbd><b>string</b>
+</p>
+</td><td align="left" valign="top">
+<p>Búsqueda de <b>cadena de caracteres</b>
+</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>?</kbd><b>string</b>
+</p>
+</td><td align="left" valign="top">
+<p>Búsqueda
+hacia atrás de <b>cadena de caracteres</b>
+</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>n</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Encontrar la siguiente aparición
+de <b>string</b> en la dirección de búsqueda</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>N</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Encontrar
+la aparición previa de la <b>cadena de caracteres </b>en
+la dirección de búsqueda</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>:g/<var>search</var>/s//<var>replace</var>/g</p>
+</td><td align="left" valign="top">
+<p>Buscar
+y reemplazar&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<b>Limpiar la pantalla</b>
+</p>
+</td><td align="left" valign="top">
+<p>&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>Ctrl-L&nbsp;</p>
+</td><td align="left" valign="top">
+<p>Limpiar (actualizar)
+la pantalla&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>&nbsp;</p>
+</td><td align="left" valign="top">
+<p>Insertar un archivo en otro archivo&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>:r</kbd> <b>nombre_de_archivo</b>
+</p>
+</td><td align="left" valign="top">
+<p>Insertar (leer) el archivo a continuación
+del cursor&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>:34</kbd> <kbd>r</kbd> <b>nombre_de_archivo</b>
+</p>
+</td><td align="left" valign="top">
+<p>Insertar
+el archivo después de la línea 34&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>Guardar y salir&nbsp;</p>
+</td><td align="left" valign="top">
+<p>&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>:w</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Guardar los cambios (escribir el contenido de la memoria
+intermedia)&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>:w</kbd><var> </var><b>nombre_de_archivo</b>
+</p>
+</td><td align="left" valign="top">
+<p>Escribir
+el contenido de la memoria
+intermedia a un archivo con nombre&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>:wq</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Guardar los cambios y salir de vi&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>ZZ</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Guardar los cambios y salir de vi&nbsp;</p>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<p>
+<kbd>:q!</kbd>
+</p>
+</td><td align="left" valign="top">
+<p>Salir sin guardar los cambios <a name="editorvi-ix1355"></a> <a name="editorvi-ix1356"></a>
+</p>
+</td>
+</tr>
+
+</tbody>
+</table>
 
 ## `2)` Proceso de Arranque SystemV:
 `(a)` Enumere los pasos del proceso de inicio de un sistema GNU/Linux, desde que se prende la PC hasta que se logra obtener el login en el sistema.\
