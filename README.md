@@ -1,3 +1,8 @@
+---
+layout: post
+title: Sistemas Operativos
+---
+
 <h1 align="center"> 🐧 Introducción a Sistemas Operativos</h1>
 
 - [Condiciones de aprobación](/Documentos/)
