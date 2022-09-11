@@ -8,7 +8,7 @@
 - [Practica 1](/Documentos/Practica1.md)
 - [Practica 2](/Documentos/Practica2.md)
 
-## Comandos utilisados en la practica 1 
+## Comandos utilizados en la practica 1 
 
 ### Sudo
 
