@@ -105,7 +105,15 @@ Estas relaciones declaradas entre scripts permiten optimizar la secuencia de arr
 - [Fuente](https://packages.debian.org/sid/insserv)
 
 `(j)` ¿Cómo maneja Upstart el proceso de arranque del sistema?\
-`(k)` Cite las principales diferencias entre SystemV y Upstart.\
+Upstart es un reemplazo basado en eventos para el daemon /sbin/init que maneja el inicio de tareas y servicios durante el arranque, los detiene durante el apagado y los supervisa mientras el sistema se está ejecutando.
+
+No entiendo una mrd, despues lo reviso.
+
+- [Fuente](https://esgeeks.com/systemv-upstart-systemd-linux/#:~:text=Qu%C3%A9%20es%20Upstart%3F-,Upstart%20es%20un%20reemplazo%20basado%20en%20eventos%20para%20el%20daemon,el%20sistema%20se%20est%C3%A1%20ejecutando.)
+
+`(k)` Cite las principales diferencias entre SystemV y Upstart.
+[Fuente](https://esgeeks.com/systemv-upstart-systemd-linux/#:~:text=Upstart%20%3A%20Upstart%20es%20un%20reemplazo,los%20sistemas%20init%20tradicionales%20SysV.) Que paja escribir
+
 `(l)` Qué reemplaza a los scripts rc de SystemV en Upstart? ¿En que ubicación del filesystem se encuentran?\
 `(m)` Dado el siguiente job de upstart perteneciente al servicio de base de datos del mysql indique a qué hace referencia cada línea del mismo:
 
@@ -128,6 +136,8 @@ exec / usr / sbin /mysqld
 
 ## `3)` Usuarios
 `(a)` ¿Qué archivos son utilizados en un sistema GNU/Linux para guardar la información de los usuarios?\
+Sistema de archivos Ext2, ext3 y ext4: Así como Apple y Microsoft tienen sus propios sistemas, estos tres (cada uno evolución del anterior) son los utilizados por las distribuciones GNU/Linux
+
 `(b)` ¿A qué hacen referencia las siglas UID y GID? ¿Pueden coexistir UIDs iguales en un sistema GNU/Linux? Justifique.\
 `(c)` ¿Qué es el usuario root? ¿Puede existir más de un usuario con este perfil en GNU/Linux? ¿Cuál es la UID del root?.\
 `(d)` Agregue un nuevo usuario llamado iso2017 a su instalación de GNU/Linux, especifique que su home sea creada en /home/iso_2017, y hágalo miembro del grupo catedra (si no existe, deberá crearlo). Luego, sin iniciar sesión como este usuario cree un archivo en su home personal que le pertenezca. Luego de todo esto, borre el usuario y verifique que no queden registros de él en los archivos de información de los usuarios y grupos.\

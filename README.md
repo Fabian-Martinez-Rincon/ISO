@@ -58,9 +58,45 @@ Antes de usar un comando `sudo`, primero tenes que entrar como super-usuario con
 - `losetup` losetup de comandos de Linux se utiliza para fijar el dispositivo de bucle 
 
 
-
 ```
 ls /etc/rc0.d
 sudo runlevel
 sudo telinit 2
 ```
+
+## Comandos utilizados en la practica 2
+
+- `useradd ó adduser`
+- `usermod`
+- `userdel`
+- `su`
+- `groupadd`
+- `who`
+- `groupdel`
+- `passwd`
+- `chmod`
+- `chown`
+- `chgrp`
+- `cd`
+- `umount`
+- `mkdir`
+- `du`
+- `rmdir`
+- `df`
+- `mount`
+- `ln`
+- `ls`
+- `pwd`
+- `cp`
+- `mv`
+- `ps`
+- `kill`
+- `pstree`
+- `killall`
+- `top`
+- `nice`
+- `tar`
+- `grep`
+- `gzip`
+- `zgrep`
+- `wc`
