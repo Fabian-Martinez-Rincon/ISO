@@ -79,11 +79,31 @@ una serie de servicios
 Un administrador (root) puede editar el archivo /etc/inittab como mejor convenga al usuario, sin embargo también tiene el poder de establecerlo en 0 o en 6. Si se establece en 6, algo que hice como experimento en mi Mandriva, la próxima vez que la máquina se encienda, se leerá el modo 6, shutdown y reboot, y se hará exactamente eso. 
 
 `(f)` Archivo /etc/inittab. ¿Cuál es su finalidad? ¿Qué tipo de información se almacena en el? ¿Cuál es la estructura de la información que en él se almacena?\
+Este programa es el encargado de lanzar los scripts de inicialización del sistema y de modificar el sistema operativo de su estado inicial de arranque al estado estándar multiusuario. También define los intérpretes de órdenes login: de todos los dispositivos tty del sistema y especifica otras características del arranque y apagado.
+
+- [Fuente](https://www.ibiblio.org/pub/linux/docs/LuCaS/Manuales-LuCAS/LIPP2/lipp-2.0-beta-html/node285.html)
+
+`(g)` Suponga que se encuentra en el runlevel \<X>. Indique qué comando(s) ejecutaría para cambiar al runlevel \<Y>. ¿Este cambio es permanente? ¿Por qué?\
+No es permanente ya que cuando reinicias el dispositivo, vulven a ejecutarse las runlevels de forma normal. [telinit](https://baulderasec.wordpress.com/analisis-software/linux/5-comenzar-con-linux-y-editar-ficheros/5-7-1-comprobar-el-modo-de-ejecucion/5-7-2-saber-el-modo-de-ejecucion-actual/5-7-2-1-cambiar-los-modos-de-ejecucion-con-init-o-telinit/)
+
+```
+ls /etc/rc0.d
+sudo runlevel
+sudo telinit 2
+```
 
 
-`(g)` Suponga que se encuentra en el runlevel <X>. Indique qué comando(s) ejecutaría para cambiar al runlevel <Y>. ¿Este cambio es permanente? ¿Por qué?\
 `(h)` Scripts RC. ¿Cuál es su finalidad? ¿Dónde se almacenan? Cuando un sistema GNU/Linux arranca o se detiene se ejecutan scripts, indique cómo determina qué script ejecutar ante cada acción. ¿Existe un orden para llamarlos? Justifique.\
+Cuando init ingresa a un nivel de ejecución, llama al script rc con un argumento numérico que especifica el nivel de ejecución al que ir. rc luego inicia y detiene los servicios en el sistema según sea necesario para llevar el sistema a ese nivel de ejecución
+
+- [Fuente](https://geekpeach.net/es/comprender-los-scripts-rc-en-linux)
+
 `(i)` ¿Qué es insserv? ¿Para qué se utiliza? ¿Qué ventajas provee respecto de un arranque tradicional?\
+El programa insserv es utilizado por el sistema de inicio «init» estándar basado en SysV. Actualiza el orden de los enlaces simbólicos en /etc/rc?.d/ basándose en las dependencias especificadas por las cabeceras LSB en los propios scripts init.d.
+
+Estas relaciones declaradas entre scripts permiten optimizar la secuencia de arranque para el conjunto de paquetes instalado actualmente, a la vez que detectan y rechazan los bucles de dependencia.
+- [Fuente](https://packages.debian.org/sid/insserv)
+
 `(j)` ¿Cómo maneja Upstart el proceso de arranque del sistema?\
 `(k)` Cite las principales diferencias entre SystemV y Upstart.\
 `(l)` Qué reemplaza a los scripts rc de SystemV en Upstart? ¿En que ubicación del filesystem se encuentran?\

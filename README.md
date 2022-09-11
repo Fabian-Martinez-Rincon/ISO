@@ -8,13 +8,13 @@
 - [Practica 1](/Documentos/Practica1.md)
 - [Practica 2](/Documentos/Practica2.md)
 
-## Comandos Frecuentes (debian 11)
+## Comandos utilisados en la practica 1 
 
 ### Sudo
 
 Sudo es un programa diseñado para facilitar a los administradores del sistema permitir a algunos usuarios ejecutar órdenes como root (u otro usuario).
 
-- `cat /var/log/syslog` Nos muestra el contenido dentro del fichero
+- `cat /var/log/syslog` Nos muestra el contenido dentro del fichero/archivo
 - `more /var/log/syslog` Igual que cat solo que muestra linea por linea 
 - `less /var/log/syslog` Nos permite indicar la cantidad de lineas que queremos ver
 - `vi nomArchivo` i para cambiar de modo, escribirmos, luego `esc` y despues :wq
@@ -43,52 +43,15 @@ Antes de usar un comando `sudo`, primero tenes que entrar como super-usuario con
 - `sudo halt` El comando halt detiene la CPU del ordenador
 - `locate nomArchivo` es como el find pero mas canchero (`sudo apt install locate`) 
 - `uname -letra` verifica la información del sistema (s, r, v, n, m, p, i, o, **[a]()**)
- uname\
-Se usa para 
+- `gmesg` No lo pude hacer funcionar (puede ser el `dmesg`?)
+- `lspci` El comando lspci lista todos los componentes tipo pci  
+- `at 10:00 PM` y luego cualquier cosa (se sale con Ctrl + D) Nos permite programar tareas, instalar con `sudo apt update, sudo apt install at`
+- `netstat` muestra información sobre las conexiones de red. Instalar con (`sudo apt install net-tools`)
+- `mount` Se utiliza para montar dispositivos y particiones para su uso por el sistema operativo (se instala con `sudo apt install nfs-common`)
+- `umount -V` permite eliminar un sistema de archivos remoto que esté montando en la actualidad (no usar xd)
+- `head nomArchivo` muestra el principio de un archivo (de texto)
+- `losetup` losetup de comandos de Linux se utiliza para fijar el dispositivo de bucle 
 
-
-`f)` gmesg (No entiendo porque esta diferente)
-El comando `dmesg` es una utilidad de Linux que muestra mensajes relacionados con el kernel recuperados del búfer de anillo del kernel.
-```
-dmesg
-```
-
-`g)` lspci
-El comando lspci lista todos los componentes tipo pci como son las tarjetas de red, tarjetas de sonido o tarjetas de televisión. 
-```
-lspci
-```
-
-`h)` at
-Ejecuta comandos a la hora especificada.
-
-`i)` netstat
-Los administradores de sistemas utilizan netstat el comando de Linux para ver información sobre las conexiones de red
-```
-sudo apt install net-tools
-```
-
-`j)` mount\
-Se utiliza para montar dispositivos y particiones para su uso por el sistema operativo
-```
-sudo apt install nfs-common
-sudo mkdir -p /mnt/client_ shareddirectory
-sudo mount [nfs_server]:/[nfs_shareddirectory] [client_mountpoint]
-```
-
-`k)` umount\
-El comando umount le permite eliminar un sistema de archivos remoto que esté montando en la actualidad\
-Ejemplo:
-```
-umount --all
-```
-
-`l)` head\
-Este comando sirve principalmente para mostrar al principio de un archivo (de texto) o para reducir a lo especificado los datos mostrados por un comando de Linux
-
-
-`m)` losetup\
-losetup de comandos de Linux se utiliza para fijar el dispositivo de bucle.
 
 
 ```
