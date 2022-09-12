@@ -196,7 +196,7 @@ Si, podes tenes los usuarios root que quieras. [Fuente](https://www.xn--linuxene
 - **du:** para ver el tamaño de ficheros y carpetas
 - **rmdir:** El comando linux rmdir sirve para borrar directorios
 - **df:** Informa la cantidad de espacio libre en disco
-- **mount:** Se utiliza para montar dispositivos y particiones para su uso por el sistema operativo (se instala con `sudo apt install nfs-common`)
+- **mount:** Se utiliza para montar dispositivos y particiones para su uso por el sistema operativo (se instala con **sudo apt install nfs-common**)
 - **ln:** crear un enlace simbólico al fichero o directorio (como un acceso directo)
 - **ls:** Lista el contenido del directorio actual
 - **pwd:** Visualiza la ruta donde estoy situado
@@ -212,6 +212,8 @@ Si, podes tenes los usuarios root que quieras. [Fuente](https://www.xn--linuxene
 `(e)` Pipe ( | ). ¿Cuál es su finalidad? Cite ejemplos de su utilización.\
 `(f)` Redirección. ¿Qué tipo de redirecciones existen? ¿Cuál es su finalidad? Cite ejemplos de utilización.\
 `(g)` Comando kill. ¿Cuál es su funcionalidad? Cite ejemplos.\
+Sirve para cancelar procesos
+
 `(h)` Investigue la funcionalidad y parámetros de los siguientes comandos relacionados con el manejo de procesos en GNU/Linux. Además, compárelos entre ellos:
 - **ps:** Muestra información de los procesos activos.
 - **kill:** Sirve para cancelar procesos

@@ -77,3 +77,10 @@ Antes de usar un comando `sudo`, primero tenes que entrar como super-usuario con
 | `su`  | Entrar como super usuario  |
 | `who`  | Verifiqua los usuarios conectado al sistema  |
 | `passwd`  | Cambia la constraseña del usuario actual  |
+| `chmod (u,g,o)(+,=)(w,rw,rwx) archivo.txt` | nos permite modificar cualquier permiso |
+| `chown nombreUsuario nombreArchivo` | cambia el propietario de un archivo |
+| `chgrp` | igual que chwon sintaxis mas simple |
+| `du` | para ver el tamaño de ficheros y carpetas (actual) |
+| `rmdir nombreCarpeta` | Elimina una carpeta |
+| `cp nombreArchivo nombreCarpeta` | Sirve para copiar archivos y directorios dentro del sistema de archivos |
+| `mv` | a revisar |
