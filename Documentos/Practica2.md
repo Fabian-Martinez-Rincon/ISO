@@ -1,4 +1,4 @@
-<h1 align="center"> Practica 2</h1>
+# 📓 Practica 2
 
 El objetivo de esta práctica es que el alumno comprenda los aspectos principales acerca de la estructura del sistema Operativo GNU/Linux en lo que respecta a procesos, usuarios, filesystems,
 permisos, etc

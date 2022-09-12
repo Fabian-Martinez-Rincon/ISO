@@ -1,4 +1,5 @@
-<h1 align="center"> Practica 1</h1>
+# 📒 Practica 1
+
 <p><img width="280" align='right' src="../Img/1.png"></p>
 
 
