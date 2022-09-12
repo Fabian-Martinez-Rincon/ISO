@@ -39,25 +39,25 @@ Sudo es un programa diseñado para facilitar a los administradores del sistema p
 ### ⚠️ Peligrosos ⚠️ 
 Antes de usar un comando `sudo`, primero tenes que entrar como super-usuario con el comando `su`
 
-- `shutdown` Te permite apagar, reiniciar y detener tu sistema
-  - `sudo shutdown` Apaga el sistema luego de 2 minutos aprox
-  - `sudo shutdown now` Apaga el sistema ahora
-  - `sudo shutdown -r` Reinicia el sistema luego de 2 minutos aprox
-  - `sudo shutdown -c` Cancela el reinicio/apagado
-- `sudo reboot` Sirve para reiniciar el equipo
-- `sudo halt` El comando halt detiene la CPU del ordenador
-- `locate nomArchivo` es como el find pero mas canchero (`sudo apt install locate`) 
-- `uname -letra` verifica la información del sistema (s, r, v, n, m, p, i, o, **[a]()**)
-- `gmesg` No lo pude hacer funcionar (puede ser el `dmesg`?)
-- `lspci` El comando lspci lista todos los componentes tipo pci  
-- `at 10:00 PM` y luego cualquier cosa (se sale con Ctrl + D) Nos permite programar tareas, instalar con `sudo apt update, sudo apt install at`
-- `netstat` muestra información sobre las conexiones de red. Instalar con (`sudo apt install net-tools`)
-- `mount` Se utiliza para montar dispositivos y particiones para su uso por el sistema operativo (se instala con `sudo apt install nfs-common`)
-- `umount -V` permite eliminar un sistema de archivos remoto que esté montando en la actualidad (no usar xd)
-- `head nomArchivo` muestra el principio de un archivo (de texto)
-- `losetup` losetup de comandos de Linux se utiliza para fijar el dispositivo de bucle 
-
-
+| Comando  | Funcion |
+| ------------- | ------------- |
+| `shutdown`  | Te permite apagar, reiniciar y detener tu sistema  |
+| `sudo shutdown`  | Apaga el sistema luego de 2 minutos aprox  |
+| `sudo shutdown now`  | Apaga el sistema ahora  |
+| `sudo shutdown -r`  | Reinicia el sistema luego de 2 minutos aprox  |
+| `sudo shutdown -c`  | Cancela el reinicio/apagado  |
+| `sudo reboot`  | Sirve para reiniciar el equipo  |
+| `sudo halt`  | El comando halt detiene la CPU del ordenador  |
+| `locate nomArchivo`  | es como el find pero mas canchero (`sudo apt install locate`)   |
+| `uname -letra`  | verifica la información del sistema (s, r, v, n, m, p, i, o, **[a]()**)  |
+| `gmesg`  | No lo pude hacer funcionar (puede ser el `dmesg`?)  |
+| `lspci`  | El comando lspci lista todos los componentes tipo pci    |
+| `at 10:00 PM`  | y luego cualquier cosa (se sale con Ctrl + D) Nos permite programar tareas, instalar con `sudo apt update, sudo apt install at`  |
+| `netstat`  | muestra información sobre las conexiones de red. Instalar con (`sudo apt install net-tools`)  |
+| `mount`  | Se utiliza para montar dispositivos y particiones para su uso por el sistema operativo (se instala con `sudo apt install nfs-common`)  |
+| `umount -V`  | permite eliminar un sistema de archivos remoto que esté montando en la actualidad (no usar xd)  |
+| `head nomArchivo`  | muestra el principio de un archivo (de texto)  |
+| `losetup`  | losetup de comandos de Linux se utiliza para fijar el dispositivo de bucle   |
 
 ## Comandos Practica 2
 
