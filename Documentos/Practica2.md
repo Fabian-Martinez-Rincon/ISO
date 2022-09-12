@@ -231,7 +231,8 @@ su orden. Suponga que se ejecutan desde un usuario que no es root ni pertenece a
 de root. (Asuma que se encuentra posicionado en el directorio de trabajo del usuario con el
 que se logueó). En caso de no poder ejecutarse el comando, indique la razón
 
-```l s −l > prueba
+```
+l s −l > prueba
 ps > PRUEBA
 chmod 710 prueba
 chown root : root PRUEBA
@@ -250,6 +251,7 @@ shutdown
 ```
 
 ## `8)` Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones:
+
 `(a)` Terminar el proceso con PID 23.\
 `(b)` Terminar el proceso llamado init. ¿Qué resultados obtuvo?\
 `(c)` Buscar todos los archivos de usuarios en los que su nombre contiene la cadena “.conf”\
