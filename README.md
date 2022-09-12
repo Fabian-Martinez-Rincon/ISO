@@ -4,12 +4,12 @@
 - [Condiciones de aprobación](/Documentos/condiciones.md)
 - [Notion de Iñaki con la Practica 1](https://nova-calcium-fbd.notion.site/Introducci-n-a-Sistemas-Operativos-78eceb443ac04f919bdf3394bbe22d27)
 
-## Parcial 1 (Practica 1,2 y 3) Sistemas Operativos Aplicados
+## Parcial 1 (Practica 1,2 y 3)
 
 - [Practica 1](/Documentos/Practica1.md)
 - [Practica 2](/Documentos/Practica2.md)
 
-## Comandos utilizados en la practica 1 
+## Comandos Practica 1 
 
 ### Sudo
 
@@ -32,7 +32,7 @@ Sudo es un programa diseñado para facilitar a los administradores del sistema p
 - `who` Verifiqua los usuarios conectado al sistema
 - `tail ISO2022-1` Muestra en pantalla las últimas líneas de un archivo
 
-### ⚠️ Un poco mas peligrosos ⚠️ 
+### ⚠️ Peligrosos ⚠️ 
 Antes de usar un comando `sudo`, primero tenes que entrar como super-usuario con el comando `su`
 
 - `shutdown` Te permite apagar, reiniciar y detener tu sistema
@@ -60,7 +60,7 @@ sudo runlevel
 sudo telinit 2
 ```
 
-## Comandos utilizados en la practica 2
+## Comandos Practica 2
 
 - `adduser` Crea un usuario  
 - `usermod -aG sudo pepe` Dar permisos
