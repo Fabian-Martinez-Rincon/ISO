@@ -14,23 +14,27 @@
 **Sudo**
 
 Sudo es un programa diseñado para facilitar a los administradores del sistema permitir a algunos usuarios ejecutar órdenes como root (u otro usuario).
-- `apt install sudo` Instala el sudo en debian 11
-- `cat /var/log/syslog` Nos muestra el contenido dentro del fichero/archivo
-- `more /var/log/syslog` Igual que cat solo que muestra linea por linea 
-- `less /var/log/syslog` Nos permite indicar la cantidad de lineas que queremos ver
-- `vi nomArchivo` i para cambiar de modo, escribirmos, luego `esc` y despues :wq
-- `file nombreArchivo` Nos indica que tipo de contenido posee
-- `cd Desktop` Nos permite meternos en un directorio interno
--  `cd ..` Para retroceder en el fichero
-- `mkdir "ISO 2022"` Cree la carpeta ISO2017
-- `cd 'ISO 2022'` Acceda a la carpeta
-- `touch ISO2022-1 ISO2022-2` Crea dos archivos
-- `ls` Lista el contenido del directorio actual
-- `pwd` Visualiza la ruta donde estoy situado
-- `find ./'ISO 2022' -name "ISO*"` Busqua todos los archivos en los que su nombre contiene la cadena “iso*” 
-- `df` Informa la cantidad de espacio libre en disco
-- `who` Verifica los usuarios conectados al sistema
-- `tail ISO2022-1` Muestra en pantalla las últimas líneas de un archivo
+
+| Comando  | Funcion |
+| ------------- | ------------- |
+| `apt install sudo`  | Instala el sudo en debian 11  |
+| `cat /var/log/syslog`  | Nos muestra el contenido dentro del fichero/archivo  |
+| `more /var/log/syslog`  | Igual que cat solo que muestra linea por linea   |
+| `less /var/log/syslog`  | Nos permite indicar la cantidad de lineas que queremos ver  |
+| `vi nomArchivo`  | i para cambiar de modo, escribirmos, luego `esc` y despues :wq  |
+| `file nombreArchivo`  | Nos indica que tipo de contenido posee  |
+| `cd Desktop`  | Nos permite meternos en un directorio interno  |
+| `cd ..`  |  Para retroceder en el fichero  |
+| `mkdir "ISO 2022"`  | Cree la carpeta ISO2017  |
+| `cd 'ISO 2022'`  | Acceda a la carpeta  |
+| `touch ISO2022-1 ISO2022-2`  | Crea dos archivos  |
+| `ls`  | Lista el contenido del directorio actual  |
+| `pwd`  | Visualiza la ruta donde estoy situado  |
+| `find ./'ISO 2022' -name "ISO*"`  | Busqua todos los archivos en los que su nombre contiene la cadena “iso*”   |
+| `df`  | Informa la cantidad de espacio libre en disco  |
+| `who`  | Verifica los usuarios conectados al sistema  |
+| `tail ISO2022-1`  | Muestra en pantalla las últimas líneas de un archivo  |
+
 
 ### ⚠️ Peligrosos ⚠️ 
 Antes de usar un comando `sudo`, primero tenes que entrar como super-usuario con el comando `su`
