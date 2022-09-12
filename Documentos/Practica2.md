@@ -139,16 +139,34 @@ exec / usr / sbin /mysqld
 Sistema de archivos Ext2, ext3 y ext4: Así como Apple y Microsoft tienen sus propios sistemas, estos tres (cada uno evolución del anterior) son los utilizados por las distribuciones GNU/Linux
 
 `(b)` ¿A qué hacen referencia las siglas UID y GID? ¿Pueden coexistir UIDs iguales en un sistema GNU/Linux? Justifique.\
+Los sistemas operativos Linux y Unix utilizan el UID (User ID o ID de usuario) para identificar al usuario particular. El GID (Group ID o ID de grupo) se utiliza para identificar a un grupo. Supongo que no podrian existir dos iguales ya que no los podrias distinguir.
+
+- [Fuente](https://techlandia.com/13112435/como-encontrar-el-uid-y-el-gid)
+
 `(c)` ¿Qué es el usuario root? ¿Puede existir más de un usuario con este perfil en GNU/Linux? ¿Cuál es la UID del root?.\
-`(d)` Agregue un nuevo usuario llamado iso2017 a su instalación de GNU/Linux, especifique que su home sea creada en /home/iso_2017, y hágalo miembro del grupo catedra (si no existe, deberá crearlo). Luego, sin iniciar sesión como este usuario cree un archivo en su home personal que le pertenezca. Luego de todo esto, borre el usuario y verifique que no queden registros de él en los archivos de información de los usuarios y grupos.\
+En Linux el usuario root es aquel que tiene todos los permisos en el sistema operativo, es decir, es el súper administrador. Puede acceder a cualquier archivo y también ejecutar cualquier comando, incluidos los que nunca deberías ejecutar.
+Si, podes tenes los usuarios root que quieras. [Fuente](https://www.xn--linuxenespaol-skb.com/tutoriales/crear-usuario-con-privilegios-de-root-en-linux/)
+
+- En Linux, la cuenta de superusuario es root , que siempre tiene el UID 0
+
+`(d)` Agregue un nuevo usuario llamado iso2017 a su instalación de GNU/Linux, especifique que su home sea creada en /home/iso_2017, y hágalo miembro del grupo catedra (si no existe, deberá crearlo). Luego, sin iniciar sesión como este usuario cree un archivo en su home personal que le pertenezca. Luego de todo esto, borre el usuario y verifique que no queden registros de él en los archivos de información de los usuarios y grupos.
+
+- `sudo adduser iso2022` creo un usuario y en home le agrego /home/ (contra = nombre para pruebas)
+- `sudo gropadd catedra` creo un grupo 
+- `sudo usermod -a -G catedra iso2022`
+- `id -nG iso2022` menciona los grupos a los que pertenece mi usuario
+- `sudo login iso2022` entro como el usuario
+- `cd ..` para ir a la home personal y crear un archivo (creo)
+- `sudo userdel iso2022` lo elimina pero aun tenemos todos los archivos creados por este
+
 `(e)` Investigue la funcionalidad y parámetros de los siguientes comandos:
-- **useradd ó adduser:**
-- **usermod:**
-- **userdel:**
-- **su:**
-- **groupadd:**
-- **who:**
-- **groupdel:**
+- **useradd nombre ó adduser nombre:** Crea un nuevo usuario
+- **usermod nombre:** nos permite modificar todos los parámetros de la cuenta de un usuario creado con anterioridad.
+- **userdel nombre:** Elimina un usuario
+- **su:** entrar al super usuario (tenes los permisos de TODO)
+- **groupadd nombre:** te deja crear un grupo
+- **who:** Verifiqua los usuarios conectado al sistema
+- **groupdel nombre:** elimina un grupo
 - **passwd:**
 
 ## `4)` FileSystem:

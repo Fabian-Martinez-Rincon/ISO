@@ -1,7 +1,3 @@
----
-layout: post
-title: Sistemas Operativos
----
 
 <h1 align="center"> 🐧 Introducción a Sistemas Operativos</h1>
 
@@ -18,7 +14,7 @@ title: Sistemas Operativos
 ### Sudo
 
 Sudo es un programa diseñado para facilitar a los administradores del sistema permitir a algunos usuarios ejecutar órdenes como root (u otro usuario).
-
+- `apt install sudo` Instala el sudo en debian 11
 - `cat /var/log/syslog` Nos muestra el contenido dentro del fichero/archivo
 - `more /var/log/syslog` Igual que cat solo que muestra linea por linea 
 - `less /var/log/syslog` Nos permite indicar la cantidad de lineas que queremos ver
@@ -66,37 +62,7 @@ sudo telinit 2
 
 ## Comandos utilizados en la practica 2
 
-- `useradd ó adduser`
-- `usermod`
-- `userdel`
-- `su`
-- `groupadd`
-- `who`
-- `groupdel`
-- `passwd`
-- `chmod`
-- `chown`
-- `chgrp`
-- `cd`
-- `umount`
-- `mkdir`
-- `du`
-- `rmdir`
-- `df`
-- `mount`
-- `ln`
-- `ls`
-- `pwd`
-- `cp`
-- `mv`
-- `ps`
-- `kill`
-- `pstree`
-- `killall`
-- `top`
-- `nice`
-- `tar`
-- `grep`
-- `gzip`
-- `zgrep`
-- `wc`
+- `adduser` Crea un usuario  
+- `usermod -aG sudo pepe` Dar permisos
+- `sudo groupadd grupode5`
+- `usermod -a -G grupode5 pepe`
