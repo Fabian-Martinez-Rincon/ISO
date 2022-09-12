@@ -284,7 +284,7 @@ Un nombre de archivo puede tener entre 1 y 255 caracteres. recomendable emplear 
 
 `b)` Investigue el funcionamiento de los editores vi y mcedit, y los comandos cat y more.
 
-### **VI**
+- **VI**
 Es el editor de texto clásico en UNIX. Puede usarse en cualquier tipo de terminal con un mínimo de teclas.
 
 **MODOS DE VI:**
@@ -296,14 +296,14 @@ Las teclas ejecutan acciones (comandos) que permiten mover el cursor, ejecutar c
 comandos que se pueden utilizar para ingresar a este modo.
 - **Modo línea o ex:** Se escriben comandos en la última línea al final de la pantalla.
 
-### MCEDIT
+- **MCEDIT**
 
 Al igual que Vi funciona como gestor de archivos
 
-### cat
+- **cat**
 Es la abreviatura de concatenar. Esto se refiere al hecho de que cat puede ser utilizado para combinar múltiples archivos en un archivo, también se puede utilizar para crear nuevos archivos y para mostrar el contenido de los archivos existentes.
 
-### more
+- **more**
 Es un comando para ver (pero no modificar) el contenido de un archivo o comando y visualizarlo por páginas.
 
 
