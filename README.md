@@ -57,23 +57,18 @@ Antes de usar un comando `sudo`, primero tenes que entrar como super-usuario con
 
 ## Comandos Practica 2
 
-- `ls /etc/rc0.d` miramos el conenido de la runlevel 0. Estos scripts controlan la detención o inicio de un servicio
-- `sudo runlevel` nos muestra la runlevel actual (es un estado que le indica al sistema cómo funcionar)
-- `sudo telinit 2` nos cambia a la runlevel 2
-- `sudo adduser usuarioNuevo` Crea un usuario  
-- `sudo groupadd grupode5` crea un grupo
-- `sudo groupdel grupode5` elimina un grupo
-- `sudo usermod -a -G grupode5 pepe` agrega usuarios a un grupo
-- `id -nG iso2022` menciona los grupos a los que pertenece mi usuario
-- `sudo login iso2022` entro como el usuario
-- `sudo userdel iso2022` Elimina un usuario
-- `groups` nos permite ver los grupos a los que pertenece mi usuario
-- `su` para entrar como super usuario
-- `who` Verifiqua los usuarios conectado al sistema
-- `passwd` cambia la constraseña del usuario actual
-
-| First Header  | Second Header |
+| Comando  | Funcion |
 | ------------- | ------------- |
+| `ls /etc/rc0.d` | miramos el conenido de la runlevel 0. Estos scripts controlan la detención o inicio de un servicio |
+| `sudo runlevel` | nos muestra la runlevel actual (es un estado que le indica al sistema cómo funcionar) |
+| `sudo telinit 2` | nos cambia a la runlevel 2 |
+| `sudo adduser usuarioNuevo` | Crea un usuario |
+| `sudo groupadd grupode5` | crea un grupo |
+| `sudo groupdel grupode5` | elimina un grupo |
+| `sudo usermod -a -G grupode5 pepe` | agrega usuarios a un grupo |
+| `id -nG iso2022` | menciona los grupos a los que pertenece mi usuario |
+| `sudo login iso2022` | entro como el usuario |
+| `sudo userdel iso2022` | Elimina un usuario |
 | `groups`  | Permite ver los grupos a los que pertenece mi usuario  |
 | `su`  | Entrar como super usuario  |
 | `who`  | Verifiqua los usuarios conectado al sistema  |
