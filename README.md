@@ -1,7 +1,7 @@
 
 <h1 align="center"> 🐧 Introducción a Sistemas Operativos</h1>
 
-- [Condiciones de aprobación](/Documentos/)
+- [Condiciones de aprobación](/Documentos/condiciones.md)
 - [Notion de Iñaki con la Practica 1](https://nova-calcium-fbd.notion.site/Introducci-n-a-Sistemas-Operativos-78eceb443ac04f919bdf3394bbe22d27)
 
 ## Parcial 1 (Practica 1,2 y 3) Sistemas Operativos Aplicados
