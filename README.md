@@ -11,7 +11,7 @@
 
 ## Comandos Practica 1 
 
-### Sudo
+**Sudo**
 
 Sudo es un programa diseñado para facilitar a los administradores del sistema permitir a algunos usuarios ejecutar órdenes como root (u otro usuario).
 - `apt install sudo` Instala el sudo en debian 11
@@ -29,7 +29,7 @@ Sudo es un programa diseñado para facilitar a los administradores del sistema p
 - `pwd` Visualiza la ruta donde estoy situado
 - `find ./'ISO 2022' -name "ISO*"` Busqua todos los archivos en los que su nombre contiene la cadena “iso*” 
 - `df` Informa la cantidad de espacio libre en disco
-- `who` Verifiqua los usuarios conectado al sistema
+- `who` Verifica los usuarios conectados al sistema
 - `tail ISO2022-1` Muestra en pantalla las últimas líneas de un archivo
 
 ### ⚠️ Peligrosos ⚠️ 
@@ -54,15 +54,15 @@ Antes de usar un comando `sudo`, primero tenes que entrar como super-usuario con
 - `losetup` losetup de comandos de Linux se utiliza para fijar el dispositivo de bucle 
 
 
-```
-ls /etc/rc0.d
-sudo runlevel
-sudo telinit 2
-```
 
 ## Comandos Practica 2
 
-- `adduser` Crea un usuario  
-- `usermod -aG sudo pepe` Dar permisos
-- `sudo groupadd grupode5`
-- `usermod -a -G grupode5 pepe`
+- `ls /etc/rc0.d` miramos el conenido de la runlevel 0. Estos scripts controlan la detención o inicio de un servicio
+- `sudo runlevel` nos muestra la runlevel actual (es un estado que le indica al sistema cómo funcionar)
+- `sudo telinit 2` nos cambia a la runlevel 2
+- `sudo adduser usuarioNuevo` Crea un usuario  
+- `sudo groupadd grupode5` crea un grupo
+- `sudo usermod -a -G grupode5 pepe` agrega usuarios a un grupo
+- `id -nG iso2022` menciona los grupos a los que pertenece mi usuario
+- `sudo login iso2022` entro como el usuario
+- `sudo userdel iso2022` Elimina un usuario

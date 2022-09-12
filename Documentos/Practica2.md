@@ -131,8 +131,16 @@ exec / usr / sbin /mysqld
 ```
 
 `(n)` ¿Qué es sytemd?\
+SystemD es el administrador de servicios y sistemas en Linux, y la estandarización de la mayoría de distribuciones de Debian y Red Hat. SystemD fue desarrollado con el objetivo de encargarse de arrancar todo lo que está por debajo del Kernel, permitiendo ejecutar varios procesos de manera simultánea. Además, permite un seguimiento de procesos a través del uso de grupos de control del sistema operativo Linux.
+
+- [Fuente](https://keepcoding.io/blog/que-es-systemd/)
+
 `(ñ)` ¿A qué hace referencia el concepto de activación de socket en systemd?\
 `(o)` ¿A qué hace referencia el concepto de cgroup?
+Los cgroups o grupos de control, son una característica del kernel Linux que permite que los procesos se organicen en grupos jerárquicos con el fin de limitar y monitorear el uso de varios tipos de recursos. Con cgroups cada proceso corre en su propio espacio del kernel y de la memoria. Cuando se tienen la necesidad, un administrador puede configurar fácilmente un cgroup para limitar los recursos que puede utilizar un proceso.
+
+- [Fuente](https://clibre.io/blog/por-secciones/hardening/item/425-cgroups-grupos-de-control-en-gnu-linux)
+
 
 ## `3)` Usuarios
 `(a)` ¿Qué archivos son utilizados en un sistema GNU/Linux para guardar la información de los usuarios?\
@@ -181,18 +189,19 @@ Si, podes tenes los usuarios root que quieras. [Fuente](https://www.xn--linuxene
 `(e)` Explique los conceptos de “full path name” y “relative path name”. De ejemplos claros de cada uno de ellos.\
 `(f)` ¿Con qué comando puede determinar en qué directorio se encuentra actualmente? ¿Existe alguna forma de ingresar a su directorio personal sin necesidad de escribir todo el path completo? ¿Podría utilizar la misma idea para acceder a otros directorios? ¿Cómo? Explique con un ejemplo.\
 `(g)` Investigue la funcionalidad y parámetros de los siguientes comandos relacionados con el uso del FileSystem:
-- **cd:**
-- **umount:**
-- **mkdir:**
-- **du:**
-- **rmdir:**
-- **df:**
-- **mount:**
-- **ln:**
-- **ls:**
-- **pwd:**
-- **cp:**
-- **mv:**
+
+- **cd:** Nos permite meternos en un directorio interno
+- **umount:** permite eliminar un sistema de archivos remoto que esté montando en la actualidad (no usar xd)
+- **mkdir:** Cree una carpeta
+- **du:** para ver el tamaño de ficheros y carpetas
+- **rmdir:** El comando linux rmdir sirve para borrar directorios
+- **df:** Informa la cantidad de espacio libre en disco
+- **mount:** Se utiliza para montar dispositivos y particiones para su uso por el sistema operativo (se instala con `sudo apt install nfs-common`)
+- **ln:** crear un enlace simbólico al fichero o directorio (como un acceso directo)
+- **ls:** Lista el contenido del directorio actual
+- **pwd:** Visualiza la ruta donde estoy situado
+- **cp:** sirve para copiar archivos y directorios dentro del sistema de archivos
+- **mv:** se utiliza para mover o renombrar los archivos y directorios
 
 ## `5)` Procesos
 
@@ -204,12 +213,12 @@ Si, podes tenes los usuarios root que quieras. [Fuente](https://www.xn--linuxene
 `(f)` Redirección. ¿Qué tipo de redirecciones existen? ¿Cuál es su finalidad? Cite ejemplos de utilización.\
 `(g)` Comando kill. ¿Cuál es su funcionalidad? Cite ejemplos.\
 `(h)` Investigue la funcionalidad y parámetros de los siguientes comandos relacionados con el manejo de procesos en GNU/Linux. Además, compárelos entre ellos:
-- **ps:**
-- **kill:**
-- **pstree:**
-- **killall:**
-- **top:**
-- **nice:**
+- **ps:** Muestra información de los procesos activos.
+- **kill:** Sirve para cancelar procesos
+- **pstree:** muestra un árbol de procesos.
+- **killall:** nos permite matar un proceso escribiendo su nombre
+- **top:** Sirve para ver los procesos de ejecución del sistema (y más cosas) en tiempo real
+- **nice:** Ejecuta un comando con una prioridad determinada, o modifica la prioridad a de un proceso
 
 ## `6)` Otros comandos de Linux (Indique funcionalidad y parámetros)
 
