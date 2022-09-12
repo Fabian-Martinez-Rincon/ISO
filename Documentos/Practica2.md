@@ -167,14 +167,14 @@ Si, podes tenes los usuarios root que quieras. [Fuente](https://www.xn--linuxene
 - **groupadd nombre:** te deja crear un grupo
 - **who:** Verifiqua los usuarios conectado al sistema
 - **groupdel nombre:** elimina un grupo
-- **passwd:**
+- **passwd:** de deja cambiar la constraseña del usuario actual
 
 ## `4)` FileSystem:
 `(a)` ¿Cómo son definidos los permisos sobre archivos en un sistema GNU/Linux?\
 `(b)` Investigue la funcionalidad y parámetros de los siguientes comandos relacionados con los permisos en GNU/Linux:
-- **chmod:**
-- **chown:**
-- **chgrp:**
+- **chmod:** nos permite gestionar permisos
+- **chown:** permite cambiar el propietario de un archivo o directorio en sistemas
+- **chgrp:** nos permite cambiar el grupo al que pertenece un archivo
 
 `(c)` Al utilizar el comando chmod generalmente se utiliza una notación octal asociada para definir permisos. ¿Qué significa esto? ¿A qué hace referencia cada valor?\
 `(d)` ¿Existe la posibilidad de que algún usuario del sistema pueda acceder a determinado archivo para el cual no posee permisos? Nombrelo, y realice las pruebas correspondientes.\
@@ -356,7 +356,7 @@ referencia a archivos:
   - **Otros:** Permisos de escritura y ejecución
 
 
-## `13)`. Indique qué comando/s es necesario para realizar cada una de las acciones de la siguiente secuencia de pasos (considerando su orden de aparición):
+## `13)` Indique qué comando/s es necesario para realizar cada una de las acciones de la siguiente secuencia de pasos (considerando su orden de aparición):
 `(a)` Cree un directorio llamado logs en el directorio /tmp.\
 `(b)` Copie todo el contenido del directorio /var/log en el directorio creado en el punto anterior.\
 `(c)` Empaquete el directorio creado en 1, el archivo resultante se debe llamar "misLogs.tar".\
