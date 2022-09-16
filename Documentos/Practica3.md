@@ -212,14 +212,63 @@ y
 vector2=( 5 98 3 41 8 ).
 ```
 
+Complete este script de manera tal de implementar la suma elemento a elemento entre
+ambos vectores y que la misma sea impresa en pantalla de la siguiente manera:
+
+```
+La suma de los elementos de la posición 0 de los vectores es 6
+La suma de los elementos de la posición 1 de los vectores es 178
+...
+La suma de los elementos de la posición 4 de los vectores es 10
+```
+
 # 25) Ejercicio
+Realice un script que agregue en un arreglo todos los nombres de los usuarios del sistema
+pertenecientes al grupo “users”. Adicionalmente el script puede recibir como parametro:
+
+- **“-b n”**: Retorna el elemento de la posición n del arreglo si el mismo existe. Caso contrario, un mensaje de error.
+- **“-l”:** Devuelve la longitud del arreglo
+- **“-i”:** Imprime todos los elementos del arreglo en pantalla
 
 # 26) Ejercicio
+Escriba un script que reciba una cantidad desconocida de parámetros al momento de su invocación (debe validar que al menos se reciba uno). Cada parámetro representa la ruta absoluta de un archivo o directorio en el sistema. El script deberá iterar por todos los parámetros recibidos, y solo para aquellos parámetros que se encuentren en posiciones impares (el primero, el tercero, el qverificar si el archivo o directorio existen en el sistema, imprimiendo en pantalla que tipo de objeto es (archivo o directorio). Además, deberá informar la cantidad de archivos o
+directorios inexistentes en el sistema.
+
 
 # 27) Ejercicio
 
+Realice un script que implemente a través de la utilización de funciones las operaciones
+básicas sobre arreglos:
+
+- inicializar: Crea un arreglo llamado array vacío
+- agregar_elem \<parametro1>: Agrega al final del arreglo el parámetro recibido
+- eliminar_elem \<parametro1>: Elimina del arreglo el elemento que se encuentra en la
+posición recibida como parámetro. Debe validar que se reciba una posición válida
+- longitud: Imprime la longitud del arreglo en pantalla
+- imprimir: Imprime todos los elementos del arreglo en pantalla
+- inicializar_Con_Valores \<parametro1>\<parametro2>: Crea un arreglo con longitud
+\<parametro1>y en todas las posiciones asigna el valor \<parametro2>
+
+
 # 28) Ejercicio
+Realice un script que reciba como parámetro el nombre de un directorio. Deberá validar que
+el mismo exista y de no existir causar la terminación del script con código de error 4. Si el
+directorio existe deberá contar por separado la cantidad de archivos que en él se encuentran
+para los cuales el usuario que ejecuta el script tiene permiso de lectura y escritura, e informar
+dichos valores en pantalla. En caso de encontrar subdirectorios, no deberán procesarse, y
+tampoco deberán ser tenidos en cuenta para la suma a informar.
+
 
 # 29) Ejercicio
 
+Implemente un script que agregue a un arreglo todos los archivos del directorio /home cuya terminación sea .doc. Adicionalmente, implemente las siguientes funciones que le permitan acceder a la estructura creada:
+
+- verArchivo \<nombre_de_archivo>: Imprime el archivo en pantalla si el mismo se
+encuentra en el arreglo. Caso contrario imprime el mensaje de error “Archivo no encontrado” y devuelve como valor de retorno 5
+- cantidadArchivos: Imprime la cantidad de archivos del /home con terminación .doc
+- borrarArchivo \<nombre_de_archivo>: Consulta al usuario si quiere eliminar el archivo lógicamente. Si el usuario responde Si, elimina el elemento solo del arreglo. Si el usuario responde No, elimina el archivo del arreglo y también del FileSystem. Debe validar que el archivo exista en el arreglo. En caso de no existir, imprime el mensaje de error “Archivo no encontrado” y devuelve como valor de retorno 10
+
+
 # 30) Ejercicio
+
+Realice un script que mueva todos los programas del directorio actual (archivos ejecutables) hacia el subdirectorio “bin” del directorio HOME del usuario actualmente logueado. El script debe imprimir en pantalla los nombres de los que mueve, e indicar cuántos ha movido, o que no ha movido ninguno. Si el directorio “bin” no existe,deberá ser creado.
