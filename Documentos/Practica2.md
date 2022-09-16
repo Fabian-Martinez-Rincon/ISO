@@ -275,11 +275,60 @@ Algunas opciones:
     ps -o ruser,pid,comm=Comando
 
 `(c)` ¿Qué significa que un proceso se está ejecutando en Background? ¿Y en Foreground?\
+Si se ejecuta en background hace referencia a **todos aquellos procesos o rutinas de ejecución que se realizan en segundo plano**
+
+**Si se muestra la ejecución del comando dentro de la terminal** se dice que está en el foreground (primer plano).
+
 `(d)` ¿Cómo puedo hacer para ejecutar un proceso en Background? ¿Como puedo hacer para pasar un proceso de background a foreground y viceversa?\
+Para colocar un proceso en segundo plano durante su ejecución, se debe utilizar la combinación teclas: Ctrl + Z. Para volver a colocar un proceso en primer plano, se debe ingresar el comando “fg”. Comando para ver procesos que se estén ejecutando: “ps” o con modificador para ver tambien procesos del sistema: “ps ax”.
+
 `(e)` Pipe ( | ). ¿Cuál es su finalidad? Cite ejemplos de su utilización.\
+Linux Pipes **te permiten procesar secuencialmente una serie de comandos referentes a un conjunto de datos, o mover eficazmente los datos de un lado a otro entre comandos**, por ejemplo 
+
+ls | more
+• Se ejecuta el comando ls y la salida del mismo, es enviada
+como entrada del comanda more
+
 `(f)` Redirección. ¿Qué tipo de redirecciones existen? ¿Cuál es su finalidad? Cite ejemplos de utilización.\
+Las **redirecciones** consisten en trasladar información de un tipo a otro
+
+Hay 2 tipos de redirecciones 
+
+- Al utilizar redirecciones mediante > (destructiva):
+    - Si el archivo de destino no existe, se lo crea
+    - Si el archivo existe, se lo trunca y se escribe el nuevo contenido
+- Al utilizar redirecciones mediante >> (no destructiva):
+    - Si el archivo de destino no existe, se lo crea
+    - Si el archivo existe, se agrega la información al final
+
+EJEMPLOS
+
+>  Redirecciona **stdout** hacía un archivo. Lo crea si no existe, si existe lo sobreescribe.
+```
+ls -l > lista.txt
+```
+
+>> (La salida del comando se envía a un archivo en vez de la terminal.)
+
+Redirecciona **stdout** hacía un archivo. Lo crea si no existe, si existe concatena la salida al final de este.
+
+```
+ps -ef >> processos.txt
+```
+(Concatena al archivo procesos.txt la salida del comando.)
+
 `(g)` Comando kill. ¿Cuál es su funcionalidad? Cite ejemplos.\
 Sirve para cancelar procesos
+kill es un **comando utilizado para enviar mensajes sencillos a los  ejecutándose en el sistema** . Por defecto el mensaje que se envía es la señal de terminación (SIGTERM), que solicita al proceso limpiar su estado y salir.
+
+`kill -l`
+
+Este comando mostrará una página con las diferentes señales del comando kill, con sus nombres y números correspondientes. Si bien hay varias señales disponibles, en la mayoría de los casos se usa SIGKILL (9) y SIGTERM (15).
+
+ejemplo 
+
+`kill 63772` elimina el proceso con id 63772
+
 
 `(h)` Investigue la funcionalidad y parámetros de los siguientes comandos relacionados con el manejo de procesos en GNU/Linux. Además, compárelos entre ellos:
 - **ps:** Muestra información de los procesos activos.
