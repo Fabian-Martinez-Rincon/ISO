@@ -8,6 +8,7 @@
 
 - [Practica 1](/Documentos/Practica1.md)
 - [Practica 2](/Documentos/Practica2.md)
+- [Practica 3](/Documentos/Practica3.md)
 
 ## Comandos Practica 1 
 
