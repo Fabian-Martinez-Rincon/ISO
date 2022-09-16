@@ -129,24 +129,88 @@ Ejemplo:
 
 
 # 15) Ejercicio
+**Comando cut**. El comando cut nos permite procesar la líneas de la entrada que reciba
+(archivo, entrada estándar, resultado de otro comando, etc) y cortar columnas o campos,
+siendo posible indicar cual es el delimitador de las mismas. Investigue los parámetros que
+puede recibir este comando y cite ejemplos de uso.
 
 # 16) Ejercicio
+Realizar un script que reciba como parámetro una extensión y haga un reporte con 2
+columnas, el nombre de usuario y la cantidad de archivos que posee con esa extensión. Se
+debe guardar el resultado en un archivo llamado **reporte.txt**
 
 # 17) Ejercicio
+Escribir un script que al ejecutarse imprima en pantalla los nombre de los archivos que se encuentran en el directorio actual, intercambiando minúsculas por mayúsculas, además de eliminar la letra a (mayúscula o minúscula). Ejemplo, directorio actual:
+
+```bash
+IsO
+pepE
+Maria
+Si ejecuto: ./ejercicio17
+```
+
+
+Obtendré como resultado
+
+```
+iSo
+PEPe
+mRI
+```
+
+**Ayuda**: Investigar el comando **tr**
 
 # 18) Ejercicio
 
+Crear un script que verifique cada 10 segundos si un usuario se ha loqueado en el sistema (el nombre del usuario será pasado por parámetro). Cuando el usuario finalmente se loguee, el programa deberá mostrar el mensaje ”Usuario XXX logueado en el sistema” y salir.
+
 # 19) Ejercicio
+
+Escribir un Programa de “Menu de Comandos Amigable con el Usuario” llamado menu, el cual, al ser invocado, mostrará un menú con la selección para cada uno de los scripts creados en esta práctica. Las instrucciones de como proceder deben mostrarse junto con el menú. El menú deberá iniciarse y permanecer activo hasta que se seleccione Salir. Por ejemplo:
+
+```
+MENU DE COMANDOS
+03. Ejercicio 3
+12. Evaluar Expresiones
+13. Probar estructuras de control
+...
+Ingrese la opción a ejecutar: 03
+```
 
 # 20) Ejercicio
 
+Realice un scrip que simule el comportamiento de una estructura de PILA e implemente las siguientes funciones aplicables sobre una estructura global definida en el script:
+
+- **push:** Recibe un parámetro y lo agrega en la pila 
+- **pop:** Saca un elemento de la pila
+- **lenght:** Devuelve la longitud de la pila
+- **print:** Imprime todos elementos de la pila
+
 # 21) Ejercicio
 
+- Agregue 10 elementos a la pila.
+- Saque 3 de ellos.
+- Imprima la longitud de la cola.
+- Luego imprima la totalidad de los elementos que en ella se encuentan.
+
 # 22) Ejercicio
+Dada la siguiente declaración al comienzo de un script: num=(10 3 5 7 9 3 5 4) (la cantidad de elementos del arreglo puede variar). Implemente la función productoria dentro de este script, cuya tarea sea multiplicar todos los números del arreglo
 
 # 23) Ejercicio
+Implemente un script que recorra un arreglo compuesto por números e imprima en pantalla sólo los números pares y que cuente sólo los números impares y los informe en pantalla al finalizar el recorrido
+
 
 # 24) Ejercicio
+Dada la definición de 2 vectores del mismo tamaño y cuyas longitudes no se conocen
+
+```bash
+vector1=( 1 .. N)
+vector2=( 7 .. N)
+Por ejemplo:
+vector1=( 1 80 65 35 2 )
+y
+vector2=( 5 98 3 41 8 ).
+```
 
 # 25) Ejercicio
 
