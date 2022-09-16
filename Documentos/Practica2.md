@@ -86,7 +86,7 @@ Este programa es el encargado de lanzar los scripts de inicialización del siste
 `(g)` Suponga que se encuentra en el runlevel \<X>. Indique qué comando(s) ejecutaría para cambiar al runlevel \<Y>. ¿Este cambio es permanente? ¿Por qué?\
 No es permanente ya que cuando reinicias el dispositivo, vulven a ejecutarse las runlevels de forma normal. [telinit](https://baulderasec.wordpress.com/analisis-software/linux/5-comenzar-con-linux-y-editar-ficheros/5-7-1-comprobar-el-modo-de-ejecucion/5-7-2-saber-el-modo-de-ejecucion-actual/5-7-2-1-cambiar-los-modos-de-ejecucion-con-init-o-telinit/)
 
-```
+```powershell
 ls /etc/rc0.d
 sudo runlevel
 sudo telinit 2
@@ -115,14 +115,16 @@ No entiendo una mrd, despues lo reviso.
 [Fuente](https://esgeeks.com/systemv-upstart-systemd-linux/#:~:text=Upstart%20%3A%20Upstart%20es%20un%20reemplazo,los%20sistemas%20init%20tradicionales%20SysV.) Que paja escribir
 
 `(l)` Qué reemplaza a los scripts rc de SystemV en Upstart? ¿En que ubicación del filesystem se encuentran?\
+Los scripts son reemplazados con jobs. Cada job es definido en el /etc/init (.conf)
+
 `(m)` Dado el siguiente job de upstart perteneciente al servicio de base de datos del mysql indique a qué hace referencia cada línea del mismo:
 
-```
+```powershell
 # MySQL Servise
-description "MySQL Server "
-autor "info autor"
-start on ( net − device − up
-        and local −filesystems
+description "MySQL Server " {Descripcion}
+autor "info autor" {Autor}
+start on ( net − device − up {Iniciar base de datos}
+        and local −filesystems   {}
         and runlevel [2345])
 stop on runlevel [016]
 [...]
@@ -133,10 +135,24 @@ exec / usr / sbin /mysqld
 `(n)` ¿Qué es sytemd?\
 SystemD es el administrador de servicios y sistemas en Linux, y la estandarización de la mayoría de distribuciones de Debian y Red Hat. SystemD fue desarrollado con el objetivo de encargarse de arrancar todo lo que está por debajo del Kernel, permitiendo ejecutar varios procesos de manera simultánea. Además, permite un seguimiento de procesos a través del uso de grupos de control del sistema operativo Linux.
 
+- Es un sistema que centraliza la administracion de demonios y librerias del sistema
+- Mejora el paralelismo de booteo
+- Puede ser controlado por systemctl
+- Compatible con SysV → si es llamado como init
+- El demonio systemd reemplaza al proceso init → este pasa a terner PID 1
+- Los runlevels son reemplazados por targets
+- Al igual que con Upstart el archivo /etc/inittab no existe m´as
+
 - [Fuente](https://keepcoding.io/blog/que-es-systemd/)
 
 `(ñ)` ¿A qué hace referencia el concepto de activación de socket en systemd?\
-`(o)` ¿A qué hace referencia el concepto de cgroup?
+Es un mecanismo de iniciación bajo demanda → podemos ofrecer una variedad de servicios sin que realmente esten iniciados
+- Cuando el sockect recibe una conexión spawnea el servicio y le
+pasa el socket
+- No hay necesidad de definir dependencias entre servicios → se
+inician todos los sockets en primer medida
+
+`(o)` ¿A qué hace referencia el concepto de cgroup?\
 Los cgroups o grupos de control, son una característica del kernel Linux que permite que los procesos se organicen en grupos jerárquicos con el fin de limitar y monitorear el uso de varios tipos de recursos. Con cgroups cada proceso corre en su propio espacio del kernel y de la memoria. Cuando se tienen la necesidad, un administrador puede configurar fácilmente un cgroup para limitar los recursos que puede utilizar un proceso.
 
 - [Fuente](https://clibre.io/blog/por-secciones/hardening/item/425-cgroups-grupos-de-control-en-gnu-linux)
@@ -179,15 +195,39 @@ Si, podes tenes los usuarios root que quieras. [Fuente](https://www.xn--linuxene
 
 ## `4)` FileSystem:
 `(a)` ¿Cómo son definidos los permisos sobre archivos en un sistema GNU/Linux?\
+**Los permisos están divididos en tres tipos: lectura, escritura y ejecución**
+. Estos permisos pueden ser fijados para tres clases de usuarios: el propietario del archivo o directorio, los integrantes del grupo al que pertenece y todos los demás usuarios.
+
 `(b)` Investigue la funcionalidad y parámetros de los siguientes comandos relacionados con los permisos en GNU/Linux:
 - **chmod:** nos permite gestionar permisos
 - **chown:** permite cambiar el propietario de un archivo o directorio en sistemas
 - **chgrp:** nos permite cambiar el grupo al que pertenece un archivo
 
 `(c)` Al utilizar el comando chmod generalmente se utiliza una notación octal asociada para definir permisos. ¿Qué significa esto? ¿A qué hace referencia cada valor?\
+Existen 3 tipos de permisos y se basan en una notacion octal para referenciar a cada uno:
+
+| Permiso  | Valor | Octal |
+| ------------- | ------------- | ------------- |
+| Lectura  | R  | 4 |
+| Escritura  | W  | 2 |
+| Ejecucion  | X  | 1 |
+
 `(d)` ¿Existe la posibilidad de que algún usuario del sistema pueda acceder a determinado archivo para el cual no posee permisos? Nombrelo, y realice las pruebas correspondientes.\
+El usuario root puede acceder a determinados archivos sin necesidad de poseer permisos o con manejo de interrupciones.
+
 `(e)` Explique los conceptos de “full path name” y “relative path name”. De ejemplos claros de cada uno de ellos.\
+full path name es la ruta completa a ese archivo o carpeta desde el directorio / del sistema de archivos. ejemplo `/home/your_username/my_script`
+
+relative path name : Rastrea la ruta desde el directorio actual a través de su padre o sus subdirectorios y archivos. ..\Documents
+
 `(f)` ¿Con qué comando puede determinar en qué directorio se encuentra actualmente? ¿Existe alguna forma de ingresar a su directorio personal sin necesidad de escribir todo el path completo? ¿Podría utilizar la misma idea para acceder a otros directorios? ¿Cómo? Explique con un ejemplo.\
+Con el comando pwd podemos saber el directorio actual.
+
+con cd /user volvemos al directorio personal, aunque con solo poner `cd`o `cd ~` ya cumplimos esa función.
+
+Se podría acceder a diferentes directorios gracias la ubicación relativa o atajos ya prestablecidos como `cd ..` para volver al directorio anterior sin necesidad de poner ningún atajo
+
+
 `(g)` Investigue la funcionalidad y parámetros de los siguientes comandos relacionados con el uso del FileSystem:
 
 - **cd:** Nos permite meternos en un directorio interno
@@ -206,7 +246,34 @@ Si, podes tenes los usuarios root que quieras. [Fuente](https://www.xn--linuxene
 ## `5)` Procesos
 
 `(a)` ¿Qué es un proceso? ¿A que hacen referencia las siglas PID y PPID? ¿Todos los procesos tienen estos atributos en GNU/Linux? Justifique. Indique qué otros atributos tiene un proceso.\
+Es un programa en ejecución Para nosotros serán sinónimos: tarea,
+job y proceso.
+
+PID significa ID de proceso, que significa Número de identificación para el proceso que se está ejecutando actualmente en la memoria. 2. PPID son las siglas de Parent Process ID, lo que significa que Parent Process es el responsable de crear el proceso actual (Child Process). A través del proceso principal, se creará el proceso secundario.
+
 `(b)` Indique qué comandos se podrían utilizar para ver qué procesos están en ejecución en un sistema GNU/Linux.\
+El comando `ps` posee algunas opciones para mostrar los procesos en ejecucion
+
+Algunas opciones:
+
+- e o : muestra todos los procesos ax
+- u (o  o ) *usuario*: muestra los procesos de un usuario U
+    - -user
+- u: salida en formato usuario
+- j: salida en formato *job* (muestra PID, PPID, etc.)
+- f o : salida en formato largo l
+- f: muestra un árbol con la jerarquía de procesos
+- k (o ) *campo*: ordena la salida por algún campo (p.e. )
+    - -sort
+    
+    ps uxak rss
+    
+- o (o  o ) *formato*: permite definir el formato de salida
+    
+    o -format
+    
+    ps -o ruser,pid,comm=Comando
+
 `(c)` ¿Qué significa que un proceso se está ejecutando en Background? ¿Y en Foreground?\
 `(d)` ¿Cómo puedo hacer para ejecutar un proceso en Background? ¿Como puedo hacer para pasar un proceso de background a foreground y viceversa?\
 `(e)` Pipe ( | ). ¿Cuál es su finalidad? Cite ejemplos de su utilización.\
