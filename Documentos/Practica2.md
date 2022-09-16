@@ -358,44 +358,63 @@ su orden. Suponga que se ejecutan desde un usuario que no es root ni pertenece a
 de root. (Asuma que se encuentra posicionado en el directorio de trabajo del usuario con el
 que se logueó). En caso de no poder ejecutarse el comando, indique la razón
 
-```
-l s −l > prueba
-ps > PRUEBA
-chmod 710 prueba
-chown root : root PRUEBA
-chmod 777 PRUEBA
-chmod 700 / etc / passwd
-passwd root
-rm PRUEBA
-man / etc / shadow
-find / −name ∗ .conf
-usermod root −d /home/ newroot −L
-cd / root
-rm ∗
-cd / etc
-cp ∗ /home −R
-shutdown
+```powershell
+l s −l > prueba {No se puede acceder a pruebas pq no existe el fichero}                         
+ps > PRUEBA   {crea el archivo prueba con lo obtenido de ps}
+chmod 710 prueba  {no existe el archivo prueba dado que se creo en mayusculas}
+chown root : root PRUEBA {No poseo los permisos para modificar eso}
+chmod 777 PRUEBA  {Concedo todos los permisos tanto al dueño,al grupo y al usuario}
+chmod 700 / etc / passwd {No poseo los permisos para modificar eso}
+passwd root {No se puede ver la contraseña del root}
+rm PRUEBA {elimina el archivo PRUEBA}
+man / etc / shadow {nos muestra la documentacion del comando shadow}
+find / −name ∗ .conf {Orden no encontrada}
+usermod root −d /home/ newroot −L {Orden no encontrada}
+cd / root {permiso denegado}
+rm ∗ {No se pueden borrar los directorios}
+cd / etc {Nos direcciona a la carpeta /etc }
+cp ∗ /home −R {no se pueden copiar los directorios}
+shutdown {apaga el sistema}
 ```
 
 ## `8)` Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones:
 
 `(a)` Terminar el proceso con PID 23.\
+`kill 23`
+
 `(b)` Terminar el proceso llamado init. ¿Qué resultados obtuvo?\
+No esta permitido
+
 `(c)` Buscar todos los archivos de usuarios en los que su nombre contiene la cadena “.conf”\
-`(d)` Guardar una lista de procesos en ejecución el archivo /home/<su nombre de usuario>/procesos\
-`(e)` Cambiar los permisos del archivo /home/<su nombre de usuario>/xxxx a:
+`grep -iRl .conf /home/user`
+
+`(d)` Guardar una lista de procesos en ejecución el archivo /home/\<su nombre de usuario>/procesos\
+`ps > /home/user/procesos`
+
+`(e)` Cambiar los permisos del archivo /home/\<su nombre de usuario>/xxxx a:
 - **Usuario:** Lectura, escritura, ejecución
 - **Grupo:** Lectura, ejecución
 - **Otros:** ejecución
+`chmod 751 /home/nomUsuario/xxxx`
 
 `(f)` Cambiar los permisos del archivo /home/<su nombre de usuario>/yyyy a:
 - **Usuario:** Lectura, escritura.
 - **Grupo:** Lectura, ejecución
 - **Otros:** Ninguno
 
+`chmod 650 /home/user/yyyy`
+
 `(g)` Borrar todos los archivos del directorio /tmp\
+```powershell
+cd /tmp
+rm *
+```
+
 `(h)` Cambiar el propietario del archivo /opt/isodata al usuario iso2010\
-`(i)` Guardar en el archivo /home/<su nombre de usuario>/donde el directorio donde me encuentro en este momento, en caso de que el archivo exista no se debe eliminar su contenido anterior.
+`chown iso2010 /opt/isodata`
+
+`(i)` Guardar en el archivo /home/\<su nombre de usuario>/donde el directorio donde me encuentro en este momento, en caso de que el archivo exista no se debe eliminar su contenido anterior.\
+`pwd >> /home/user/donde`
 
 ## `9)` Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones
 
