@@ -32,13 +32,35 @@
 - [30) Realice un script que mueva todos los programas del directorio actual](#30-ejercicio)
 
 # 1) Ejercicio
-¿Qué es el Shell Scripting? ¿A qué tipos de tareas están orientados los script? ¿Los scripts
-deben compilarse? ¿Por qué?
+¿Qué es el Shell Scripting? ¿A qué tipos de tareas están orientados los script?  ¿Los scripts deben compilarse? ¿Por qué?
+ Interprete de comandos
+- Interactivo
+- En sistemas operativos *nix es configurable
+- Proveen estructuras de control que permiten programar Shell scripts
+Están orientados para:
+   - Automatizacion de tareas
+   - Aplicaciones interactivas
+   - Aplicaciones con interfaz grafica (con el comando zenity, por
+   ejemplo)
+
+
 
 # 2) Ejercicio
-Investigar la funcionalidad de los comandos echo y read
-- (a) ¿Como se indican los comentarios dentro de un script?
-- (b) ¿Cómo se declaran y se hace referencia a variables dentro de un script?
+Investigar la funcionalidad de los comandos echo y read/
+- `Echo:` Se utiliza en los scripts de Bash y en los archivos por lotes para mostrar el texto de estado en un archivo o en tu pantalla. 
+- `Read:` se trata del input desde teclado
+
+
+- (a) ¿Como se indican los comentarios dentro de un script? Los comentarios tienen que comenzar con el símbolo #
+- (b) ¿Cómo se declaran y se hace referencia a variables dentro de un script? No necesita declarar una variable. Se creará sólo con asignarle un valor a su referencia. Luego se referencia con el símbolo $
+Ejemplo
+
+
+```bash
+#!/bin/bash 
+CAD="¡Hola Mundo!"
+echo $CAD
+```
 
 # 3) Ejercicio
 Crear dentro del directorio personal del usuario logueado un directorio llamado practicashell-script y dentro de él un archivo llamado mostrar.sh cuyo contenido sea el siguiente:
