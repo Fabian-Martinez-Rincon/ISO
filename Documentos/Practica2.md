@@ -252,7 +252,7 @@ job y proceso.
 PID significa ID de proceso, que significa Número de identificación para el proceso que se está ejecutando actualmente en la memoria. 2. PPID son las siglas de Parent Process ID, lo que significa que Parent Process es el responsable de crear el proceso actual (Child Process). A través del proceso principal, se creará el proceso secundario.
 
 `(b)` Indique qué comandos se podrían utilizar para ver qué procesos están en ejecución en un sistema GNU/Linux.\
-El comando `ps` posee algunas opciones para mostrar los procesos en ejecucion
+El comando `ps` posee algunas opciones para mostrar los procesos en ejecución
 
 Algunas opciones:
 
@@ -341,22 +341,42 @@ ejemplo
 ## `6)` Otros comandos de Linux (Indique funcionalidad y parámetros)
 
 `(a)` ¿A qué hace referencia el concepto de empaquetar archivos en GNU/Linux?\
-`(b)` Seleccione 4 archivos dentro de algún directorio al que tenga permiso y sume el tamaño de cada uno de estos archivos. Cree un archivo empaquetado conteniendo estos 4 archivos y compare los tamaños de los mismos. ¿Qué característica nota?\
+Es agrupar en un solo fichero varios ficheros y/o directorios
+
+`(b)` Seleccione 4 archivos dentro de algún directorio al que tenga permiso y sume el tamaño de cada uno de estos archivos. Cree un archivo empaquetado conteniendo estos 4 archivos y compare los tamaños de los mismos. ¿Qué característica nota?
+
+```cmd
+tar cvf ejercicio6.tar directorioNuevo
+```
+
+los archivos empaquetados redujeron su tamaño en comparaciona estar los 4 “sueltos”
+
+
 `(c)` ¿Qué acciones debe llevar a cabo para comprimir 4 archivos en uno solo? Indique la secuencia de comandos ejecutados.\
+Teniendo en cuenta que tenemos 4 archivos en el directorio Descargas/ejercicio6 y nos situamos en Descargas ejecutamos lo siguiente
+
+```shell
+tar cvfz archivo.tar.gz ejercicio 6
+```
+Esto nos dejaria un archivo empaquetado de archivos comprimidos en un solo archivo archivo.tar.gz y para acceder a dicha informacion haremos
+
+```powershell
+tar xvfz archivo.tar.gz
+```
+
 `(d)` ¿Pueden comprimirse un conjunto de archivos utilizando un único comando?\
+Si los archivos están en el mismo directorio utilizamos el comando visto anteriormente
+
 `(e)` Investigue la funcionalidad de los siguientes comandos:
-- **tar:**
-- **grep:**
-- **gzip:**
-- **zgrep:**
-- **wc:**
+- **tar:** empaqueta/desempaqueta varios archivos en uno solo, puede realizar compresión sin perdida
+- **grep:** Buscar todos los archivos de usuarios en los que su nombre contiene la cadena “.conf”
+- **gzip:** comprime/descomprime archivos
+- **zgrep:** lo mismo que grep pero puede estar comprimido el archivo
+- **wc:**  cuenta nuevas líneas, palabras y bytes para los archivos dados
 
 ## `7)` Ejercicio
 
-Enunciado: Indique qué acción realiza cada uno de los comandos indicados a continuación considerando
-su orden. Suponga que se ejecutan desde un usuario que no es root ni pertenece al grupo
-de root. (Asuma que se encuentra posicionado en el directorio de trabajo del usuario con el
-que se logueó). En caso de no poder ejecutarse el comando, indique la razón
+Enunciado: Indique qué acción realiza cada uno de los comandos indicados a continuación considerando su orden. Suponga que se ejecutan desde un usuario que no es root ni pertenece al grupo de root. (Asuma que se encuentra posicionado en el directorio de trabajo del usuario con el que se logueó). En caso de no poder ejecutarse el comando, indique la razón
 
 ```powershell
 l s −l > prueba {No se puede acceder a pruebas pq no existe el fichero}                         
@@ -419,10 +439,30 @@ rm *
 ## `9)` Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones
 
 `(a)` Ingrese al sistema como usuario “root”\
+```powershell
+su
+```
 `(b)` Cree un usuario. Elija como nombre, por convención, la primer letra de su nombre seguida de su apellido. Asígnele una contraseña de acceso.\
+```powershell
+sudo adduser il {crear}
+passwd il {nueva contra}
+```
+
 `(c)` ¿Qué archivos fueron modificados luego de crear el usuario y qué directorios se crearon?\
+se modificaron los archivos /etc/passwd y se creo el directorio personal del perfil en /home/nombrelegido
+
 `(d)` Crear un directorio en /tmp llamado cursada2017\
+```powershell
+cd /tmp
+mkdir cursada2017
+```
+
 `(e)` Copiar todos los archivos de /var/log al directorio antes creado.\
+En modo superusuario/root
+```powershell
+cp /var/log /tmp/cursada2017
+```
+
 `(f)` Para el directorio antes creado (y los archivos y subdirectorios contenidos en él) cambiar el propietario y grupo al usuario creado y grupo users.\
 `(g)` Agregue permiso total al dueño, de escritura al grupo y escritura y ejecución a todos los demás usuarios para todos los archivos dentro de un directorio en forma recursiva.\
 `(h)` Acceda a otra terminal virtual para loguearse con el usuario antes creado.\

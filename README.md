@@ -87,4 +87,11 @@ Antes de usar un comando `sudo`, primero tenes que entrar como super-usuario con
 | `du` | Muestra tamaño de ficheros y carpetas (actual) |
 | `rmdir nombreCarpeta` | Elimina una carpeta |
 | `cp nombreArchivo nombreCarpeta` | Sirve para copiar archivos y directorios dentro del sArch |
-| `mv` | a revisar |
+| `mv` | e utiliza para mover o renombrar los archivos y directorios |
+|`ps`  | posee algunas opciones para mostrar los procesos en ejecución |
+| `ls \| more ` | Se ejecuta el comando ls y la salida del mismo, es enviada como entrada del comanda more |
+| `grep -iRl .conf ` | Buscar todos los archivos de usuarios en los que su nombre contiene la cadena “.conf” |
+| `tar cvf ejercicio6.tar directorioNuevo` | Comprime el directorio o archivo marcado |
+| `gzip` | comprime/descomprime archivos ([Parametros que puede recibir](https://www.solvetic.com/tutoriales/article/11693-comprimir-o-descomprimir-archivos-con-gzip-en-linux/)) |
+| `zgrep` | lo mismo que grep pero puede estar comprimido el archivo |
+| `wc` | cuenta nuevas líneas, palabras y bytes para los archivos  |
