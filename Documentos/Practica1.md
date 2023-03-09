@@ -5,8 +5,8 @@
 
 <div align="center">
 
-[Siguiente](/Documentos/Practica2.md.md)<br>
-[Anterior](/Documentos/Practica6.md.md)
+[Siguiente](/Documentos/Practica2.md)<br>
+[Anterior](/Documentos/Practica6.md)
 
 </div>
 
