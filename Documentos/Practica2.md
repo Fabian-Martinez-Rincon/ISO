@@ -33,6 +33,8 @@ Estos comandos si bien son muy utiles y simples, carecen de algunas funcionalida
 `(c)` Nombre los comandos más comunes que se le pueden enviar al editor de textos vi
 - [Comandos basicos](https://docs.oracle.com/cd/E19620-01/805-7644/6j76klopr/index.html)
 
+---
+
 ## `2)` Proceso de Arranque SystemV:
 `(a)` Enumere los pasos del proceso de inicio de un sistema GNU/Linux, desde que se prende la PC hasta que se logra obtener el login en el sistema.
 
@@ -157,6 +159,7 @@ Los cgroups o grupos de control, son una característica del kernel Linux que pe
 
 - [Fuente](https://clibre.io/blog/por-secciones/hardening/item/425-cgroups-grupos-de-control-en-gnu-linux)
 
+---
 
 ## `3)` Usuarios
 `(a)` ¿Qué archivos son utilizados en un sistema GNU/Linux para guardar la información de los usuarios?\
@@ -192,6 +195,8 @@ Si, podes tenes los usuarios root que quieras. [Fuente](https://www.xn--linuxene
 - **who:** Verifiqua los usuarios conectado al sistema
 - **groupdel nombre:** elimina un grupo
 - **passwd:** de deja cambiar la constraseña del usuario actual
+
+---
 
 ## `4)` FileSystem:
 `(a)` ¿Cómo son definidos los permisos sobre archivos en un sistema GNU/Linux?\
@@ -242,6 +247,8 @@ Se podría acceder a diferentes directorios gracias la ubicación relativa o ata
 - **pwd:** Visualiza la ruta donde estoy situado
 - **cp:** sirve para copiar archivos y directorios dentro del sistema de archivos
 - **mv:** se utiliza para mover o renombrar los archivos y directorios
+
+---
 
 ## `5)` Procesos
 
@@ -338,6 +345,8 @@ ejemplo
 - **top:** Sirve para ver los procesos de ejecución del sistema (y más cosas) en tiempo real
 - **nice:** Ejecuta un comando con una prioridad determinada, o modifica la prioridad a de un proceso
 
+---
+
 ## `6)` Otros comandos de Linux (Indique funcionalidad y parámetros)
 
 `(a)` ¿A qué hace referencia el concepto de empaquetar archivos en GNU/Linux?\
@@ -374,6 +383,8 @@ Si los archivos están en el mismo directorio utilizamos el comando visto anteri
 - **zgrep:** lo mismo que grep pero puede estar comprimido el archivo
 - **wc:**  cuenta nuevas líneas, palabras y bytes para los archivos dados
 
+---
+
 ## `7)` Ejercicio
 
 Enunciado: Indique qué acción realiza cada uno de los comandos indicados a continuación considerando su orden. Suponga que se ejecutan desde un usuario que no es root ni pertenece al grupo de root. (Asuma que se encuentra posicionado en el directorio de trabajo del usuario con el que se logueó). En caso de no poder ejecutarse el comando, indique la razón
@@ -396,6 +407,8 @@ cd / etc {Nos direcciona a la carpeta /etc }
 cp ∗ /home −R {no se pueden copiar los directorios}
 shutdown {apaga el sistema}
 ```
+
+---
 
 ## `8)` Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones:
 
@@ -436,6 +449,8 @@ rm *
 `(i)` Guardar en el archivo /home/\<su nombre de usuario>/donde el directorio donde me encuentro en este momento, en caso de que el archivo exista no se debe eliminar su contenido anterior.\
 `pwd >> /home/user/donde`
 
+---
+
 ## `9)` Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones
 
 `(a)` Ingrese al sistema como usuario “root”\
@@ -472,6 +487,8 @@ cp /var/log /tmp/cursada2017
 `(l)` Vuelva a la terminal del usuario root, y envíele un mensaje al usuario anteriormente creado, avisándole que el sistema va a ser apagado.\
 `(m)` Apague el sistema
 
+---
+
 ## `10)` Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones
 
 `(a)` Cree un directorio cuyo nombre sea su número de legajo e ingrese a él.\
@@ -485,6 +502,8 @@ Nombre, Apellido, Número de alumno y dirección de correo electrónico. El arch
 `(d)` Vaya al directorio /etc y verifique su contenido. Cree un archivo dentro de su directorio personal cuyo nombre sea leame donde el contenido del mismo sea el listado de todos los archivos y directorios contenidos en /etc. ¿Cuál es la razón por la cuál puede crear este archivo si ya existe un archivo llamado "LEAME.en este directorio?.\
 `(e)` ¿Qué comando utilizaría y de qué manera si tuviera que localizar un archivo dentro del filesystem? ¿Y si tuviera que localizar varios archivos con características similares? Explique el concepto teórico y ejemplifique.\
 `(f)` Utilizando los conceptos aprendidos en el punto e), busque todos los archivos cuya extensión sea .so y almacene el resultado de esta búsqueda en un archivo dentro del directorio creado en a). El archivo deberá llamarse .ejercicio_f".
+
+---
 
 ## `11)` Ejercicio
 
@@ -522,6 +541,8 @@ mkdir ejercicio5
 
 ![image](https://user-images.githubusercontent.com/55964635/189272687-459c381d-b44c-4a8d-b3d0-aa3acc44e1ae.png)
 
+---
+
 ## `12)` Ejercicio
 
 **Enunciado:** Cree una estructura desde el directorio /home que incluya varios directorios, subdirectorios y archivos, según el esquema siguiente. Asuma que “usuario” indica cuál es su nombre de usuario. Además deberá tener en cuenta que dirX hace referencia a directorios y fX hace
@@ -543,8 +564,10 @@ referencia a archivos:
   - **Grupo:** Permisos de escritura
   - **Otros:** Permisos de escritura y ejecución
 
+---
 
 ## `13)` Indique qué comando/s es necesario para realizar cada una de las acciones de la siguiente secuencia de pasos (considerando su orden de aparición):
+
 `(a)` Cree un directorio llamado logs en el directorio /tmp.\
 `(b)` Copie todo el contenido del directorio /var/log en el directorio creado en el punto anterior.\
 `(c)` Empaquete el directorio creado en 1, el archivo resultante se debe llamar "misLogs.tar".\
