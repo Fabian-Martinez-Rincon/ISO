@@ -1,4 +1,14 @@
+
+
+<div align='center'>
+
 # 📓 Practica 2
+
+<p><img  src="https://media.giphy.com/media/GETBSteB6mBddfeadH/giphy.gif"></p>
+
+</div>
+
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 El objetivo de esta práctica es que el alumno comprenda los aspectos principales acerca de la estructura del sistema Operativo GNU/Linux en lo que respecta a procesos, usuarios, filesystems,
 permisos, etc
@@ -18,6 +28,8 @@ permisos, etc
 - [12) Cree una estructura desde el directorio /home que incluya varios directorios....](#12-ejercicio)
 - [13) Indique qué comando/s es necesario para realizar cada una de las acciones de la siguiente secuencia de paso](#13-indique-qué-comandos-es-necesario-para-realizar-cada-una-de-las-acciones-de-la-siguiente-secuencia-de-pasos-considerando-su-orden-de-aparición)
 
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+
 ## `1)` Editor de textos:
 `(a)` Nombre al menos 3 editores de texto que puede utilizar desde la línea de comandos.
 
@@ -33,7 +45,7 @@ Estos comandos si bien son muy utiles y simples, carecen de algunas funcionalida
 `(c)` Nombre los comandos más comunes que se le pueden enviar al editor de textos vi
 - [Comandos basicos](https://docs.oracle.com/cd/E19620-01/805-7644/6j76klopr/index.html)
 
----
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `2)` Proceso de Arranque SystemV:
 `(a)` Enumere los pasos del proceso de inicio de un sistema GNU/Linux, desde que se prende la PC hasta que se logra obtener el login en el sistema.
@@ -159,7 +171,7 @@ Los cgroups o grupos de control, son una característica del kernel Linux que pe
 
 - [Fuente](https://clibre.io/blog/por-secciones/hardening/item/425-cgroups-grupos-de-control-en-gnu-linux)
 
----
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `3)` Usuarios
 `(a)` ¿Qué archivos son utilizados en un sistema GNU/Linux para guardar la información de los usuarios?\
@@ -196,7 +208,7 @@ Si, podes tenes los usuarios root que quieras. [Fuente](https://www.xn--linuxene
 - **groupdel nombre:** elimina un grupo
 - **passwd:** de deja cambiar la constraseña del usuario actual
 
----
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `4)` FileSystem:
 `(a)` ¿Cómo son definidos los permisos sobre archivos en un sistema GNU/Linux?\
@@ -248,7 +260,7 @@ Se podría acceder a diferentes directorios gracias la ubicación relativa o ata
 - **cp:** sirve para copiar archivos y directorios dentro del sistema de archivos
 - **mv:** se utiliza para mover o renombrar los archivos y directorios
 
----
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `5)` Procesos
 
@@ -345,7 +357,7 @@ ejemplo
 - **top:** Sirve para ver los procesos de ejecución del sistema (y más cosas) en tiempo real
 - **nice:** Ejecuta un comando con una prioridad determinada, o modifica la prioridad a de un proceso
 
----
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `6)` Otros comandos de Linux (Indique funcionalidad y parámetros)
 
@@ -383,7 +395,7 @@ Si los archivos están en el mismo directorio utilizamos el comando visto anteri
 - **zgrep:** lo mismo que grep pero puede estar comprimido el archivo
 - **wc:**  cuenta nuevas líneas, palabras y bytes para los archivos dados
 
----
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `7)` Ejercicio
 
@@ -408,7 +420,7 @@ cp ∗ /home −R {no se pueden copiar los directorios}
 shutdown {apaga el sistema}
 ```
 
----
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `8)` Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones:
 
@@ -449,7 +461,7 @@ rm *
 `(i)` Guardar en el archivo /home/\<su nombre de usuario>/donde el directorio donde me encuentro en este momento, en caso de que el archivo exista no se debe eliminar su contenido anterior.\
 `pwd >> /home/user/donde`
 
----
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `9)` Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones
 
@@ -487,7 +499,7 @@ cp /var/log /tmp/cursada2017
 `(l)` Vuelva a la terminal del usuario root, y envíele un mensaje al usuario anteriormente creado, avisándole que el sistema va a ser apagado.\
 `(m)` Apague el sistema
 
----
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `10)` Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones
 
@@ -503,7 +515,7 @@ Nombre, Apellido, Número de alumno y dirección de correo electrónico. El arch
 `(e)` ¿Qué comando utilizaría y de qué manera si tuviera que localizar un archivo dentro del filesystem? ¿Y si tuviera que localizar varios archivos con características similares? Explique el concepto teórico y ejemplifique.\
 `(f)` Utilizando los conceptos aprendidos en el punto e), busque todos los archivos cuya extensión sea .so y almacene el resultado de esta búsqueda en un archivo dentro del directorio creado en a). El archivo deberá llamarse .ejercicio_f".
 
----
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `11)` Ejercicio
 
@@ -541,7 +553,7 @@ mkdir ejercicio5
 
 ![image](https://user-images.githubusercontent.com/55964635/189272687-459c381d-b44c-4a8d-b3d0-aa3acc44e1ae.png)
 
----
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `12)` Ejercicio
 
@@ -564,7 +576,7 @@ referencia a archivos:
   - **Grupo:** Permisos de escritura
   - **Otros:** Permisos de escritura y ejecución
 
----
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `13)` Indique qué comando/s es necesario para realizar cada una de las acciones de la siguiente secuencia de pasos (considerando su orden de aparición):
 
@@ -573,3 +585,5 @@ referencia a archivos:
 `(c)` Empaquete el directorio creado en 1, el archivo resultante se debe llamar "misLogs.tar".\
 `(d)` Empaquete y comprima el directorio creado en 1, el archivo resultante se debe llamar "misLogs.tar.gz".\
 `(e)` Copie los archivos creados en 3 y 4 al directorio de trabajo de su usuario.
+
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
