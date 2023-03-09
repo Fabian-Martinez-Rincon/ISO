@@ -11,9 +11,7 @@
 </div>
 
 
----
-
-
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 - [Condiciones de aprobación](/Documentos/condiciones.md)
 - [Notion de Iñaki con Practicas](https://nova-calcium-fbd.notion.site/Introducci-n-a-Sistemas-Operativos-78eceb443ac04f919bdf3394bbe22d27)
@@ -22,5 +20,5 @@
 - [Practica 3](/Documentos/Practica3.md)
 - [Comandos Importantes](/Documentos/Comandos.md)
 
----
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
