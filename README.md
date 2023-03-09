@@ -18,6 +18,9 @@
 - [Practica 1](/Documentos/Practica1.md)
 - [Practica 2](/Documentos/Practica2.md)
 - [Practica 3](/Documentos/Practica3.md)
+- [Practica 4](/Documentos/Practica4.md)
+- [Practica 5](/Documentos/Practica5.md)
+- [Practica 6](/Documentos/Practica6.md)
 - [Comandos Importantes](/Documentos/Comandos.md)
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
