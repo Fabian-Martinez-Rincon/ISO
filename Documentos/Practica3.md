@@ -1,8 +1,11 @@
-<div align='center'>
+<h1 align="center"> 📚 Practica 3</h1>
 
-# 📚 Practica 3
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-<p><img  src="https://media.giphy.com/media/h4xnfwFBy8HFA4FBNr/giphy.gif"></p>
+<div align="center">
+
+[Siguiente](/Documentos/Practica4.md)<br>
+[Anterior](/Documentos/Practica2.md)
 
 </div>
 
