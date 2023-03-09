@@ -31,6 +31,8 @@
 - [29) Implemente un script que agregue a un arreglo todos los archivos](#29-ejercicio)
 - [30) Realice un script que mueva todos los programas del directorio actual](#30-ejercicio)
 
+---
+
 # 1) Ejercicio
 ¿Qué es el Shell Scripting? ¿A qué tipos de tareas están orientados los script?  ¿Los scripts deben compilarse? ¿Por qué?
  Interprete de comandos
@@ -43,7 +45,7 @@ Están orientados para:
    - Aplicaciones con interfaz grafica (con el comando zenity, por
    ejemplo)
 
-
+---
 
 # 2) Ejercicio
 Investigar la funcionalidad de los comandos echo y read/
@@ -61,6 +63,8 @@ Ejemplo
 CAD="¡Hola Mundo!"
 echo $CAD
 ```
+
+---
 
 # 3) Ejercicio
 Crear dentro del directorio personal del usuario logueado un directorio llamado practicashell-script y dentro de él un archivo llamado mostrar.sh cuyo contenido sea el siguiente:
@@ -86,20 +90,27 @@ echo "Su directorio actual es:"
 - **(d)** Las backquotes (`) entre el comando whoami ilustran el uso de la sustitución de comandos. ¿Qué significa esto?
 - **(e)** Realizar modificaciones al script anteriormente creado de manera de poder mostrar distintos resultados (cuál es su directorio personal, el contenido de un directorio en particular, el espacio libre en disco, etc.). Pida que se introduzcan por teclado (entrada estándar) otros datos.
 
+---
+
 # 4) Ejercicio
 Parametrización: ¿Cómo se acceden a los parámetros enviados al script al momento de su invocación? ¿Qué información contienen las variables **\$#, \$*, \$?** Y **\$HOME** dentro de un script?
 
+---
 
 # 5) Ejercicio
  ¿Cual es la funcionalidad de comando exit? ¿Qué valores recibe como parámetro y cual es su significado?
 
+---
 
 # 6) Ejercicio
 El comando **expr** permite la evaluación de expresiones. Su sintaxis es: **expr arg1 op arg2**, donde **arg1 y arg2** representan argumentos y op la operación de la expresión. Investigar que tipo de operaciones se pueden utilizar
 
+---
 
 # 7) Ejercicio
 El comando **“test expresión”** permite evaluar expresiones y generar un valor de retorno, true o false. Este comando puede ser reemplazado por el uso de corchetes de la siguiente manera **[ expresión ]**. Investigar que tipo de expresiones pueden ser usadas con el comando test. Tenga en cuenta operaciones para: evaluación de archivos, evaluación de cadenas de caracteres y evaluaciones numéricas.
+
+---
 
 # 8) Ejercicio
 Estructuras de control. Investigue la sintaxis de las siguientes estructuras de control incluidas en shell scripting:
@@ -109,20 +120,30 @@ Estructuras de control. Investigue la sintaxis de las siguientes estructuras de 
 - for
 - select
 
+---
+
 # 9) Ejercicio
 ¿Qué acciones realizan las sentencias break y continue dentro de un bucle? ¿Qué parámetros reciben?
+
+---
 
 # 10) Ejercicio
 ¿Qué tipo de variables existen? ¿Es shell script fuertemente tipado? ¿Se pueden definir arreglos? ¿Cómo?
 
+---
+
 # 11) Ejercicio
 ¿Pueden definirse funciones dentro de un script? ¿Cómo? ¿Cómo se maneja el pasaje de parámetros de una función a la otra?
+
+---
 
 # 12) Ejercicio
 Evaluación de expresione
 - **(a)** Realizar un script que le solicite al usuario 2 números, los lea de la entrada Standard e imprima la multiplicación, suma, resta y cual es el mayor de los números leídos.
 - **(b)** Modificar el script creado en el inciso anterior para que los números sean recibidos como parámetros. El script debe controlar que los dos parámetros sean enviados.
 - **(c)** Realizar una calculadora que ejecute las 4 operaciones básicas: +, - ,*, %. Esta calculadora debe funcionar recibiendo la operación y los números como parámetros
+
+---
 
 # 13) Ejercicio
 Uso de las estructuras de control:
@@ -133,6 +154,7 @@ Uso de las estructuras de control:
    - QuienEsta: muestra los usuarios conectados al sistema.
 - (c) Crear un script que reciba como parámetro el nombre de un archivo e informe si el mismo existe o no, y en caso afirmativo indique si es un directorio o un archivo. En caso de que no exista el archivo/directorio cree un directorio con el nombre recibido como parámetro
 
+---
 
 # 14) Ejercicio
 Renombrando Archivos: haga un script que renombre solo archivos de un directorio pasado como parametro agregandole una CADENA, contemplando las opciones:
@@ -149,6 +171,7 @@ Ejemplo:
 - Y si ejecuto: ./renombra /tmp/ -b EJ
 - El resultado será: /tmp/EJa /tmp/EJb
 
+---
 
 # 15) Ejercicio
 **Comando cut**. El comando cut nos permite procesar la líneas de la entrada que reciba
@@ -156,10 +179,14 @@ Ejemplo:
 siendo posible indicar cual es el delimitador de las mismas. Investigue los parámetros que
 puede recibir este comando y cite ejemplos de uso.
 
+---
+
 # 16) Ejercicio
 Realizar un script que reciba como parámetro una extensión y haga un reporte con 2
 columnas, el nombre de usuario y la cantidad de archivos que posee con esa extensión. Se
 debe guardar el resultado en un archivo llamado **reporte.txt**
+
+---
 
 # 17) Ejercicio
 Escribir un script que al ejecutarse imprima en pantalla los nombre de los archivos que se encuentran en el directorio actual, intercambiando minúsculas por mayúsculas, además de eliminar la letra a (mayúscula o minúscula). Ejemplo, directorio actual:
@@ -182,9 +209,13 @@ mRI
 
 **Ayuda**: Investigar el comando **tr**
 
+---
+
 # 18) Ejercicio
 
 Crear un script que verifique cada 10 segundos si un usuario se ha loqueado en el sistema (el nombre del usuario será pasado por parámetro). Cuando el usuario finalmente se loguee, el programa deberá mostrar el mensaje ”Usuario XXX logueado en el sistema” y salir.
+
+---
 
 # 19) Ejercicio
 
@@ -199,6 +230,8 @@ MENU DE COMANDOS
 Ingrese la opción a ejecutar: 03
 ```
 
+---
+
 # 20) Ejercicio
 
 Realice un scrip que simule el comportamiento de una estructura de PILA e implemente las siguientes funciones aplicables sobre una estructura global definida en el script:
@@ -208,6 +241,8 @@ Realice un scrip que simule el comportamiento de una estructura de PILA e implem
 - **lenght:** Devuelve la longitud de la pila
 - **print:** Imprime todos elementos de la pila
 
+---
+
 # 21) Ejercicio
 
 - Agregue 10 elementos a la pila.
@@ -215,12 +250,17 @@ Realice un scrip que simule el comportamiento de una estructura de PILA e implem
 - Imprima la longitud de la cola.
 - Luego imprima la totalidad de los elementos que en ella se encuentan.
 
+---
+
 # 22) Ejercicio
 Dada la siguiente declaración al comienzo de un script: num=(10 3 5 7 9 3 5 4) (la cantidad de elementos del arreglo puede variar). Implemente la función productoria dentro de este script, cuya tarea sea multiplicar todos los números del arreglo
+
+---
 
 # 23) Ejercicio
 Implemente un script que recorra un arreglo compuesto por números e imprima en pantalla sólo los números pares y que cuente sólo los números impares y los informe en pantalla al finalizar el recorrido
 
+---
 
 # 24) Ejercicio
 Dada la definición de 2 vectores del mismo tamaño y cuyas longitudes no se conocen
@@ -244,6 +284,8 @@ La suma de los elementos de la posición 1 de los vectores es 178
 La suma de los elementos de la posición 4 de los vectores es 10
 ```
 
+---
+
 # 25) Ejercicio
 Realice un script que agregue en un arreglo todos los nombres de los usuarios del sistema
 pertenecientes al grupo “users”. Adicionalmente el script puede recibir como parametro:
@@ -252,10 +294,13 @@ pertenecientes al grupo “users”. Adicionalmente el script puede recibir como
 - **“-l”:** Devuelve la longitud del arreglo
 - **“-i”:** Imprime todos los elementos del arreglo en pantalla
 
+---
+
 # 26) Ejercicio
 Escriba un script que reciba una cantidad desconocida de parámetros al momento de su invocación (debe validar que al menos se reciba uno). Cada parámetro representa la ruta absoluta de un archivo o directorio en el sistema. El script deberá iterar por todos los parámetros recibidos, y solo para aquellos parámetros que se encuentren en posiciones impares (el primero, el tercero, el qverificar si el archivo o directorio existen en el sistema, imprimiendo en pantalla que tipo de objeto es (archivo o directorio). Además, deberá informar la cantidad de archivos o
 directorios inexistentes en el sistema.
 
+---
 
 # 27) Ejercicio
 
@@ -271,6 +316,7 @@ posición recibida como parámetro. Debe validar que se reciba una posición vá
 - inicializar_Con_Valores \<parametro1>\<parametro2>: Crea un arreglo con longitud
 \<parametro1>y en todas las posiciones asigna el valor \<parametro2>
 
+---
 
 # 28) Ejercicio
 Realice un script que reciba como parámetro el nombre de un directorio. Deberá validar que
@@ -280,6 +326,7 @@ para los cuales el usuario que ejecuta el script tiene permiso de lectura y escr
 dichos valores en pantalla. En caso de encontrar subdirectorios, no deberán procesarse, y
 tampoco deberán ser tenidos en cuenta para la suma a informar.
 
+---
 
 # 29) Ejercicio
 
@@ -290,7 +337,10 @@ encuentra en el arreglo. Caso contrario imprime el mensaje de error “Archivo n
 - cantidadArchivos: Imprime la cantidad de archivos del /home con terminación .doc
 - borrarArchivo \<nombre_de_archivo>: Consulta al usuario si quiere eliminar el archivo lógicamente. Si el usuario responde Si, elimina el elemento solo del arreglo. Si el usuario responde No, elimina el archivo del arreglo y también del FileSystem. Debe validar que el archivo exista en el arreglo. En caso de no existir, imprime el mensaje de error “Archivo no encontrado” y devuelve como valor de retorno 10
 
+---
 
 # 30) Ejercicio
 
 Realice un script que mueva todos los programas del directorio actual (archivos ejecutables) hacia el subdirectorio “bin” del directorio HOME del usuario actualmente logueado. El script debe imprimir en pantalla los nombres de los que mueve, e indicar cuántos ha movido, o que no ha movido ninguno. Si el directorio “bin” no existe,deberá ser creado.
+
+---

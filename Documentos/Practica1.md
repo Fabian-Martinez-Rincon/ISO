@@ -1,8 +1,12 @@
+<div align='center'>
+
 # 📒 Practica 1
 
-<p><img width="280" align='right' src="../Img/1.png"></p>
+<p><img  src="https://media.giphy.com/media/26DMVt0JsXL8WrQ0E/giphy.gif"></p>
 
+</div>
 
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 El objetivo de esta práctica es que el alumno se familiarice con los conceptos básicos del sistema
 operativo GNU/Linux, así como con su entorno y comandos principales.
@@ -20,6 +24,7 @@ operativo GNU/Linux, así como con su entorno y comandos principales.
 - [11) Investigue su funcionamiento y parámetros más importantes](#11-nvestigue-su-funcionamiento-y-parámetros-más-importantes)
 - [12) Investigue su funcionamiento y parámetros más importantes](#12-nvestigue-su-funcionamiento-y-parámetros-más-importantes)
 
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## Preguntas/Dudas
 
@@ -27,7 +32,7 @@ operativo GNU/Linux, así como con su entorno y comandos principales.
 - Que funcionalidad tiene el locate, porque no funca
 - Falta el ultimo punto (12)
 
----
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `1)` Características de **GNU/Linux**:
 
@@ -65,7 +70,7 @@ LINUX utiliza la llamada multitarea preventiva, la cual **asegura que todos los
 `f)` ¿Qué es **POSIX**?\
 Es una norma escrita por la IEEE, que define una interfaz estándar del sistema operativo y el entorno, incluyendo un intérprete de comandos (o "shell")
 
----
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `2)` Distribuciones de **GNU/Linux**:
 
@@ -84,7 +89,7 @@ Aunque en la mayoría de los casos la principal diferencia es la GUI, o los pro
 `c)` ¿Qué es Debian? Acceda al sitio 1 e indique cuáles son los objetivos del proyecto y una breve cronología del mismo.\
 Debian es un sistema operativo libre, desarrollado por un monton de comunistas :D
 
----
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `3)` Estructura de GNU/Linux:
 
@@ -99,8 +104,7 @@ Debian es un sistema operativo libre, desarrollado por un monton de comunistas :
 - **Servidor grafico:** es responsable de la activación de la tarjeta de vídeo, ratón y teclado, lo que permite al usuario el uso de interfaces gráficas que son llamadas de Gestores de Ventanas y Entornos de Escritorio
 - **Entornos de escritorio:** Estos Entornos de Escritorio proporcionan el fondo de la pantalla, los paneles, las barras de título de las ventanas y mucho más.
 
-
----
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `4)` Kernel: 
 
@@ -125,7 +129,7 @@ Se encuentra justo en el medio que reside en la memoria e indica qué debe hace
 `f)` ¿El Kernel de GNU/Linux es monolítico? Justifique.\
 El kernel de GNU/Linux es monolítico hibrido, esto se refiere a que el núcleo usa mecanismos de arquitectura tando de diseño **monolítico** como **micronúcleo**
 
----
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `5)` Intérprete de comandos (Shell):
 
@@ -152,7 +156,7 @@ La principal razon es que es muy remplazable, en caso de que falle, se puede rei
 `f)` ¿Es posible definir un intérprete de comandos distinto para cada usuario? ¿Desde dónde se define? ¿Cualquier usuario puede realizar dicha tarea?\
 Cada usuario posee una shell por defecto , la cual puede definirse por un usuario con derechos privilegiados.
 
----
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `6)` Sistema de Archivos (File System):
 
@@ -177,7 +181,7 @@ La estructura basica en la que se organizan es **jerarquica de tipo arbol**. El 
 
 FHS define los directorios principales y sus contenidos en el sistema operativo LinuxGNU/Linux 
 
----
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `7)` Particiones:
 
@@ -218,7 +222,7 @@ Existen 2 tipos:
 - **Destructivos:** permiten crear y eliminar particiones (fdisk)
 - **No destructivo:** permiten crear, eliminar y modificar particiones
 
----
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `8)` Arranque (bootstrap) de un Sistema Operativo:
 
@@ -275,7 +279,7 @@ Ell flujo de control durante el arranque es desde el **[BIOS]()**, al **[gesto
 `i)` ¿Es posible tener en una PC GNU/Linux y otro Sistema Operativo instalado? Justifique\
 Si es posible ya lo vimos anteriormente gracias a las particiones de disco instalar múltiples sistema operativos o a través de maquinas virtuales.
 
----
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `9)` Archivos
 
@@ -330,7 +334,7 @@ Permite detectar el tipo y formato de un archivo
 file nombreArchivo
 ```
 
----
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `10)` Indique qué comando es necesario utilizar para realizar cada una de las siguientes acciones. Investigue su funcionamiento y parámetros más importantes:
 
@@ -375,7 +379,7 @@ vi ISO2022-1
 tail ISO2022-1
 ```
 
----
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `11)` Investigue su funcionamiento y parámetros más importantes:
 
@@ -501,10 +505,12 @@ Se utiliza para dar formato a un dispositivo de almacenamiento de bloque con un 
 `o)` fdisk (con cuidado) \
 Permite al usuario crear particiones en el disco duro de la misma manera que su contraparte de MS-DOS
 
----
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 # `12)` Investigue su funcionamiento y parámetros más importantes:
 
 - `a)`  Indique en qué directorios se almacenan los comandos mencionados en el ejercicio anterior.
 
 Preguntale a dios.
+
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
