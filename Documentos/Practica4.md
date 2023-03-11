@@ -44,18 +44,21 @@ que se encuentra en cátedras virtuales
 - [Ejercicio 23 ]()
 - [Ejercicio 24 ]()
 
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+
 ### 1. Responda en forma sintética sobre los siguientes conceptos:
-- (a) Programa y Proceso
-- (b) Defina Tiempo de retorno (TR) y Tiempo de espera (TE) para un Job.
-- (c) Defina Tiempo Promedio de Retorno (TPR) y Tiempo promedio de espera (TPE)
-- para un lote de JOBS.
-- (d) ¿Qué es el Quantum?
-- (e) ¿Qué significa que un algoritmo de scheduling sea apropiativo o no apropiativo (Preem-ptive o Non-Preemptive)?
-- (f) ¿Qué tareas realizan?:
+- **`(a)`** Programa y Proceso
+- **`(b)`** Defina Tiempo de retorno (TR) y Tiempo de espera (TE) para un Job.
+- **`(c)`** Defina Tiempo Promedio de Retorno (TPR) y Tiempo promedio de espera (TPE) para un lote de JOBS.
+- **`(d)`** ¿Qué es el Quantum?
+- **`(e)`** ¿Qué significa que un algoritmo de scheduling sea apropiativo o no apropiativo (Preem-ptive o Non-Preemptive)?
+- **`(f)`** ¿Qué tareas realizan?:
     - i. Short Term Scheduler
     - ii. Long Term Scheduler
     - iii. Medium Term Scheduler
-- (g) ¿Qué tareas realiza el Dispatcher?
+- **`(g)`** ¿Qué tareas realiza el Dispatcher?
+
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ### 2.Procesos
 
@@ -121,6 +124,8 @@ del bucle for y compruebe los nuevos resultados
 - `(h)` Explique mediante un diagrama las posibles transiciones entre los estados.
 - `(i)` ¿Que scheduler de los mencionados en 1 f se encarga de las transiciones?
 
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+
 ### 3. Para los siguientes algoritmos de scheduling:
 
 - FCFS (Fisrt Coome First Served)
@@ -135,6 +140,9 @@ del bucle for y compruebe los nuevos resultados
 - `(c)` Cual es el mas adecuado según los tipos de procesos y/o SO.
 - `(d)` Cite ventajas y desventajas de su uso
 
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+
+
 ### 4. Para el algoritmo Round Robin, existen 2 variantes:
 
 - Timer Fijo
@@ -145,6 +153,9 @@ del bucle for y compruebe los nuevos resultados
 - `(a)` ¿Qué significan estas 2 variantes?
 - `(b)` Explique mediante un ejemplo sus diferencias.
 - `(c)` En cada variante ¿Dónde debería residir la información del Quantum?
+
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+
 
 ### 5. Se tiene el siguiente lote de procesos que arriban al sistema en el instante 0 (cero):
 
@@ -164,6 +175,8 @@ del bucle for y compruebe los nuevos resultados
 - `(b)` Para cada algoritmo calcule el TR y TE para cada job así como el TPR y el TPE.
 - `(c)` En base a los tiempos calculados compare los diferentes algoritmos.
 
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+
 ### 6. Se tiene el siguiente lote de procesos
 
 - `(a)` Realice los diagramas de Gantt según los siguientes algoritmos de scheduling: <br><br>
@@ -179,9 +192,14 @@ del bucle for y compruebe los nuevos resultados
     - iii. Round Robin con quantum = 1 y Timer Variable
     - iv. Round Robin con quantum = 6 y Timer Variable
 
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+
+
 ### 7. Una variante al algoritmo SJF es el algoritmo SJF apropiativo o SRTF (Shortest Remaining Time First):
 - `(a)` Realice el diagrama del Gantt para este algoritmo según el lote de trabajos del ejercicio 6.
 - `(b)` ¿Nota alguna ventaja frente a otros algoritmos?
+
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ### 8. Suponga que se agregan las siguientes prioridades al lote de procesos del ejercicio 6, donde un menor número indica mayor prioridad:
 
@@ -200,10 +218,15 @@ del bucle for y compruebe los nuevos resultados
 - `(b)` Calcule el TR y TE para cada job así como el TPR y el TPE.
 - `(c)` ¿Nota alguna ventaja frente a otros algoritmos? Bajo que circunstancias lo utilizaría y ante que situaciones considera que la implementación de prioridades podría no ser de mayor relevancia?
 
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+
+
 ### 9. Inanición (Starvation)
 - `(a)` ¿Qué significa?
 - `(b)` ¿Cuál/es de los algoritmos vistos puede provocarla?
 - `(c)` ¿Existe alguna técnica que evite la inanición para el/los algoritmos mencionados en b?
+
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%"
 
 ### 10. Los procesos, durante su ciclo de vida, pueden realizar operaciones de I/O como lecturas o escrituras a disco, cintas, uso de impresoras, etc.
 
@@ -237,24 +260,28 @@ Y suponiendo que la cola de listos de todos los dispositivos se administra media
     | 3 | (R2, 2, 3) |
     | 4 | (R1, 1, 2) |
 
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%"
+
 ### 11. Algunos algoritmos pueden presentar ciertas desventajas cuando en el sistema se cuenta con procesos ligados a CPU y procesos ligados a entrada salida. Analice las mismas para los siguientes algoritmos:
 - `(a)` Round Robin
 - `(b)` SRTF (Shortest Remaining Time First)
+
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ### 12. Para equiparar la desventaja planteada en el ejercicio 11), se plantea la siguiente modificación al algoritmo:
 
 **Algoritmo VRR** (Virtual Round Robin): Este algoritmo funciona igual que el Round Robin, con la diferencia que cuando un proceso regresa de una I/O se coloca en una cola auxiliar. Cuando se tiene que tomar el próximo proceso a ejecutar, los procesos que se encuentra en la cola auxiliar tienen prioridad sobre los otros. Cuando se elije un proceso de la cola auxiliar se le otorga el procesador por tantas unidades de tiempo como le falto ejecutar en su ráfaga de CPU anterior, esto es, se le otorga la CPU por un tiempo que surge entre la diferencia del quantum original y el tiempo usado en la última ráfaga de CPU.
 
-
-
-
-
 - `(a)` Analice el funcionamiento de este algoritmo mediante un ejemplo. Marque en cada instante en que cola se encuentran los procesos.
 - `(b)` Realice el ejercicio 10)a) nuevamente considerando este algoritmo, con un quantum de 2 unidades y Timer Variable.
+
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ### Ejercicio 13
 
 Suponga que un SO utiliza un algoritmo de VRR con Timer Variable para el planificar sus procesos. Para ello, el quantum es representado por un contador, que es decrementado en 1 unidad cada vez que ocurre una interrupción de reloj. ¿Bajo este esquema, puede suceder que el quantum de un proceso nunca llegue a 0 (cero)? Justifique su respuesta.
+
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ### Ejercicio 14
 
@@ -280,12 +307,16 @@ Donde:
 - `(d)` Para todas las estimaciones realizadas en a y c ¿Cuál es la que mas se asemeja a las
 ráfagas de CPU reales del proceso?
 
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+
 ### 15. Colas Multinivel
 
 Hoy en día los algoritmos de planificación vistos se han ido combinando para formar al- goritmos más eficientes. Así surge el algoritmo de Colas Multinivel, donde la cola de procesos listos es divida en varias colas, teniendo cada una su propio algoritmo de planificación.
 
 - `(a)` Suponga que se tienen dos tipos de procesos: Interactivos y Batch. Cada uno de estos procesos se coloca en una cola según su tipo. ¿Qué algoritmo de los vistos utilizaría para administrar cada una de estas colas?.\ A su vez, se utiliza un algoritmo para administrar cada cola que se crea. Así, por ejemplo, el algoritmo podría determinar mediante prioridades sobre que cola elegir un proceso.
 - `(b)` Para el caso de las dos colas vistas en a: ¿Qué algoritmo utilizaría para planificarlas?
+
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ### Ejercicio 16
 
@@ -308,6 +339,8 @@ Suponiendo que las colas de cada dispositivo se administran a trabes de FCFS y q
 - `(a)` Asumiendo que NO hay apropiación entre los procesos.
 - `(b)` Asumiendo que hay apropiación entre los procesos.
 
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%"
+
 ### Ejercicio 17
 
 En el esquema de Colas Multinivel, cuando se utiliza un algoritmo de prioridades para administrar las diferentes colas los procesos pueden sufrir starvation.
@@ -318,13 +351,17 @@ Por ejemplo: Un proceso con prioridad 3 esta en cola su cola correspondiente. Lu
 
 - `(a)` Para los casos a y b del ejercicio 16 realice el diagrama de Gantt considerando además que se tiene un envejecimiento de 4 unidades.
 
-### La situación planteada en el ejercicio 17, donde un proceso puede cambiar de una cola a otra, se la conoce como Colas Multinivel con Realimentación.
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+
+### 18. La situación planteada en el ejercicio 17, donde un proceso puede cambiar de una cola a otra, se la conoce como Colas Multinivel con Realimentación.
 
 Suponga que se quiere implementar un algoritmo de planificación que tenga en cuenta el tiempo de ejecución consumido por el proceso, penalizando a los que más tiempo de ejecución tienen. (Similar a la tarea del algoritmo SJF que tiene en cuenta el tiempo de ejecución que resta).
 
 Utilizando los conceptos vistos de Colas Multinivel con Realimentación indique que colas implementaría, que algoritmo usaría para cada una de ellas así como para la administración de las colas entre sí.
 
 Tenga en cuenta que los procesos no deben sufrir inanición.
+
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ### 19. Un caso real: “Unix Clasico “ (SVR3 y BSD 4.3)
 
@@ -361,6 +398,8 @@ estas actividades?
 (c) La utilización de RR dentro de cada cola: ¿Verdaderamente favorece al sistema de
 Tiempo Compartido? Justifique.
 
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+
 ### 20. A cuáles de los siguientes tipos de trabajos:
 - `(a)` cortos acotados por CPU
 - `(b)` cortos acotados por E/S
@@ -372,7 +411,11 @@ benefician las siguientes estrategias de administración:
 - `(a)` prioridad determinada estáticamente con el método del más corto primero (SJF).
 - `(b)` prioridad dinámica inversamente proporcional al tiempo transcurrido desde la última operación de E/S
 
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+
 ### 21. Explicar porqué si el quantum "q.en Round-Robin se incrementa sin límite, el método se aproxima a FIFO
+
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ### 22. Los sistemas multiprocesador pueden clasificarse en:
 
@@ -391,10 +434,14 @@ Otra clasificación posible puede ser:
 - **`(b)`** ¿Qué significa que la asignación de procesos se realice de manera simétrica?
 - **`(c)`** ¿Qué significa que se trabaje bajo un esquema Maestro/esclavo?
 
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+
 ### 23. Asumiendo el caso de procesadores homogéneos
 
 - **`(a)`** ¿Cuál sería el método de planificación más sencillo para asignar CPUs a los procesos?
 - **`(b)`** Cite ventajas y desventajas del método escogido
+
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ### 24. Indique brevemente a que hacen referencia los siguientes conceptos
 
@@ -404,6 +451,8 @@ Otra clasificación posible puede ser:
 - **`(d)`** ¿Puede el usuario en Windows cambiar la afinidad de un proceso? ¿y en GNU/Linux?
 - **`(e)`** Investigue el concepto de balanceo de carga (load balancing).
 - **`(f)`** Compare los conceptos de afinidad y balanceo de carga y como uno afecta al otro.
+
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ### 25. Si a la tabla del ejercicio 6 la modificamos de la siguiente manera: Y considerando que el
 
@@ -415,7 +464,16 @@ Otra clasificación posible puede ser:
 | 4 | 6 | 5 | CPU1 |
 | 5 | 8 | 2 | CPU0 |
 
+scheduler de los Sistemas Operativos de la familia Windows utiliza un mecanismo denomi-
+nado preferred processor (procesador preferido). El scheduler usa el procesador preferido a
+modo de afinidad cuando el proceso esta en estado ready. De esta manera el sheduler asigna
+este procesador a la tarea si este está libre.
 
+- **`(a)`** Ejecute el esquema anterior utilizando el algoritmo anterior.
+- **`(b)`** Ejecute el esquema anterior. Pero ahora si el procesador preferido no está libre es asignado a otro procesador. Luego el procesador preferido de cada job es el último enel cual ejecuto.
+- **`(c)`** Para cada uno de los casos calcule el tiempo promedio de retorno y el tiempo promedio de espera.
+- **`(d)`** ¿Cuál de las dos alternativas planteadas es mas performante?
 
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 
