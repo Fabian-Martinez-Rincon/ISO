@@ -361,3 +361,61 @@ estas actividades?
 (c) La utilización de RR dentro de cada cola: ¿Verdaderamente favorece al sistema de
 Tiempo Compartido? Justifique.
 
+### 20. A cuáles de los siguientes tipos de trabajos:
+- `(a)` cortos acotados por CPU
+- `(b)` cortos acotados por E/S
+- `(c)` largos acotados por CPU
+- `(d)` largos acotados por E/S
+
+benefician las siguientes estrategias de administración:
+
+- `(a)` prioridad determinada estáticamente con el método del más corto primero (SJF).
+- `(b)` prioridad dinámica inversamente proporcional al tiempo transcurrido desde la última operación de E/S
+
+### 21. Explicar porqué si el quantum "q.en Round-Robin se incrementa sin límite, el método se aproxima a FIFO
+
+### 22. Los sistemas multiprocesador pueden clasificarse en:
+
+- **`Homogéneos:`** Los procesadores son iguales. Ningún procesador tiene ventaja física sobre el resto.
+- **`Heterogéneos:`** Cada procesador tiene su propia cola y algoritmo de planificación.
+
+Otra clasificación posible puede ser:
+
+- **`Multiprocesador`** débilmente acoplados: Cada procesador tiene su propia memo- ria principal y canales.
+- **`Procesadores`** especializados: Existe uno o más procesadores principales de propó- sito general y varios especializados controlados por el primero (ejemplo procesadores de E/S, procesadores Java, procesadores Criptográficos, etc.).
+- **`Multiprocesador`** fuertemente acoplado: Consta de un conjunto de procesadores que comparten una memoria principal y se encuentran bajo el control de un Sistema Operativo
+
+***Preguntas*** 
+
+- **`(a)`** ¿Con cuál/es de estas clasificaciones asocia a las PCs de escritorio habituales?
+- **`(b)`** ¿Qué significa que la asignación de procesos se realice de manera simétrica?
+- **`(c)`** ¿Qué significa que se trabaje bajo un esquema Maestro/esclavo?
+
+### 23. Asumiendo el caso de procesadores homogéneos
+
+- **`(a)`** ¿Cuál sería el método de planificación más sencillo para asignar CPUs a los procesos?
+- **`(b)`** Cite ventajas y desventajas del método escogido
+
+### 24. Indique brevemente a que hacen referencia los siguientes conceptos
+
+- **`(a)`** Huella de un proceso en un procesador
+- **`(b)`** Afinidad con un procesador
+- **`(c)`** ¿Por qué podría ser mejor en algunos casos que un proceso se ejecute en el mismo procesador?
+- **`(d)`** ¿Puede el usuario en Windows cambiar la afinidad de un proceso? ¿y en GNU/Linux?
+- **`(e)`** Investigue el concepto de balanceo de carga (load balancing).
+- **`(f)`** Compare los conceptos de afinidad y balanceo de carga y como uno afecta al otro.
+
+### 25. Si a la tabla del ejercicio 6 la modificamos de la siguiente manera: Y considerando que el
+
+| Job | Llegada | CPU | Afinidad |
+| --- | --- | --- | --- |
+| 1 | 0 | 4 | CPU0 |
+| 2 | 2 | 6 | CPU0 |
+| 3 | 3 | 4 | CPU1 |
+| 4 | 6 | 5 | CPU1 |
+| 5 | 8 | 2 | CPU0 |
+
+
+
+
+
