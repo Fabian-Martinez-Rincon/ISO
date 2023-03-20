@@ -13,6 +13,8 @@
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
+- [Repaso Primer Parcial de Promoción]()
+- [Primer Parcial de Promoción]()
 - [Condiciones de aprobación](/Documentos/condiciones.md)
 - [Notion de Iñaki con Practicas](https://nova-calcium-fbd.notion.site/Introducci-n-a-Sistemas-Operativos-78eceb443ac04f919bdf3394bbe22d27)
 - [Practica 1](/Documentos/Practica1.md)
