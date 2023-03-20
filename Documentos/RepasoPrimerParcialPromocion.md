@@ -266,3 +266,47 @@ print 'FIN!'
     | --- | --- |
     | Uno <br> Dos <br> Cinco <dbr> Seis | Dos <br> Tres <br>Contenido del directorio donde ejecuta el proceso <br> Seis |
 
+<img src= 'https://starpng.com/public/uploads/preview/thin-crayon-divider-line-png-51575739708kixuhrawiv.png' height="20" width="100%">
+
+### Indicar que imprime el siguiente programa:
+```C
+print 'Uno'
+newpid = fork()
+print 'Dos'
+if newpid == 0
+    print 'Tres'
+    execv('ls')
+    print 'Cuatro'
+else:
+    print 'Cinco'
+
+endif
+exit(0)
+print 'Seis'
+```
+
+- `1)`
+
+    | En el padre imprime | En el hijo imprime |
+    | --- | --- |
+    | Hola Mundo! <br> FIN! | - Continua <br > - Contenido del directorio donde ejecuta el proceso <br> - Continuara |
+- `2)`
+
+    | En el padre imprime | En el hijo imprime |
+    | --- | --- |
+    | Hola Mundo! | Continua <br> Contenido del directorio donde ejecuta el proceso |
+- `3)`
+
+    | En el padre imprime | En el hijo imprime |
+    | --- | --- |
+    | Hola Mundo! <br>FIN | Continua <br> Contenido del directorio donde ejecuta el procesos <br> Continuara |
+- `4)`
+
+    | En el padre imprime | En el hijo imprime |
+    | --- | --- |
+    | Hola Mundo! <br> Dos <br> Cinco | Tres <br> Contenido del directorio donde ejecuta el procesos |
+- `5)`
+
+    | En el padre imprime | En el hijo imprime |
+    | --- | --- |
+    | Uno <br> Dos <br> Cinco <dbr> Seis | Dos <br> Tres <br>Contenido del directorio donde ejecuta el proceso <br> Seis |
