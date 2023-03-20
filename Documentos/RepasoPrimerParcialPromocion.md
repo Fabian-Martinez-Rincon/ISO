@@ -300,3 +300,83 @@ print 'Seis'
     | En el padre imprime | En el hijo imprime |
     | --- | --- |
     | Uno <br> Dos <br> Cinco | Dos <br> Tres <br> Contenido del directorio donde ejecuta el proceso |
+
+<img src= 'https://starpng.com/public/uploads/preview/thin-crayon-divider-line-png-51575739708kixuhrawiv.png' height="20" width="100%">
+
+### ¿El algoritmo de planificación Round Robin puede causar inanición ?
+
+Seleccione una:
+
+- `I)` Si, puede causar en función del tamaño del quantum que se utiliza
+- `II)` Si, siempre puede causar
+- `III)` No, no puede causar
+
+<img src= 'https://starpng.com/public/uploads/preview/thin-crayon-divider-line-png-51575739708kixuhrawiv.png' height="20" width="100%">
+
+### Complete la oración con la opción correcta:
+
+La PCB de un proceso que ejecuta una SysCall bloqueante, por ejemplo un write() a un archivo, será colocada en  ______   hasta que la SysCall termine
+- La cola de procesos swapeados
+- La cola de Waiting o Blocked
+- La cola de Ready
+
+<img src= 'https://starpng.com/public/uploads/preview/thin-crayon-divider-line-png-51575739708kixuhrawiv.png' height="20" width="100%">
+
+### Mientras se ejecuta el planificador de mediano plazo (Medium Term Scheduller) el kernel puede asignar otro proceso a  la CPU para maximizar la productividad de la misma.
+
+Seleccione una:
+
+- Verdadero
+- Falso
+
+<img src= 'https://starpng.com/public/uploads/preview/thin-crayon-divider-line-png-51575739708kixuhrawiv.png' height="20" width="100%">
+
+### La PCB de un proceso que ejecuta una System Call bloqueante, por ejemplo un read() a un archivo, será colocada en la Cola de Listos hasta que la operación solicitada culmine.
+
+Seleccione una:
+- Verdadero
+- Falso
+
+<img src= 'https://starpng.com/public/uploads/preview/thin-crayon-divider-line-png-51575739708kixuhrawiv.png' height="20" width="100%">
+
+### La PCB de un proceso en estado “Swappeado” se encuentra almacenada en:
+
+Seleccione una:
+
+ - `I)` RAM (Mem. Principal)
+ - `II)` Un proceso en ese estado no cuenta con un PCB
+ - `III)` Area de Swap (Mem. Secundaria)
+
+<img src= 'https://starpng.com/public/uploads/preview/thin-crayon-divider-line-png-51575739708kixuhrawiv.png' height="20" width="100%">
+
+### Para poder llevar adelante la planificación, el sistema operativo utiliza diversos algoritmos y colas en las cuales incluye el espacio de direcciones de cada proceso
+
+Seleccione una:
+- Verdadero
+- Falso
+
+<img src= 'https://starpng.com/public/uploads/preview/thin-crayon-divider-line-png-51575739708kixuhrawiv.png' height="20" width="100%">
+
+### En los algoritmos de planificación de CPU no apropiativos,  el proceso en ejecución dejara la CPU cuando él decide. 
+
+Seleccione una:
+- Verdadero
+- Falso
+
+<img src= 'https://starpng.com/public/uploads/preview/thin-crayon-divider-line-png-51575739708kixuhrawiv.png' height="20" width="100%">
+
+### En un mismo sistema operativo pueden convivir la modalidad Batch y la Interactiva
+
+Seleccione una:
+- Verdadero
+- Falso
+
+<img src= 'https://starpng.com/public/uploads/preview/thin-crayon-divider-line-png-51575739708kixuhrawiv.png' height="20" width="100%">
+
+### El planificador de corto plazo (short term) selecciona a quien le va a dar la CPU de la lista de procesos que están en estado  bloqueado
+
+Seleccione una:
+- Verdadero
+- Falso
+
+<img src= 'https://starpng.com/public/uploads/preview/thin-crayon-divider-line-png-51575739708kixuhrawiv.png' height="20" width="100%">
