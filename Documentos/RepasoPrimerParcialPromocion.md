@@ -259,7 +259,7 @@ print 'FIN!'
 - `5)`
     | En el padre imprime | En el hijo imprime |
     | --- | --- |
-    | Uno <br> Dos <br> Cinco <dbr> Seis | Dos <br> Tres <br>Contenido del directorio donde ejecuta el proceso <br> Seis |
+    | Uno <br> Dos <br> Cinco <br> Seis | Dos <br> Tres <br>Contenido del directorio donde ejecuta el proceso <br> Seis |
 
 <img src= 'https://starpng.com/public/uploads/preview/thin-crayon-divider-line-png-51575739708kixuhrawiv.png' height="20" width="100%">
 
@@ -287,16 +287,16 @@ print 'Seis'
 - `2)`
     | En el padre imprime | En el hijo imprime |
     | --- | --- |
-    | Uno <br> Dos <br> Cinco | Continua <br> Contenido del directorio donde ejecuta el proceso |
+    | Uno <br> Dos <br> Cinco | Tres <br> Contenido del directorio donde ejecuta el proceso |
 - `3)`
     | En el padre imprime | En el hijo imprime |
     | --- | --- |
-    | Uno <br> Dos <br> Cinco | Continua <br> Contenido del directorio donde ejecuta el procesos <br> Continuara |
+    | Uno <br> Dos <br> Cinco | Dos <br> Tres <br> Contenido del directorio donde ejecuta el procesos <br> Cuatro |
 - `4)`
     | En el padre imprime | En el hijo imprime |
     | --- | --- |
-    | Uno <br> Dos <br> Cinco <br> Seis | Tres <br> Contenido del directorio donde ejecuta el procesos |
+    | Uno <br> Dos <br> Cinco <br> Seis | Dos <br> Tres <br> Contenido del directorio donde ejecuta el proceso <br> Seis |
 - `5)`
     | En el padre imprime | En el hijo imprime |
     | --- | --- |
-    | Uno <br> Dos <br> Cinco | Dos <br> Tres <br>Contenido del directorio donde ejecuta el proceso |
+    | Uno <br> Dos <br> Cinco | Dos <br> Tres <br> Contenido del directorio donde ejecuta el proceso |
