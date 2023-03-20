@@ -246,7 +246,23 @@ print 'FIN!'
     | --- | --- |
     | Hola Mundo! <br> FIN! | - Continua <br > - Contenido del directorio donde ejecuta el proceso <br> - Continuara |
 - `2)`
+
+    | En el padre imprime | En el hijo imprime |
+    | --- | --- |
+    | Hola Mundo! | Continua <br> Contenido del directorio donde ejecuta el proceso |
 - `3)`
+
+    | En el padre imprime | En el hijo imprime |
+    | --- | --- |
+    | Hola Mundo! <br>FIN | Continua <br> Contenido del directorio donde ejecuta el procesos <br> Continuara |
 - `4)`
+
+    | En el padre imprime | En el hijo imprime |
+    | --- | --- |
+    | Hola Mundo! <br> Dos <br> Cinco | Tres <br> Contenido del directorio donde ejecuta el procesos |
 - `5)`
+
+    | En el padre imprime | En el hijo imprime |
+    | --- | --- |
+    | Uno <br> Dos <br> Cinco <dbr> Seis | Dos <br> Tres <br>Contenido del directorio donde ejecuta el proceso <br> Seis |
 
