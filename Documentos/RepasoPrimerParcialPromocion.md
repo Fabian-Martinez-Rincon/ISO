@@ -22,7 +22,7 @@ Seleccione una:
 
 <img src= 'https://starpng.com/public/uploads/preview/thin-crayon-divider-line-png-51575739708kixuhrawiv.png' height="20" width="100%">
 
-Con el fin de limitar el conjunto de instrucciones que puede ejecutar cada proceso, se define el bit de modo (usuario / supervisor), el cual es administrado por el Kernel y almacenado en la PCB de cada proceso que se va a ejecutar.
+### Con el fin de limitar el conjunto de instrucciones que puede ejecutar cada proceso, se define el bit de modo (usuario / supervisor), el cual es administrado por el Kernel y almacenado en la PCB de cada proceso que se va a ejecutar.
 
 Seleccione una:
 
@@ -74,7 +74,7 @@ Seleccione una:
 
 <img src= 'https://starpng.com/public/uploads/preview/thin-crayon-divider-line-png-51575739708kixuhrawiv.png' height="20" width="100%">
 
-Es función de un Sistema Operativo evitar que un proceso se apropie de la CPU. Para ello el mismo evalúa la continuidad o no de un proceso en su ejecución después de cada instrucción de CPU que el proceso ejecuta.
+### Es función de un Sistema Operativo evitar que un proceso se apropie de la CPU. Para ello el mismo evalúa la continuidad o no de un proceso en su ejecución después de cada instrucción de CPU que el proceso ejecuta.
 
 Seleccione una:
 - Verdadero
@@ -82,7 +82,7 @@ Seleccione una:
 
 <img src= 'https://starpng.com/public/uploads/preview/thin-crayon-divider-line-png-51575739708kixuhrawiv.png' height="20" width="100%">
 
-Mientras que en un SO el  ____ es el responsable de la interacción con el Hardware, el  ____   es el responsable de la interacción del Usuario
+### Mientras que en un SO el  ____ es el responsable de la interacción con el Hardware, el  ____   es el responsable de la interacción del Usuario
 
 - Kernel
 - Shell
@@ -110,7 +110,7 @@ Seleccione una:
 
 <img src= 'https://starpng.com/public/uploads/preview/thin-crayon-divider-line-png-51575739708kixuhrawiv.png' height="20" width="100%">
 
-Mientras que la técnica de administración de memoria por paginación pura puede producir  _____ y la técnica de segmentación  ______ , la técnica de Segmentación Paginada puede producir  ______  
+### Mientras que la técnica de administración de memoria por paginación pura puede producir  _____ y la técnica de segmentación  ______ , la técnica de Segmentación Paginada puede producir  ______  
 
 - Fragmentación Externa
 - Tanto Fragmentación Interna como Externa
@@ -126,14 +126,14 @@ Seleccione una:
 
 <img src= 'https://starpng.com/public/uploads/preview/thin-crayon-divider-line-png-51575739708kixuhrawiv.png' height="20" width="100%">
 
-En la técnica de administración de memoria principal por Segmentación Paginada la unidad de trabajo para subir o bajar de la RAM es  ______
+### En la técnica de administración de memoria principal por Segmentación Paginada la unidad de trabajo para subir o bajar de la RAM es  ______
 
 - El segmento
 - La Pagina
 
 <img src= 'https://starpng.com/public/uploads/preview/thin-crayon-divider-line-png-51575739708kixuhrawiv.png' height="20" width="100%">
 
-En la técnica de particiones dinámicas los valores de Registro Base y Registro límite de cada proceso son definidos por la MMU.
+### En la técnica de particiones dinámicas los valores de Registro Base y Registro límite de cada proceso son definidos por la MMU.
 
 Seleccione una:
 - Verdadero
@@ -141,7 +141,7 @@ Seleccione una:
 
 <img src= 'https://starpng.com/public/uploads/preview/thin-crayon-divider-line-png-51575739708kixuhrawiv.png' height="20" width="100%">
 
-En la técnica de administración de la memoria por particiones  ______ el grado de multiprogramación es variable
+### En la técnica de administración de la memoria por particiones  ______ el grado de multiprogramación es variable
 
 - Dinámicas
 - Fijas
@@ -168,7 +168,7 @@ Seleccione una:
 
 <img src= 'https://starpng.com/public/uploads/preview/thin-crayon-divider-line-png-51575739708kixuhrawiv.png' height="20" width="100%">
 
-Para poder implementar el algoritmo de planificación de CPU FCFS (primero que llega es el primero en ser atendido, First Come First Served) es indispensable contar con la Interrupción por Clock.
+### Para poder implementar el algoritmo de planificación de CPU FCFS (primero que llega es el primero en ser atendido, First Come First Served) es indispensable contar con la Interrupción por Clock.
 
 Seleccione una:
 - Verdadero
@@ -177,7 +177,7 @@ Seleccione una:
 
 <img src= 'https://starpng.com/public/uploads/preview/thin-crayon-divider-line-png-51575739708kixuhrawiv.png' height="20" width="100%">
 
-El planificador de largo plazo (long term) aumenta o disminuye el grado de multi-programación cuando lo considera necesario
+### El planificador de largo plazo (long term) aumenta o disminuye el grado de multi-programación cuando lo considera necesario
 
 Seleccione una:
 - Verdadero
@@ -193,7 +193,7 @@ Seleccione una:
 
 <img src= 'https://starpng.com/public/uploads/preview/thin-crayon-divider-line-png-51575739708kixuhrawiv.png' height="20" width="100%">
 
-Un proceso puede pasar de estado “Bloqueado Swap-out” al estado “Bloqueado” y el cambio es realizado por el Medium Term Scheduller
+### Un proceso puede pasar de estado “Bloqueado Swap-out” al estado “Bloqueado” y el cambio es realizado por el Medium Term Scheduller
 
 Seleccione una:
 - Verdadero
@@ -201,7 +201,7 @@ Seleccione una:
 
 <img src= 'https://starpng.com/public/uploads/preview/thin-crayon-divider-line-png-51575739708kixuhrawiv.png' height="20" width="100%">
 
-La PCB de un proceso es creada por el loader cuando este carga en memoria el Espacio de Direcciones del nuevo proceso.
+### La PCB de un proceso es creada por el loader cuando este carga en memoria el Espacio de Direcciones del nuevo proceso.
 
 Seleccione una:
 - Verdadero
@@ -209,7 +209,7 @@ Seleccione una:
 
 <img src= 'https://starpng.com/public/uploads/preview/thin-crayon-divider-line-png-51575739708kixuhrawiv.png' height="20" width="100%">
 
-Mediante los modos de ejecución se controla que un proceso no pueda, por sí mismo, ejecutar instrucciones de CPU relacionadas a E/S 
+### Mediante los modos de ejecución se controla que un proceso no pueda, por sí mismo, ejecutar instrucciones de CPU relacionadas a E/S 
 
 Seleccione una:
 - Verdadero
@@ -217,7 +217,7 @@ Seleccione una:
 
 <img src= 'https://starpng.com/public/uploads/preview/thin-crayon-divider-line-png-51575739708kixuhrawiv.png' height="20" width="100%">
 
-Cuando un proceso ejecuta la System Call fork() tanto padre e hijo compartirán el mismo espacio de direcciones hasta que es ejecutada la System Call execve()
+### Cuando un proceso ejecuta la System Call fork() tanto padre e hijo compartirán el mismo espacio de direcciones hasta que es ejecutada la System Call execve()
 
 Seleccione una:
 - Verdadero
