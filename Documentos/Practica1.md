@@ -40,13 +40,18 @@ operativo GNU/Linux, así como con su entorno y comandos principales.
 
 ## `1)` Características de **GNU/Linux**:
 
-`a)` Mencione y explique las características más relevantes de **GNU/Linux**.\
-Linux es un sistema operativo completamente libre y gratuito.
-- **Gratuito:** Además de ser completamente gratuito, cuenta con múltiples distribuciones, cada una con distintas funcionalidades.
-- **Código abierto e independiente:** Cualquiera puede desarrollar y distribuir nuevas funciones, sin necesidad de permisos ni protocolos previos.
-- **Muy estable:** Es muy estable :D
-- **Altamente seguro:** Como se trata de un software libre, los "hackers" informáticos no tienen mucho interés en desarrollar virus para Linux. 
-- **Multitarea y multiusuario:** La potencia de este sistema permite ejecutar a la vez numerosos programas y aplicaciones.
+### `a)` Mencione y explique las características más relevantes de **GNU/Linux**.\
+
+#### **`Es multiusuario`**
+
+Cumple simultáneamente las necesidades de dos o más usuarios que comparten los mismos recursos, un sistema multiusuario permite que los usuarios accedan a los datos o procesos de una única maquina, desde diferentes computadoras o termínales
+
+
+#### **`Es multitarea y multiprocesador`**
+
+Puede realizar varias operaciones, funciones o ejecuciones al mismo tiempo
+
+
 
 `b)` Mencione otros sistemas operativos y compárelos con GNU/Linux en cuanto a los puntos mencionados en el inciso a.
 - A diferencia de Windows y Mac, Linux no pertenece a ninguna compañía, sino que su desarrollo depende de la colaboración de un gran número de empresas y profesionales.
