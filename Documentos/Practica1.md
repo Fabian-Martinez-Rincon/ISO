@@ -40,7 +40,7 @@ operativo GNU/Linux, así como con su entorno y comandos principales.
 
 ## `1)` Características de **GNU/Linux**:
 
-### `a)` Mencione y explique las características más relevantes de **GNU/Linux**.
+#### `a)` Mencione y explique las características más relevantes de **GNU/Linux**.
 
 #### **`Es multiusuario`**
 
@@ -93,22 +93,27 @@ Sensible a las mayúsculas y minúsculas
 
 Software cuyo código fuente y otros derechos que normalmente son exclusivos para quienes poseen los derechos de autor, son publicados bajo una licencia de código abierto o forman parte del dominio público. En las licencias compatibles con la Open Source Definition el propietario de los derechos de autor permite a los usuarios utilizarlo, modificarlo, estudiarlo, aprovechar su documentación, redistribuir el software, a cualquiera, para cualquier propósito, ya sea en su forma modificada o en su forma original etc. 
 
+---
 
-### `b)` Mencione otros sistemas operativos y compárelos con GNU/Linux en cuanto a los puntos mencionados en el inciso a.
+#### `b)` Mencione otros sistemas operativos y compárelos con GNU/Linux en cuanto a los puntos mencionados en el inciso a.
 
 - A diferencia de Windows y Mac, Linux no pertenece a ninguna compañía, sino que su desarrollo depende de la colaboración de un gran número de empresas y profesionales.
 - Su uso esta mas enfocado a programadores dado que sus interfaces son menos amigables.
 - Los demás sistemas suelen ser en su mayoría pagos y enfocados mas a lo comercial
 - El manejo de permisos de Linux vuelve mas difícil la creación de un virus para dicho sistema mientras que en Windows es mas común.
 
-### `c)` ¿Qué es **GNU**?
+---
+
+#### `c)` ¿Qué es **GNU**?
 
 GNU es un SO de tipo Unix pero libre, diseñado por miles de programadores, así como una gran colección de programas informáticos que componen al sistema, desarrollado por y para el GNU.
 
 Está formado en su totalidad por software libre, mayoritariamente bajo términos
 de copyleft. GNU es el acrónimo recursivo de "GNU's Not Unix" **(GNU no es Unix)**, nombre elegido debido a que GNU sigue un diseño tipo Unix y se mantiene compatible con este, pero se distingue de Unix por ser software libre y por no contener código de Unix.
 
-### `d)` Indique una breve historia sobre la evolución del proyecto *GNU*
+---
+
+#### `d)` Indique una breve historia sobre la evolución del proyecto *GNU*
 
 - El proyecto GNU fue iniciado por Richard M. Stallman con el propósito de crear un sistema operativo completo y libre: el sistema GNU.
 - Se baso principalmente en 4 libertades
@@ -119,7 +124,9 @@ de copyleft. GNU es el acrónimo recursivo de "GNU's Not Unix" **(GNU no es Unix
 
 Pondria más pero a nadie le importa la historia de linux salu2.
 
-### `e)` Explique qué es la multitarea, e indique si *GNU/Linux* hace uso de ella.
+---
+
+#### `e)` Explique qué es la multitarea, e indique si *GNU/Linux* hace uso de ella.
 
 Puede realizar varias operaciones, funciones o ejecuciones al mismo tiempo
 
@@ -129,7 +136,9 @@ Los SO multitarea permiten realizar varias operaciones gracias a una operación 
 
 **GNU/Linux si es multitarea.**
 
-### `f)` ¿Qué es **POSIX**?
+---
+
+#### `f)` ¿Qué es **POSIX**?
 
 POSIX (Interfaz de sistema operativo portátil) es un conjunto de interfaces de sistema
 operativo estándar basadas en el sistema operativo Unix .
@@ -142,7 +151,7 @@ El estándar también define un intérprete de comandos ( shell ) y programas de
 
 ## `2)` Distribuciones de **GNU/Linux**:
 
-### `a)` ¿Qué es una distribución de GNU/Linux? Nombre al menos 4 distribuciones de GNU/- Linux y cite diferencias básicas entre ellas.
+#### `a)` ¿Qué es una distribución de GNU/Linux? Nombre al menos 4 distribuciones de GNU/- Linux y cite diferencias básicas entre ellas.
 
 Una distribución es un conjunto de software de GNU, así como programas de sistema, librerías y aplicaciones de usuario, con también software de terceros (a veces), con una versión de un kernel de Linux, todo compilado, empaquetado, configurado y preparado para su instalación en una computadora.
 
@@ -164,7 +173,9 @@ Debian, Opensuse, Fedora, Ubuntu.
 - **`Opensuse:`** Novel se quedó sin sistema operativo para su plataforma de servidores y redes, así que compro Suse. Su panel de control para configuración lo hace fácil de configurar. Es un buena elección para aprender de servidores, pero posiblemente para cosas más sofisticadas dejarán las herramientas de configuración y harán ajustes personalizados. El mundo de Software Libre les critica fuertemente sus acuerdos de interoperabilidad con Microsoft.
 - **`Ubuntu:`** Se propuso cambiarle la cara al mundo Linux y ciertamente lo ha logrado. Apuntando a ser fácil de usar hace bien simple la instalación de drivers y decodificadores privativos, cosa que se le critican los fundamentalistas del software libre. Su programa de enviar discos gratis hasta la puerta de tu casa ha significado su creciente popularidad. Tiene ciclo de desarrollo rápido, pero sus versiones tienen ciclos de soporte alternado, entre periodos largos y cortos, tratando de tener estabilidad de soporte y flexibilidad de desarrollo.
 
-### `b)` ¿En qué se diferencia una distribución de otra?
+---
+
+#### `b)` ¿En qué se diferencia una distribución de otra?
 
 Las mayores diferencias se encuentran sobre todo en distribuciones comerciales, donde se han introducido herramientas para una fácil instalación, detección de software etc... 
 
@@ -175,7 +186,9 @@ Las mayores diferencias se encuentran sobre todo en distribuciones comerciales, 
 - Gestores de paquetes.
 - Secuencia en el proceso de arranque.
 
-### `c)` ¿Qué es Debian? Acceda al sitio 1 e indique cuáles son los objetivos del proyecto y una breve cronología del mismo.
+---
+
+#### `c)` ¿Qué es Debian? Acceda al sitio 1 e indique cuáles son los objetivos del proyecto y una breve cronología del mismo.
 
 Debian es una comunidad de desarrolladores , que mantiene un sistema operativo GNU basado en software libre. El sistema se encuentra precompilado, empaquetado y en formato deb para múltiples arquitecturas de computador y para varios núcleos.
 
@@ -194,11 +207,13 @@ hay quince versiones estables (con sus respectivas revisiones) enumeradas en la 
 
 ## `3)` Estructura de GNU/Linux:
 
-### `a)` Nombre cuales son los 3 componentes fundamentales de GNU/Linux.
+#### `a)` Nombre cuales son los 3 componentes fundamentales de GNU/Linux.
 
 Kernel, shell y Filesystem.
 
-### `b)` Mencione y explique la estructura básica del Sistema Operativo GNU/Linux.
+---
+
+#### `b)` Mencione y explique la estructura básica del Sistema Operativo GNU/Linux.
 
 Estructura. Nos ocuparemos de tres componentes principales:
 
@@ -210,10 +225,12 @@ Estructura. Nos ocuparemos de tres componentes principales:
 
 ## `4)` Kernel: 
 
-### `a)` ¿Qué es? Indique una breve reseña histórica acerca de la evolución del Kernel de GNU/Linux.
+#### `a)` ¿Qué es? Indique una breve reseña histórica acerca de la evolución del Kernel de GNU/Linux.
 Se explica arriba y la historia no me importa :D
 
-`b)` ¿Cuáles son sus funciones principales?
+---
+
+#### `b)` ¿Cuáles son sus funciones principales?
 - **Gestión de la memoria:** supervisa cuánta memoria se utiliza para almacenar qué tipo de elementos, así como el lugar en que los guarda.
 - **Gestión de los procesos:** determina qué procesos pueden usar la unidad central de procesamiento (CPU), cuándo y durante cuánto tiempo.
 - **Controladores de dispositivos:** actúa como mediador o intérprete entre el hardware y los procesos.
