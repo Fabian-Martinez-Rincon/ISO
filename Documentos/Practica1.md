@@ -142,14 +142,27 @@ El estándar también define un intérprete de comandos ( shell ) y programas de
 
 ## `2)` Distribuciones de **GNU/Linux**:
 
-`a)` ¿Qué es una distribución de GNU/Linux? Nombre al menos 4 distribuciones de GNU/- Linux y cite diferencias básicas entre ellas.\
-Una distribución GNU/Linux es un conjunto de aplicaciones reunidas que permiten brindar mejoras para instalar fácilmente un sistema operativo.
+### `a)` ¿Qué es una distribución de GNU/Linux? Nombre al menos 4 distribuciones de GNU/- Linux y cite diferencias básicas entre ellas.
 
-Algunas distribuciones:
-- [Debian](http://www.debian.org/)
-- [Gentoo](http://www.gentoo.org/)
-- [Red Hat Linux](http://www.redhat.com/)
-- [Slackware](http://www.slackware.com/)
+Una distribución es un conjunto de software de GNU, así como programas de sistema, librerías y aplicaciones de usuario, con también software de terceros (a veces), con una versión de un kernel de Linux, todo compilado, empaquetado, configurado y preparado para su instalación en una computadora.
+
+En resumen una distribución de GNU/Linux es el sistema operativo preparado para ser instalado y usado en una computadora.
+
+Desarrollar una distribución es elegir de entre todos los programas de sistema (compiladores, intérpretes, etc.) y aplicaciones de usuario (entornos gráficos de escritorio, editores de texto, paquetes de ofimática, etc.) de GNU y de software de terceros (a veces, no siempre), los que se crean convenientes según la distribución que se quiera crear, más pesada, más ligera, etc., sumado a una versión de un kernel de Linux.
+
+**Distribución GNU/Linux = Software GNU + Software de terceros (no siempre) + Kernel de Linux.**
+
+Cualquier persona con conocimientos de programación puede crear una distribución
+GNU/Linux, por eso hay cientos de ellas.
+
+Es tan indispensable el kernel de Linux como el conjunto de programas y librerías de GNU. Por ello cuando a una distribución GNU/Linux se le llama Linux a secas, es una falta de respeto hacia todo el software que GNU ha desarrollado y continua desarrollando como software libre y gratuito.
+
+Debian, Opensuse, Fedora, Ubuntu.
+
+- **`Debian:`** Se orienta a la estabilidad, en términos de ciclo de desarrollo. Sus actualizaciones y versiones se liberan cuando están listas y bien probadas. Lo cual es bueno para servidores, pero por otra parte nos limita compatibilidad con dispositivos de hardware más novedosos. Son muy exigentes en lo que respecta a Software Libre.
+- **`Fedora:`** Se orienta a innovación con un ciclo de desarrollo corto de seis meses, y un tiempo de soporte de un año sobre sus paquetes. Lo más nuevo se encuentra en Fedora, a veces la gente desconfía de la solidez de sus paquetes sin embargo lo que sucede es que están en fase de maduración y se le integran mejores funcionalidades. Por ahí leí que Fedora es como probar lo que Linux ofrecerá dentro de seis meses.
+- **`Opensuse:`** Novel se quedó sin sistema operativo para su plataforma de servidores y redes, así que compro Suse. Su panel de control para configuración lo hace fácil de configurar. Es un buena elección para aprender de servidores, pero posiblemente para cosas más sofisticadas dejarán las herramientas de configuración y harán ajustes personalizados. El mundo de Software Libre les critica fuertemente sus acuerdos de interoperabilidad con Microsoft.
+- **`Ubuntu:`** Se propuso cambiarle la cara al mundo Linux y ciertamente lo ha logrado. Apuntando a ser fácil de usar hace bien simple la instalación de drivers y decodificadores privativos, cosa que se le critican los fundamentalistas del software libre. Su programa de enviar discos gratis hasta la puerta de tu casa ha significado su creciente popularidad. Tiene ciclo de desarrollo rápido, pero sus versiones tienen ciclos de soporte alternado, entre periodos largos y cortos, tratando de tener estabilidad de soporte y flexibilidad de desarrollo.
 
 `b)` ¿En qué se diferencia una distribución de otra?\
 Aunque en la mayoría de los casos la principal diferencia es la GUI, o los programas y herramientas que vienen incluidos. Cada distribución Linux tiene un objetivo, que justifica su existencia. Por ejemplo, distribuciones como Ubuntu se centran en ser lo más amigables posible a la hora de instalarse o descargar programas.
