@@ -164,32 +164,53 @@ Debian, Opensuse, Fedora, Ubuntu.
 - **`Opensuse:`** Novel se quedó sin sistema operativo para su plataforma de servidores y redes, así que compro Suse. Su panel de control para configuración lo hace fácil de configurar. Es un buena elección para aprender de servidores, pero posiblemente para cosas más sofisticadas dejarán las herramientas de configuración y harán ajustes personalizados. El mundo de Software Libre les critica fuertemente sus acuerdos de interoperabilidad con Microsoft.
 - **`Ubuntu:`** Se propuso cambiarle la cara al mundo Linux y ciertamente lo ha logrado. Apuntando a ser fácil de usar hace bien simple la instalación de drivers y decodificadores privativos, cosa que se le critican los fundamentalistas del software libre. Su programa de enviar discos gratis hasta la puerta de tu casa ha significado su creciente popularidad. Tiene ciclo de desarrollo rápido, pero sus versiones tienen ciclos de soporte alternado, entre periodos largos y cortos, tratando de tener estabilidad de soporte y flexibilidad de desarrollo.
 
-`b)` ¿En qué se diferencia una distribución de otra?\
-Aunque en la mayoría de los casos la principal diferencia es la GUI, o los programas y herramientas que vienen incluidos. Cada distribución Linux tiene un objetivo, que justifica su existencia. Por ejemplo, distribuciones como Ubuntu se centran en ser lo más amigables posible a la hora de instalarse o descargar programas.
+### `b)` ¿En qué se diferencia una distribución de otra?
 
-`c)` ¿Qué es Debian? Acceda al sitio 1 e indique cuáles son los objetivos del proyecto y una breve cronología del mismo.\
-Debian es un sistema operativo libre, desarrollado por un monton de comunistas :D
+Las mayores diferencias se encuentran sobre todo en distribuciones comerciales, donde se han introducido herramientas para una fácil instalación, detección de software etc... 
+
+**Diferencias:**
+
+- Proceso de instalación.
+- Ayudantes o wizard que te ayuden en la configuración de tu máquina.
+- Gestores de paquetes.
+- Secuencia en el proceso de arranque.
+
+### `c)` ¿Qué es Debian? Acceda al sitio 1 e indique cuáles son los objetivos del proyecto y una breve cronología del mismo.
+
+Debian es una comunidad de desarrolladores , que mantiene un sistema operativo GNU basado en software libre. El sistema se encuentra precompilado, empaquetado y en formato deb para múltiples arquitecturas de computador y para varios núcleos.
+
+El proyecto Debian fue anunciado inicialmente 1993 por Ian Murdock. Debian 0.01 fue lanzado el 16 de agosto de 1993 y la primera versión estable fue hecha en 1996.
+
+Nació como una apuesta por separar en sus versiones el software libre del software no libre. El modelo de desarrollo del proyecto es ajeno a motivos empresariales o comerciales, siendo llevado adelante por los propios usuarios, aunque cuenta con el apoyo de varias empresas en forma de infraestructuras.
+
+Debian no vende directamente su software, lo pone a disposición de cualquiera en Internet, aunque sí permite a personas o empresas distribuirlo comercialmente mientras se respete su licencia.
+
+La primera adaptación del sistema Debian, siendo también la más desarrollada, es Debian GNU/Linux, basada en el núcleo Linux, y como siempre utilizando herramientas de GNU
+
+Los nombres de las versiones de Debian son tomados de la película Toy Story. Hasta la fecha,
+hay quince versiones estables (con sus respectivas revisiones) enumeradas en la tabla adjunta:
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `3)` Estructura de GNU/Linux:
 
-`a)` Nombre cuales son los 3 componentes fundamentales de GNU/Linux.\
+### `a)` Nombre cuales son los 3 componentes fundamentales de GNU/Linux.
 
-- **El kernel (núcleo)** es el encargado de que el software y el hardware de una computadora puedan trabajar juntos.
-- **El Shell (interprete de comandos)** Un intérprete de comandos es un programa que lee las entradas del usuario y las traduce a instrucciones que el sistema es capaz de entender y utilizar.
-- **El FileSystem (sistema de archivos)** permite que dentro de un SO se organicen y administren archivos.
+Kernel, shell y Filesystem.
 
-`b)` Mencione y explique la estructura básica del Sistema Operativo GNU/Linux.
-- **Bootloader (gestor de arranque):** es un sutil software cuya tarea es cargar el sistema operativo de un ordenador en la memoria.
-- **Servidor grafico:** es responsable de la activación de la tarjeta de vídeo, ratón y teclado, lo que permite al usuario el uso de interfaces gráficas que son llamadas de Gestores de Ventanas y Entornos de Escritorio
-- **Entornos de escritorio:** Estos Entornos de Escritorio proporcionan el fondo de la pantalla, los paneles, las barras de título de las ventanas y mucho más.
+### `b)` Mencione y explique la estructura básica del Sistema Operativo GNU/Linux.
+
+Estructura. Nos ocuparemos de tres componentes principales:
+
+- **`Kernel:`** El núcleo se podría definir como el corazón de este sistema operativo. Es a grandes rasgos, el encargado de que el software y el hardware de una computadora puedan trabajar juntos.
+- **`Shell:`** Es un programa que recibe lo que se escribe en una terminal de texto y lo convierte en instrucciones para el sistema operativo.
+- **`Filesystem:`** Es la forma lógica en que dentro de un SO se organizan y se administran los archivos. 
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `4)` Kernel: 
 
-`a)` ¿Qué es? Indique una breve reseña histórica acerca de la evolución del Kernel de GNU/Linux.\
+### `a)` ¿Qué es? Indique una breve reseña histórica acerca de la evolución del Kernel de GNU/Linux.
 Se explica arriba y la historia no me importa :D
 
 `b)` ¿Cuáles son sus funciones principales?
