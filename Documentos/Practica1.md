@@ -421,26 +421,52 @@ No, cada usuario puede definir su o sus intérpretes
 
 ## `6)` Sistema de Archivos (File System):
 
-`a)` ¿Qué es?\
-Es la forma en que dentro de un SO se organizan y se administran los archivos.
-- **Métodos de acceso:** cómo se acceden los datos contenidos en el archivo.
-- **Manejo de archivos:** cómo actúan los mecanismos para almacenar, referenciar, compartir y proteger los archivos.
-- **Manejo de la memoria secundaria:** Cómo se administra el espacio para los archivos en memoria secundaria.
-- **Mecanismos de integridad:** con qué métodos se garantiza la incorruptibilidad del archivo.
+#### `a)` ¿Qué es?
 
-`b)` Mencione sistemas de archivos soportados por GNU/Linux.\
+Es la forma en que dentro de un SO se organizan y se administran los archivos.
+
+Los usuarios de Linux hacen una distinción del filesystem. Dicen que un filesystem es un esquema de programación que se utiliza para organizar y buscar archivos en una
+partición. Mientras que el sistema de archivos se refiere a todos los archivos de la
+computadora.
+
+Lo que esto significa, básicamente, es que el filesystem es la estructura que se utiliza para ver, buscar y usar los archivos mediante Ubuntu. Mientras que el sistema de archivos son todos los archivos separados de esa estructura y el formato de esos archivos. 
+
+---
+
+#### `b)` Mencione sistemas de archivos soportados por GNU/Linux.
+
 A continuación veremos una lista con algunos filesystem utilizados hoy en día:
+
 - ext2
 - ext3
 - ReiserFS
 - XFS
 
-`c)` ¿Es posible visualizar particiones del tipo FAT y NTFS en GNU/Linux?\
-SI\
-`d)`  ¿Cuál es la estructura básica de los File System en GNU/Linux? Mencione los directorios más importantes e indique qué tipo de información se encuentra en ellos. ¿A qué hace referencia la sigla FHS?\
-La estructura basica en la que se organizan es **jerarquica de tipo arbol**. El nivel más alto del sistema de ficheros es / o directorio raíz. Todos los demás ficheros y directorios están bajo el directorio raíz. Por ejemplo, /home/jebediah/cheeses.
+---
 
-FHS define los directorios principales y sus contenidos en el sistema operativo LinuxGNU/Linux 
+#### `c)` ¿Es posible visualizar particiones del tipo FAT y NTFS en GNU/Linux?\
+
+Si. En estos momentos existen distribuciones de GNU-Linux que pueden realizar operaciones de lectura y escritura sobre ellas. 
+
+#### `d)`  ¿Cuál es la estructura básica de los File System en GNU/Linux? 
+
+![image](https://user-images.githubusercontent.com/55964635/227661611-40497548-8ce3-4142-88f9-e193515a9d88.png)
+
+#### Mencione los directorios más importantes e indique qué tipo de información se encuentra en ellos.
+
+- **`/`** Tope de la estructura de directorios. Es como el C:\ (raíz).
+- **`/home`** Se almacenan archivos de usuarios (Mis documentos)
+- **`/var`** Información que varía de tamaño (logs, BD, spools)
+- **`/etc`** Archivos de configuración del sistema.
+- **`/bin`** Archivos binarios y ejecutables.
+- **`/dev`** Enlace a dispositivos.
+- **`/usr`** Aplicaciones de usuarios
+
+#### ¿A qué hace referencia la sigla FHS?
+
+(Filesystem Hierarchy Standard - Estándar de jerarquía del sistema de archivos).
+
+FHS: es el estándar que siguen todos los sistemas operativos unix, para organizar el sistema de archivos. 
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
