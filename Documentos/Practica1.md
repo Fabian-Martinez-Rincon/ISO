@@ -40,7 +40,7 @@ operativo GNU/Linux, así como con su entorno y comandos principales.
 
 ## `1)` Características de **GNU/Linux**:
 
-### `a)` Mencione y explique las características más relevantes de **GNU/Linux**.\
+### `a)` Mencione y explique las características más relevantes de **GNU/Linux**.
 
 #### **`Es multiusuario`**
 
@@ -51,18 +51,65 @@ Cumple simultáneamente las necesidades de dos o más usuarios que comparten los
 
 Puede realizar varias operaciones, funciones o ejecuciones al mismo tiempo
 
+Los SO multitarea permiten realizar varias operaciones gracias a una operación denominada cambio de contexto que actúa de la siguiente manera, quita un proceso del CPU, ingresa uno nuevo, y luego vuelve a ingresar el proceso que quitó del CPU en una especie de cola de ejecución, sin que el procesador se entere de todo lo que está pasando, de modo, que pueda realizar varias tareas simultáneas. Es como una especie de engaño, que permite mejorar el rendimiento de los ordenadores y facilitar el trabajo a los usuarios.
+
+Multiprocesador se refiere al número de procesadores del sistema, que es más de uno y éste es capaz de usarlos todos para distribuir su carga de trabajo. 
+
+#### **`Es altamente portable`**
+
+Se puede usar en cualquier ordenador que tenga el SO para el que fue programado sin la
+necesidad de una instalación previa; significa que no hace falta la instalación de bibliotecas adicionales en el sistema para que pueda funcionar. 
+
+#### **`Posee diversos intérpretes de comandos, de los cuales algunos son programables`**
+
+- Es el método de interacción entre el usuario y la máquina (shell)
+- CLI (interfaz de línea de comando) un ejemplo seria la terminal bash. 
+
+#### **`Permite el manejo de usuarios y permisos`**
+
+Nos permite darle permisos particulares a usuarios y archivos del file system.
+
+#### **`Todo es un archivo (hasta los dispositivos y directorios):`**
+
+Todo es un fichero. Los directorios son ficheros, los ficheros son ficheros, y los dispositivos son ficheros. A veces a los dispositivos se les llama nodos, pero siguen siendo ficheros.
+
+Los sistemas de ficheros de GNU/Linux se organizan en una estructura jerárquica, de tipo árbol.
+
+El nivel más alto del sistema de ficheros es / o directorio raíz. Todos los demás ficheros y directorios están bajo el directorio raíz. Por ejemplo, `/home/jebediah/cheeses.odt` muestra la ruta completa al fichero cheeses.odt que está en el directorio jebediah, que a su vez está bajo el directorio home, que por su parte está bajo el directorio raíz (/).
+
+#### **`Cada directorio puede estar en una partición diferente (/temp, /home, etc.)`**
+
+En Linux, el sistema de archivos se organiza en una estructura de árbol con una raíz denominada "/" (barra). Dentro de esta estructura de árbol, cada partición puede montarse en un directorio diferente, lo que significa que los archivos y directorios que se encuentran dentro de esa partición se harán accesibles a través del directorio montado.
+
+Por ejemplo, si tienes una partición llamada /dev/sda1 y quieres montarla en el directorio /home, los archivos y directorios en esa partición estarán disponibles en el directorio /home. Si tienes otra partición llamada /dev/sda2 y quieres montarla en /temp, los archivos y directorios en esa partición estarán disponibles en el directorio /temp.
+
+En resumen, en Linux, cada partición puede montarse en un directorio diferente en la estructura de árbol de archivos del sistema, lo que permite una mejor organización y gestión de los datos.
+
+####  **`Es case sensitive`**
+
+Sensible a las mayúsculas y minúsculas
+
+#### **`Es código abierto`**
+
+Software cuyo código fuente y otros derechos que normalmente son exclusivos para quienes poseen los derechos de autor, son publicados bajo una licencia de código abierto o forman parte del dominio público. En las licencias compatibles con la Open Source Definition el propietario de los derechos de autor permite a los usuarios utilizarlo, modificarlo, estudiarlo, aprovechar su documentación, redistribuir el software, a cualquiera, para cualquier propósito, ya sea en su forma modificada o en su forma original etc. 
 
 
-`b)` Mencione otros sistemas operativos y compárelos con GNU/Linux en cuanto a los puntos mencionados en el inciso a.
+### `b)` Mencione otros sistemas operativos y compárelos con GNU/Linux en cuanto a los puntos mencionados en el inciso a.
+
 - A diferencia de Windows y Mac, Linux no pertenece a ninguna compañía, sino que su desarrollo depende de la colaboración de un gran número de empresas y profesionales.
 - Su uso esta mas enfocado a programadores dado que sus interfaces son menos amigables.
 - Los demás sistemas suelen ser en su mayoría pagos y enfocados mas a lo comercial
 - El manejo de permisos de Linux vuelve mas difícil la creación de un virus para dicho sistema mientras que en Windows es mas común.
 
-`c)` ¿Qué es **GNU**?\
-GNU es un sistema operativo de software libre
+### `c)` ¿Qué es **GNU**?
 
-`d)` Indique una breve historia sobre la evolución del proyecto *GNU*\
+GNU es un SO de tipo Unix pero libre, diseñado por miles de programadores, así como una gran colección de programas informáticos que componen al sistema, desarrollado por y para el GNU.
+
+Está formado en su totalidad por software libre, mayoritariamente bajo términos
+de copyleft. GNU es el acrónimo recursivo de "GNU's Not Unix" **(GNU no es Unix)**, nombre elegido debido a que GNU sigue un diseño tipo Unix y se mantiene compatible con este, pero se distingue de Unix por ser software libre y por no contener código de Unix.
+
+### `d)` Indique una breve historia sobre la evolución del proyecto *GNU*
+
 - El proyecto GNU fue iniciado por Richard M. Stallman con el propósito de crear un sistema operativo completo y libre: el sistema GNU.
 - Se baso principalmente en 4 libertades
     - **Libertad 1:** la libertad para ejecutar el programa con cualquier fin.
@@ -72,12 +119,24 @@ GNU es un sistema operativo de software libre
 
 Pondria más pero a nadie le importa la historia de linux salu2.
 
-`e)` Explique qué es la multitarea, e indique si *GNU/Linux* hace uso de ella.\
-**Multitarea:** Que permite la ejecución concurrente o simultánea de diversas tareas y procesos.\
-LINUX utiliza la llamada multitarea preventiva, la cual **asegura que todos los programas que se están utilizando en un momento dado serán ejecutados**, siendo el sistema operativo el encargado de ceder tiempo de microprocesador a cada programa.
+### `e)` Explique qué es la multitarea, e indique si *GNU/Linux* hace uso de ella.
 
-`f)` ¿Qué es **POSIX**?\
-Es una norma escrita por la IEEE, que define una interfaz estándar del sistema operativo y el entorno, incluyendo un intérprete de comandos (o "shell")
+Puede realizar varias operaciones, funciones o ejecuciones al mismo tiempo
+
+Los SO multitarea permiten realizar varias operaciones gracias a una operación denominada cambio de contexto que actúa de la siguiente manera, quita un proceso del CPU, ingresa uno nuevo, y luego vuelve a ingresar el proceso que quitó del CPU en una especie de cola de ejecución, sin que el procesador se entere de todo lo que está pasando, de modo, que pueda realizar varias tareas simultáneas. Es como una especie de engaño, que permite mejorar el rendimiento de los ordenadores y facilitar el trabajo a los usuarios. 
+
+`Linux es Multitarea:` La multitarea no consiste en hacer que el procesador realice más de un trabajo al mismo tiempo (un solo procesador no tiene esa capacidad), lo único que realiza es presentar las tareas de forma intercalada para que se ejecuten varias simultáneamente. Por lo tanto en Linux es posible ejecutar varios programas a la vez sin necesidad de tener que parar la ejecución de cada aplicación. 
+
+**GNU/Linux si es multitarea.**
+
+### `f)` ¿Qué es **POSIX**?
+
+POSIX (Interfaz de sistema operativo portátil) es un conjunto de interfaces de sistema
+operativo estándar basadas en el sistema operativo Unix .
+
+Definen una interfaz y un entorno estándar que puede utilizar un sistema operativo para proporcionar acceso a aplicaciones compatibles con POSIX.
+
+El estándar también define un intérprete de comandos ( shell ) y programas de utilidad comunes . POSIX admite la portabilidad de aplicaciones en el nivel del código fuente , por lo que las aplicaciones se pueden crear para ejecutarse en cualquier sistema operativo compatible con POSIX.
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
