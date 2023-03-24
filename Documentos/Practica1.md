@@ -226,53 +226,182 @@ Estructura. Nos ocuparemos de tres componentes principales:
 ## `4)` Kernel: 
 
 #### `a)` ¿Qué es? Indique una breve reseña histórica acerca de la evolución del Kernel de GNU/Linux.
-Se explica arriba y la historia no me importa :D
+
+El kernel es la estructura principal del SO, es el que se encarga de que el software y el hardware puedan trabajar juntos.
+
+Es un núcleo monolítico hibrido, y esta licenciado bajo la licencia GPL v2. 
+
+***Evolución***
+
+
+En 1991 Linus Torvalds inicia la programación del kernel Linux basándose en Minix (un clon de Unix desarrollado por Tenembaum en 1987).
+
+En octubre de 1991 sale la primera versión oficial Linux(0.02) .
+
+En 1992 se une Linux con el proyecto Gnu de Richard Stallman , la versión 1.0 aparece el 14 de marzo del 94’ , luego el desarrollo de Gnu/Linux se sigue desarrollando por miles de programadores, en el 96’ adoptan como mascota oficial a Tux (pingüinito).
+
+En julio de 1996 se lanza la versión 2.0 y se define la nomenclatura de versionado. Se desarrollo hasta febrero de 2004 y termino con la 2.0.40. En enero de 1999 se lanza la versión 2.2, que provee mejoras de portabilidad entre otras y se desarrolla hasta febrero de 2004 terminando en la versión 2.2.26.
+
+En 2001 se lanza la versión 2.4 y se deja de desarrollar a fines del 2010 con la 2.4.37.11. La versión 2.4 fue la que catapulto a GNU/Linux como un SO estable y robusto.
+
+Durante este período es que se comienza a utilizar Linux más asiduamente Núcleo.
+
+A fines del 2003 se lanza la versión 2.6, Esta versión ha tenido muchas mejoras para el SO dentro de las que se destacan soporte de hilos, mejoras en la planificación y soporte de nuevo hardware.
+
+El 3 de agosto de 2011 se lanza la versión 2.6.39.4 anunciándose la misma desde meses
+previos como la última en su revisión.
+
+El 17 de julio de 2011 se lanza la versión 3.01, No agrega mayores cambios.
+
+La decisión del cambio son los 20 años del SO y no superar los 40 números de revisión. Totalmente compatible con 2.6. La última versión estable es la 5.19.6 (agosto de 2022). 
+
 
 ---
 
 #### `b)` ¿Cuáles son sus funciones principales?
-- **Gestión de la memoria:** supervisa cuánta memoria se utiliza para almacenar qué tipo de elementos, así como el lugar en que los guarda.
-- **Gestión de los procesos:** determina qué procesos pueden usar la unidad central de procesamiento (CPU), cuándo y durante cuánto tiempo.
-- **Controladores de dispositivos:** actúa como mediador o intérprete entre el hardware y los procesos.
-- **Seguridad y llamadas al sistema:** recibe solicitudes de servicio por parte de los procesos.
 
-`c)` ¿Cuál es la versión actual? ¿Cómo se definía el esquema de versionado del Kernel en versiones anteriores a la 2.4? ¿Qué cambió en el versionado se impuso a partir de la versión 2.6?\
+Funciones principales: Administrar la memoria, CPU y E/S, administración de procesos y
+comunicación y concurrencia. 
+
+---
+
+#### `c)` ¿Cuál es la versión actual? 
+
 La versión del kernel actual es 5.16. Lo demas a nadie le importa 
 
-`d)` ¿Es posible tener más de un Kernel de GNU/Linux instalado en la misma máquina?\
-No, solo puede haber uno.
+#### **¿Cómo se definía el esquema de versionado del Kernel en versiones anteriores a la 2.4?**
 
-`e)` ¿Dónde se encuentra ubicado dentro del File System?\
-Se encuentra justo en el medio que reside en la memoria e indica qué debe hacer la CPU.  En el directorio boot
+En la versión 2.0 se define la nomenclatura del versionado:
 
-`f)` ¿El Kernel de GNU/Linux es monolítico? Justifique.\
-El kernel de GNU/Linux es monolítico hibrido, esto se refiere a que el núcleo usa mecanismos de arquitectura tando de diseño **monolítico** como **micronúcleo**
+Modo de Versionar: A.B.C.[D]
+
+- `A)` Denota Versión. Cambia con menor Frecuencia. en 1994 (versión 1.0), en 1996 (versión 2.0) y en 2010(3.0).
+- `B)` Denota Mayor revisión. Antes de la versión 2.6, los números impares indicaban desarrollo, los pares producción.
+- `C)` Denota Menor revisión. Solo cambia cuando hay nuevos drivers o características. -------------------------- la D se agrega a partir de la visión 2.4 ------------------------------------------
+- `D)` Cambia cuando se corrige un grave error sin agregar nueva funcionalidad.
+(casi no se usan en la rama de versiones 3.x, 4.x y 5.x viéndose reflejado en el componente C del SO).
+
+Ejemplo actualidad: versión 5.19.6
+
+#### **¿Qué cambió en el versionado se impuso a partir de la versión 2.6?**
+
+- Antes de la versión 2.6, los números impares indicaban desarrollo, los pares producción.
+
+
+---
+
+#### `d)` ¿Es posible tener más de un Kernel de GNU/Linux instalado en la misma máquina?
+
+Sí. Se puede instalar en la misma máquina, pero 2 núcleos corriendo simultáneamente en Linux es imposible
+
+---
+
+#### `e)` ¿Dónde se encuentra ubicado dentro del File System?
+
+Se encuentra ubicado el /lib/: librerías esenciales compartidas y módulos de kernel
+
+Directorio raíz de toda la jerarquía de archivos del sistema.
+
+`\` Jerarquia Primaria
+
+- `/bin/)` Comandos binarios esenciales de usuario
+- `/boot/)` Archivos estáticos del selector de arranque
+- `/dev/)` Archivos de unidades
+- `/etc/)` Configuración del sistema de Host Especifico
+- `/home/)` Directorio "home" de usuario
+- `/lib/)` Librerias esenciales compartidas y módulos de Kernel
+- `/media/)` Punto de Montaje para medios removibles
+- `/mnt/)` Punto de Montaje temporal para sistemas de archivos
+- `/opt/)` Agregados de paquetes de Software y Aplicaciones
+- `/sbin/)` Binarios de Sistema
+- `/srv/)` Datos para los servicios provistos por este sistema
+- `/tmp/)` Archivos temporales
+- `/usr/)` Unidades y aplicaciones de (Multi) usuario
+- `/var/)` Variables de archivo
+- `/root/)` Directorio "Home" del usuario Root
+- `/proc/)` Documentación del sistema de archivos virtual del Kernel y las condiciones de los procesos en archivos de texto
+
+---
+
+#### `f)` ¿El Kernel de GNU/Linux es monolítico? Justifique.
+
+El kernel Gnu/Linux si es **monolítico**.
+
+**`Kernel monolítico`** quiere decir que toda funcionalidad que implementa el SO se ejecuta en modo kernel o supervisor, ejemplo cuando un usuario quiere ejecutar un proceso se pasa a modo kernel se resuelve todo ahí y después regresa a modo usuario cuando esa resolución termino, toda la lógica se encuentra en el modo kernel. 
+
+**`Ventajas`** el modelado, el diseño implica menos tiempo en la resolución de las cosas. (cambio de modo - resuelvo lo que tengo que resolver - vuelvo a modo usuario). 
+
+También existe el ***kernel microkernel***, se trata de que el modo kernel o supervisor este el menos tiempo posible y trata de dejar en modo usuario diferentes componentes para que se ejecuten en modo usuario y que hagan de apoyo al modo kernel.
+
+**`Ejemplo:`** el SO tiene un conjunto de procesos que van a ir cambiando cada 3 segundos, cada vez que cambia de proceso eso debe estar en modo kernel, ahora la selección de cuál de esos 3 procesos va a ser seleccionado para a entrar a ejecutarse se puede hacer en modo usuario.
+
+Básicamente el kernel microkernel reduce al máximo el uso del modo kernel y delega cosas al modo usuario cosa que no sucede con el modo kernel.
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `5)` Intérprete de comandos (Shell):
 
-`a)` ¿Qué es?\
-El Shell (intérprete de comandos) es el programa que recibe lo que se escribe en la terminal y lo convierte en instrucciones para el sistema operativo.
+#### `a)` ¿Qué es?
 
-`b)` ¿Cuáles son sus funciones?\
-Una de sus funciones es leer las entradas del usuario y traducirlas a instrucciones que el sistema es capaz de entender y utilizar.
+La shell también conocida como CLI (interfaz de línea de comando), es el que gestiona la interacción entre el usuario y el sistema operativo.
 
-`c)` Mencione al menos 3 intérpretes de comandos que posee GNU/Linux y compárelos entre ellos.
-- **Korn-Shell (ksh):**
-- **Bourne-Shell (sh):**
-- **C-Shell (csh):**
+(es solo un programa que hará de mediador entre nosotros y el kernel del SO. Puede ser tanto gráfico Ej. La interfase X-Window, como de texto Linux (Ej. El bash).
 
-Estas se diferencian entre sí básicamente en la sintaxis de sus comandos y en la interacción con el usuario.
+La Shell no forma parte básico del sistema operativo si no que la misma dialogo con el kernel.\
+La shell es iniciada por un proceso llamado login y dado que cada usuario tiene asignado una shell por defecto la misma se inicia cada vez que un usuario comienza a trabajar en su estación de trabajo, es decir se loguea en una terminal. Dentro del contenido del archivo /etc/passwd, se puede ver cual es la shell que cada usuario tiene asignada por defecto.
+---
 
-`d)` ¿Dónde se ubican (path) los comandos propios y externos al Shell?
-- **Propios:** Son basicamente los comandos
-- **Externos:** Es cualquier ejecutable
+#### `b)` ¿Cuáles son sus funciones?
 
-`e)` ¿Por qué considera que el Shell no es parte del Kernel de GNU/Linux?\
+Es el encargado de ejecutar programas a partir del ingreso de comandos.
+
+Ejemplo: control de procesos, redirección de entrada/salida, listado y lectura de ficheros, protección, comunicaciones y un lenguaje de órdenes para escribir programas por lotes o (scripts o guiones).
+
+
+---
+
+#### `c)` Mencione al menos 3 intérpretes de comandos que posee GNU/Linux y compárelos entre ellos.
+
+- **`Bourne Shell (sh)`** Creado por S. Bourne, es el más utilizado en la actualidad. Su símbolo del sistema es $. Es el shell estándar y el que se monta en casi todos los sistemas UNIX/Linux.
+- **`Korn Shell (ksh)`** Escrito por David Korn, amplía el shell del sistema añadiendo historial de órdenes, edición en línea de órdenes y características ampliadas de programación. 
+- **`Bourne Again Shell (bash)`** Fue creado para usarlo en el proyecto GNU. BASH, por lo tanto, es un shell o intérprete de comandos GNU que incorpora la mayoría de distribuciones de Linux. Es compatible con el shell sh. Además, incorpora algunas características útiles de ksh y csh, y otras propias como la edición de línea de comandos, tamaño ilimitado del historial de comandos, control de los trabajos y procesos, funciones y alias, cálculos aritméticos con números enteros, etc. Su símbolo del sistema es nombre_usuario@nombre_equipo. 
+
+
+Los intérpretes se diferencian entre sí básicamente en la sintaxis de sus comandos y en la interacción con el usuario.
+
+---
+
+#### `d)` ¿Dónde se ubican (path) los comandos propios y externos al Shell?
+
+**PATH:** es una variable y su contenido es una cadena que contiene rutas de
+directorios separadas por dos puntos.
+
+Por ejemplo, para mostrar el valor de una variable en la shell se debe escribir:
+
+- `echo $ nombrevariable `
+- en el caso de la variable path seria
+- echo$ PATH
+
+la variable PATH contiene una lista de directorios separados por dos puntos. Estos son los directorios en los que el shell busca el comando que el usuario escribe desde el teclado.
+
+La búsqueda no se realiza en el orden en el que están los directorios en la variable PATH.
+
+- Los `comandos propios`, también conocidos como built-in commands, son aquellos que están integrados en la propia shell. Estos comandos suelen ser los más básicos y necesarios para la gestión de la sesión y del sistema, como por ejemplo: cd (para cambiar de directorio), echo (para imprimir texto en la pantalla), exit (para salir de la sesión), entre otros.
+- Por otro lado, los `comandos externos` son aquellos que se encuentran en el sistema operativo y que son invocados desde la shell. Estos comandos pueden ser programas completos o scripts que realizan una tarea específica. Ejemplos de comandos externos son ls (para listar los archivos en un directorio), cat (para mostrar el contenido de un archivo), grep (para buscar patrones en un archivo), entre otros.
+
+En resumen, los comandos propios están integrados en la propia shell y los comandos externos son programas o scripts que se ejecutan desde la shell.
+
+
+---
+
+#### `e)` ¿Por qué considera que el Shell no es parte del Kernel de GNU/Linux?
+
 La principal razon es que es muy remplazable, en caso de que falle, se puede reiniciar y todo tendria que seguir andando.
 
-`f)` ¿Es posible definir un intérprete de comandos distinto para cada usuario? ¿Desde dónde se define? ¿Cualquier usuario puede realizar dicha tarea?\
+---
+
+#### `f)` ¿Es posible definir un intérprete de comandos distinto para cada usuario? ¿Desde dónde se define? ¿Cualquier usuario puede realizar dicha tarea?
+
 Cada usuario posee una shell por defecto , la cual puede definirse por un usuario con derechos privilegiados.
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
