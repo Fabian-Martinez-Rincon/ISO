@@ -304,22 +304,22 @@ Directorio raíz de toda la jerarquía de archivos del sistema.
 
 `\` Jerarquia Primaria
 
-- `/bin/)` Comandos binarios esenciales de usuario
-- `/boot/)` Archivos estáticos del selector de arranque
-- `/dev/)` Archivos de unidades
-- `/etc/)` Configuración del sistema de Host Especifico
-- `/home/)` Directorio "home" de usuario
-- `/lib/)` Librerias esenciales compartidas y módulos de Kernel
-- `/media/)` Punto de Montaje para medios removibles
-- `/mnt/)` Punto de Montaje temporal para sistemas de archivos
-- `/opt/)` Agregados de paquetes de Software y Aplicaciones
-- `/sbin/)` Binarios de Sistema
-- `/srv/)` Datos para los servicios provistos por este sistema
-- `/tmp/)` Archivos temporales
-- `/usr/)` Unidades y aplicaciones de (Multi) usuario
-- `/var/)` Variables de archivo
-- `/root/)` Directorio "Home" del usuario Root
-- `/proc/)` Documentación del sistema de archivos virtual del Kernel y las condiciones de los procesos en archivos de texto
+- `/bin/` Comandos binarios esenciales de usuario
+- `/boot/` Archivos estáticos del selector de arranque
+- `/dev/` Archivos de unidades
+- `/etc/` Configuración del sistema de Host Especifico
+- `/home/` Directorio "home" de usuario
+- `/lib/` Librerias esenciales compartidas y módulos de Kernel
+- `/media/` Punto de Montaje para medios removibles
+- `/mnt/` Punto de Montaje temporal para sistemas de archivos
+- `/opt/` Agregados de paquetes de Software y Aplicaciones
+- `/sbin/` Binarios de Sistema
+- `/srv/` Datos para los servicios provistos por este sistema
+- `/tmp/` Archivos temporales
+- `/usr/` Unidades y aplicaciones de (Multi) usuario
+- `/var/` Variables de archivo
+- `/root/` Directorio "Home" del usuario Root
+- `/proc/` Documentación del sistema de archivos virtual del Kernel y las condiciones de los procesos en archivos de texto
 
 ---
 
@@ -444,7 +444,7 @@ A continuación veremos una lista con algunos filesystem utilizados hoy en día:
 
 ---
 
-#### `c)` ¿Es posible visualizar particiones del tipo FAT y NTFS en GNU/Linux?\
+#### `c)` ¿Es posible visualizar particiones del tipo FAT y NTFS en GNU/Linux?
 
 Si. En estos momentos existen distribuciones de GNU-Linux que pueden realizar operaciones de lectura y escritura sobre ellas. 
 
@@ -472,7 +472,8 @@ FHS: es el estándar que siguen todos los sistemas operativos unix, para organiz
 
 ## `7)` Particiones:
 
-`a)`  Definición. Tipos de particiones. Ventajas y Desventajas.\
+#### `a)`  Definición. Tipos de particiones. Ventajas y Desventajas.
+
 Particionar un disco duro es realizar una división en él de modo que, a efectos prácticos, el sistema operativo crea que tienes varios discos duros, cuando en realidad sólo hay un único disco físico dividido en varias partes. De este modo, se pueden modificar o borrar particiones sin afectar a los demás datos del disco.\
 Tipos de particiones:
 
@@ -491,19 +492,22 @@ Tipos de particiones:
     - **Posibilidad de errores**
     - **Experiencia más lenta**
 
-`b)` ¿Cómo se identifican las particiones en GNU/Linux? (Considere discos **IDE**, **SCSI** y **SATA**).\
+#### `b)` ¿Cómo se identifican las particiones en GNU/Linux? (Considere discos **IDE**, **SCSI** y **SATA**).
+
 Las particiones en cada disco son representadas añadiendo un número decimal al nombre del disco: sda1 y sda2 representan a la primera y segunda partición en la primera unidad de disco SCSI en el sistema.
 
-`c)` ¿Cuántas particiones son necesarias como mínimo para instalar GNU/Linux? Nómbrelas indicando tipo de partición, identificación, tipo de File System y punto de montaje.\
+#### `c)` ¿Cuántas particiones son necesarias como mínimo para instalar GNU/Linux? Nómbrelas indicando tipo de partición, identificación, tipo de File System y punto de montaje.
+
 Como mınimo es necesario una particion (para el /)\
 La respuesta rápida y fácil es: **recomendable al menos dos, una para el sistema/datos(Primaria) y otra para Swap**. Usualmente se suelen tener tres, una para el sistema/programas (/)(Secundaria), otra para los datos (/home) y otra para swap.
 
 - **Swap:** Una partición SWAP en Linux es un espacio del disco duro utilizado por el sistema operativo como memoria virtual o almacenamiento temporal. Es utilizado cuando no hay espacio suficiente en la memoria RAM para guardar datos de aplicaciones, por lo que la parición SWAP cumple la función de emular RAM en disco
 
-`d)` Ejemplifique diversos casos de particionamiento dependiendo del tipo de tarea que se deba realizar en su sistema operativo.\
+#### `d)` Ejemplifique diversos casos de particionamiento dependiendo del tipo de tarea que se deba realizar en su sistema operativo.
+
 Son las primarias y secundarias, que para mas detalle se encuentra en la pregunta `a)`
 
-`e)`  ¿Qué tipo de software para particionar existe? Menciónelos y compare\
+#### `e)` ¿Qué tipo de software para particionar existe? Menciónelos y compare
 
 Existen 2 tipos:
 - **Destructivos:** permiten crear y eliminar particiones (fdisk)
@@ -513,24 +517,28 @@ Existen 2 tipos:
 
 ## `8)` Arranque (bootstrap) de un Sistema Operativo:
 
-`a)` ¿Qué es el BIOS? ¿Qué tarea realiza?\
+#### `a)` ¿Qué es el BIOS? ¿Qué tarea realiza?
+
 BIOS es el responsable de iniciar la carga del SO a través del MBC, el cual es un pequeño código para el arranque del sistema operativo
 
-`b)` ¿Qué es UEFI? ¿Cuál es su función?\
+#### `b)` ¿Qué es UEFI? ¿Cuál es su función?
+
 UEFI  es el código del firmware(sirve para comunicarse con los dispositivos de hardware de un sistema) de un chip en la placa base que proporciona funciones adicionales a las del sistema de entrada/salida básico (BIOS). UEFI ofrece una manera de hacer cosas con el equipo antes de que se cargue un sistema operativo.
 
-`c)` ¿Qué es el MBR? ¿Que es el MBC?\
+#### `c)` ¿Qué es el MBR? ¿Que es el MBC?
 MBC, es un pequeño código para el arranque del sistema operativo.
 
 El MBR o **master boot recordes** el primer sector físico de un portador de datos (por ejemplo, un disco duro, una memoria USB) que se utiliza para arrancar (iniciar) los ordenadores. Para esto, el ordenador debe disponer de un BIOS y un sistema operativo x86
 
-`d)` ¿A qué hacen referencia las siglas GPT? ¿Qué sustituye? Indique cuál es su formato.\
+#### `d)` ¿A qué hacen referencia las siglas GPT? ¿Qué sustituye? Indique cuál es su formato.
+
 GPT(GUID partition table) especifica la ubicación y formato de la tabla de
 particiones en un disco duro. Sustituye al MBR
 
 **GPT lo hace mediante LBA o dirección de bloque lógica** para referirse a la región en donde se encuentran los datos físicamente almacenados en nuestra unidad de almacenamiento
 
-`e)` ¿Cuál es la funcionalidad de un “Gestor de Arranque”? ¿Qué tipos existen? ¿Dónde se instalan? Cite gestores de arranque conocidos.\
+#### `e)` ¿Cuál es la funcionalidad de un “Gestor de Arranque”? ¿Qué tipos existen? ¿Dónde se instalan? Cite gestores de arranque conocidos.
+
 La finalidad del bootloader o gestor de arranque es la de cargar una imagen de
 Kernel (sistema operativo) de alguna partición para su ejecución
 
@@ -543,13 +551,14 @@ Kernel (sistema operativo) de alguna partición para su ejecución
 - GRand Unified Bootloader: gestor de arranque múltiple más
 utilizado
 
-`f)` ¿Cuáles son los pasos que se suceden desde que se prende una computadora hasta que el Sistema Operativo es cargado (proceso de bootstrap)?
+#### `f)` ¿Cuáles son los pasos que se suceden desde que se prende una computadora hasta que el Sistema Operativo es cargado (proceso de bootstrap)?
 
 - El BIOS se ejecuta, realizando el **POST**, que incluye rutinas que, fijan valores de las señales internas, y ejecutan test internos (RAM, el teclado, etc).
 - Se lee el primer sector del disco de inicio llamado **MBR**.
 - Se carga en memoria y se ejecuta
 
-`g)`  Analice el proceso de arranque en GNU/Linux y describa sus principales pasos.\
+####  `g)` Analice el proceso de arranque en GNU/Linux y describa sus principales pasos.
+
 Ell flujo de control durante el arranque es desde el **[BIOS]()**, al **[gestor de arranque]()** y al núcleo (**[kernel]())**). 
 
 - **Kernel:** Este inicia el planificador (para permitir la **[multitarea]()**) y ejecuta el primer **[espacio de usuario]()** (fuera del espacio del núcleo) y el programa de inicialización (que establece el entorno de usuario y permite la interacción del usuario y el **[inicio de sesión]())**, momento en el que el núcleo se inactiva hasta que sea llamado externamente.
@@ -558,22 +567,25 @@ Ell flujo de control durante el arranque es desde el **[BIOS]()**, al **[gesto
 
 - En el apagado, Init es llamado a cerrar toda las funcionalidades del espacio de usuario de una manera controlada, de nuevo a través de secuencias de comandos, tras lo cual el Init termina y el núcleo ejecuta el apagado.
 
-`h)` ¿Cuáles son los pasos que se suceden en el proceso de parada (shutdown) de GNU/Linux?
+#### `h)` ¿Cuáles son los pasos que se suceden en el proceso de parada (shutdown) de GNU/Linux?
+
 - Se notifica a los usuarios este hecho.
 - Se bloquea el sistema para que nadie más pueda acceder exceptuando el **root**.
 - Se envía la señal **SIGTERM** (señal de terminación) a todos los procesos no definidos en **inittab**(contiene un registro para cada proceso que define los niveles de ejecución para ese proceso) para el siguiente run level, provocando que terminen su ejecución de modo ordenado.
 
-`i)` ¿Es posible tener en una PC GNU/Linux y otro Sistema Operativo instalado? Justifique\
+#### `i)` ¿Es posible tener en una PC GNU/Linux y otro Sistema Operativo instalado? Justifique
+
 Si es posible ya lo vimos anteriormente gracias a las particiones de disco instalar múltiples sistema operativos o a través de maquinas virtuales.
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `9)` Archivos
 
-`a)` ¿Cómo se identifican los archivos en GNU/Linux?\
+#### `a)` ¿Cómo se identifican los archivos en GNU/Linux?
+
 Un nombre de archivo puede tener entre 1 y 255 caracteres. recomendable emplear los caracteres con significado especial en Linux, que son los siguientes: **= \ ^ ~ ' " ` * ; - ? ( )! & ~ < >**
 
-`b)` Investigue el funcionamiento de los editores vi y mcedit, y los comandos cat y more.
+#### `b)` Investigue el funcionamiento de los editores vi y mcedit, y los comandos cat y more.
 
 - **VI**
 Es el editor de texto clásico en UNIX. Puede usarse en cualquier tipo de terminal con un mínimo de teclas.
@@ -598,7 +610,8 @@ Es la abreviatura de concatenar. Esto se refiere al hecho de que cat puede ser u
 Es un comando para ver (pero no modificar) el contenido de un archivo o comando y visualizarlo por páginas.
 
 
-`c)` Cree un archivo llamado “prueba.exe” en su directorio personal usando el vi. El mismo debe contener su número de alumno y su nombre.\
+#### `c)` Cree un archivo llamado “prueba.exe” en su directorio personal usando el vi. El mismo debe contener su número de alumno y su nombre.
+
 - Utilice el siguiente comando para crear un archivo (en este ejemplo, .htaccess). También puede editar un archivo existente con el mismo comando. 
 
 ```
@@ -614,7 +627,8 @@ vi .htaccess
 :wq
 ```
 
-`d)` Investigue el funcionamiento del comando file. Pruébelo con diferentes archivos. ¿Qué diferencia nota?\
+#### `d)` Investigue el funcionamiento del comando file. Pruébelo con diferentes archivos. ¿Qué diferencia nota?
+
 Permite detectar el tipo y formato de un archivo
 
 ```
