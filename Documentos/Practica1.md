@@ -349,6 +349,7 @@ La shell también conocida como CLI (interfaz de línea de comando), es el que g
 
 La Shell no forma parte básico del sistema operativo si no que la misma dialogo con el kernel.\
 La shell es iniciada por un proceso llamado login y dado que cada usuario tiene asignado una shell por defecto la misma se inicia cada vez que un usuario comienza a trabajar en su estación de trabajo, es decir se loguea en una terminal. Dentro del contenido del archivo /etc/passwd, se puede ver cual es la shell que cada usuario tiene asignada por defecto.
+
 ---
 
 #### `b)` ¿Cuáles son sus funciones?
@@ -398,11 +399,23 @@ En resumen, los comandos propios están integrados en la propia shell y los coma
 
 La principal razon es que es muy remplazable, en caso de que falle, se puede reiniciar y todo tendria que seguir andando.
 
+Y tambien
+
+La shell no forma parte del kernel de Linux porque es una aplicación que proporciona una interfaz de línea de comandos para interactuar con el sistema operativo, mientras que el kernel es la parte central del sistema operativo que administra los recursos del hardware y proporciona servicios básicos al software. Aunque la shell y el kernel trabajan juntos, son dos componentes distintos con diferentes funciones y responsabilidades.
+
 ---
 
-#### `f)` ¿Es posible definir un intérprete de comandos distinto para cada usuario? ¿Desde dónde se define? ¿Cualquier usuario puede realizar dicha tarea?
+#### `f)` ¿Es posible definir un intérprete de comandos distinto para cada usuario? 
 
-Cada usuario posee una shell por defecto , la cual puede definirse por un usuario con derechos privilegiados.
+Si, es posible. 
+
+#### ¿Desde dónde se define?
+
+Se definen en etc/passwd 
+
+#### ¿Cualquier usuario puede realizar dicha tarea?
+
+No, cada usuario puede definir su o sus intérpretes
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
