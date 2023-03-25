@@ -746,48 +746,18 @@ file [opciones] archivo
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-## `10)` Indique qué comando es necesario utilizar para realizar cada una de las siguientes acciones. Investigue su funcionamiento y parámetros más importantes:
+### `10)` Indique qué comando es necesario utilizar para realizar cada una de las siguientes acciones. Investigue su funcionamiento y parámetros más importantes:
 
-- `a)` Cree la carpeta ISO2017 <br><br>
-    ```bash
-    mkdir "ISO 2022"
-    ```
-- `b)` Acceda a la carpeta (cd)<br><br>
-    ```bash
-    cd 'ISO 2022'
-    ```
-- `c)` Cree dos archivos con los nombres iso2017-1 e iso2017-2 (touch)<br><br>
-    ```bash
-    touch ISO2022-1 ISO2022-2
-    ```
-- `d)` Liste el contenido del directorio actual (ls)<br><br>
-    ```bash
-    ls
-    ```
-- `e)` Visualizar la ruta donde estoy situado (pwd)<br><br>
-    ```bash
-    pwd
-    ```
-- `f)` Busque todos los archivos en los que su nombre contiene la cadena “iso*” (find)<br><br>
-    ```bash
-    find ./'ISO 2022' -name "ISO*"
-    ```
-- `g)` Informar la cantidad de espacio libre en disco (df)<br><br>
-    ```bash
-    df
-    ```
-- `h)` Verifique los usuarios conectado al sistema (who)<br><br>
-    ```bash
-    who
-    ```
-- `i)` Acceder a el archivo iso2017-1 e ingresar Nombre y Apellido<br><br>
-    ```bash
-    vi ISO2022-1
-    ```
-- `j)` Mostrar en pantalla las últimas líneas de un archivo (tail).<br><br>
-    ```bash
-    tail ISO2022-1
-    ```
+- `mkdir "ISO 2022"` Cree la carpeta ISO2017 
+- `cd 'ISO 2022'` Acceda a la carpeta (cd)
+- `touch ISO2022-1 ISO2022-2` Cree dos archivos con los nombres iso2017-1 e iso2017-2 (touch)
+- `ls` Liste el contenido del directorio actual (ls)
+- `pwd` Visualizar la ruta donde estoy situado (pwd)
+- `find ./'ISO 2022' -name "ISO*"` Busque todos los archivos en los que su nombre contiene la cadena “iso*” (find)
+- `df` Informar la cantidad de espacio libre en disco (df)
+- `who` Verifique los usuarios conectado al sistema (who)
+- `vi ISO2022-1` Acceder a el archivo iso2017-1 e ingresar Nombre y Apellido
+- `tail ISO2022-1` Mostrar en pantalla las últimas líneas de un archivo (tail).
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
