@@ -786,9 +786,10 @@ sudo shutdown -c
 | -F  | After reboot it forces fsck.  |
 | -H  | This option orders the system to descend into the boot the monitor on computers which provide support to it if -h is also supplied.  |
 
+---
+
 - `sudo reboot` Sirve para reiniciar el equipo
 - `sudo halt` El comando halt detiene la CPU del ordenador
-
 - `locate` El comando locate es una alternativa útil, ya que es más rápido que find para realizar búsquedas. Eso se debe a que sólo escanea tu base de datos de Linux en lugar de todo el sistema. Además, la sintaxis es más fácil de escribir `sudo apt install locate`
 - `uname` Se usa para verificar la información del sistema
     ```
@@ -802,18 +803,16 @@ sudo shutdown -c
     uname -o
     uname -a
     ```
-- `gmesg` (No entiendo porque esta diferente) \
-El comando `dmesg` es una utilidad de Linux que muestra mensajes relacionados con el kernel recuperados del búfer de anillo del kernel. `dmesg`
+- `gmesg` (No entiendo porque esta diferente) El comando `dmesg` es una utilidad de Linux que muestra mensajes relacionados con el kernel recuperados del búfer de anillo del kernel. `dmesg`
 - `lspci` El comando lspci lista todos los componentes tipo pci como son las tarjetas de red, tarjetas de sonido o tarjetas de televisión. 
 - `at` Ejecuta comandos a la hora especificada.
 - `netstat` Los administradores de sistemas utilizan netstat el comando de Linux para ver información sobre las conexiones de red `sudo apt install net-tools`
-- `mount` Se utiliza para montar dispositivos y particiones para su uso por el sistema operativo
+- `mount` Se utiliza para montar dispositivos y particiones para su uso por el sistema operativo <br> <br>
     ```
     sudo apt install nfs-common
     sudo mkdir -p /mnt/client_ shareddirectory
     sudo mount [nfs_server]:/[nfs_shareddirectory] [client_mountpoint]
     ```
-
 - `umount` El comando umount le permite eliminar un sistema de archivos remoto que esté montando en la actualidad `umount --all`
 - `head` Este comando sirve principalmente para mostrar al principio de un archivo (de texto) o para reducir a lo especificado los datos mostrados por un comando de Linux
 - `losetup` losetup de comandos de Linux se utiliza para fijar el dispositivo de bucle.
@@ -821,27 +820,20 @@ El comando `dmesg` es una utilidad de Linux que muestra mensajes relacionados co
     - `d` dispositivo extraíble.
     - `e` <cifrado> Iniciar cifrado codificación.
     - `o` <número de traducción> Establecer el número de conversión de datos.
-
-`n)` write\
-sirve para enviar un mensaje a otro usuario del sistema.
-
-write usuario
-Escribo aquí lo que
-quiera que le llegue y luego cierro.
-Control-D
-
-`ñ)` mkfs\
-Se utiliza para dar formato a un dispositivo de almacenamiento de bloque con un determinado sistema de archivos
-
-`o)` fdisk (con cuidado) \
-Permite al usuario crear particiones en el disco duro de la misma manera que su contraparte de MS-DOS
+- `write` sirve para enviar un mensaje a otro usuario del sistema.
+    - write usuario
+    - Escribo aquí lo que
+    - quiera que le llegue y luego cierro.
+    - Control-D
+- `mkfs` Se utiliza para dar formato a un dispositivo de almacenamiento de bloque con un determinado sistema de archivos
+- `fdisk` (con cuidado) Permite al usuario crear particiones en el disco duro de la misma manera que su contraparte de MS-DOS
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-# `12)` Investigue su funcionamiento y parámetros más importantes:
+### `12)` Investigue su funcionamiento y parámetros más importantes:
 
 - `a)`  Indique en qué directorios se almacenan los comandos mencionados en el ejercicio anterior.
 
-Preguntale a dios.
+El directorio /bin es un directorio estático y es donde se almacenan todos los binarios necesarios para garantizar las funciones básicas a nivel de usuario. Solo almacena los ejecutables de usuario, ya que los binarios necesarios para tareas administra/vas gestionadas por el usuario root o súper-usuario del sistema se encuentran en el directorio / sbin.
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
