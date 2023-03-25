@@ -472,36 +472,69 @@ FHS: es el estándar que siguen todos los sistemas operativos unix, para organiz
 
 ## `7)` Particiones:
 
-#### `a)`  Definición. Tipos de particiones. Ventajas y Desventajas.
+#### `a)`  Definición
 
-Particionar un disco duro es realizar una división en él de modo que, a efectos prácticos, el sistema operativo crea que tienes varios discos duros, cuando en realidad sólo hay un único disco físico dividido en varias partes. De este modo, se pueden modificar o borrar particiones sin afectar a los demás datos del disco.\
-Tipos de particiones:
+Es el nombre que recibe cada división de una sola unidad física de almacenamiento
+de datos. (es un pedazo de una unidad ).
 
-- **Primarias:** puede ser reconocida como una partición de arranque y puede contener un sistema operativo que realice el arranque del equipo.
-- **Extendidas/secundaria** : actúa como una partición primaria; sirve para contener múltiples unidades lógicas en su interior. Fue ideada para romper la limitación de 4 particiones primarias en un solo disco físico
-- **Lógicas:** son aquellas particiones que creamos dentro de las particiones extendidas. Al igual que en las particiones primarias, las particiones lógicas pueden utilizarse para instalar Windows y cualquier otro tipo de archivos. Aunque podemos instalar sistemas operativos en las unidades lógicas, no se les puede dar el estado activo y, por lo tanto, no sirven para arrancar el ordenador desde cero por si mismas. Eso sí, podemos utilizar un gestor de arranque en una partición primaria para arrancar las particiones lógicas.
-- `Ventajas`
-    - **Instalar dos o más sistemas operativos**
-    - **Mejor organización**
-    - **Más seguridad**
-    - **Copias de seguridad**
-    - **Facilidad de reinstalación**
-- ``Desventajas``
-    - **Innecesario para el usuario medio**
-    - **Desorden en los volúmenes**
-    - **Posibilidad de errores**
-    - **Experiencia más lenta**
+Toda partición tiene su propio sistema de archivos (formato); generalmente, casi cualquier sistema operativo interpreta, utiliza y manipula cada partición como un disco físico independiente, a pesar de que dichas particiones estén en un solo disco físico.
+
+---
+
+#### Tipos de particiones
+
+Existen 3 tipos diferentes de particiones:
+
+- **`Partición primaria`** Son las divisiones crudas o primarias del disco, solo puede haber 4 de éstas o 3 primarias y una extendida. Depende de una tabla de particiones. Un disco físico completamente formateado consiste, en realidad, de una partición primaria que ocupa todo el espacio del disco y posee un sistema de archivos. A este tipo de particiones, prácticamente cualquier sistema operativo puede detectarlas y asignarles una unidad, siempre y cuando el sistema operativo reconozca su formato (sistema de archivos). 
+- **`Partición extendida`** También conocida como partición secundaria es otro tipo de partición que actúa como una partición primaria; sirve para contener múltiples unidades lógicas en su interior. Fue ideada para romper la limitación de 4 particiones primarias en un solo disco físico. Solo puede existir una partición de este tipo por disco, y solo sirve para contener particiones lógicas. Por lo tanto, es el único tipo de partición que no soporta un sistema de archivos directamente.
+- **`Partición lógica`** Ocupa una porción de la partición extendida o la totalidad de la misma, la cual se ha formateado con un tipo específico de sistema de archivos (FAT32, NTFS, ext2,...) y se le ha asignado una unidad, así el sistema operativo reconoce las particiones lógicas o su sistema de archivos. Puede haber un máximo de 23 particiones lógicas en una partición extendida.
+
+---
+
+#### Ventajas
+
+- **`Facilidad de reinstalación.`** Si separamos los archivos Windows de nuestra información personal, será mucho más fácil reinstalar Windows. Esto es porque nos «ata» todo lo que tenemos guardado, evitando formatear o intentando hallar otras soluciones antes que esa. De hecho, podemos clonar la partición de Windows para hacer restauración.
+- **`Copias de seguridad.`** Las copias de seguridad son las que nos salvan de los problemas catastróficos (que me lo digan a mí). Siempre hay que funcionar sobreseguro, lo que se traduce en tener backups de toda la información, o de la más importante. Las particiones nos dan la ventaja de tener un volumen para copias de seguridad.
+- **`Más seguridad.`** Imaginad que nuestra partición de Windows queda infectada por un virus y perdemos toda la información hallada en ella. Tener nuestra información importante en otra partición nos salva de un gran apuro, especialmente si el virus es ransomware. Igualmente, instalad un antivirus y funcionad con él.
+- **`Mejor organización.`** Esto depende de la persona, pero es innegable que podemos organizarnos mucho mejor teniendo varias particiones. Así, podemos clasificar toda nuestra información de mayor a menor importancia, o según el tipo de información, tamaño, etc. 
+- **`Instalar dos o más sistemas operativos.`** En mi opinión, es uno de los motivos principales por los que las personas hacen particiones. En el pasado, hice una partición para usar OS X y Windows, creando un arranque dual que me permitiera elegir el sistema operativo que quisiese iniciar. Al fin y al cabo, tenéis un volumen listo para usar. 
+- **`Máquinas virtuales.`** Quienes trabajéis con ellas, haréis particiones para instalar una máquina virtual en ella. Es una gran idea para separar nuestro PC de nuestra máquina virtual. Por tanto, podemos tener ambos contenidos separados; de lo contrario, si algo falla, podríamos perder toda la información de nuestro PC y máquina virtual.
+
+---
+
+#### Desventajas
+
+- **`Experiencia más lenta.`** Si tenemos muchas particiones, puede que nos cueste encontrar un archivo en concreto. Aquí hay que ser muy metódico y ordenado para saber qué partición es vital, como cuál es prescindible. Al final, tardamos en encontrar algo por tener demasiadas particiones.
+- **`Posibilidad de errores.`** Existe la posibilidad de que surjan más fallos cuando tenemos muchas particiones. Son meras cuestiones de probabilidad, así que no hay que volverse loco.
+- **`Desorden en los volúmenes.`** Es fácil que esto ocurra; de hecho, me ha pasado muchas veces a mí. Cuando hacemos una partición, formateamos, volvemos a crear un volumen, etc., podemos crear particiones extendidas que no van a ningún sitio. En mi caso, se trataba de una partición de 700 MB en un HDD de 2 TB: el impacto es mínimo. Sin embargo, no tiene gracia que nos pase en un SSD de poca capacidad.
+- **`Innecesario para el usuario medio.`** Al final, las personas que utilizan el PC para «3 cosas», no requieren particiones, ni se quieren liar a aprender cómo funciona esto. Por tanto, es una opción limitada a aquellos que buscan cierta utilidad. 
+
+---
 
 #### `b)` ¿Cómo se identifican las particiones en GNU/Linux? (Considere discos **IDE**, **SCSI** y **SATA**).
 
-Las particiones en cada disco son representadas añadiendo un número decimal al nombre del disco: sda1 y sda2 representan a la primera y segunda partición en la primera unidad de disco SCSI en el sistema.
+El primer disco duro **`IDE`** se conoce como /dev/hda. Si tenemos un segundo disco duro IDE se llamará /dev/hdb, etc.
+
+Los discos duros **`SCSI`** y **`SATA`** se denominan /dev/sda, /dev/sdb, etc. En cada disco son representadas **añadiendo un número decimal al nombre del disco**: sda1 y sda2 representan a la primera y segunda partición en la primera unidad de disco SCSI en el sistema.
+
+---
 
 #### `c)` ¿Cuántas particiones son necesarias como mínimo para instalar GNU/Linux? Nómbrelas indicando tipo de partición, identificación, tipo de File System y punto de montaje.
 
-Como mınimo es necesario una particion (para el /)\
-La respuesta rápida y fácil es: **recomendable al menos dos, una para el sistema/datos(Primaria) y otra para Swap**. Usualmente se suelen tener tres, una para el sistema/programas (/)(Secundaria), otra para los datos (/home) y otra para swap.
+Si bien el número **mínimo absoluto de particiones sería uno (1)**, una **instalación típica de GNU / Linux tendrá al menos dos (2)** particiones: la partición raíz (indicada como /) y la partición de **intercambio**. Puede optar por tener todos los archivos en una sola partición dentro de la mayoría de las distribuciones durante la instalación.
 
-- **Swap:** Una partición SWAP en Linux es un espacio del disco duro utilizado por el sistema operativo como memoria virtual o almacenamiento temporal. Es utilizado cuando no hay espacio suficiente en la memoria RAM para guardar datos de aplicaciones, por lo que la parición SWAP cumple la función de emular RAM en disco
+El esquema de particiones estándar para la mayoría de las instalaciones domésticas de Linux es el siguiente: Una partición de 12-20 GB para el sistema operativo, que se monta como / (llamada **“raíz”** o **root**) Una partición más pequeña que se utiliza para aumentar su RAM, montada y denominada **/swap**. Una mampara más grande para uso personal, montada como **/home**
+
+Para una instalación de **GNU/Linux saludable se recomiendan 3 particiones swap, root y home**.
+
+**Hay 2 tipos de particiones principales en un sistema Linux:**
+
+- **`Partición de datos`** datos normales del sistema Linux, incluida la partición raíz que contiene todos los datos para iniciar y ejecutar el sistema; y.
+- **`Partición de intercambio`** expansión de la memoria física de la computadora, memoria extra en el disco duro.
+- **`Tipo de filesystem`** Sistema de archivos Ext2, ext3 y ext4: Así como Apple y Microsoft tienen sus propios sistemas, estos tres (cada uno evolución del anterior) son los utilizados por las distribuciones GNU/Linux. El principal inconveniente es que sólo puede ser utilizado en esta familia de sistemas operativos. 
+
+**`Tipo de filesystem`** Sistema de archivos **Ext2, ext3 y ext4**: Así como Apple y Microsoft tienen sus propios sistemas, estos tres (cada uno evolución del anterior) son los utilizados por las distribuciones GNU/Linux. El principal inconveniente es que sólo puede ser utilizado en esta familia de sistemas operativos. 
+
 
 #### `d)` Ejemplifique diversos casos de particionamiento dependiendo del tipo de tarea que se deba realizar en su sistema operativo.
 
