@@ -33,107 +33,267 @@ permisos, etc
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `1)` Editor de textos:
-`(a)` Nombre al menos 3 editores de texto que puede utilizar desde la línea de comandos.
+#### `(a)` Nombre al menos 3 editores de texto que puede utilizar desde la línea de comandos.
 
 -  **Vim:** Es un editor de texto que rompe las bolas pero aprendes
 - **GNU Emacs:** La misma basura que vim pero con calculadora y administrador de archivos
 - **mcedit:** Te permite navegar entre los ficheros con una interfaz.
 
-`(b)` ¿En qué se diferencia un editor de texto de los comandos cat, more o less? Enumere los modos de operación que posee el editor de textos vi.\
-Estos comandos si bien son muy utiles y simples, carecen de algunas funcionalidades, como por ejemplo, abrir un archivo en modo lectura asi no nos tenemos que preocupar de modificarlo.
+---
 
-- [Fuente](https://victorhckinthefreeworld.com/2020/01/02/ni-cat-ni-more-ni-less-usa-vim-para-ver-el-contenido-de-un-archivo-de-texto-en-la-consola/)
+#### `(b)` ¿En qué se diferencia un editor de texto de los comandos cat, more o less? Enumere los modos de operación que posee el editor de textos vi.
+
+Los **comandos cat, more y less** permiten mostrar el contenido de ficheros de texto desde la línea de comandos en sistemas **Unix**. 
+
+En su lugar los **editores de texto**, justamente nos dejan **editar texto** además de poder **visualizarlo**. 
+
+- `cat` imprimirá por pantalla el contenido del fichero sin ningún tipo de paginación ni posibilidad de modificarlo. Básicamente concatena archivos o la salida estándar en la salida estándar. 
+- `more` permite visualizar por pantalla el contenido de un fichero de texto, con la diferencia con el anterior de que `more` página los resultados. Primero mostrará por pantalla todo lo que se pueda visualizar sin hacer scroll y después, pulsando la tecla espacio avanzará de igual modo por el fichero. 
+- `less` es el más completo de los tres, pues puede hacer todo lo que hace `more` añadiendo mayor capacidad de navegación por el fichero (avanzar y retroceder) además de que sus comandos están basados en el editor `vi`, del cual se diferencia en que no tiene que leer todo el contenido del fichero antes de ser abierto.
+
+---
 
 `(c)` Nombre los comandos más comunes que se le pueden enviar al editor de textos vi
+
 - [Comandos basicos](https://docs.oracle.com/cd/E19620-01/805-7644/6j76klopr/index.html)
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `2)` Proceso de Arranque SystemV:
-`(a)` Enumere los pasos del proceso de inicio de un sistema GNU/Linux, desde que se prende la PC hasta que se logra obtener el login en el sistema.
+#### `(a)` Enumere los pasos del proceso de inicio de un sistema GNU/Linux, desde que se prende la PC hasta que se logra obtener el login en el sistema.
 
-- Se empieza a ejecutar el código del BIOS
-- El BIOS ejecuta el POST
-- El BIOS lee el sector de arranque (MBR)
-- Se carga el gestor de arranque (MBC)
-- El bootloader carga el kernel y el initrd
-- Se monta el initrd como sistema de archivos raíz y se inicializan componentes esenciales (ej.: scheduler)
-- El Kernel ejecuta el proceso init y se desmonta el initrd
-- Se lee el /etc/inittab
-- Se ejecutan los scripts apuntados por el runlevel 1
-- El final del runlevel 1 le indica que vaya al runlevel por defecto
-- Se ejecutan los scripts apuntados por el runlevel por defecto
-- El sistema est´a listo para usarse
+- `Paso 1)` Se empieza a ejecutar el código del BIOS
+- `Paso 2)` El BIOS ejecuta el POST
+- `Paso 3)` El BIOS lee el sector de arranque (MBR)
+- `Paso 4)` Se carga el gestor de arranque (MBC)
+- `Paso 5)` El bootloader carga el kernel y el initrd
+- `Paso 6)` Se monta el initrd como sistema de archivos raíz y se inicializan componentes esenciales (ej.: scheduler)
+- `Paso 7)` El Kernel ejecuta el proceso init y se desmonta el initrd
+- `Paso 8)` Se lee el /etc/inittab
+- `Paso 9)` Se ejecutan los scripts apuntados por el ***runlevel 1***
+- `Paso 10)` El final del ***runlevel 1*** le indica que vaya al runlevel por defecto
+- `Paso 11)` Se ejecutan los scripts apuntados por el runlevel por defecto
+- `Paso 12)` El sistema est´a listo para usarse
 
-`(b)` Proceso INIT. ¿Quién lo ejecuta? ¿Cuál es su objetivo?
+---
+
+#### `(b)` Proceso INIT. ¿Quién lo ejecuta? ¿Cuál es su objetivo?
 - Su función es cargar todos los subprocesos necesarios para el correcto funcionamiento del SO
-- El proceso init posee el PID 1 y se encuentra en /sbin/init
-- En SysV se lo configura a traves del archivo /etc/inittab
+- El proceso init posee el PID 1 y se encuentra en **/sbin/init**
+- En SysV se lo configura a traves del archivo **/etc/inittab**
 - No tiene padre y es el padre de todos los procesos (pstree)
-- Es el encargado de montar los filesystems y de hacer
-disponible los dem´as dispositivos
+- Es el encargado de montar los filesystems y de hacer disponible los dem´as dispositivos
 
-`(c)` Ejecute el comando pstree. ¿Qué es lo que se puede observar a partir de la ejecución de este comando?\
+---
+
+#### `(c)` Ejecute el comando pstree. ¿Qué es lo que se puede observar a partir de la ejecución de este comando?
+
 El programa pstree facilita información sobre la finalización de una serie de procesos relacionados entre sí, esto es, todos los descendientes de un proceso particular. El programa deja claro desde un principio que proceso es el primario y cuales son los secundarios.
 
-`(d)` RunLevels. ¿Qué son? ¿Cuál es su objetivo?
+---
+
+#### `(d)` RunLevels. ¿Qué son? ¿Cuál es su objetivo?
 - Es el modo en que arranca Linux (3 en Redhat, 2 en Debian)
 - El proceso de arranque lo dividimos en niveles
-- Cada uno es responsable de levantar (iniciar) o bajar (parar)
-una serie de servicios
+- Cada uno es responsable de levantar (iniciar) o bajar (parar) una serie de servicios
+- Un nivel de ejecución es básicamente una configuración de programas y servicios que se ejecutarán orientados a un determinado funcionamiento. 
 
-`(e)` ¿A qué hace referencia cada nivel de ejecución según el estándar? ¿Dónde se define qué Runlevel ejecutar al iniciar el sistema operativo? ¿Todas las distribuciones respetan estos estándares? [Fuente](https://www.factor.mx/portal/base-de-conocimiento/niveles-de-ejecucion/)
+Explicación más detallada
 
-- **0** Indica halt o apagado de la máquina.
-- **1** Indica monousuario.
-- **2** Indica modo multiusuario sin soporte de red.
-- **3** Indica modo multiusuario completo con soporte de red.
-- **4** No usado, con esta opción el administrador puede personalizar el inicio para cargar algún servicio.
-- **5** Indica multiusuario completo con inicio gráfico (X11)
-- **6** Indica shutdown y reboot: Se apaga inmediatamente la máquina para reinicio.
+- `Paso 1)` Cuando un sistema GNU/Linux arranca, primero se carga el kernel del sistema, después se inicia el primer proceso, denominado **init**, que es el responsable de ejecutar y activar el resto del sistema, mediante la gestión de los niveles de ejecución (o **runlevels**).
+- `Paso 2)` En el caso del modelo runlevel de SystemV, cuando el proceso init arranca, utiliza un fichero de configuración llamado **/etc/inittab** para decidir el modo de ejecución en el que va a entrar.
+- `Paso 3)` En este fichero se define el runlevel por defecto (initdefault) en arranque (por instalación en Fedora el 5, en Debian el 2) y una serie de servicios de terminal por activar para atender la entrada del usuario.
+- `Paso 4)` Después, el sistema, según el runlevel escogido, consulta los ficheros contenidos en **/etc/rcn.d**, donde **n** es el número asociado al runlevel (nivel escogido), en el que se encuentra una lista de servicios por activar o parar en caso de que arranquemos en el runlevel, o lo abandonemos
+- `Paso 5)` Dentro del directorio encontraremos una serie de **scripts** o enlaces a los scripts que controlan el servicio. Cada script posee un nombre relacionado con el servicio, una S o K inicial que indica si es el script para iniciar **(S)** o matar **(K)** el servicio, y un número que refleja el orden en que se ejecutarán los servicios. 
 
-Un administrador (root) puede editar el archivo /etc/inittab como mejor convenga al usuario, sin embargo también tiene el poder de establecerlo en 0 o en 6. Si se establece en 6, algo que hice como experimento en mi Mandriva, la próxima vez que la máquina se encienda, se leerá el modo 6, shutdown y reboot, y se hará exactamente eso. 
 
-`(f)` Archivo /etc/inittab. ¿Cuál es su finalidad? ¿Qué tipo de información se almacena en el? ¿Cuál es la estructura de la información que en él se almacena?\
-Este programa es el encargado de lanzar los scripts de inicialización del sistema y de modificar el sistema operativo de su estado inicial de arranque al estado estándar multiusuario. También define los intérpretes de órdenes login: de todos los dispositivos tty del sistema y especifica otras características del arranque y apagado.
+#### `(e)` ¿A qué hace referencia cada nivel de ejecución según el estándar? [Fuente](https://www.factor.mx/portal/base-de-conocimiento/niveles-de-ejecucion/)
 
-- [Fuente](https://www.ibiblio.org/pub/linux/docs/LuCaS/Manuales-LuCAS/LIPP2/lipp-2.0-beta-html/node285.html)
+- **`0`** Indica halt o apagado de la máquina.
+- **`1`** Indica monousuario.
+- **`2`** Indica modo multiusuario sin soporte de red.
+- **`3`** Indica modo multiusuario completo con soporte de red.
+- **`4`** No usado, con esta opción el administrador puede personalizar el inicio para cargar algún servicio.
+- **`5`** Indica multiusuario completo con inicio gráfico (X11)
+- **`6`** Indica shutdown y reboot: Se apaga inmediatamente la máquina para reinicio.
 
-`(g)` Suponga que se encuentra en el runlevel \<X>. Indique qué comando(s) ejecutaría para cambiar al runlevel \<Y>. ¿Este cambio es permanente? ¿Por qué?\
-No es permanente ya que cuando reinicias el dispositivo, vulven a ejecutarse las runlevels de forma normal. [telinit](https://baulderasec.wordpress.com/analisis-software/linux/5-comenzar-con-linux-y-editar-ficheros/5-7-1-comprobar-el-modo-de-ejecucion/5-7-2-saber-el-modo-de-ejecucion-actual/5-7-2-1-cambiar-los-modos-de-ejecucion-con-init-o-telinit/)
+Un administrador (root) puede editar el archivo **/etc/inittab** como mejor convenga al usuario, sin embargo también tiene el poder de establecerlo en 0 o en 6. Si se establece en 6, algo que hice como experimento en mi Mandriva, la próxima vez que la máquina se encienda, se leerá el modo 6, shutdown y reboot, y se hará exactamente eso. 
 
-```powershell
+---
+
+#### ¿Dónde se define qué Runlevel ejecutar al iniciar el sistema operativo?
+
+- Se encuentran definidos en **/etc/inittab**
+- Los scripts que se ejecutan están en **/etc/init.d**
+- En **/etc/rcX.d** (donde X = 0..6) hay links a los archivos del /etc/init.d
+- Formato de los links:
+
+```
+    [SjK]<orden><nombreScript>
+```
+
+- `S)` lanza el script con el argument start
+- `K)` lanza el script con el argument stop
+
+---
+
+#### ¿Todas las distribuciones respetan estos estándares?
+
+No todas las distribuciones respetan los estándares.
+
+---
+
+### `(f)` Archivo /etc/inittab. ¿Cuál es su finalidad?  
+
+Es el archivo de configuración de init, que decide el modo de ejecución en el que va a entrar.
+
+Cuando el sistema se arranca, se verifica si existe un runlevel predeterminado en el archivo **/etc/inittab**, si no, se debe introducir por medio de la consola del sistema. Después se procede a ejecutar todos los scripts relativos al runlevel especificado. 
+
+---
+
+#### ¿Qué tipo de información se almacena en el? ¿Cuál es la estructura de la información que en él se almacena?
+
+`/etc/inittab`
+
+**`id:nivelesEjecucion:acción:proceso`**
+- **Id**: identifica la entrada en inittab (1 a 4 caracteres)
+- **Niveles_ejecucion**: el/los nivel de ejecución en los que se realiza la acción
+- **Acción**: describe la acción a realizar
+    - **wait**: Se inicia cuando se entra al runlevel e init espera a que termine
+    - **initdefault**
+    - **ctrlaltdel**: se ejecutará cuando init reciba la señal SIGINT
+    - **off, repawn, once, boot, bootwait, powerwait, otras…**
+- **Proceso**: el proceso exacto que será ejecutado
+
+---
+
+#### `(g)` Suponga que se encuentra en el runlevel \<X>. Indique qué comando(s) ejecutaría para cambiar al runlevel \<Y>. ¿Este cambio es permanente? ¿Por qué?
+
+Existen dos formas de modificar los runlevels:
+
+- **a) Cambiar de runlevel en ejecución:**
+Existe una utilidad para línea de comandos que permite cambiar de un nivel de ejecución a otro. Esta es la herramienta init. Para cambiar de nivel de ejecución sólo hay que ejecutar init seguido del número del runlevel.\
+Por ejemplo
+- **` init 0`** Cambia al runlevel 0 (se apaga el sistema, equivalente al comando halt).
+- **` init 2`** Cambia al runlevel 2.
+- **` init 6`** Cambia al runlevel 6 (reinicia el sistema, equivalente al comando reboot). 
+
+También **`telinit`**, nos permite cambiar de nivel de ejecución, sólo tenemos que indicar el número. Por ejemplo, necesitamos hacer una tarea crítica en root; sin usuarios trabajando, podemos hacer un **`tellinit 1`** (también puede usarse S) para pasar a runlevel monousuario, y después de la tarea un tellinit 3 para volver a multiusuario
+
+---
+
+#### **`b) Modificar el runlevel por defecto`**
+
+Por defecto, el sistema suele arrancar en el nivel de ejecución 5 (modo gráfico). Si se quisiera modificar este comportamiento, habría que editar el fichero **`/etc/inittab.`**
+
+Más concretamente, habría que modificar en el fichero /etc/inittab la línea donde el número 5 indica que el nivel de ejecución por defecto es el 5
+
+No es permanente. En el caso de que el runlevel se cambie durante la sección de bash abierta y luego se apague la máquina, cuando se vuelva a prender la maquina se volverá a restablecer al modo que tenga el sistema configurado (por defecto).
+
+En el caso de que se quiera cambiar el modo de arranque del runlevel de manera permanente se tendrá que configurar para que eso suceda. 
+
+
+```shell
 ls /etc/rc0.d
 sudo runlevel
 sudo telinit 2
 ```
 
+---
 
-`(h)` Scripts RC. ¿Cuál es su finalidad? ¿Dónde se almacenan? Cuando un sistema GNU/Linux arranca o se detiene se ejecutan scripts, indique cómo determina qué script ejecutar ante cada acción. ¿Existe un orden para llamarlos? Justifique.\
-Cuando init ingresa a un nivel de ejecución, llama al script rc con un argumento numérico que especifica el nivel de ejecución al que ir. rc luego inicia y detiene los servicios en el sistema según sea necesario para llevar el sistema a ese nivel de ejecución
+#### `(h)` Scripts RC. ¿Cuál es su finalidad?
 
-- [Fuente](https://geekpeach.net/es/comprender-los-scripts-rc-en-linux)
+Los scripts RC se encargan de cargar o cerrar los servicios necesarios para que el sistema funcione, de acuerdo con el runlevel que se está iniciando. Por ejemplo: lpd (servicio para imprimir), fetchmail (servicio para leer correo-e), sshd (SecureShell para abrir sesiones remotas de una manera segura), networking (abre las conexiones de red).
 
-`(i)` ¿Qué es insserv? ¿Para qué se utiliza? ¿Qué ventajas provee respecto de un arranque tradicional?\
-El programa insserv es utilizado por el sistema de inicio «init» estándar basado en SysV. Actualiza el orden de los enlaces simbólicos en /etc/rc?.d/ basándose en las dependencias especificadas por las cabeceras LSB en los propios scripts init.d.
 
-Estas relaciones declaradas entre scripts permiten optimizar la secuencia de arranque para el conjunto de paquetes instalado actualmente, a la vez que detectan y rechazan los bucles de dependencia.
-- [Fuente](https://packages.debian.org/sid/insserv)
+---
 
-`(j)` ¿Cómo maneja Upstart el proceso de arranque del sistema?\
-Upstart es un reemplazo basado en eventos para el daemon /sbin/init que maneja el inicio de tareas y servicios durante el arranque, los detiene durante el apagado y los supervisa mientras el sistema se está ejecutando.
+#### ¿Dónde se almacenan? 
 
-No entiendo una mrd, despues lo reviso.
+Todos estos servicios se encuentran en **/etc/init.d/**
 
-- [Fuente](https://esgeeks.com/systemv-upstart-systemd-linux/#:~:text=Qu%C3%A9%20es%20Upstart%3F-,Upstart%20es%20un%20reemplazo%20basado%20en%20eventos%20para%20el%20daemon,el%20sistema%20se%20est%C3%A1%20ejecutando.)
+Sin embargo, no todos los servicios se cargan en todos los runlevels. **¿Cómo sabe el RC que servicios tiene que cargar?** Los servicios a cargar se encuentran en el directorio /etc/rcX.d/, donde X es el runlevel a cargar. En realidad, en estos directorios no hay más que enlaces simbólicos a /etc/init.d/
 
-`(k)` Cite las principales diferencias entre SystemV y Upstart.
-[Fuente](https://esgeeks.com/systemv-upstart-systemd-linux/#:~:text=Upstart%20%3A%20Upstart%20es%20un%20reemplazo,los%20sistemas%20init%20tradicionales%20SysV.) Que paja escribir
+---
 
-`(l)` Qué reemplaza a los scripts rc de SystemV en Upstart? ¿En que ubicación del filesystem se encuentran?\
-Los scripts son reemplazados con jobs. Cada job es definido en el /etc/init (.conf)
+#### Cuando un sistema GNU/Linux arranca o se detiene se ejecutan scripts, indique cómo determina qué script ejecutar ante cada acción. ¿Existe un orden para llamarlos? Justifique.
 
-`(m)` Dado el siguiente job de upstart perteneciente al servicio de base de datos del mysql indique a qué hace referencia cada línea del mismo:
+`Orden para llamarlos:`
+
+Los nombres en estos directorios tienen una sintaxis bastante concreta. Empiezan por una letra (S o K) seguidos de un número y el nombre del servicio. La letra S significa iniciar (S de start). La letra K significa acabar (K de kill). El número es de dos dígitos, de 00 a 99 e indica el orden en el que se arrancará el servicio.
+
+- `1)` Ejecuta, por orden de nombre, todos los scripts que comienzan por **K** en el directorio correspondiente al nivel, utilizando como argumento para dicho script la opción **stop**.
+- `2)` Ejecuta, por orden de nombre, todos los scripts que comienzan por S en el directorio correspondiente al nivel, utilizando como argumento para dicho script la opción start.
+
+---
+
+### `(i)` ¿Qué es insserv? 
+
+El comando **insserv** se usa para controlar el orden de inicio y detención de los servicios que se encuentran en un sistema Linux. 
+
+#### ¿Para qué se utiliza?
+
+Se utiliza para administrar el orden de los enlaces simbólicos del **`/etc/rcX.d`**, resolviendo las dependencias de forma automática
+
+- Utiliza cabeceras en los scripts del **`/etc/init.d`** que permiten especificar la relación con otros scripts rc -> LSBInit (Linux Standard Based Init)
+- Es utilizado por update-rc.d para instalar / remover los links simbólicos
+
+#### ¿Qué ventajas provee respecto de un arranque tradicional?
+
+Mejora la performance del arranque en sistemas multiprocesadores. 
+
+---
+
+#### `(j)` ¿Cómo maneja Upstart el proceso de arranque del sistema?
+
+Upstart fue el primer reemplazo propuesto para SystemV (Ubuntu, Fedora, Debian, etc.). 
+
+- Permite la ejecución de trabajos en forma asincrónica a través de eventos (event-based) como principal diferencia con sysVinit que es estrictamente sincrónico (dependencybased).
+- Estos trabajos se denominan **Jobs**.
+- El principal objetivo de un job es definir servicios o tareas a ser ejecutadas por init
+- Son scripts de texto plano que definen las acciones/tareas (unidad de trabajo) a ejecutar ante determinados eventos.
+- Cada job es definido en el **/etc/init (.conf).**
+- Suelen ser de dos tipos:
+    - **Task**: ejecución finita (task) -> not respawning -> exit 0 o uso de stop.
+    - **Service**: ejecución indeterminada  respawning
+- Los jobs son ejecutados ante eventos (arranque del equipo, inserción de un dispositivo USB,etc)
+    - Es posible crear eventos pero existen algunos de manera estándar.
+    - Definido por **start on y stop on.**
+- Es compatible con SystemV ! **/etc/init/rc-sysinit.conf**, runlevels, scripts en /etc/init.d, objetivo start y stop. 
+- Cada job posee un objetivo (goal start/stop) y un estado (state). 
+    - En base a ellos se ejecuta un proceso específico.
+    - Al inicio, init emite el evento startup. 
+- Un job puede tener uno o varias tareas ejecutables como parte de su ciclo de vida y siempre debe existir la tarea principal
+- Las tareas de un job se definen mediante exec o script ... end script
+- A través de **initctl** podemos administrar los jobs del demonio de Upstart: 
+- **`start <job>`**: cambia el objetivo a start del job especificado
+- **`stop <job>`**: cambia el objetivo a stop del job especificado
+- **`emit <event>`**: event es emitido causando que otros Jobs cambien a objetivo start o stop 
+- No más **/etc/inittab**
+
+
+
+---
+
+#### `(k)` Cite las principales diferencias entre SystemV y Upstart.
+
+Upstart se creó como reemplazo del modelo SysVinit. A diferencia de SysVinit, que se creó para operar en un entorno estático Upstart se creó para operar en un entorno flexible.
+
+Upstart proporciona beneficios principales sobre el SysVinit. Estos beneficios son: event-based (principal diferencia con SysVinit que es estrictamente sincrónico - dependecy-based -) es la ejecucion de servicios en forma asincrónica y otro beneficio es el reinicio automático de servicios que dejan de responder de la manera inesperada para el sistema.
+
+Upstart en lugar de usar runlevels, usa jobs que cada uno de ellos posee un objetivo (start/stop y un estado state). Cuando ocurre una interrupción, upstart detecta ese interrupción y realiza los cambios necesarios. 
+
+
+---
+
+#### `(l)` Qué reemplaza a los scripts rc de SystemV en Upstart? ¿En que ubicación del filesystem se encuentran?
+
+- Los **`jobs`** reemplazan a los scripts de SystemV en Upstart.
+- Cada job es definido en el **`/etc/init (.conf)`**
+
+---
+
+#### `(m)` Dado el siguiente job de upstart perteneciente al servicio de base de datos del mysql indique a qué hace referencia cada línea del mismo:
 
 ```powershell
 # MySQL Servise
@@ -148,34 +308,59 @@ exec / usr / sbin /mysqld
 [...]
 ```
 
-`(n)` ¿Qué es sytemd?\
-SystemD es el administrador de servicios y sistemas en Linux, y la estandarización de la mayoría de distribuciones de Debian y Red Hat. SystemD fue desarrollado con el objetivo de encargarse de arrancar todo lo que está por debajo del Kernel, permitiendo ejecutar varios procesos de manera simultánea. Además, permite un seguimiento de procesos a través del uso de grupos de control del sistema operativo Linux.
+Este es un archivo de configuración Upstart para el servicio de base de datos MySQL. Cada línea se explica a continuación:
 
-- Es un sistema que centraliza la administracion de demonios y librerias del sistema
-- Mejora el paralelismo de booteo
-- Puede ser controlado por systemctl
-- Compatible con SysV → si es llamado como init
-- El demonio systemd reemplaza al proceso init → este pasa a terner PID 1
-- Los runlevels son reemplazados por targets
-- Al igual que con Upstart el archivo /etc/inittab no existe m´as
+- MySQL Service: un comentario que describe el servicio que se va a iniciar.
+- description "MySQL Server": una descripción del servicio, que aparecerá en los registros del sistema. {Descripcion}
+- author "info autor": información sobre el autor del archivo de configuración. {Autor}
+- start on (net-device-up and local-filesystems and runlevel [2345]): indica que el servicio debe iniciarse cuando la red y el sistema de archivos locales estén disponibles y el sistema se esté ejecutando en el nivel de ejecución 2, 3, 4 o 5. {Iniciar base de datos}
+- stop on runlevel [016]: indica que el servicio debe detenerse cuando el sistema se esté ejecutando en el nivel de ejecución 0, 1 o 6.
+- exec `/usr/sbin/mysqld`: la línea que indica al sistema qué comando ejecutar para iniciar el servicio MySQL. El comando `/usr/sbin/mysqld` es el comando para iniciar el servidor de base de datos MySQL.
 
-- [Fuente](https://keepcoding.io/blog/que-es-systemd/)
+---
 
-`(ñ)` ¿A qué hace referencia el concepto de activación de socket en systemd?\
-Es un mecanismo de iniciación bajo demanda → podemos ofrecer una variedad de servicios sin que realmente esten iniciados
-- Cuando el sockect recibe una conexión spawnea el servicio y le
-pasa el socket
-- No hay necesidad de definir dependencias entre servicios → se
-inician todos los sockets en primer medida
+#### `(n)` ¿Qué es sytemd?
 
-`(o)` ¿A qué hace referencia el concepto de cgroup?\
-Los cgroups o grupos de control, son una característica del kernel Linux que permite que los procesos se organicen en grupos jerárquicos con el fin de limitar y monitorear el uso de varios tipos de recursos. Con cgroups cada proceso corre en su propio espacio del kernel y de la memoria. Cuando se tienen la necesidad, un administrador puede configurar fácilmente un cgroup para limitar los recursos que puede utilizar un proceso.
+- Es un sistema que centraliza la administración de demonios y librerias del sistema.
+- Puede ser controlado por `systemctl`
+- Compatible con SysV -> si es llamado como `init`
+- El demonio systemd reemplaza al proceso init -> este pasa a terner PID 1
+- Los runlevels son reemplazados por `targets`
+- Al igual que con Upstart el archivo `/etc/inittab` no existe más. 
 
-- [Fuente](https://clibre.io/blog/por-secciones/hardening/item/425-cgroups-grupos-de-control-en-gnu-linux)
+---
+
+#### `(ñ)` ¿A qué hace referencia el concepto de activación de socket en systemd?
+
+Las unidades de trabajo son denominadas units de tipo:
+
+Service: controla un servicio particular (.service)
+
+- **`Socket`** encapsula IPC, un sockect del sistema o file system FIFO (.socket) -> sockect-based activation.
+- **`Target`** agrupa units o establece puntos de sincronización durante el booteo (.target)
+- **`dependencia`** de unidades
+- **`Snapshot`** almacena el estado de un conjunto de unidades que puede ser establecido más tarde (.snapshot) etc. 
+
+Las **units** pueden tener dos estados -> **active** o **inactive** 
+
+
+ ---
+
+#### `(o)` ¿A qué hace referencia el concepto de cgroup?
+
+Permite organizar un grupo de procesos en forma jerárquica
+
+Agrupa conjunto de procesos relacionados (por ejemplo, un servidor web Apache con sus dependientes).
+
+Tareas que realiza:
+
+- Tracking mediante subsistema cgroups  no se utiliza el PID  doble fork no funciona para escapar de systemd.
+- Limitar el uso de recursos. 
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `3)` Usuarios
+
 `(a)` ¿Qué archivos son utilizados en un sistema GNU/Linux para guardar la información de los usuarios?\
 Sistema de archivos Ext2, ext3 y ext4: Así como Apple y Microsoft tienen sus propios sistemas, estos tres (cada uno evolución del anterior) son los utilizados por las distribuciones GNU/Linux
 
@@ -403,7 +588,7 @@ Si los archivos están en el mismo directorio utilizamos el comando visto anteri
 
 Enunciado: Indique qué acción realiza cada uno de los comandos indicados a continuación considerando su orden. Suponga que se ejecutan desde un usuario que no es root ni pertenece al grupo de root. (Asuma que se encuentra posicionado en el directorio de trabajo del usuario con el que se logueó). En caso de no poder ejecutarse el comando, indique la razón
 
-```powershell
+```shell
 l s −l > prueba {No se puede acceder a pruebas pq no existe el fichero}                         
 ps > PRUEBA   {crea el archivo prueba con lo obtenido de ps}
 chmod 710 prueba  {no existe el archivo prueba dado que se creo en mayusculas}
