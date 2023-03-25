@@ -361,21 +361,46 @@ Tareas que realiza:
 
 ## `3)` Usuarios
 
-`(a)` ¿Qué archivos son utilizados en un sistema GNU/Linux para guardar la información de los usuarios?\
-Sistema de archivos Ext2, ext3 y ext4: Así como Apple y Microsoft tienen sus propios sistemas, estos tres (cada uno evolución del anterior) son los utilizados por las distribuciones GNU/Linux
+#### `(a)` ¿Qué archivos son utilizados en un sistema GNU/Linux para guardar la información de los usuarios?
 
-`(b)` ¿A qué hacen referencia las siglas UID y GID? ¿Pueden coexistir UIDs iguales en un sistema GNU/Linux? Justifique.\
+En un sistema GNU/Linux, la información de los usuarios se almacena principalmente en los siguientes archivos:
+
+- **`/etc/passwd`** Este archivo contiene información básica de los usuarios, como sus nombres de usuario, identificación de usuario (UID), identificación de grupo (GID), nombre completo, ruta del directorio de inicio y shell predeterminada.
+- **`/etc/shadow`** Este archivo contiene información confidencial de los usuarios, como sus contraseñas encriptadas, tiempo de última modificación de la contraseña, tiempo de expiración, cuenta bloqueada, etc.
+- **`/etc/group`** Este archivo contiene información de los grupos de usuarios, como el nombre del grupo, identificación de grupo (GID) y una lista de nombres de usuario que pertenecen a ese grupo.
+- **`/etc/gshadow`** Este archivo contiene información confidencial de los grupos de usuarios, como sus contraseñas encriptadas, tiempo de última modificación de la contraseña, tiempo de expiración, cuenta bloqueada, etc.
+
+Es importante destacar que estos archivos son de lectura y escritura solo para el superusuario (root) y que modificarlos sin conocimiento puede comprometer la seguridad del sistema.
+
+---
+
+#### `(b)` ¿A qué hacen referencia las siglas UID y GID? ¿Pueden coexistir UIDs iguales en un sistema GNU/Linux? Justifique.
+
 Los sistemas operativos Linux y Unix utilizan el UID (User ID o ID de usuario) para identificar al usuario particular. El GID (Group ID o ID de grupo) se utiliza para identificar a un grupo. Supongo que no podrian existir dos iguales ya que no los podrias distinguir.
 
-- [Fuente](https://techlandia.com/13112435/como-encontrar-el-uid-y-el-gid)
+Puede haber un caso que seria el root en el que podemos tener varios usuarios root con el ID 0
 
-`(c)` ¿Qué es el usuario root? ¿Puede existir más de un usuario con este perfil en GNU/Linux? ¿Cuál es la UID del root?.\
-En Linux el usuario root es aquel que tiene todos los permisos en el sistema operativo, es decir, es el súper administrador. Puede acceder a cualquier archivo y también ejecutar cualquier comando, incluidos los que nunca deberías ejecutar.
-Si, podes tenes los usuarios root que quieras. [Fuente](https://www.xn--linuxenespaol-skb.com/tutoriales/crear-usuario-con-privilegios-de-root-en-linux/)
+---
 
-- En Linux, la cuenta de superusuario es root , que siempre tiene el UID 0
+#### `(c)` ¿Qué es el usuario root? ¿Puede existir más de un usuario con este perfil en GNU/Linux? ¿Cuál es la UID del root?.
 
-`(d)` Agregue un nuevo usuario llamado iso2017 a su instalación de GNU/Linux, especifique que su home sea creada en /home/iso_2017, y hágalo miembro del grupo catedra (si no existe, deberá crearlo). Luego, sin iniciar sesión como este usuario cree un archivo en su home personal que le pertenezca. Luego de todo esto, borre el usuario y verifique que no queden registros de él en los archivos de información de los usuarios y grupos.
+En sistemas operativos del tipo Unix, el superusuario o root es el nombre
+convencional de la cuenta de usuario que posee todos los derechos en todos los
+modos (monousuario o multiusuario). Normalmente es la cuenta de administrador. 
+
+- Su UID (User ID) y GID es 0 (cero).
+- Es la única cuenta de usuario con privilegios sobre todo el sistema.
+- Acceso total a todos los archivos y directorios con independencia de propietarios y permisos.
+- Controla la administración de cuentas de usuarios.
+- Ejecuta tareas de mantenimiento del sistema.
+- Puede detener el sistema.
+- Instala software en el sistema.
+- Puede modificar o reconfigurar el kernel, controladores, etc. 
+
+
+---
+
+#### `(d)` Agregue un nuevo usuario llamado iso2017 a su instalación de GNU/Linux, especifique que su home sea creada en /home/iso_2017, y hágalo miembro del grupo catedra (si no existe, deberá crearlo). Luego, sin iniciar sesión como este usuario cree un archivo en su home personal que le pertenezca. Luego de todo esto, borre el usuario y verifique que no queden registros de él en los archivos de información de los usuarios y grupos.
 
 - `sudo adduser iso2022` creo un usuario y en home le agrego /home/ (contra = nombre para pruebas)
 - `sudo gropadd catedra` creo un grupo 
@@ -385,22 +410,59 @@ Si, podes tenes los usuarios root que quieras. [Fuente](https://www.xn--linuxene
 - `cd ..` para ir a la home personal y crear un archivo (creo)
 - `sudo userdel iso2022` lo elimina pero aun tenemos todos los archivos creados por este
 
-`(e)` Investigue la funcionalidad y parámetros de los siguientes comandos:
-- **useradd nombre ó adduser nombre:** Crea un nuevo usuario
-- **usermod nombre:** nos permite modificar todos los parámetros de la cuenta de un usuario creado con anterioridad.
-- **userdel nombre:** Elimina un usuario
-- **su:** entrar al super usuario (tenes los permisos de TODO)
-- **groupadd nombre:** te deja crear un grupo
-- **who:** Verifiqua los usuarios conectado al sistema
-- **groupdel nombre:** elimina un grupo
-- **passwd:** de deja cambiar la constraseña del usuario actual
+---
+
+#### `(e)` Investigue la funcionalidad y parámetros de los siguientes comandos:
+- **`useradd nombre ó adduser nombre`** Crea un nuevo usuario
+- **`usermod nombre`** nos permite modificar todos los parámetros de la cuenta de un usuario creado con anterioridad.
+- **`userdel nombre`** Elimina un usuario
+- **`su`** entrar al super usuario (tenes los permisos de TODO)
+- **`groupadd nombre`** te deja crear un grupo
+- **`who`** Verifiqua los usuarios conectado al sistema
+- **`groupdel nombre`** elimina un grupo
+- **`passwd`** de deja cambiar la constraseña del usuario actual
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `4)` FileSystem:
-`(a)` ¿Cómo son definidos los permisos sobre archivos en un sistema GNU/Linux?\
-**Los permisos están divididos en tres tipos: lectura, escritura y ejecución**
-. Estos permisos pueden ser fijados para tres clases de usuarios: el propietario del archivo o directorio, los integrantes del grupo al que pertenece y todos los demás usuarios.
+
+#### `(a)` ¿Cómo son definidos los permisos sobre archivos en un sistema GNU/Linux?
+
+Este mecanismo permite que archivos y directorios “pertenezcan” a un usuario en particular. Por ejemplo, como diego creó archivos en su directorio “home”, diego es el propietario de esos archivos y tiene acceso total a ellos. 
+
+Unix también permite que los archivos sean compartidos entre usuarios y grupos de usuarios. Si diego lo desea, podría restringir el acceso a sus archivos de forma que ningún otro usuario pueda acceder a ellos. 
+
+Los **permisos están divididos en tres tipos: `lectura`, `escritura` y `ejecución`**. Estos permisos pueden ser fijados para tres clases de usuarios: el propietario del archivo o directorio, los integrantes del grupo al que pertenece y todos los demás usuarios. 
+
+- **`lectura`** permite a un usuario leer el contenido del archivo o en el caso de un directorio, listar el contenido del mismo (usando ls).
+- **`escritura`** permite a un usuario escribir y modificar el archivo (inclusive, eliminarlo). Para directorios, el permiso de escritura permite crear nuevos archivos o borrar archivos ya existentes en el mismo.
+- **`ejecución`** permite a un usuario ejecutar el archivo si es un programa. Para directorios, el permiso de ejecución permite al usuario ingresar al mismo (por ejemplo, con el comando cd). 
+- **`Interpretando los permisos de archivos`** Veamos un ejemplo del uso de permisos de archivos. Usando el comando ls con la opción **`-l`** se mostrara un listado **`largo`** de los archivos, el cual incluye los permisos. <br><br>
+    ```
+    fabrizio@debian: /$ ls -l
+    -rwxr-xr-- 1 fabrizio users 505 May 5 19:05 prueba.exe
+    ```
+
+El primer campo representa los permisos del archivo. El tercer campo es el propietario del mismo (fabrizio), el cuarto es el grupo al cual pertenece el archivo (users) y el último campo es el nombre del archivo (prueba.exe). 
+
+La cadena **`-rwxr-xr--`** nos informa, por orden, los permisos para el propietario, los usuarios del grupo y el resto de los usuarios.
+
+El primer carácter de la cadena de permisos `(“-”)` representa el tipo de archivo. El `“-”` significa que es un archivo regular, `“d”` indicaría que se trata de un directorio. Los siguientes tres caracteres `(“rwx”)` representan los permisos para el propietario del archivo, fabrizio. Éste tiene permisos para leer `(r)`, escribir `(w)` y ejecutar `(x)` el archivo prueba.exe.
+
+Los siguientes tres caracteres, `“r-x”`, representan los permisos para los miembros del grupo al que pertenece el archivo (en este caso, users). Como sólo aparece `“r-x”` cualquier usuario que pertenezca al grupo users puede leer este archivo, y ejecutarlo, pero no modificarlo.
+
+Los últimos tres caracteres, `“r--”`, representan los permisos para cualquier otro usuario del sistema (que no sea fabrizio ni pertenezca al grupo users). Como sólo está presente la `“r”`, los demás usuarios pueden leer el archivo, pero no escribir en él o ejecutarlo
+
+Aquí tenemos otros ejemplos de permisos de grupo
+
+- **`-rw-------`**
+- El propietario del archivo puede leer y escribir. Nadie más puede acceder al archivo.
+- **`rwxrwxrwx`**
+- Todos los usuarios pueden leer, escribir y ejecutar el archivo. 
+- **`drwxr-xr-x`**
+- El propietario del directorio puede leer, escribir y entrar al mismo. Los usuarios pertenecientes al grupo del directorio y todos los demás usuarios pueden leer e ingresar al directorio.
+
+---
 
 `(b)` Investigue la funcionalidad y parámetros de los siguientes comandos relacionados con los permisos en GNU/Linux:
 - **chmod:** nos permite gestionar permisos
