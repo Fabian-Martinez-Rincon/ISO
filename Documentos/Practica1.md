@@ -761,11 +761,9 @@ file [opciones] archivo
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-## `11)` Investigue su funcionamiento y parámetros más importantes:
+### `11)` Investigue su funcionamiento y parámetros más importantes:
 
-`a)` shutdown\
-El comando de apagado (Shutdown) te permite apagar, reiniciar y detener tu sistema
-
+- `shutdown`  El comando de apagado (Shutdown) te permite apagar, reiniciar y detener tu sistema
 
 ```
 sudo shutdown
@@ -788,88 +786,41 @@ sudo shutdown -c
 | -F  | After reboot it forces fsck.  |
 | -H  | This option orders the system to descend into the boot the monitor on computers which provide support to it if -h is also supplied.  |
 
-`b)` reboot\
-Sirve para reiniciar el equipo
-```
-sudo reboot
-```
+- `sudo reboot` Sirve para reiniciar el equipo
+- `sudo halt` El comando halt detiene la CPU del ordenador
 
+- `locate` El comando locate es una alternativa útil, ya que es más rápido que find para realizar búsquedas. Eso se debe a que sólo escanea tu base de datos de Linux en lugar de todo el sistema. Además, la sintaxis es más fácil de escribir `sudo apt install locate`
+- `uname` Se usa para verificar la información del sistema
+    ```
+    uname -s
+    uname -r
+    uname -v
+    uname -n
+    uname -m
+    uname -p
+    uname -i
+    uname -o
+    uname -a
+    ```
+- `gmesg` (No entiendo porque esta diferente) \
+El comando `dmesg` es una utilidad de Linux que muestra mensajes relacionados con el kernel recuperados del búfer de anillo del kernel. `dmesg`
+- `lspci` El comando lspci lista todos los componentes tipo pci como son las tarjetas de red, tarjetas de sonido o tarjetas de televisión. 
+- `at` Ejecuta comandos a la hora especificada.
+- `netstat` Los administradores de sistemas utilizan netstat el comando de Linux para ver información sobre las conexiones de red `sudo apt install net-tools`
+- `mount` Se utiliza para montar dispositivos y particiones para su uso por el sistema operativo
+    ```
+    sudo apt install nfs-common
+    sudo mkdir -p /mnt/client_ shareddirectory
+    sudo mount [nfs_server]:/[nfs_shareddirectory] [client_mountpoint]
+    ```
 
-`c)` halt\
-El comando halt detiene la CPU del ordenador
-```
-sudo halt
-```
-
-
-
-`d)` locate\
-El comando locate es una alternativa útil, ya que es más rápido que find para realizar búsquedas. Eso se debe a que sólo escanea tu base de datos de Linux en lugar de todo el sistema. Además, la sintaxis es más fácil de escribir
-```
-sudo apt install locate
-```
-`e)` uname\
-Se usa para verificar la información del sistema
-```
-uname -s
-uname -r
-uname -v
-uname -n
-uname -m
-uname -p
-uname -i
-uname -o
-uname -a
-```
-
-`f)` gmesg (No entiendo porque esta diferente)
-El comando `dmesg` es una utilidad de Linux que muestra mensajes relacionados con el kernel recuperados del búfer de anillo del kernel.
-```
-dmesg
-```
-
-`g)` lspci
-El comando lspci lista todos los componentes tipo pci como son las tarjetas de red, tarjetas de sonido o tarjetas de televisión. 
-```
-lspci
-```
-
-`h)` at
-Ejecuta comandos a la hora especificada.
-
-`i)` netstat
-Los administradores de sistemas utilizan netstat el comando de Linux para ver información sobre las conexiones de red
-```
-sudo apt install net-tools
-```
-
-`j)` mount\
-Se utiliza para montar dispositivos y particiones para su uso por el sistema operativo
-```
-sudo apt install nfs-common
-sudo mkdir -p /mnt/client_ shareddirectory
-sudo mount [nfs_server]:/[nfs_shareddirectory] [client_mountpoint]
-```
-
-`k)` umount\
-El comando umount le permite eliminar un sistema de archivos remoto que esté montando en la actualidad\
-Ejemplo:
-```
-umount --all
-```
-
-`l)` head\
-Este comando sirve principalmente para mostrar al principio de un archivo (de texto) o para reducir a lo especificado los datos mostrados por un comando de Linux
-
-
-`m)` losetup\
-losetup de comandos de Linux se utiliza para fijar el dispositivo de bucle.
-
+- `umount` El comando umount le permite eliminar un sistema de archivos remoto que esté montando en la actualidad `umount --all`
+- `head` Este comando sirve principalmente para mostrar al principio de un archivo (de texto) o para reducir a lo especificado los datos mostrados por un comando de Linux
+- `losetup` losetup de comandos de Linux se utiliza para fijar el dispositivo de bucle.
 **parámetros:**
-
-- -d dispositivo extraíble.
-- -e <cifrado> Iniciar cifrado codificación.
-- -o <número de traducción> Establecer el número de conversión de datos.
+    - `d` dispositivo extraíble.
+    - `e` <cifrado> Iniciar cifrado codificación.
+    - `o` <número de traducción> Establecer el número de conversión de datos.
 
 `n)` write\
 sirve para enviar un mensaje a otro usuario del sistema.
