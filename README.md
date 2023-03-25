@@ -10,6 +10,10 @@
 <img src="https://media.giphy.com/media/3oz8xNkfjM07d7dK0w/giphy.gif"/>
 </div>
 
+---
+Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que puedas instalar y configurar a tu gusto el editor para hacer las practicas
+
+- [Blog de Vim](https://mith-arg.github.io/EI-Materias-Web/2022-10-04-vim/)
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 

@@ -538,11 +538,19 @@ Para una instalación de **GNU/Linux saludable se recomiendan 3 particiones swap
 
 #### `d)` Ejemplifique diversos casos de particionamiento dependiendo del tipo de tarea que se deba realizar en su sistema operativo.
 
-Son las primarias y secundarias, que para mas detalle se encuentra en la pregunta `a)`
+**`Integración de nuevas adquisiciones`** Si forma una empresa nueva. La empresa recién formada no utiliza las mismas aplicaciones para las nóminas, el inventario y la facturación. Tiene previsto consolidar las dos empresas en un solo conjunto de aplicaciones, pero esta consolidación tardará un tiempo. Mientras tanto, debe reducir el coste de los centros de datos con rapidez. 
+
+Por tanto, decide crear particiones lógicas para las aplicaciones utilizadas por la empresa recién adquirida. Instala un sistema operativo y las aplicaciones utilizadas por la empresa nueva en la partición lógica. Si las cargas de trabajo combinadas necesitan más recursos. 
+
+**`Creación de varios entornos de cliente`** El usuario suministra servicios e-commerce de alta disponibilidad a diversos clientes. Proporciona recursos de sistema, aplicaciones y soporte técnico a cada cliente, y cada cliente puede configurar y utilizar independientemente las aplicaciones ejecutadas en los recursos de sistema suministrados. En un entorno de este tipo, es esencial aislar a los clientes para que sólotengan acceso a sus recursos. Sin embargo, dedicar un servidor físico a cada cliente tiene un coste prohibitivo, y no permite aumentar ni disminuir fácilmente la cantidad de recursos de sistema utilizados por cada cliente. 
+
+Por tanto, decide crear una partición lógica para cada cliente. Instala un sistema operativo y aplicaciones en cada partición lógica. A continuación, puede utilizar el particionamiento dinámico para añadir recursos a particiones lógicas o eliminar recursos de ellas según sea necesario. Si un cliente deja de utilizar el servicio, puede suprimir la partición lógica de dicho cliente y reasignar los recursos a otras particiones lógicas 
+
 
 #### `e)` ¿Qué tipo de software para particionar existe? Menciónelos y compare
 
 Existen 2 tipos:
+
 - **Destructivos:** permiten crear y eliminar particiones (fdisk)
 - **No destructivo:** permiten crear, eliminar y modificar particiones
 
@@ -550,45 +558,100 @@ Existen 2 tipos:
 
 ## `8)` Arranque (bootstrap) de un Sistema Operativo:
 
-#### `a)` ¿Qué es el BIOS? ¿Qué tarea realiza?
+#### `a)` ¿Qué es el BIOS? 
 
-BIOS es el responsable de iniciar la carga del SO a través del MBC, el cual es un pequeño código para el arranque del sistema operativo
+La BIOS (Sistema Básico de Entrada/Salida) es un software que inicializa y comprueba todos los componentes de hardware durante el arranque de la máquina. También prepara el equipo para que el Sistema Operativo se cargue y se ejecute. Su nombre viene de las siglas en inglés Basic Input Output System.
 
-#### `b)` ¿Qué es UEFI? ¿Cuál es su función?
+La Bios es un software de bajo nivel que se encuentra en el Motherboard. Cuando se arranca la computadora el bios se ejecuta, realizando el POST (power – on Self -test) que incluye rutinas que, entre otras actividades, fijan valores de señales internas y ejecutan test internos (ram , teclado etc). 
 
-UEFI  es el código del firmware(sirve para comunicarse con los dispositivos de hardware de un sistema) de un chip en la placa base que proporciona funciones adicionales a las del sistema de entrada/salida básico (BIOS). UEFI ofrece una manera de hacer cosas con el equipo antes de que se cargue un sistema operativo.
+#### ¿Qué tarea realiza?
 
-#### `c)` ¿Qué es el MBR? ¿Que es el MBC?
-MBC, es un pequeño código para el arranque del sistema operativo.
+- **`POST`** POST es un acrónimo de Power-On Self Test (Autocomprobación de encendido) que se ejecuta en tu PC en el momento en que la enciendes. El POST prueba el hardware de tu computadora y se asegura de que no exista ninguna avería ni haya errores presentes en su sistema operativo.
+El POST comprueba todo, desde el teclado y la unidad de disco, hasta la velocidad de la RAM en una computadora y los puertos integrados. Si todo está en orden, POST continuará como de costumbre y permitirá que tu PC se inicie normalmente. Si se detecta un error, el BIOS emitirá un mensaje de error que puede aparecer en forma de texto en la pantalla o una serie de pitidos indicativos de dicho error. Estos sonidos siempre son señales para mensajes determinados, por lo que, si te sucede esto, deberás verificar lo que ello significa para el hardware de tu computadora.
+- **`Configuración del CMOS`** Tu PC almacena todas las configuraciones de bajo nivel como la hora del sistema y la configuración de hardware dentro del CMOS. Esto significa que cada cambio que realices en la estructura del BIOS se guardará en este chip de memoria especial llamado Semiconductor Complementario de Óxido Metálico, o CMOS (por sus siglas en inglés). La configuración del CMOS es responsable, a su vez, de configurar tu contraseña, hora y fecha.
+- **`Cargador de arranque`** El cargador de arranque, programa que vive dentro de la EPROM o ROM de tu computadora, tiene la tarea de leer el sector de arranque del disco duro de tu PC para moverse a lo largo de todo el proceso de carga del sistema operativo. 
 
-El MBR o **master boot recordes** el primer sector físico de un portador de datos (por ejemplo, un disco duro, una memoria USB) que se utiliza para arrancar (iniciar) los ordenadores. Para esto, el ordenador debe disponer de un BIOS y un sistema operativo x86
+---
 
-#### `d)` ¿A qué hacen referencia las siglas GPT? ¿Qué sustituye? Indique cuál es su formato.
+#### `b)` ¿Qué es UEFI? 
 
-GPT(GUID partition table) especifica la ubicación y formato de la tabla de
-particiones en un disco duro. Sustituye al MBR
+UEFI (Unified Extensible Firmware Interface o Interfaz de Firmware Extensible Unificada). Es la Alianza entre varias compañías con el objetivo de modernizar el proceso de arranque, querían reemplazar a la BIOS. Sus funciones son parecidas a los de la BIOS, pero mejoradas. UEFI aporta criptografía, autenticación por red, y una interfaz gráfica. 
 
-**GPT lo hace mediante LBA o dirección de bloque lógica** para referirse a la región en donde se encuentran los datos físicamente almacenados en nuestra unidad de almacenamiento
+
+#### ¿Cuál es su función?
+
+Usa el sistema GPT (GUID Partition table) para solucionar algunas limitaciones del MBR, tales como la cantidad de particiones y capacidad máxima del dispositivo particionado.
+
+---
+
+#### `c)` ¿Qué es el MBR? 
+
+Sector de arranque – MBR
+
+El Master Boot Record es el primer sector del disco físico.
+
+Se ubica en el cilindro 0, cabeza 0, sector 1. En todos los discos existe un MBR, pero el mismo es tenido en cuenta si el disco contiene las particiones del sistema.
+
+El tamaño de MBR coincide con el tamaño estandard de sector del disco, generalmente 512 bytes. Estos bytes contienen lo siguiente:
+
+#### ¿Que es el MBC?
+
+El MBC es un pequeño código que permite arrancar el sistema operativo. La tarea del MBC consiste en buscar una entrada de la tabla de particiones marcada con el valor 0x80 indicando que esta entrada es booteable lo cual indica que la partición correspondiente a esta entrada es booteable. La última acción del BIOS es leer el MBC. Lo lleva a memoria y lo ejecuta. 
+
+---
+
+#### `d)` ¿A qué hacen referencia las siglas GPT? 
+
+Una partición GPT GUID Partition Table es un estándar diseñado para realizar la configuración de las tablas de particiones y su ubicación en medios de almacenamiento como los discos duros físicos.
+
+Puede ser utilizado independientemente de la UEFI.
+
+#### ¿Qué sustituye? Indique cuál es su formato.
+
+`MBR` es la tabla de particiones tradicional que soporta los sistemas operativos más antiguos, mientras que `GPT` es un nuevo sustituto que no tiene límites en cuanto al tamaño del disco y el número de particiones que se pueden crear
+
+**`Las ventajas de GPT sobre MBR`**
+
+- Soporta discos duros más grandes que 2TiB.
+- Permite crear particiones teóricamente ilimitadas. 
+- Contiene una verificación de redundancia cíclica para comprobar la integridad de sus datos.
+- Contiene la copia de seguridad del encabezado GPT primario y las entradas de la partición que protege mejor los datos del disco.
+
+---
 
 #### `e)` ¿Cuál es la funcionalidad de un “Gestor de Arranque”? ¿Qué tipos existen? ¿Dónde se instalan? Cite gestores de arranque conocidos.
 
-La finalidad del bootloader o gestor de arranque es la de cargar una imagen de
-Kernel (sistema operativo) de alguna partición para su ejecución
+Un gestor de arranque, es un programa que se encarga del inicio del ordenador, antes del sistema operativo, y que nos permite elegir el sistema operativo que queremos cargar, es decir se encarga del bootstrap (carga) o booteo del sistema.
 
-- Se ejecuta luego del código del BIOS
-- Existen 2 modos de instalación:
-    - En el MBR (puede llegar a utilizar MBR gap)
-    - En el sector de arranque de la partición raíz o activa (Volume
-    Boot Record)
-- Tipos GRUB, LILO, NTLDR, GAG, YaST, etc
-- GRand Unified Bootloader: gestor de arranque múltiple más
-utilizado
+Es el encargado de carga el sistema operativo (kernel) de un ordenador en la memoria RAM.
+
+Se ejecuta luego del código de la BIOS.
+
+Los datos de un sistema operativo deben cargarse directamente en la memoria RAM al iniciarse el dispositivo. Esto es posible con el bootloader, también conocido como gestor de arranque. El bootloader suele ejecutarse directamente al arrancar un dispositivo usando algún medio que sea booteable, es decir, que sirva como unidad de arranque, como puede ser un disco duro, un CD o DVD, o un stick booteable. El medio de arranque recibe la información acerca de dónde se encuentra el bootloader por parte del firmware del ordenador (BIOS, por ejemplo). Al proceso completo se le denomina inicio, arranque o, en inglés to boot. 
+
+En lo que a la ubicación de los bootloaders se refiere, se han consolidado dos opciones: 
+
+- **`El bootloader se guarda en el primer bloque del medio booteable o de arranque (MBR):`** Está estrechamente relacionada con el principio de los Master Boot Records, que no solo contienen la referencia necesaria por parte del firmware hacia el bootloader, sino también el software de inicio en sí. Para el record se reserva siempre el primer bloque o sector de memoria disponible en el medio. Este bloque o sector también es llamado, precisamente por esta función tan importante, boot block o boot sector.
+- **`El bootloader se guarda en una partición específica del medio de arranque:`** El sistema operativo usa como lugar de almacenamiento del bootloader una partición seleccionada, si bien el sistema de archivos de base y la tabla de particiones utilizada no tienen por qué coincidir en absoluto. El firmware siempre es un factor decisivo y, este tipo de ubicación del bootloader, requiere además un formato de archivo específico del gestor de arranque. En dispositivos con UEFI se trata, por ejemplo, del formato PE/COFF (Portable Executable / Common Object File Format). 
+
+**Algunos gestores de arranque: GRUB**
+- GRUB 2
+- LILO o SYSLINUX.
+- NTLDR
+- GAG
+- YaST 
+
+GRand Unified Bootloader(grub): gestor de arranque múltiple que se usa para iniciar dos o más sistemas operativos instalados en un mismo ordenador. 
+
+---
 
 #### `f)` ¿Cuáles son los pasos que se suceden desde que se prende una computadora hasta que el Sistema Operativo es cargado (proceso de bootstrap)?
 
-- El BIOS se ejecuta, realizando el **POST**, que incluye rutinas que, fijan valores de las señales internas, y ejecutan test internos (RAM, el teclado, etc).
-- Se lee el primer sector del disco de inicio llamado **MBR**.
-- Se carga en memoria y se ejecuta
+Cuando aprietas el botón de arranque de un ordenador, lo primero que aparece en la pantalla son los datos acerca del hardware del equipo. El software responsable de esta información es, en primer lugar, el ya mencionado firmware, que los productores de los dispositivos por lo general implementan en una memoria flash en la placa base o mainboard. En la mayoría de los ordenadores de mesa y portátiles se apuesta por el ya veterano BIOS (Basic Input/Output System) o por el más reciente UEFI (Unified Extensible Firmware Interface). Ambos programas reúnen diferentes datos del hardware y para generar, entre otras cosas, una lista completa de todas las unidades de disco disponibles en el dispositivo. 
+
+Una vez se ha completado este proceso, el firmware comprueba uno a uno los soportes de datos encontrados en busca del bootloader o, más concretamente, la llamada boot signature o boot record. La búsqueda se inicia siempre en los medios extraíbles conectados (CD/DVD, stick USB, discos duros externos, etc.) y luego pasa a los discos duros internos. En estos últimos, el bootloader (o la boot signature) suele estar en el Master Boot Record (MBR), que también aloja la tabla de particiones del soporte de datos. Cuando se encuentre un bootloader, este se cargará y se iniciará así el sistema. Si la búsqueda, en cambio, no tiene éxito, el firmware mostrará un mensaje de error. 
+
+---
 
 ####  `g)` Analice el proceso de arranque en GNU/Linux y describa sus principales pasos.
 
@@ -600,11 +663,15 @@ Ell flujo de control durante el arranque es desde el **[BIOS]()**, al **[gesto
 
 - En el apagado, Init es llamado a cerrar toda las funcionalidades del espacio de usuario de una manera controlada, de nuevo a través de secuencias de comandos, tras lo cual el Init termina y el núcleo ejecuta el apagado.
 
+---
+
 #### `h)` ¿Cuáles son los pasos que se suceden en el proceso de parada (shutdown) de GNU/Linux?
 
 - Se notifica a los usuarios este hecho.
 - Se bloquea el sistema para que nadie más pueda acceder exceptuando el **root**.
 - Se envía la señal **SIGTERM** (señal de terminación) a todos los procesos no definidos en **inittab**(contiene un registro para cada proceso que define los niveles de ejecución para ese proceso) para el siguiente run level, provocando que terminen su ejecución de modo ordenado.
+
+---
 
 #### `i)` ¿Es posible tener en una PC GNU/Linux y otro Sistema Operativo instalado? Justifique
 
@@ -617,6 +684,8 @@ Si es posible ya lo vimos anteriormente gracias a las particiones de disco insta
 #### `a)` ¿Cómo se identifican los archivos en GNU/Linux?
 
 Un nombre de archivo puede tener entre 1 y 255 caracteres. recomendable emplear los caracteres con significado especial en Linux, que son los siguientes: **= \ ^ ~ ' " ` * ; - ? ( )! & ~ < >**
+
+---
 
 #### `b)` Investigue el funcionamiento de los editores vi y mcedit, y los comandos cat y more.
 
@@ -642,13 +711,14 @@ Es la abreviatura de concatenar. Esto se refiere al hecho de que cat puede ser u
 - **more**
 Es un comando para ver (pero no modificar) el contenido de un archivo o comando y visualizarlo por páginas.
 
+---
 
 #### `c)` Cree un archivo llamado “prueba.exe” en su directorio personal usando el vi. El mismo debe contener su número de alumno y su nombre.
 
 - Utilice el siguiente comando para crear un archivo (en este ejemplo, .htaccess). También puede editar un archivo existente con el mismo comando. 
 
 ```
-vi .htaccess
+nvim fabianmartinezrincon.txt
 ```
 
 - Pulse la tecla de la letra i para cambiar al modo de entrada.
@@ -660,58 +730,64 @@ vi .htaccess
 :wq
 ```
 
+---
+
 #### `d)` Investigue el funcionamiento del comando file. Pruébelo con diferentes archivos. ¿Qué diferencia nota?
 
 Permite detectar el tipo y formato de un archivo
 
+```css
+file [opciones] archivo
 ```
-file nombreArchivo
-```
+
+- `b)` muestra solo el tipo de archivo sin ninguna información adicional.
+- `i)` fuerza el uso de la sintaxis MIME para mostrar el tipo de archivo.
+- `z)` trata los archivos como si estuvieran comprimidos.
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `10)` Indique qué comando es necesario utilizar para realizar cada una de las siguientes acciones. Investigue su funcionamiento y parámetros más importantes:
 
-`a)` Cree la carpeta ISO2017
-```
-mkdir "ISO 2022"
-```
-`b)` Acceda a la carpeta (cd)
-```
-cd 'ISO 2022'
-```
-`c)` Cree dos archivos con los nombres iso2017-1 e iso2017-2 (touch)
-```
-touch ISO2022-1 ISO2022-2
-```
-`d)` Liste el contenido del directorio actual (ls)
-```
-ls
-```
-`e)` Visualizar la ruta donde estoy situado (pwd)
-```
-pwd
-```
-`f)` Busque todos los archivos en los que su nombre contiene la cadena “iso*” (find)
-```
-find ./'ISO 2022' -name "ISO*"
-```
-`g)` Informar la cantidad de espacio libre en disco (df)
-```
-df
-```
-`h)` Verifique los usuarios conectado al sistema (who)
-```
-who
-```
-`i)` Acceder a el archivo iso2017-1 e ingresar Nombre y Apellido
-```
-vi ISO2022-1
-```
-`j)` Mostrar en pantalla las últimas líneas de un archivo (tail).
-```
-tail ISO2022-1
-```
+- `a)` Cree la carpeta ISO2017 <br><br>
+    ```bash
+    mkdir "ISO 2022"
+    ```
+- `b)` Acceda a la carpeta (cd)<br><br>
+    ```bash
+    cd 'ISO 2022'
+    ```
+- `c)` Cree dos archivos con los nombres iso2017-1 e iso2017-2 (touch)<br><br>
+    ```bash
+    touch ISO2022-1 ISO2022-2
+    ```
+- `d)` Liste el contenido del directorio actual (ls)<br><br>
+    ```bash
+    ls
+    ```
+- `e)` Visualizar la ruta donde estoy situado (pwd)<br><br>
+    ```bash
+    pwd
+    ```
+- `f)` Busque todos los archivos en los que su nombre contiene la cadena “iso*” (find)<br><br>
+    ```bash
+    find ./'ISO 2022' -name "ISO*"
+    ```
+- `g)` Informar la cantidad de espacio libre en disco (df)<br><br>
+    ```bash
+    df
+    ```
+- `h)` Verifique los usuarios conectado al sistema (who)<br><br>
+    ```bash
+    who
+    ```
+- `i)` Acceder a el archivo iso2017-1 e ingresar Nombre y Apellido<br><br>
+    ```bash
+    vi ISO2022-1
+    ```
+- `j)` Mostrar en pantalla las últimas líneas de un archivo (tail).<br><br>
+    ```bash
+    tail ISO2022-1
+    ```
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
