@@ -749,11 +749,12 @@ Claro, para sumar el tamaño de cuatro archivos en Linux y crear un archivo empa
     ```
     tar -cvzf archivo_empaquetado.tar.gz file1 file2 file3 file4
     ```
-    Esto creará un archivo empaquetado llamado "archivo_empaquetado.tar.gz" que contiene los cuatro archivos.
+    Esto creará un archivo empaquetado llamado `archivo_empaquetado.tar.gz` que contiene los cuatro archivos.
 - Para comparar los tamaños de los cuatro archivos individuales y el archivo empaquetado, use el comando `ls -lh`. Esto mostrará el tamaño de cada archivo en una lista. Compare el tamaño total de los cuatro archivos individuales con el tamaño del archivo empaquetado para notar la diferencia en el tamaño.
 
 
-Es importante tener en cuenta que el comando tar utiliza la compresión para reducir el tamaño del archivo empaquetado, por lo que es posible que el tamaño del archivo empaquetado sea menor que la suma total de los tamaños de los cuatro archivos individuales.
+Es importante tener en cuenta que el comando `tar` utiliza la compresión para reducir el tamaño del archivo empaquetado, por lo que es posible que el tamaño del archivo empaquetado sea menor que la suma total de los tamaños de los cuatro archivos individuales.
+
 `(c)` ¿Qué acciones debe llevar a cabo para comprimir 4 archivos en uno solo? Indique la secuencia de comandos ejecutados.\
 Teniendo en cuenta que tenemos 4 archivos en el directorio Descargas/ejercicio6 y nos situamos en Descargas ejecutamos lo siguiente
 
