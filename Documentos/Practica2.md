@@ -143,7 +143,7 @@ No todas las distribuciones respetan los estándares.
 
 ---
 
-### `(f)` Archivo /etc/inittab. ¿Cuál es su finalidad?  
+#### `(f)` Archivo /etc/inittab. ¿Cuál es su finalidad?  
 
 Es el archivo de configuración de init, que decide el modo de ejecución en el que va a entrar.
 
@@ -741,12 +741,12 @@ Claro, para sumar el tamaño de cuatro archivos en Linux y crear un archivo empa
 
 - Abrir una terminal y navegar hasta el directorio que contiene los cuatro archivos usando el comando `cd`.
 - Para sumar el tamaño de los cuatro archivos, use el comando <br> <br>
-    ```
+    ```shell
     du -sh file1 file2 file3 file4
     ```
     Esto le dará la suma total de los tamaños de los cuatro archivos.
 - Para crear un archivo empaquetado que contenga los cuatro archivos, puede utilizar el comando 
-    ```
+    ```shell
     tar -cvzf archivo_empaquetado.tar.gz file1 file2 file3 file4
     ```
     Esto creará un archivo empaquetado llamado `archivo_empaquetado.tar.gz` que contiene los cuatro archivos.
@@ -755,11 +755,14 @@ Claro, para sumar el tamaño de cuatro archivos en Linux y crear un archivo empa
 
 Es importante tener en cuenta que el comando `tar` utiliza la compresión para reducir el tamaño del archivo empaquetado, por lo que es posible que el tamaño del archivo empaquetado sea menor que la suma total de los tamaños de los cuatro archivos individuales.
 
-`(c)` ¿Qué acciones debe llevar a cabo para comprimir 4 archivos en uno solo? Indique la secuencia de comandos ejecutados.\
+---
+
+#### `(c)` ¿Qué acciones debe llevar a cabo para comprimir 4 archivos en uno solo? Indique la secuencia de comandos ejecutados.
+
 Teniendo en cuenta que tenemos 4 archivos en el directorio Descargas/ejercicio6 y nos situamos en Descargas ejecutamos lo siguiente
 
 ```shell
-tar cvfz archivo.tar.gz ejercicio 6
+tar cvfz archivo.tar.gz ejercicio6
 ```
 Esto nos dejaria un archivo empaquetado de archivos comprimidos en un solo archivo archivo.tar.gz y para acceder a dicha informacion haremos
 
@@ -767,15 +770,23 @@ Esto nos dejaria un archivo empaquetado de archivos comprimidos en un solo archi
 tar xvfz archivo.tar.gz
 ```
 
-`(d)` ¿Pueden comprimirse un conjunto de archivos utilizando un único comando?\
+---
+
+#### `(d)` ¿Pueden comprimirse un conjunto de archivos utilizando un único comando?
+
 Si los archivos están en el mismo directorio utilizamos el comando visto anteriormente
 
-`(e)` Investigue la funcionalidad de los siguientes comandos:
-- **tar:** empaqueta/desempaqueta varios archivos en uno solo, puede realizar compresión sin perdida
-- **grep:** Buscar todos los archivos de usuarios en los que su nombre contiene la cadena “.conf”
-- **gzip:** comprime/descomprime archivos
-- **zgrep:** lo mismo que grep pero puede estar comprimido el archivo
-- **wc:**  cuenta nuevas líneas, palabras y bytes para los archivos dados
+
+----
+
+#### `(e)` Investigue la funcionalidad de los siguientes comandos:
+
+- **`tar`** Empaqueta/desempaqueta varios archivos en uno solo, puede realizar compresión sin perdida
+- **`grep`** El comando grep nos permite buscar cadenas de texto y palabras dentro de un fichero de texto o de la entrada estándar de la terminal. Una vez encontrado el contenido que estamos buscando: 
+    grep mostrará en pantalla la totalidad de la línea/s que contiene/n la cadena de texto o palabra que estamos buscando
+- **`gzip`** Comprime solo archivos utilizando la extensión .gz que se utiliza para truncar el tamaño de un archivo.
+- **`zgrep`** Se usa para buscar expresiones de un archivo dado, incluso si está comprimido
+- **`wc`** Cuenta los caracteres, palabras y líneas del archivo de texto.
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
@@ -785,117 +796,259 @@ Enunciado: Indique qué acción realiza cada uno de los comandos indicados a con
 
 ```shell
 l s −l > prueba {No se puede acceder a pruebas pq no existe el fichero}                         
-ps > PRUEBA   {crea el archivo prueba con lo obtenido de ps}
-chmod 710 prueba  {no existe el archivo prueba dado que se creo en mayusculas}
-chown root : root PRUEBA {No poseo los permisos para modificar eso}
-chmod 777 PRUEBA  {Concedo todos los permisos tanto al dueño,al grupo y al usuario}
-chmod 700 / etc / passwd {No poseo los permisos para modificar eso}
-passwd root {No se puede ver la contraseña del root}
-rm PRUEBA {elimina el archivo PRUEBA}
-man / etc / shadow {nos muestra la documentacion del comando shadow}
-find / −name ∗ .conf {Orden no encontrada}
-usermod root −d /home/ newroot −L {Orden no encontrada}
-cd / root {permiso denegado}
-rm ∗ {No se pueden borrar los directorios}
-cd / etc {Nos direcciona a la carpeta /etc }
-cp ∗ /home −R {no se pueden copiar los directorios}
-shutdown {apaga el sistema}
+ps > PRUEBA 
+chmod 710 prueba
+chown root : root PRUEBA
+chmod 777 PRUEBA 
+chmod 700 / etc / passwd 
+passwd root 
+rm PRUEBA 
+man / etc / shadow 
+find / −name ∗ .conf 
+usermod root −d /home/ newroot −L 
+cd / root 
+rm ∗ 
+cd / etc 
+cp ∗ /home −R 
+shutdown 
 ```
+
+- `ls -l > prueba` Genera un archivo de nombre prueba que contiene un listado detallado con los contenidos del directorio home del usuario. Se redirige la salida estándar de ls mediante el carácter > hacia el archivo prueba.
+- `ps > PRUEBA` Genera un archivo de nombre PRUEBA que contiene un listado de los procesos en ejecución en el directorio home del usuario. AL igual que en el ejemplo anterior, se redirige la salida estándar mediante >.
+- `chmod 710 prueba` Cambia los permisos del archivo prueba a 710 para UGO (usuario, Grupo, Otros).
+- `chown root:root PRUEBA` Se intenta cambiar el propietario del archivo prueba pero la operación no está permitida.
+- `chmod 777 PRUEBA` Cambia los permisos del archivo PRUEBA a 777. Es decir, todos los usuarios pueden leer, escribir y ejecutar el archivo.
+- `chmod 700 /etc/passwd` Intenta cambiar los permisos a 700, pero la operación no está permitida para un usuario que no es root, esto por el archivo que está intentando cambiar.
+- `passwd root` passwd: No debe ver o cambiar la información de la contraseña para root.
+- `rm PRUEBA` Se elimina el archivo PRUEBA.
+- `man /etc/shadow` Permiso denegad, porque “man” no debe recibir una ruta, si hago “man shadow” si anda.
+- `find / -name *.conf` Lista todos los archivos cuyo nombres terminan con .conf, empezando la búsqueda en el directorio raíz /.
+- `usermod root –d /home/newroot –L`
+- `cd /root` Se intenta acceder a la carpeta root, pero la operación falla porque el usuario no tiene los permisos.
+- `rm *` Borra todos los archivos del directorio donde está posicionado el usuario.
+- `cd /etc` Cambia el directorio a /etc, osea “se mueve” a /etc
+- `cp * /home –R` Intenta copiar el contenido de /etc a home, pero el usuario no tiene los permisos necesarios para crear archivos en el directorio /home.
+- `shutdown` Apaga el equipo
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `8)` Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones:
 
-`(a)` Terminar el proceso con PID 23.\
-`kill 23`
+#### `(a)` Terminar el proceso con PID 23.
 
-`(b)` Terminar el proceso llamado init. ¿Qué resultados obtuvo?\
-No esta permitido
+- Todos los procesos tienen un pid (id de proceso) para terminar un proceso se usa el comando:
+    ```
+    kill -9 23 (kill menos 9 número de id del proceso).
+    ```
+- `ps –aux` Para ver los procesos del sistema que corren en el momento comando:
 
-`(c)` Buscar todos los archivos de usuarios en los que su nombre contiene la cadena “.conf”\
-`grep -iRl .conf /home/user`
+---
 
-`(d)` Guardar una lista de procesos en ejecución el archivo /home/\<su nombre de usuario>/procesos\
-`ps > /home/user/procesos`
+#### `(b)` Terminar el proceso llamado init. ¿Qué resultados obtuvo?
 
-`(e)` Cambiar los permisos del archivo /home/\<su nombre de usuario>/xxxx a:
+- `1)` Primero buscamos el PID de init con el comando `ps –aux`
+- `2)` Ingresamos como superusuario: su – e ingresamos contraseña
+- `3)` Utilizamos el comando kill –9 1
+- `4)` Y vamos a ver que no va a suceder nada, porque el proceso init, no puede terminarse, así que ni responde al comando. 
+
+
+---
+
+#### `(c)` Buscar todos los archivos de usuarios en los que su nombre contiene la cadena “.conf”
+
+Para buscar un `archivo` se utiliza el comando:
+```
+ find / -type f -name NombreDelArchivoABuscar
+```
+Búsqueda por tipo
+
+Linux permite a los usuarios listar toda la información basada en sus tipos. Hay varios filtros que puedes usar:
+- **`d`** directorio o carpeta
+- **`f`** archivo normal
+- **`l`** enlace simbólico
+- **`c`** dispositivos de caracteres
+- **`b`** dispositivos de bloque
+
+Si deseamos buscar la palabra “conf” en todo el sistema se utiliza el comando:
+```
+find / -name NombreABuscar 
+```
+
+---
+
+#### `(d)` Guardar una lista de procesos en ejecución el archivo /home/\<su nombre de usuario>/procesos
+
+```
+ps > /home/user/procesos
+```
+
+- `cat Procesos` Para poder comprobar el contenido que tiene el directorio Procesos
+- `rm –r Procesos` Para eliminar dicho directorio
+
+---
+
+#### `(e)` Cambiar los permisos del archivo /home/\<su nombre de usuario>/xxxx a:
+
 - **Usuario:** Lectura, escritura, ejecución
 - **Grupo:** Lectura, ejecución
 - **Otros:** ejecución
-`chmod 751 /home/nomUsuario/xxxx`
 
-`(f)` Cambiar los permisos del archivo /home/<su nombre de usuario>/yyyy a:
+- `mkdir xxxx` Primero creamos el directorio “xxxx” 
+- `ls –l` Para ver los permisos que tiene dicho directorio
+- `chmod 751 xxxx` Para cambiar sus permisos donde Usuario tenga los permisos de lectura, escritura, ejecución, Grupo los permisos de lectura y ejecución y Otros el permiso
+- `7` = 4(Lectura) + 2(Escritura) + 1(Ejecución) --> `Usuario`
+- `5` = 4(Lectura) + 1(Ejecución) --> `Grupo`
+- `1` = 1(Ejecución) --> `Otros`
+- `ls -l` Para chequear si los permisos fueron modificados
+
+Para lograr visualizar los permisos se lee de la siguiente forma: 
+
+![image](https://user-images.githubusercontent.com/55964635/227809799-8f8fb1d2-8ea0-4a2e-8a26-33bc6d1f83f0.png)
+- No ver la primera d!
+- Los primeros `rwx`(Lectura, Escritura, Ejecución) pertenecen a Usuario
+- Luego rx (LecturaEjecución) pertenece a Grupo
+- Y x (Ejecución) pertenece a Otros
+
+---
+
+#### `(f)` Cambiar los permisos del archivo /home/<su nombre de usuario>/yyyy a:
 - **Usuario:** Lectura, escritura.
 - **Grupo:** Lectura, ejecución
 - **Otros:** Ninguno
 
-`chmod 650 /home/user/yyyy`
+- `mkdir yyyy` Primero creamos el directorio `“yyyy”`
+- `ls –l` Para ver los permisos que tiene dicho directorio 
+- `chmod 650 yyyy` Para cambiar sus permisos donde Usuario tenga los permisos de lectura, escritura, ejecución, Grupo los permisos de lectura y ejecución y Otros el permiso de ejecución.
 
-`(g)` Borrar todos los archivos del directorio /tmp\
-```powershell
+---
+
+#### `(g)` Borrar todos los archivos del directorio /tmp
+
+```shell
 cd /tmp
 rm *
 ```
 
-`(h)` Cambiar el propietario del archivo /opt/isodata al usuario iso2010\
-`chown iso2010 /opt/isodata`
+---
 
-`(i)` Guardar en el archivo /home/\<su nombre de usuario>/donde el directorio donde me encuentro en este momento, en caso de que el archivo exista no se debe eliminar su contenido anterior.\
-`pwd >> /home/user/donde`
+#### `(h)` Cambiar el propietario del archivo /opt/isodata al usuario iso2010
+
+```shell
+chown iso2010 /opt/isodata
+```
+
+#### `(i)` Guardar en el archivo /home/\<su nombre de usuario>/donde el directorio donde me encuentro en este momento, en caso de que el archivo exista no se debe eliminar su contenido anterior.
+
+```
+pwd >> /home/user/donde
+```
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `9)` Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones
 
-`(a)` Ingrese al sistema como usuario “root”\
+#### `(a)` Ingrese al sistema como usuario “root”
+
 ```powershell
 su
 ```
-`(b)` Cree un usuario. Elija como nombre, por convención, la primer letra de su nombre seguida de su apellido. Asígnele una contraseña de acceso.\
+
+---
+
+#### `(b)` Cree un usuario. Elija como nombre, por convención, la primer letra de su nombre seguida de su apellido. Asígnele una contraseña de acceso.
+
 ```powershell
 sudo adduser il {crear}
 passwd il {nueva contra}
 ```
 
-`(c)` ¿Qué archivos fueron modificados luego de crear el usuario y qué directorios se crearon?\
+---
+
+#### `(c)` ¿Qué archivos fueron modificados luego de crear el usuario y qué directorios se crearon?
+
 se modificaron los archivos /etc/passwd y se creo el directorio personal del perfil en /home/nombrelegido
 
-`(d)` Crear un directorio en /tmp llamado cursada2017\
+---
+
+#### `(d)` Crear un directorio en /tmp llamado cursada2017
+
 ```powershell
 cd /tmp
 mkdir cursada2017
 ```
 
-`(e)` Copiar todos los archivos de /var/log al directorio antes creado.\
+---
+
+#### `(e)` Copiar todos los archivos de /var/log al directorio antes creado.
+
 En modo superusuario/root
 ```powershell
 cp /var/log /tmp/cursada2017
 ```
 
-`(f)` Para el directorio antes creado (y los archivos y subdirectorios contenidos en él) cambiar el propietario y grupo al usuario creado y grupo users.\
-`(g)` Agregue permiso total al dueño, de escritura al grupo y escritura y ejecución a todos los demás usuarios para todos los archivos dentro de un directorio en forma recursiva.\
-`(h)` Acceda a otra terminal virtual para loguearse con el usuario antes creado.\
-`(i)` Una vez logueado con el usuario antes creado, averigüe cuál es el nombre de su terminal.\
-`(j)` Verifique la cantidad de procesos activos que hay en el sistema.\
-`(k)` Verifiqué la cantidad de usuarios conectados al sistema.\
-`(l)` Vuelva a la terminal del usuario root, y envíele un mensaje al usuario anteriormente creado, avisándole que el sistema va a ser apagado.\
-`(m)` Apague el sistema
+---
+
+#### `(f)` Para el directorio antes creado (y los archivos y subdirectorios contenidos en él) cambiar el propietario y grupo al usuario creado y grupo users.
+
+---
+
+#### `(g)` Agregue permiso total al dueño, de escritura al grupo y escritura y ejecución a todos los demás usuarios para todos los archivos dentro de un directorio en forma recursiva.
+
+---
+
+#### `(h)` Acceda a otra terminal virtual para loguearse con el usuario antes creado.
+
+---
+
+#### `(i)` Una vez logueado con el usuario antes creado, averigüe cuál es el nombre de su terminal.
+
+---
+
+#### `(j)` Verifique la cantidad de procesos activos que hay en el sistema.
+
+---
+
+#### `(k)` Verifiqué la cantidad de usuarios conectados al sistema.
+
+---
+
+#### `(l)` Vuelva a la terminal del usuario root, y envíele un mensaje al usuario anteriormente creado, avisándole que el sistema va a ser apagado.
+
+---
+
+#### `(m)` Apague el sistema
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `10)` Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones
 
-`(a)` Cree un directorio cuyo nombre sea su número de legajo e ingrese a él.\
-`(b)` Cree un archivo utilizando el editor de textos vi, e introduzca su información personal:\
-Nombre, Apellido, Número de alumno y dirección de correo electrónico. El archivo debe llamarse "LEAME".\
-`(c)` Cambie los permisos del archivo LEAME, de manera que se puedan ver reflejados los siguientes permisos:
+#### `(a)` Cree un directorio cuyo nombre sea su número de legajo e ingrese a él.
+
+---
+
+#### `(b)` Cree un archivo utilizando el editor de textos vi, e introduzca su información personal:
+
+Nombre, Apellido, Número de alumno y dirección de correo electrónico. El archivo debe llamarse "LEAME".
+
+---
+
+#### `(c)` Cambie los permisos del archivo LEAME, de manera que se puedan ver reflejados los siguientes permisos:
+
 - **Dueño:** ningún permiso
 - **Grupo:** permiso de ejecución
 - **Otros:** todos los permisos
 
-`(d)` Vaya al directorio /etc y verifique su contenido. Cree un archivo dentro de su directorio personal cuyo nombre sea leame donde el contenido del mismo sea el listado de todos los archivos y directorios contenidos en /etc. ¿Cuál es la razón por la cuál puede crear este archivo si ya existe un archivo llamado "LEAME.en este directorio?.\
-`(e)` ¿Qué comando utilizaría y de qué manera si tuviera que localizar un archivo dentro del filesystem? ¿Y si tuviera que localizar varios archivos con características similares? Explique el concepto teórico y ejemplifique.\
-`(f)` Utilizando los conceptos aprendidos en el punto e), busque todos los archivos cuya extensión sea .so y almacene el resultado de esta búsqueda en un archivo dentro del directorio creado en a). El archivo deberá llamarse .ejercicio_f".
+---
+
+#### `(d)` Vaya al directorio /etc y verifique su contenido. Cree un archivo dentro de su directorio personal cuyo nombre sea leame donde el contenido del mismo sea el listado de todos los archivos y directorios contenidos en /etc. ¿Cuál es la razón por la cuál puede crear este archivo si ya existe un archivo llamado "LEAME.en este directorio?.
+
+---
+
+#### `(e)` ¿Qué comando utilizaría y de qué manera si tuviera que localizar un archivo dentro del filesystem? ¿Y si tuviera que localizar varios archivos con características similares? Explique el concepto teórico y ejemplifique.
+
+---
+
+#### `(f)` Utilizando los conceptos aprendidos en el punto e), busque todos los archivos cuya extensión sea .so y almacene el resultado de esta búsqueda en un archivo dentro del directorio creado en a). El archivo deberá llamarse .ejercicio_f".
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
@@ -926,12 +1079,15 @@ mkdir ejercicio5
 .............................................
 ```
 
-`(a)` Inicie 2 sesiones utilizando su nombre de usuario y contraseña. En una sesión vaya siguiendo paso a paso las órdenes que se encuentran escritas en el cuadro superior. En la otra sesión, cree utilizando algún editor de textos un archivo que se llame. ejercicio10_explicacion"dentro del directorio creado en el ejercicio 9.a) y, para cada una de las órdenes que ejecute en la otra sesión, realice una breve explicación de los resultados obtenidos.\
-`(b)` Complete en el cuadro superior los comandos 19 y 20, de manera tal que realicen la siguiente acción:
+#### `(a)` Inicie 2 sesiones utilizando su nombre de usuario y contraseña. En una sesión vaya siguiendo paso a paso las órdenes que se encuentran escritas en el cuadro superior. En la otra sesión, cree utilizando algún editor de textos un archivo que se llame. ejercicio10_explicacion"dentro del directorio creado en el ejercicio 9.a) y, para cada una de las órdenes que ejecute en la otra sesión, realice una breve explicación de los resultados obtenidos.
+
+---
+
+#### `(b)` Complete en el cuadro superior los comandos 19 y 20, de manera tal que realicen la siguiente acción:
 - `19:` Copiar el directorio iso y todo su contenido al directorio creado en el inciso 9.a).
 - `20:` Copiar el resto de los archivos y directorios que se crearon en este ejercicio al directorio creado en el ejercicio 9.a).
 
-`(c)` Ejecute las órdenes 19 y 20 y comentelas en el archivo creado en el inciso a).
+#### `(c)` Ejecute las órdenes 19 y 20 y comentelas en el archivo creado en el inciso a).
 
 ![image](https://user-images.githubusercontent.com/55964635/189272687-459c381d-b44c-4a8d-b3d0-aa3acc44e1ae.png)
 
@@ -942,7 +1098,7 @@ mkdir ejercicio5
 **Enunciado:** Cree una estructura desde el directorio /home que incluya varios directorios, subdirectorios y archivos, según el esquema siguiente. Asuma que “usuario” indica cuál es su nombre de usuario. Además deberá tener en cuenta que dirX hace referencia a directorios y fX hace
 referencia a archivos:
 
-`(a)` Utilizando la estructura de directorios anteriormente creada, indique que comandos son necesarios para realizar las siguientes acciones:
+#### `(a)` Utilizando la estructura de directorios anteriormente creada, indique que comandos son necesarios para realizar las siguientes acciones:
 - Mueva el archivo "f3.al directorio de trabajo /home/usuario.
 - Copie el archivo "f4.en el directorio "dir11".
 - Haga los mismo que en el inciso anterior pero el archivo de destino, se debe llamar "f7".
@@ -962,10 +1118,22 @@ referencia a archivos:
 
 ## `13)` Indique qué comando/s es necesario para realizar cada una de las acciones de la siguiente secuencia de pasos (considerando su orden de aparición):
 
-`(a)` Cree un directorio llamado logs en el directorio /tmp.\
-`(b)` Copie todo el contenido del directorio /var/log en el directorio creado en el punto anterior.\
-`(c)` Empaquete el directorio creado en 1, el archivo resultante se debe llamar "misLogs.tar".\
-`(d)` Empaquete y comprima el directorio creado en 1, el archivo resultante se debe llamar "misLogs.tar.gz".\
-`(e)` Copie los archivos creados en 3 y 4 al directorio de trabajo de su usuario.
+#### `(a)` Cree un directorio llamado logs en el directorio /tmp.
+
+---
+
+#### `(b)` Copie todo el contenido del directorio /var/log en el directorio creado en el punto anterior.
+
+---
+
+#### `(c)` Empaquete el directorio creado en 1, el archivo resultante se debe llamar "misLogs.tar".
+
+---
+
+#### `(d)` Empaquete y comprima el directorio creado en 1, el archivo resultante se debe llamar "misLogs.tar.gz".
+
+---
+
+#### `(e)` Copie los archivos creados en 3 y 4 al directorio de trabajo de su usuario.
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
