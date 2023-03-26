@@ -1155,20 +1155,76 @@ Indique qué acción realiza cada uno de los comandos indicados a continuación 
 referencia a archivos:
 
 #### `(a)` Utilizando la estructura de directorios anteriormente creada, indique que comandos son necesarios para realizar las siguientes acciones:
-- Mueva el archivo "f3.al directorio de trabajo /home/usuario.
-- Copie el archivo "f4.en el directorio "dir11".
-- Haga los mismo que en el inciso anterior pero el archivo de destino, se debe llamar "f7".
-- Cree el directorio copia dentro del directorio usuario y copie en él, el contenido de "dir1".
-- Renombre el archivo "f1"por el nombre archivo y vea los permisos del mismo.
-- Cambie los permisos del archivo llamado archivo de manera de reflejar lo siguiente:
-  - **Usuario:** Permisos de lectura y escritura
-  - **Grupo:** Permisos de ejecución
-  - **Otros:** Todos los permisos
-- Renombre los archivos "f3 2 "f4"de manera que se llamen "f3.exe 2 "f4.exerespectivamente.
-- Utilizando un único comando cambie los permisos de los dos archivos renombrados en el inciso anterior, de manera de reflejar lo siguiente:
-  - **Usuario:** Ningún permiso
-  - **Grupo:** Permisos de escritura
-  - **Otros:** Permisos de escritura y ejecución
+
+#### Mueva el archivo "f3.al directorio de trabajo /home/usuario.
+
+```shell
+mv f3 $HOME
+```
+
+---
+
+#### Copie el archivo "f4.en el directorio "dir11".
+
+```shell
+cp f4 $HOME/dir11
+```
+
+---
+
+#### Haga los mismo que en el inciso anterior pero el archivo de destino, se debe llamar "f7".
+
+```shell
+cp f4 $HOME/dir11/f7
+```
+
+---
+
+#### Cree el directorio copia dentro del directorio usuario y copie en él, el contenido de "dir1".
+
+```shell
+mkdir copia; cp -a dir11 copia
+```
+
+---
+
+#### Renombre el archivo "f1"por el nombre archivo y vea los permisos del mismo.
+
+```shell
+cd iso;mv f0 archivo; ls  -ld archivo
+```
+
+---
+
+#### Cambie los permisos del archivo llamado archivo de manera de reflejar lo siguiente:
+
+- **``Usuario``** Permisos de lectura y escritura
+- **``Grupo``** Permisos de ejecución
+- **``Otros``** Todos los permisos
+
+```shell
+chmod 617 archivo
+```
+
+---
+
+#### Renombre los archivos "f3 2 "f4"de manera que se llamen "f3.exe 2 "f4.exerespectivamente.
+
+```shell
+mv f3 f3.exe; cd $HOME/dir11 ; mov f4 f4.exe
+```
+
+---
+
+#### Utilizando un único comando cambie los permisos de los dos archivos renombrados en el inciso anterior, de manera de reflejar lo siguiente:
+
+- **`Usuario`** Ningún permiso
+- **`Grupo`** Permisos de escritura
+- **`Otros`** Permisos de escritura y ejecución
+
+```shell
+chmod 023 f3.exe f4.exe
+```
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
@@ -1176,20 +1232,58 @@ referencia a archivos:
 
 #### `(a)` Cree un directorio llamado logs en el directorio /tmp.
 
+```shell
+cd /tmp; mkdir logs
+```
+
 ---
 
 #### `(b)` Copie todo el contenido del directorio /var/log en el directorio creado en el punto anterior.
+
+```shell
+cp -a /var/log/. /tmp/logs
+```
 
 ---
 
 #### `(c)` Empaquete el directorio creado en 1, el archivo resultante se debe llamar "misLogs.tar".
 
+```shell
+tar cvf misLogs.tar logs
+```
+
 ---
 
 #### `(d)` Empaquete y comprima el directorio creado en 1, el archivo resultante se debe llamar "misLogs.tar.gz".
 
+```shell
+tar cvfz misLogs.tar.gz logs
+```
+
 ---
 
 #### `(e)` Copie los archivos creados en 3 y 4 al directorio de trabajo de su usuario.
+
+```shell
+cp misLoggs.tar $HOME
+cp misLogs.tar.gz $HOME
+```
+
+---
+
+#### `(f)` Elimine el directorio creado en 1, logs
+
+```shell
+rm -r logs
+```
+
+---
+
+#### `(g)` Desempaquete los archivos creados en 3 y 4 en do directorios diferentes.
+
+```shell
+tar xvf misLogs.tar -C 1 
+tar xvfz misLogs.tar.gz -C 2
+```
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
