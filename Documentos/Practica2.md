@@ -1059,11 +1059,20 @@ sudo shutdown now
 
 #### `(a)` Cree un directorio cuyo nombre sea su número de legajo e ingrese a él.
 
+```shell
+mkdir 19508/3 {No se puede dado q confunde / con un desplazamiento de directorio}
+```
+
 ---
 
 #### `(b)` Cree un archivo utilizando el editor de textos vi, e introduzca su información personal:
 
 Nombre, Apellido, Número de alumno y dirección de correo electrónico. El archivo debe llamarse "LEAME".
+
+```
+cd legajo
+vi LEAME
+```
 
 ---
 
@@ -1073,17 +1082,31 @@ Nombre, Apellido, Número de alumno y dirección de correo electrónico. El arch
 - **Grupo:** permiso de ejecución
 - **Otros:** todos los permisos
 
+```shell
+chmod 017 LEAME
+```
+
 ---
 
 #### `(d)` Vaya al directorio /etc y verifique su contenido. Cree un archivo dentro de su directorio personal cuyo nombre sea leame donde el contenido del mismo sea el listado de todos los archivos y directorios contenidos en /etc. ¿Cuál es la razón por la cuál puede crear este archivo si ya existe un archivo llamado "LEAME.en este directorio?.
+
+Se puede porque unix es case sensitive y distingue entre mayúsculas y minúsculas.
 
 ---
 
 #### `(e)` ¿Qué comando utilizaría y de qué manera si tuviera que localizar un archivo dentro del filesystem? ¿Y si tuviera que localizar varios archivos con características similares? Explique el concepto teórico y ejemplifique.
 
+```shell
+find / -name "[0-9]*"
+```
+
 ---
 
 #### `(f)` Utilizando los conceptos aprendidos en el punto e), busque todos los archivos cuya extensión sea .so y almacene el resultado de esta búsqueda en un archivo dentro del directorio creado en a). El archivo deberá llamarse .ejercicio_f".
+
+```shell
+find / -name "*.os" > /home/user/legajo/ejerciciof
+```
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
@@ -1091,30 +1114,28 @@ Nombre, Apellido, Número de alumno y dirección de correo electrónico. El arch
 
 Indique qué acción realiza cada uno de los comandos indicados a continuación considerando su orden. Suponga que se ejecutan desde un usuario que no es root ni pertenece al grupo de root. (Asuma que se encuentra posicionado en el directorio de trabajo del usuario con el que se logueó). En caso de no poder ejecutarse el comando indique la razón:
 
-```shell
-mkdir iso
-cd . / iso; ps > f0
-ls > f1
-cd /
-echo $HOME
-ls −l $> $HOME/ iso / l s
-cd $HOME; mkdir f2
-ls −ld f2
-chmod 341 f2
-touch dir
-cd f2
-cd ~/ iso
-pwd > f3
-ps | grep ' ps ' | wc −l >> ../f2/f3
-chmod 700 . . / f 2 ; cd . .
-find . −name e t c / passwd
-find / −name e t c / passwd
-mkdir ejercicio5
-...................................
-.............................................
-```
 
-#### `(a)` Inicie 2 sesiones utilizando su nombre de usuario y contraseña. En una sesión vaya siguiendo paso a paso las órdenes que se encuentran escritas en el cuadro superior. En la otra sesión, cree utilizando algún editor de textos un archivo que se llame. ejercicio10_explicacion"dentro del directorio creado en el ejercicio 9.a) y, para cada una de las órdenes que ejecute en la otra sesión, realice una breve explicación de los resultados obtenidos.
+- `mkdir iso` Crea el directorio iso
+- `cd . / iso; ps > f0` Me situo en iso y creo el archivo f0 con los procesos en ejecucion
+- `ls > f1` Guardo en F1 la lista de archivos en el directorio iso
+- `cd /` Me posiciono en la raiz 
+- `echo $HOME` muestra en pantalla la direccion del directorio personal del usuario
+- `ls −l $> $HOME/iso/ls` No se puede acceder a $ no existe el fichero o directorio
+- `cd $HOME; mkdir f2` Nos situamos en el directorio personal y creamos el directorio f2
+- `ls −ld f2` Se da un listado detallado de f2
+- `chmod 341 f2` Se modifican los permisos de f2;Es,Ej para usuario,L para Grupo, y Ej para otros
+- `touch dir` se crea el archivo dir
+- `cd f2` accedemos al directoriio f2
+- `cd ~/ iso` accedemos a la carpeta iso
+- `pwd > f3` se guarda en el archivo f3 la direccion de la carpeta iso
+- `ps | grep ' ps ' | wc −l >> ../f2/f3` se obtienen los procesos, se usa de entrada para grep el cual filtra todos los que posean ps,pra luego almacenar la cantidad de lineas obtenidas luegro de dicho filtro y añadirlas al archivo f3
+- `chmod 700 .. / f2 ; cd ..` Se modifica el acceso de f2 dando al usuario todos los permisos y a los demas nada, volviendo despues al directorio personal
+- `find . −name etc / passwd` Lanza un warning por mal uso del comando
+- `find / −name etc / passwd` filtra todos los archivos de passwd por nombre en orden
+- `mkdir ejercicio5` crea el directorio ejercicio5
+
+
+#### `(a)` Inicie 2 sesiones utilizando su nombre de usuario y contraseña. En una sesión vaya siguiendo paso a paso las órdenes que se encuentran escritas en el cuadro superior. En la otra sesión, cree utilizando algún editor de textos un archivo que se llame. ejercicio10_explicacion"dentro del directorio creado en el ejercicio 9.a) y, para cada una de las órdenes que ejecute en la otra sesión, realice una breve explicación de los resultados obtenidos. (ARRIBA)
 
 ---
 
