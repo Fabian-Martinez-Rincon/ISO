@@ -708,29 +708,30 @@ El comando **`kill`** en Linux (ubicado en / bin / kill), es un comando incorpor
 Los archivos `TAR` no son archivos comprimidos sino empaquetados. `TAR` es un empaquetador, es algo más parecido a un compresor como `arj` ó `zip` pero sin compresión. Su función es la de incluir todos los ficheros juntos en el mismo archivo, conservando las estructuras de directorios y permisos de los mismos. 
 
 - **``crear``** un archivo .tar <br><br> 
-    ```
+    ```shell
     tar –cvf mi_archivo.tar /directorio/a/empaquetar 
     ```
 - **``extraer``** el contenido de un archivo .tar ya creado <br><br> 
-    ```
+    ```shell
     tar –xvf mi_archivo.tar
     ```
 - **`actualizar`** el contenido de un archivo .tar ya existente <br><br> 
-    ```
+    ```shell
     tar –uvf mi_archivo.tar
     ```
 - **`agregar`** un directorio a un archivo .tar ya existente <br> <br> 
-    ```
+    ```shell
     tar –rvf archivo. tar  directorio/a/agregar
     ```
 - **`empaquetar`** y comprimir el archivo .tar <br><br> 
-    ```
+    ```shell
     tar –cvzf archivo.tgz /directorio/a/empaquetar/y/comprimir
     ```
 - **`desempaquetar`** el archivo .tgz <br><br>
-    ```
+    ```shell
     tar –xvzf archivo.tgz
     ```
+- Ojo : Observa la extensión ".tgz" para el tar comprimido. Aunque también podemos ponerle como extensión ".tar.gz"
 
 ---
 
