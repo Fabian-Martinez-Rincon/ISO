@@ -735,15 +735,25 @@ Los archivos `TAR` no son archivos comprimidos sino empaquetados. `TAR` es un em
 
 ---
 
-`(b)` Seleccione 4 archivos dentro de algún directorio al que tenga permiso y sume el tamaño de cada uno de estos archivos. Cree un archivo empaquetado conteniendo estos 4 archivos y compare los tamaños de los mismos. ¿Qué característica nota?
+#### `(b)` Seleccione 4 archivos dentro de algún directorio al que tenga permiso y sume el tamaño de cada uno de estos archivos. Cree un archivo empaquetado conteniendo estos 4 archivos y compare los tamaños de los mismos. ¿Qué característica nota?
 
-```cmd
-tar cvf ejercicio6.tar directorioNuevo
-```
+Claro, para sumar el tamaño de cuatro archivos en Linux y crear un archivo empaquetado que los contenga, puede seguir los siguientes pasos:
 
-los archivos empaquetados redujeron su tamaño en comparaciona estar los 4 “sueltos”
+- Abrir una terminal y navegar hasta el directorio que contiene los cuatro archivos usando el comando `cd`.
+- Para sumar el tamaño de los cuatro archivos, use el comando <br> <br>
+    ```
+    du -sh file1 file2 file3 file4
+    ```
+    Esto le dará la suma total de los tamaños de los cuatro archivos.
+- Para crear un archivo empaquetado que contenga los cuatro archivos, puede utilizar el comando 
+    ```
+    tar -cvzf archivo_empaquetado.tar.gz file1 file2 file3 file4
+    ```
+    Esto creará un archivo empaquetado llamado "archivo_empaquetado.tar.gz" que contiene los cuatro archivos.
+- Para comparar los tamaños de los cuatro archivos individuales y el archivo empaquetado, use el comando `ls -lh`. Esto mostrará el tamaño de cada archivo en una lista. Compare el tamaño total de los cuatro archivos individuales con el tamaño del archivo empaquetado para notar la diferencia en el tamaño.
 
 
+Es importante tener en cuenta que el comando tar utiliza la compresión para reducir el tamaño del archivo empaquetado, por lo que es posible que el tamaño del archivo empaquetado sea menor que la suma total de los tamaños de los cuatro archivos individuales.
 `(c)` ¿Qué acciones debe llevar a cabo para comprimir 4 archivos en uno solo? Indique la secuencia de comandos ejecutados.\
 Teniendo en cuenta que tenemos 4 archivos en el directorio Descargas/ejercicio6 y nos situamos en Descargas ejecutamos lo siguiente
 
