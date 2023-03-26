@@ -464,12 +464,13 @@ Aquí tenemos otros ejemplos de permisos de grupo
 
 ---
 
-`(b)` Investigue la funcionalidad y parámetros de los siguientes comandos relacionados con los permisos en GNU/Linux:
+#### `(b)` Investigue la funcionalidad y parámetros de los siguientes comandos relacionados con los permisos en GNU/Linux:
 - **chmod:** nos permite gestionar permisos
 - **chown:** permite cambiar el propietario de un archivo o directorio en sistemas
 - **chgrp:** nos permite cambiar el grupo al que pertenece un archivo
 
-`(c)` Al utilizar el comando chmod generalmente se utiliza una notación octal asociada para definir permisos. ¿Qué significa esto? ¿A qué hace referencia cada valor?\
+#### `(c)` Al utilizar el comando chmod generalmente se utiliza una notación octal asociada para definir permisos. ¿Qué significa esto? ¿A qué hace referencia cada valor?
+
 Existen 3 tipos de permisos y se basan en una notacion octal para referenciar a cada uno:
 
 | Permiso  | Valor | Octal |
@@ -478,86 +479,147 @@ Existen 3 tipos de permisos y se basan en una notacion octal para referenciar a 
 | Escritura  | W  | 2 |
 | Ejecucion  | X  | 1 |
 
-`(d)` ¿Existe la posibilidad de que algún usuario del sistema pueda acceder a determinado archivo para el cual no posee permisos? Nombrelo, y realice las pruebas correspondientes.\
-El usuario root puede acceder a determinados archivos sin necesidad de poseer permisos o con manejo de interrupciones.
+Se aplican sobre los usuarios:
 
-`(e)` Explique los conceptos de “full path name” y “relative path name”. De ejemplos claros de cada uno de ellos.\
-full path name es la ruta completa a ese archivo o carpeta desde el directorio / del sistema de archivos. ejemplo `/home/your_username/my_script`
+- Usuarios: permisos del dueño -> `U`
+- Usuarios: permisos del grupo -> `G`
+- Usuarios: permisos de otro usuario -> `O`
 
-relative path name : Rastrea la ruta desde el directorio actual a través de su padre o sus subdirectorios y archivos. ..\Documents
 
-`(f)` ¿Con qué comando puede determinar en qué directorio se encuentra actualmente? ¿Existe alguna forma de ingresar a su directorio personal sin necesidad de escribir todo el path completo? ¿Podría utilizar la misma idea para acceder a otros directorios? ¿Cómo? Explique con un ejemplo.\
-Con el comando pwd podemos saber el directorio actual.
+La notación octal se refiere a ver estos valores en 3 bits , 010 equivale a 2 , por lo tanto si un archivo tendrá solo permisos de escritura, figura de esa manera. Si los valores fueran 110= serian permisos de lectura y escritura, y si fueran 111 el archivo tendría todos los permisos (lectura escritura y ejecución). 
 
-con cd /user volvemos al directorio personal, aunque con solo poner `cd`o `cd ~` ya cumplimos esa función.
+- En general cuando se le da un permiso a un archivo requiere 3 números (ejemplo **`chmod 755`**) cada uno de esos números representa los permisos para diferentes cosas.
+- El primer número es para indicar los permisos para el dueño del archivo (**`U`**).
+- El segundo número es para indicar los permisos para los usuarios del grupo de un archivo (**`G`**)
+- El tercer número es para indicar los permisos para todo el resto de los usuarios (**`O`**). 
+
+Por lo tanto, en el ejemplo **`chmod 755`**, indica que el **`dueño (U)`** tiene permiso para lectura, escritura y ejecución ( 4 + 2 + 1 = 7). Los **`usuarios del grupo (G)`** y para el **`resto de los usuarios (O)`** tienen permiso para lectura y ejecución (4 + 1= 5). Ver tabla.
+
+---
+
+#### `(d)` ¿Existe la posibilidad de que algún usuario del sistema pueda acceder a determinado archivo para el cual no posee permisos? Nombrelo, y realice las pruebas correspondientes.
+
+
+Existe la posibilidad, si es que el usuario puede utilizar el comando su, o sudo. Sino, sin poseer los permisos necesarios no puede acceder al archivo. Sólo root.
+
+---
+
+#### `(e)` Explique los conceptos de “full path name” y “relative path name”. De ejemplos claros de cada uno de ellos.
+
+- **`Full path name`** es la ruta completa a ese archivo o carpeta desde el directorio / del sistema de archivos. ejemplo `/home/your_username/my_script`
+- **`Relative path name`** Rastrea la ruta desde el directorio actual a través de su padre o sus subdirectorios y archivos. ..\Documents
+
+---
+
+#### `(f)` ¿Con qué comando puede determinar en qué directorio se encuentra actualmente? ¿Existe alguna forma de ingresar a su directorio personal sin necesidad de escribir todo el path completo? ¿Podría utilizar la misma idea para acceder a otros directorios? ¿Cómo? Explique con un ejemplo.
+
+- Con el comando pwd podemos saber el directorio actual.
+- Con `cd`o `cd ~` vamos al directorio personal.
+- Se puede usar este mismo comando para acceder a directorios a partir de la ruta en donde estemos parados
 
 Se podría acceder a diferentes directorios gracias la ubicación relativa o atajos ya prestablecidos como `cd ..` para volver al directorio anterior sin necesidad de poner ningún atajo
 
+---
 
-`(g)` Investigue la funcionalidad y parámetros de los siguientes comandos relacionados con el uso del FileSystem:
+#### `(g)` Investigue la funcionalidad y parámetros de los siguientes comandos relacionados con el uso del FileSystem:
 
-- **cd:** Nos permite meternos en un directorio interno
-- **umount:** permite eliminar un sistema de archivos remoto que esté montando en la actualidad (no usar xd)
-- **mkdir:** Cree una carpeta
-- **du:** para ver el tamaño de ficheros y carpetas
-- **rmdir:** El comando linux rmdir sirve para borrar directorios
-- **df:** Informa la cantidad de espacio libre en disco
-- **mount:** Se utiliza para montar dispositivos y particiones para su uso por el sistema operativo (se instala con **sudo apt install nfs-common**)
-- **ln:** crear un enlace simbólico al fichero o directorio (como un acceso directo)
-- **ls:** Lista el contenido del directorio actual
-- **pwd:** Visualiza la ruta donde estoy situado
-- **cp:** sirve para copiar archivos y directorios dentro del sistema de archivos
-- **mv:** se utiliza para mover o renombrar los archivos y directorios
+- **`cd`** Nos permite meternos en un directorio interno
+- **`umount`** permite eliminar un sistema de archivos remoto que esté montando en la actualidad (no usar xd)
+- **`mkdir`** Cree una carpeta
+- **`du`** Para ver el tamaño de ficheros y carpetas
+- **`rmdir`** Borrar directorios
+- **`df`** Informa la cantidad de espacio libre en disco
+- **`mount`** Se utiliza para montar dispositivos y particiones para su uso por el sistema operativo (se instala con **sudo apt install nfs-common**)
+- **`ln`** crear un enlace simbólico al fichero o directorio (como un acceso directo)
+- **`ls`** Lista el contenido del directorio actual
+- **`pwd`** Visualiza la ruta donde estoy situado
+- **`cp`** sirve para copiar archivos y directorios dentro del sistema de archivos
+- **`mv`** se utiliza para mover o renombrar los archivos y directorios
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## `5)` Procesos
 
-`(a)` ¿Qué es un proceso? ¿A que hacen referencia las siglas PID y PPID? ¿Todos los procesos tienen estos atributos en GNU/Linux? Justifique. Indique qué otros atributos tiene un proceso.\
-Es un programa en ejecución Para nosotros serán sinónimos: tarea,
-job y proceso.
+#### `(a)` ¿Qué es un proceso? ¿A que hacen referencia las siglas PID y PPID? ¿Todos los procesos tienen estos atributos en GNU/Linux? Justifique. Indique qué otros atributos tiene un proceso.
 
-PID significa ID de proceso, que significa Número de identificación para el proceso que se está ejecutando actualmente en la memoria. 2. PPID son las siglas de Parent Process ID, lo que significa que Parent Process es el responsable de crear el proceso actual (Child Process). A través del proceso principal, se creará el proceso secundario.
+Un proceso es un programa en ejecución. Para nosotros serán sinónimos de tarea, job y proceso.
+- Es dinámico
+- Tiene program counter.
+- Su ciclo de vida comprende desde que se lo **`dispara`** hasta que termina.
 
-`(b)` Indique qué comandos se podrían utilizar para ver qué procesos están en ejecución en un sistema GNU/Linux.\
-El comando `ps` posee algunas opciones para mostrar los procesos en ejecución
+La sigla `PID` hace referencia al `ID` del Proceso y la sigla `PPID` hace referencia al `ID` del Proceso Padre del proceso.
 
-Algunas opciones:
+Todos los procesos tienen estos atributos, además de estos (que son los más importantes pero no todos): Usuario (`UID`), Grupo (`GID`), Prioridad, etc. Con ps –ejH
 
-- e o : muestra todos los procesos ax
-- u (o  o ) *usuario*: muestra los procesos de un usuario U
-    - -user
-- u: salida en formato usuario
-- j: salida en formato *job* (muestra PID, PPID, etc.)
-- f o : salida en formato largo l
-- f: muestra un árbol con la jerarquía de procesos
-- k (o ) *campo*: ordena la salida por algún campo (p.e. )
-    - -sort
-    
-    ps uxak rss
-    
-- o (o  o ) *formato*: permite definir el formato de salida
-    
-    o -format
-    
-    ps -o ruser,pid,comm=Comando
+PUEDO VER EL PPID.
 
-`(c)` ¿Qué significa que un proceso se está ejecutando en Background? ¿Y en Foreground?\
-Si se ejecuta en background hace referencia a **todos aquellos procesos o rutinas de ejecución que se realizan en segundo plano**
+----
 
-**Si se muestra la ejecución del comando dentro de la terminal** se dice que está en el foreground (primer plano).
+#### `(b)` Indique qué comandos se podrían utilizar para ver qué procesos están en ejecución en un sistema GNU/Linux.
 
-`(d)` ¿Cómo puedo hacer para ejecutar un proceso en Background? ¿Como puedo hacer para pasar un proceso de background a foreground y viceversa?\
-Para colocar un proceso en segundo plano durante su ejecución, se debe utilizar la combinación teclas: Ctrl + Z. Para volver a colocar un proceso en primer plano, se debe ingresar el comando “fg”. Comando para ver procesos que se estén ejecutando: “ps” o con modificador para ver tambien procesos del sistema: “ps ax”.
+- **`pstree`** que nos muestra los procesos en una estructura de árbol top El comando top te permite ver las tareas del sistema que se ejecutan en tiempo real.
+- **`top`** El comando top te permite ver las tareas del sistema que se ejecutan en tiempo real.Proporciona un buen resumen de tu sistema para verificar rápidamente si algo se destaca que pueda estar causando problemas con tu sitio web o servidor
+- **`ps`** muestra por pantalla un listado de los procesos que están ejecutándose en el sistema.
 
-`(e)` Pipe ( | ). ¿Cuál es su finalidad? Cite ejemplos de su utilización.\
-Linux Pipes **te permiten procesar secuencialmente una serie de comandos referentes a un conjunto de datos, o mover eficazmente los datos de un lado a otro entre comandos**, por ejemplo 
+Las opciones (parámetros) más importantes y utilizadas de este comando son:
+- **`a`** para mostrar los procesos de todos los teminales.
+- **`u`** para mostrar el usuario al que pertenece el proceso y la hora de inicio.
+- **`x`** para mostrar procesos que no estan controlados por ningún terminal.
 
+Suelen usarse combiandas para tener una visión global de los procesos que están en ejecutan.
+
+---
+
+#### `(c)` ¿Qué significa que un proceso se está ejecutando en Background? ¿Y en Foreground?
+
+- **`Proceso ejecutándose en Background`** significa que el proceso continúa la ejecución mientras que el shell se libera para otras actividades. **`Proceso en segundo plano`**.
+- **`Proceso ejecutándose en Foreground`** Es exactamente lo contrario, quiere decir que no se admitirá ningún otro comando hasta que se complete el proceso. **`Proceso en primer plano`**.
+
+---
+
+#### `(d)` ¿Cómo puedo hacer para ejecutar un proceso en Background? ¿Como puedo hacer para pasar un proceso de background a foreground y viceversa?
+
+Para ejecutar un proceso en background en Linux, se puede agregar el símbolo "&" al final del comando en la línea de comandos. Por ejemplo, para ejecutar un proceso llamado "mi_proceso" en background, se puede escribir:
+
+```bash
+mi_proceso &
+```
+
+Esto permitirá que el proceso se ejecute en segundo plano mientras se sigue usando la terminal para ejecutar otros comandos.
+
+Para pasar un proceso de background a foreground y viceversa, se pueden usar los siguientes comandos:
+
+- **`fg`** mueve un proceso en background a foreground. Se debe proporcionar el número de trabajo (job number) del proceso como argumento. El número de trabajo se puede obtener con el comando "jobs". Por ejemplo: <br><br>
+    ```bash
+    fg %1
+    ```
+    Esto mueve el proceso número 1 en background al foreground.
+- **`bg`** mueve un proceso en foreground a background. También se debe proporcionar el número de trabajo del proceso como argumento. Por ejemplo:
+    ```bash
+    bg %1
+    ```
+    Esto mueve el proceso número 1 en foreground a background.
+
+También se puede suspender un proceso en foreground con la combinación de teclas `Ctrl + Z`. Esto detendrá el proceso y lo moverá a background. Para reanudar el proceso en background, se puede usar el comando `bg`
+
+---
+
+#### `(e)` Pipe ( | ). ¿Cuál es su finalidad? Cite ejemplos de su utilización.
+
+ El **`|`** nos permite comunicar dos procesos por medio de un pipe o tubería desde la shell
+
+El pipe conecta stdout (salida estándar) del primer comando con la stdin (entrada estándar) del segundo.
+
+Por ejemplo:
+
+```
 ls | more
-• Se ejecuta el comando ls y la salida del mismo, es enviada
-como entrada del comanda more
+```
 
-`(f)` Redirección. ¿Qué tipo de redirecciones existen? ¿Cuál es su finalidad? Cite ejemplos de utilización.\
+---
+
+#### `(f)` Redirección. ¿Qué tipo de redirecciones existen? ¿Cuál es su finalidad? Cite ejemplos de utilización.
+
 Las **redirecciones** consisten en trasladar información de un tipo a otro
 
 Hay 2 tipos de redirecciones 
