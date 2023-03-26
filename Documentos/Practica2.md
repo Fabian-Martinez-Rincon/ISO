@@ -677,6 +677,7 @@ Si quisiéramos redirigir todas las salidas a la vez hacia un mismo fichero, pod
 
 Además, con el carácter `&` podemos redirigir salidas de un tipo hacia otras, por ejemplo, si quisiéramos redirigir la salida de error hacia la salida estándar podríamos indicarlo con: **`2>&1`**. Es importante tener en cuenta que el orden de las redirecciones es significativo: se ejecutarán de izquierda a derecha.
 
+---
 
 #### `(g)` Comando kill. ¿Cuál es su funcionalidad? Cite ejemplos.
 
@@ -702,8 +703,19 @@ El comando **`kill`** en Linux (ubicado en / bin / kill), es un comando incorpor
 
 ## `6)` Otros comandos de Linux (Indique funcionalidad y parámetros)
 
-`(a)` ¿A qué hace referencia el concepto de empaquetar archivos en GNU/Linux?\
-Es agrupar en un solo fichero varios ficheros y/o directorios
+#### `(a)` ¿A qué hace referencia el concepto de empaquetar archivos en GNU/Linux?
+
+Los archivos `TAR` no son archivos comprimidos sino empaquetados. `TAR` es un empaquetador, es algo más parecido a un compresor como `arj` ó `zip` pero sin compresión. Su función es la de incluir todos los ficheros juntos en el mismo archivo, conservando las estructuras de directorios y permisos de los mismos. 
+
+- **``crear``** un archivo .tar tar –cvf mi_archivo.tar /directorio/a/empaquetar
+- **``extraer``** el contenido de un archivo .tar ya creado tar –xvf mi_archivo.tar
+- **`actualizar`** el contenido de un archivo .tar ya existente tar –uvf mi_archivo.tar
+- **`agregar`** un directorio a un archivo .tar ya existente **`tar –rvf archivo.tar  directorio/a/agregar`**
+- **`empaquetar`** y comprimir el archivo .tar
+- **`tar –cvzf archivo.tgz /directorio/a/empaquetar/y/comprimir`**
+- **`desempaquetar`** el archivo **`.tgz tar –xvzf archivo.tgz`**
+
+---
 
 `(b)` Seleccione 4 archivos dentro de algún directorio al que tenga permiso y sume el tamaño de cada uno de estos archivos. Cree un archivo empaquetado conteniendo estos 4 archivos y compare los tamaños de los mismos. ¿Qué característica nota?
 
