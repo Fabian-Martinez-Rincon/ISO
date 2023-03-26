@@ -616,9 +616,33 @@ Por ejemplo:
 ls | more
 ```
 
+- Se ejecuta el comando ls y la salida del mismo, es enviada como entrada del comanda **`more`**. 
+- Se pueden anidar tantos pipes como se deseen
+
+¿Cómo haríamos si quisiéramos contar la cantidad de usuarios del sistema que en su
+nombre de usuario aparece una letra “a"?
+
+```shell
+cat /etc/passwd | cut -d: -f1 | grep a | wc –l
+```
+
 ---
 
 #### `(f)` Redirección. ¿Qué tipo de redirecciones existen? ¿Cuál es su finalidad? Cite ejemplos de utilización.
+
+En Linux, al final todo es tratado como si fuera un fichero y como tal, tenemos descriptores de fichero para aquellos puntos donde queramos acceder.
+
+Hay unos descriptores de fichero por defecto:
+- **`0`** Entrada estándar (normalmente el teclado).
+- **`1`** Salida estándar (normalmente la consola).
+- **`2`** Salida de error. 
+
+Para redirigir las salidas utilizaremos el descriptor de fichero seguido del símbolo > o < si redirigimos la entrada hacia un comando. Veamos unos ejemplos
+
+- **`ls -l > fichero`** Guarda la salida de ls -l en fichero. Si no existe lo crea, y si existe lo sobreescribe.
+- **`ls -l >> fichero`** Añade la salida del comando a fichero. Si no existe lo crea, y si existe, lo añade al final.
+- **`ls -l 2 > fichero`** Si hay algún error, lo guarda en fichero (podría salir un error si no tuviéramos permiso de lectura en el directorio). 
+
 
 Las **redirecciones** consisten en trasladar información de un tipo a otro
 
@@ -647,26 +671,32 @@ ps -ef >> processos.txt
 ```
 (Concatena al archivo procesos.txt la salida del comando.)
 
-`(g)` Comando kill. ¿Cuál es su funcionalidad? Cite ejemplos.\
-Sirve para cancelar procesos
-kill es un **comando utilizado para enviar mensajes sencillos a los  ejecutándose en el sistema** . Por defecto el mensaje que se envía es la señal de terminación (SIGTERM), que solicita al proceso limpiar su estado y salir.
+Es importante ver que si no se especifica el descriptor de fichero se asume que se redirige la salida estándar. En el caso del operador `<` se redirige la entrada estándar, es decir, el contenido del fichero que especificáramos, se pasaría como parámetro al comando.
 
-`kill -l`
+Si quisiéramos redirigir todas las salidas a la vez hacia un mismo fichero, podríamos utilizar **`>&`**.
 
-Este comando mostrará una página con las diferentes señales del comando kill, con sus nombres y números correspondientes. Si bien hay varias señales disponibles, en la mayoría de los casos se usa SIGKILL (9) y SIGTERM (15).
-
-ejemplo 
-
-`kill 63772` elimina el proceso con id 63772
+Además, con el carácter `&` podemos redirigir salidas de un tipo hacia otras, por ejemplo, si quisiéramos redirigir la salida de error hacia la salida estándar podríamos indicarlo con: **`2>&1`**. Es importante tener en cuenta que el orden de las redirecciones es significativo: se ejecutarán de izquierda a derecha.
 
 
-`(h)` Investigue la funcionalidad y parámetros de los siguientes comandos relacionados con el manejo de procesos en GNU/Linux. Además, compárelos entre ellos:
+#### `(g)` Comando kill. ¿Cuál es su funcionalidad? Cite ejemplos.
+
+El comando **`kill`** en Linux (ubicado en / bin / kill), es un comando incorporado que se usa para terminar los procesos manualmente. El comando kill envía una señal a un proceso que termina el proceso. Si el usuario no especifica ninguna señal que se enviará junto con el comando kill, se envía la señal TERM predeterminada que finaliza el proceso.
+
+- **`kill -l`** Para mostrar todas las señales disponibles, puede usar la siguiente opción de comando.
+- **`kill pid`** Para mostrar cómo usar un PID con el comando kill.
+- **`kill -s`** Para mostrar cómo enviar señales a los procesos.
+- **`kill -L`** este comando se usa para listar las señales disponibles en un formato de tabla. 
+
+---
+
+#### `(h)` Investigue la funcionalidad y parámetros de los siguientes comandos relacionados con el manejo de procesos en GNU/Linux. Además, compárelos entre ellos:
+
 - **ps:** Muestra información de los procesos activos.
-- **kill:** Sirve para cancelar procesos
+- **kill:** Usa el PID para matar el proceso. Permite interactuar con cualquier proceso mandando señales. Kill `<pid>` termina un proceso y Kill -9 `<pid>` fuerza a terminar un proceso en caso de que la anterior opción falle. 
 - **pstree:** muestra un árbol de procesos.
 - **killall:** nos permite matar un proceso escribiendo su nombre
 - **top:** Sirve para ver los procesos de ejecución del sistema (y más cosas) en tiempo real
-- **nice:** Ejecuta un comando con una prioridad determinada, o modifica la prioridad a de un proceso
+- **nice:** Ejecuta un comando con una prioridad determinada, o modifica la prioridad a de un proceso. `nice -10 named` Esto bajaría la prioridad de named en 10 unidades(Si estaba en -10, pasará a - 20) `MENOS GENTIL = MAS PRIORIDAD`
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
