@@ -949,7 +949,7 @@ pwd >> /home/user/donde
 
 #### `(a)` Ingrese al sistema como usuario “root”
 
-```powershell
+```shell
 su
 ```
 
@@ -966,57 +966,92 @@ passwd il {nueva contra}
 
 #### `(c)` ¿Qué archivos fueron modificados luego de crear el usuario y qué directorios se crearon?
 
-se modificaron los archivos /etc/passwd y se creo el directorio personal del perfil en /home/nombrelegido
+se modificaron los archivos `/etc/passwd` y se creo el directorio personal del perfil en /home/nombrelegido
 
 ---
 
-#### `(d)` Crear un directorio en /tmp llamado cursada2017
+#### `(d)` Crear un directorio en `/tmp` llamado cursada2017
 
-```powershell
+```shell
 cd /tmp
 mkdir cursada2017
 ```
 
 ---
 
-#### `(e)` Copiar todos los archivos de /var/log al directorio antes creado.
+#### `(e)` Copiar todos los archivos de `/var/log` al directorio antes creado.
 
 En modo superusuario/root
-```powershell
-cp /var/log /tmp/cursada2017
+
+```shell
+cp /var/log/* /tmp/cursada2017
 ```
 
 ---
 
 #### `(f)` Para el directorio antes creado (y los archivos y subdirectorios contenidos en él) cambiar el propietario y grupo al usuario creado y grupo users.
 
+```shell
+chown nombreUsuario:nombreUsuario /tmp/cursada2017
+```
+
 ---
 
 #### `(g)` Agregue permiso total al dueño, de escritura al grupo y escritura y ejecución a todos los demás usuarios para todos los archivos dentro de un directorio en forma recursiva.
+
+```shell
+chmod -R 745 /tmp/cursada2017
+```
 
 ---
 
 #### `(h)` Acceda a otra terminal virtual para loguearse con el usuario antes creado.
 
+```
+sudo login user
+```
+
 ---
 
 #### `(i)` Una vez logueado con el usuario antes creado, averigüe cuál es el nombre de su terminal.
+
+```shell
+ps -p 544
+```
 
 ---
 
 #### `(j)` Verifique la cantidad de procesos activos que hay en el sistema.
 
+```shell
+ps aux | wc -l
+```
+
 ---
 
 #### `(k)` Verifiqué la cantidad de usuarios conectados al sistema.
+
+```shell
+who
+```
 
 ---
 
 #### `(l)` Vuelva a la terminal del usuario root, y envíele un mensaje al usuario anteriormente creado, avisándole que el sistema va a ser apagado.
 
+```shell
+sudo shutdown 1 'El sistema se va a apagar'
+tmb sin apagar
+wall "En un minuto apagaremos el sistema."
+```
+
 ---
 
 #### `(m)` Apague el sistema
+
+```shell
+sudo shutdown now
+```
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
@@ -1056,7 +1091,7 @@ Nombre, Apellido, Número de alumno y dirección de correo electrónico. El arch
 
 Indique qué acción realiza cada uno de los comandos indicados a continuación considerando su orden. Suponga que se ejecutan desde un usuario que no es root ni pertenece al grupo de root. (Asuma que se encuentra posicionado en el directorio de trabajo del usuario con el que se logueó). En caso de no poder ejecutarse el comando indique la razón:
 
-```
+```shell
 mkdir iso
 cd . / iso; ps > f0
 ls > f1
