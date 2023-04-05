@@ -17,6 +17,7 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
+- [Teoria](/Documentos/Teoria.md)
 - [Repaso Primer Parcial de Promoción](/Documentos/RepasoPrimerParcialPromocion.md)
 - [Primer Parcial de Promoción](/Documentos/PrimerParcialPromocion.md)
 - [Condiciones de aprobación](/Documentos/condiciones.md)
