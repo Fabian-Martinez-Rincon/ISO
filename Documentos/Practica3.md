@@ -372,7 +372,15 @@ Evaluación de expresione
 
 #### **(b)** Modificar el script creado en el inciso anterior para que los números sean recibidos como parámetros. El script debe controlar que los dos parámetros sean enviados.
 
+| ![](2023-04-17-15-27-16.png) | ![](2023-04-17-15-26-52.png) |
+| --- | --- |
+
 #### **(c)** Realizar una calculadora que ejecute las 4 operaciones básicas: +, - ,*, %. Esta calculadora debe funcionar recibiendo la operación y los números como parámetros
+
+| ![](2023-04-17-15-47-45.png) | ![](2023-04-17-15-45-51.png) |
+| --- | --- |
+
+
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
