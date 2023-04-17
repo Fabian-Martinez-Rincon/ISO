@@ -228,6 +228,8 @@ El comando test posee dos sintaxis: **test expresión** y **[ expresión ]**, do
 ![](2023-04-17-03-24-27.png)
 ![](2023-04-17-03-25-59.png)
 
+### Valores a tener en cuenta
+
 <table>
 
 <td>
@@ -258,11 +260,6 @@ El comando test posee dos sintaxis: **test expresión** y **[ expresión ]**, do
 
 </td>
 </table>
-
-
-
-### Valores (condiciones del IF)
-
 
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
