@@ -240,28 +240,15 @@ El comando test posee dos sintaxis: **test expresión** y **[ expresión ]**, do
 ## 8) Ejercicio
 
 Estructuras de control. Investigue la sintaxis de las siguientes estructuras de control incluidas en shell scripting:
-### if
 
-| Codigo | Resultado |
+| if | Resultado |
 | --- | --- |
 | ![](2023-04-17-04-30-21.png) | ![](2023-04-17-04-59-47.png) |
-
-### case
-
-| Codigo | Resultado |
-| --- | --- |
+| case | Resultado |
 | ![](2023-04-17-04-03-28.png) | ![](2023-04-17-04-32-55.png) |
-
-### while
-
-| Codigo | Resultado |
-| --- | --- |
+| while | Resultado |
 | ![](2023-04-17-04-14-06.png) | ![](2023-04-17-04-15-06.png) |
-
-
-### for
-| Codigo | Resultado |
-| --- | --- |
+| for | Resultado |
 | ![](2023-04-17-04-46-40.png) | ![](2023-04-17-04-47-29.png) |
 
 
