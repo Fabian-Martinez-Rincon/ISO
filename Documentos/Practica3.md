@@ -112,7 +112,6 @@ Tambien podes ejecutar el script con el comando `bash script.sh`
 
 Crear dentro del directorio personal del usuario logueado un directorio llamado practicashell-script y dentro de él un archivo llamado mostrar.sh cuyo contenido sea el siguiente:
 
-<table><td>
 
 ```bash
 #!/bin/bash
@@ -129,13 +128,11 @@ echo "Su usuario es: `whoami`"
 echo "Su directorio actual es:"
 ```
 
-</td><td>
+
 
 ![image](https://user-images.githubusercontent.com/55964635/232369884-42f534c8-975e-4053-997a-ad86ffdada50.png)
 
-</td>
 
-</table>
 
 
 
@@ -154,8 +151,9 @@ Son para poder ejecutar comando cuando se encuentran dentro de un string
 
 #### **(e)** Realizar modificaciones al script anteriormente creado de manera de poder mostrar distintos resultados (cuál es su directorio personal, el contenido de un directorio en particular, el espacio libre en disco, etc.). Pida que se introduzcan por teclado (entrada estándar) otros datos.
 
-| ![](2023-04-17-00-45-05.png) | ![](2023-04-17-00-40-25.png) |
-| --- | --- |
+![](2023-04-17-00-45-05.png) 
+
+![](2023-04-17-00-40-25.png) 
 
 
 
@@ -182,7 +180,25 @@ Parametrización: ¿Cómo se acceden a los parámetros enviados al script al mom
 
 ## 5) Ejercicio
 
- ¿Cual es la funcionalidad de comando exit? ¿Qué valores recibe como parámetro y cual es su significado?
+¿Cual es la funcionalidad de comando exit? ¿Qué valores recibe como parámetro y cual es su significado?
+
+El comando exit finaliza un script. Incluso, puede arrojar un valor de terminación, el cual estará disponible para su proceso padre.
+
+Todo comando posee un estado de terminación (exit status). Un comando que se ejecutó satisfactoriamente arrojará un valor de 0, mientras que un comando que no se procesó de manera correcta, finalizará con un número diferente de 0.
+
+Al igual que un comando, un script posee su propio estado de terminación, el cual será determinado por la última instrucción ejecutada por el script.
+
+Dentro de un script, el comando exit puede arrojar un número dentro de un rango de 0 a 255.
+
+Se puede consultar el exit status imprimiendo la variable `$?` de la siguiente manera:
+- Ingresamos al editor VIM con el archivo mostrar.sh
+- Una vez hecho el bin bash, como última línea y dentro de insertar ingresamos el siguiente comando: echo $?
+- ESC
+- :exit
+
+En la consola se mostrara un número de 0 a 255. 
+
+![](2023-04-17-01-20-45.png)
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
