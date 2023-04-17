@@ -61,7 +61,8 @@ Está orientado a diferentes tareas:
 
 ## 2) Investigar la funcionalidad de los comandos echo y read
 
-- `Echo:` Es un comando para la impresión de un texto en pantalla. El comando para imprimir el contenido de la variable es: `echo $nombreVar `
+- `Echo:` Es un comando para la impresión de un texto en pantalla. El comando para imprimir el contenido de la variable es:
+- `echo $nombreVar `
 - `Read:` El comando read lee su entrada estándar y asigna las palabras leídas en la(s) variable(s) cuyo nombre se pasa como argumento. Se trata del input desde teclado. 
 
 ![](/Practicas/Practica3/Imagenes/1.png)
