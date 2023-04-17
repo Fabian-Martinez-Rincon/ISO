@@ -338,6 +338,17 @@ No es fuertemente tipado, y no requiere una declaración explícita de tipo vari
 
 ¿Pueden definirse funciones dentro de un script? ¿Cómo? ¿Cómo se maneja el pasaje de parámetros de una función a la otra?
 
+Si, se pueden definir funciones dentro de un script.
+- Las funciones permiten modularizar el comportamiento de los scripts. 
+- Se pueden declarar de 2 formas:
+   ```
+   function nombre { block }
+   nombre() { block }
+   ```
+- Con la sentencia return se retorna un valor entre 0 y 255
+- El valor de retorno se puede evaluar mediante la variable $?
+- Reciben argumentos en las variables $1, $2, etc
+
 Para definir variables locales podemos usar la palabra clave `local var1`
 
 
