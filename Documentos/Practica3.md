@@ -209,8 +209,11 @@ También se puede utilizar para:
    - expr index “esto es un test” s 
    - te devuelve el índice de la letra pasado por parámetro en la cadena (la primera aparición). 
 
-![](2023-04-17-02-23-27.png)
-![](2023-04-17-02-25-09.png)
+| ![](2023-04-17-02-23-27.png) | ![](2023-04-17-02-25-09.png) |
+| --- | --- |
+
+
+
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
@@ -284,6 +287,32 @@ Estructuras de control. Investigue la sintaxis de las siguientes estructuras de 
 
 ## 10) Ejercicio
 ¿Qué tipo de variables existen? ¿Es shell script fuertemente tipado? ¿Se pueden definir arreglos? ¿Cómo?
+
+bash soporta `strings` y `arrays`
+- Los nombres son case sensitive
+- Para crear una variable:
+   - NOMBRE="pepe" # SIN espacios alrededor del =
+- Para accederla se usa $:
+   - echo $NOMBRE
+
+Para evitar ambigüedades se pueden usar llaves:
+
+- Esto no accede a $NOMBRE
+- echo $NOMBREesto_no_es_parte_de_la_variable
+- Esto sí
+- echo ${NOMBRE}esto_no_es_parte_de_la_variable
+Los nombres de las variables pueden contener mayúsculas, minúsculas, números y el símbolo (underscore), pero no pueden empezar con un número.
+
+No es fuertemente tipado, y no requiere una declaración explícita de tipo variables.
+
+### Todo sobre los arreglos
+
+| Bash | Resultado |
+| --- | --- |
+| arreglo=() | Arreglo vacio |
+| arreglo[0]="valor1" | Asignación |
+| arreglo=("valor1", "valor2") | Definir con valores |
+| read - arreglo | leer desde teclado \ tiene que estar definido arriba |
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
