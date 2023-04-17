@@ -132,6 +132,7 @@ echo "Su directorio actual es:"
 </td><td>
 
 ![image](https://user-images.githubusercontent.com/55964635/232369884-42f534c8-975e-4053-997a-ad86ffdada50.png)
+
 </td>
 
 </table>
@@ -153,9 +154,12 @@ Son para poder ejecutar comando cuando se encuentran dentro de un string
 
 #### **(e)** Realizar modificaciones al script anteriormente creado de manera de poder mostrar distintos resultados (cuál es su directorio personal, el contenido de un directorio en particular, el espacio libre en disco, etc.). Pida que se introduzcan por teclado (entrada estándar) otros datos.
 
-![](2023-04-17-00-45-05.png)
+| ![](2023-04-17-00-45-05.png) | ![](2023-04-17-00-40-25.png) |
+| --- | --- |
 
-![](2023-04-17-00-40-25.png)
+
+
+
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
