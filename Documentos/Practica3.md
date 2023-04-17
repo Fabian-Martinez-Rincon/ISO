@@ -159,8 +159,6 @@ Parametrización: ¿Cómo se acceden a los parámetros enviados al script al mom
 | ![](2023-04-17-01-04-44.png) | ![](2023-04-17-01-05-38.png) |
 | --- | --- |
 
-
-
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## 5) Ejercicio
@@ -230,16 +228,9 @@ El comando test posee dos sintaxis: **test expresión** y **[ expresión ]**, do
 ![](2023-04-17-03-24-27.png)
 ![](2023-04-17-03-25-59.png)
 
-| Operador | Con Strings | Con números | Operaciones |
-| --- | --- | --- | --- |
-| Igualdad | [ $nombre = "Maria" ] | [ $edad -eq 20 ] | $(( 2 == 2 )) |
-| Desigualdad | [ $nombre != "Maria" ] | [ $edad -ne 20 ] | $(( 3 != 4 )) |
-| Mayor | [ A > Z ] | [ 5 -gt 20 ] | $(( 3 > 1 )) |
-| Mayor o Igual | [ A >= Z ] | [ 5 -ge 20 ] | $( 2 >= 1 )) |
-| Menor | [ A < Z ] | [ 5 -lt 20 ] | $(( 1 < 10 )) |
-| Menor o Igual | [ A <= Z ] | [ 5 -le 20 ] | $(( 3 <= 5 )) |
+<table>
 
-### Valores (condiciones del IF)
+<td>
 
 | Parametro | Valor |
 | --- | --- |
@@ -251,6 +242,28 @@ El comando test posee dos sintaxis: **test expresión** y **[ expresión ]**, do
 | -e | Si existe |
 | -d | Si es un directorio |
 | -f | Si es un archivo |
+
+</td>
+
+<td>
+
+| Operador | Con Strings | Con números | Operaciones |
+| --- | --- | --- | --- |
+| Igualdad | [ $nombre = "Maria" ] | [ $edad -eq 20 ] | $(( 2 == 2 )) |
+| Desigualdad | [ $nombre != "Maria" ] | [ $edad -ne 20 ] | $(( 3 != 4 )) |
+| Mayor | [ A > Z ] | [ 5 -gt 20 ] | $(( 3 > 1 )) |
+| Mayor o Igual | [ A >= Z ] | [ 5 -ge 20 ] | $( 2 >= 1 )) |
+| Menor | [ A < Z ] | [ 5 -lt 20 ] | $(( 1 < 10 )) |
+| Menor o Igual | [ A <= Z ] | [ 5 -le 20 ] | $(( 3 <= 5 )) |
+
+</td>
+</table>
+
+
+
+### Valores (condiciones del IF)
+
+
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
