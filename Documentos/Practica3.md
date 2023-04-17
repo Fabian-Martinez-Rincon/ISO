@@ -218,6 +218,13 @@ También se puede utilizar para:
 
 El comando **“test expresión”** permite evaluar expresiones y generar un valor de retorno, true o false. Este comando puede ser reemplazado por el uso de corchetes de la siguiente manera **[ expresión ]**. Investigar que tipo de expresiones pueden ser usadas con el comando test. Tenga en cuenta operaciones para: evaluación de archivos, evaluación de cadenas de caracteres y evaluaciones numéricas.
 
+Este comando tiene un código de retorno igual a 0 cuando el test es positivo, y diferente de cero en caso contrario
+
+El comando test posee dos sintaxis: **test expresión** y **[ expresión ]**, donde **expresión** representa el test que se debe efectuar
+
+![](2023-04-17-03-24-27.png)
+![](2023-04-17-03-25-59.png)
+
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## 8) Ejercicio
