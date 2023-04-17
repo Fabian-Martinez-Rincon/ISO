@@ -20,7 +20,6 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 - [Teoria](/Documentos/Teoria.md)
 - [Repaso Primer Parcial de Promoción](/Documentos/RepasoPrimerParcialPromocion.md)
 - [Primer Parcial de Promoción](/Documentos/PrimerParcialPromocion.md)
-- [Condiciones de aprobación](/Documentos/condiciones.md)
 - [Notion de Iñaki con Practicas](https://nova-calcium-fbd.notion.site/Introducci-n-a-Sistemas-Operativos-78eceb443ac04f919bdf3394bbe22d27)
 - [Practica 1](/Documentos/Practica1.md)
 - [Practica 2](/Documentos/Practica2.md)
