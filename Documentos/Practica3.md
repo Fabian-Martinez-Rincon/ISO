@@ -225,14 +225,14 @@ El comando test posee dos sintaxis: **test expresión** y **[ expresión ]**, do
 ![](2023-04-17-03-24-27.png)
 ![](2023-04-17-03-25-59.png)
 
-| Operador | Con Strings | Con números |
-| --- | --- | --- |
-| Igualdad | [ $nombre = "Maria" ] | $edad -eq 20 |
-| Desigualdad | [ $nombre != "Maria" ] | $edad -ne 20 |
-| Mayor | [ A > Z ] | 5 -gt 20 |
-| Mayor o Igual | [ A >= Z ] | 5 -ge 20 |
-| Menor | [ A < Z ] | 5 -lt 20 |
-| Menor o Igual | [ A <= Z ] | 5 -le 20 |
+| Operador | Con Strings | Con números | Operaciones |
+| --- | --- | --- | --- |
+| Igualdad | [ $nombre = "Maria" ] | [ $edad -eq 20 ] | $(( 2 == 2 )) |
+| Desigualdad | [ $nombre != "Maria" ] | [ $edad -ne 20 ] | $(( 3 != 4 )) |
+| Mayor | [ A > Z ] | [ 5 -gt 20 ] | $(( 3 > 1 )) |
+| Mayor o Igual | [ A >= Z ] | [ 5 -ge 20 ] | $( 2 >= 1 )) |
+| Menor | [ A < Z ] | [ 5 -lt 20 ] | $(( 1 < 10 )) |
+| Menor o Igual | [ A <= Z ] | [ 5 -le 20 ] | $(( 3 <= 5 )) |
 
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
@@ -255,6 +255,8 @@ Estructuras de control. Investigue la sintaxis de las siguientes estructuras de 
 ![](2023-04-17-04-15-06.png)
 
 ### for
+![](2023-04-17-04-46-40.png)
+![](2023-04-17-04-47-29.png)
 
 ### select
 
