@@ -398,6 +398,9 @@ Uso de las estructuras de control
 - DondeEstoy: muestra el directorio donde me encuentro ubicado.
 - QuienEsta: muestra los usuarios conectados al sistema.
 
+| ![](2023-04-17-16-21-50.png) | ![](2023-04-17-16-22-17.png) |
+| --- | --- |
+
 #### (c) Crear un script que reciba como parámetro el nombre de un archivo e informe si el mismo existe o no, y en caso afirmativo indique si es un directorio o un archivo. En caso de que no exista el archivo/directorio cree un directorio con el nombre recibido como parámetro
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
