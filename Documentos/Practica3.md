@@ -234,6 +234,18 @@ El comando test posee dos sintaxis: **test expresión** y **[ expresión ]**, do
 | Menor | [ A < Z ] | [ 5 -lt 20 ] | $(( 1 < 10 )) |
 | Menor o Igual | [ A <= Z ] | [ 5 -le 20 ] | $(( 3 <= 5 )) |
 
+### Valores (condiciones del IF)
+
+| Parametro | Valor |
+| --- | --- |
+| -r | Si es de Lectura |
+| -w | Si es de escritura |
+| -x | Si es de ejecución |
+| -a | and |
+| -o | or |
+| -e | Si existe |
+| -d | Si es un directorio |
+| -f | Si es un archivo |
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
@@ -250,11 +262,11 @@ Estructuras de control. Investigue la sintaxis de las siguientes estructuras de 
 | ![](2023-04-17-04-14-06.png) | ![](2023-04-17-04-15-06.png) |
 | for | Resultado |
 | ![](2023-04-17-04-46-40.png) | ![](2023-04-17-04-47-29.png) |
+| select | resultado |
+| ![](2023-04-17-12-09-15.png) | ![](2023-04-17-12-08-38.png) |
 
 
 
-
-### select
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
