@@ -247,6 +247,7 @@ El comando test posee dos sintaxis: **test expresión** y **[ expresión ]**, do
 | -e | Si existe |
 | -d | Si es un directorio |
 | -f | Si es un archivo |
+| -n | No es cadena vacia |
 
 </td>
 
