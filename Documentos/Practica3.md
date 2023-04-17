@@ -44,7 +44,8 @@
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-## 1) ¿Qué es el Shell Scripting? ¿A qué tipos de tareas están orientados los script?  ¿Los scripts deben compilarse? ¿Por qué?
+## 1) Ejercicio
+¿Qué es el Shell Scripting? ¿A qué tipos de tareas están orientados los script?  ¿Los scripts deben compilarse? ¿Por qué?
 
 La Shell provee estructuras de control que permiten programar shell scripts. 
 
@@ -59,7 +60,9 @@ Está orientado a diferentes tareas:
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-## 2) Investigar la funcionalidad de los comandos echo y read
+## 2) Ejercicio
+
+Investigar la funcionalidad de los comandos echo y read
 
 - `Echo:` Es un comando para la impresión de un texto en pantalla. El comando para imprimir el contenido de la variable es:
 - `echo $nombreVar `
