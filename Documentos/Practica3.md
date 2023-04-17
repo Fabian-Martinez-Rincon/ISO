@@ -366,6 +366,9 @@ Evaluación de expresione
 
 #### **(a)** Realizar un script que le solicite al usuario 2 números, los lea de la entrada Standard e imprima la multiplicación, suma, resta y cual es el mayor de los números leídos.
 
+| ![](2023-04-17-13-48-57.png) | ![](2023-04-17-13-48-29.png) |
+| --- | --- |
+
 #### **(b)** Modificar el script creado en el inciso anterior para que los números sean recibidos como parámetros. El script debe controlar que los dos parámetros sean enviados.
 
 #### **(c)** Realizar una calculadora que ejecute las 4 operaciones básicas: +, - ,*, %. Esta calculadora debe funcionar recibiendo la operación y los números como parámetros
