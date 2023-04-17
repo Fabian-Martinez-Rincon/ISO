@@ -225,6 +225,16 @@ El comando test posee dos sintaxis: **test expresión** y **[ expresión ]**, do
 ![](2023-04-17-03-24-27.png)
 ![](2023-04-17-03-25-59.png)
 
+| Operador | Con Strings | Con números |
+| --- | --- | --- |
+| Igualdad | $nombre = "Maria" | $edad -eq 20 |
+| Desigualdad | $nombre != "Maria" | $edad -ne 20 |
+| Mayor | A > Z | 5 -gt 20 |
+| Mayor o Igual | A >= Z | 5 -ge 20 |
+| Menor | A < Z | 5 -lt 20 |
+| Menor o Igual | A <= Z | 5 -le 20 |
+
+
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## 8) Ejercicio
