@@ -338,6 +338,12 @@ No es fuertemente tipado, y no requiere una declaración explícita de tipo vari
 
 ¿Pueden definirse funciones dentro de un script? ¿Cómo? ¿Cómo se maneja el pasaje de parámetros de una función a la otra?
 
+Para definir variables locales podemos usar la palabra clave `local var1`
+
+
+| ![](2023-04-17-13-28-17.png) | ![](2023-04-17-13-30-12.png) |
+| --- | --- |
+
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## 12) Ejercicio
