@@ -387,12 +387,15 @@ Evaluación de expresione
 ## 13) Ejercicio
 
 Uso de las estructuras de control:
-- **(a)** Realizar un script que visualice por pantalla los números del 1 al 100 así como sus cuadrados.
-- (b) Crear un script que muestre 3 opciones al usuario: Listar, DondeEstoy y QuienEsta. Según la opción elegida se le debe mostrar:
-   - Listar: lista el contenido del directoria actual.
-   - DondeEstoy: muestra el directorio donde me encuentro ubicado.
-   - QuienEsta: muestra los usuarios conectados al sistema.
-- (c) Crear un script que reciba como parámetro el nombre de un archivo e informe si el mismo existe o no, y en caso afirmativo indique si es un directorio o un archivo. En caso de que no exista el archivo/directorio cree un directorio con el nombre recibido como parámetro
+#### **(a)** Realizar un script que visualice por pantalla los números del 1 al 100 así como sus cuadrados.
+
+
+#### (b) Crear un script que muestre 3 opciones al usuario: Listar, DondeEstoy y QuienEsta. Según la opción elegida se le debe mostrar:
+- Listar: lista el contenido del directoria actual.
+- DondeEstoy: muestra el directorio donde me encuentro ubicado.
+- QuienEsta: muestra los usuarios conectados al sistema.
+
+#### (c) Crear un script que reciba como parámetro el nombre de un archivo e informe si el mismo existe o no, y en caso afirmativo indique si es un directorio o un archivo. En caso de que no exista el archivo/directorio cree un directorio con el nombre recibido como parámetro
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
