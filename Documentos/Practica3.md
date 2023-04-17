@@ -274,6 +274,12 @@ Estructuras de control. Investigue la sintaxis de las siguientes estructuras de 
 
 ¿Qué acciones realizan las sentencias break y continue dentro de un bucle? ¿Qué parámetros reciben?
 
+- **`break [n]`** Corta la ejecución de `n` niveles de loops.
+- **`continue [n]`** salta a la siguiente iteración del enésimo loop que contiene esta instrucción
+
+| ![](2023-04-17-12-32-14.png) | ![](2023-04-17-12-31-44.png) |
+| --- | --- |
+
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## 10) Ejercicio
