@@ -196,7 +196,7 @@ El comando **expr** permite la evaluación de expresiones. Su sintaxis es: **exp
    - resta
    - multiplicación (/*)
    - división (/). 
-- Y devuelve solo la parte entera.: 
+- Y devuelve solo la parte entera.:
 - expr 10 + 10 -> 20, expr 14 % 9 -> 5.
 
 También se puede utilizar para:
