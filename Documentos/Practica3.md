@@ -112,6 +112,8 @@ Tambien podes ejecutar el script con el comando `bash script.sh`
 
 Crear dentro del directorio personal del usuario logueado un directorio llamado practicashell-script y dentro de él un archivo llamado mostrar.sh cuyo contenido sea el siguiente:
 
+<table><td>
+
 ```bash
 #!/bin/bash
 # Comentarios acerca de lo que hace el script
@@ -127,7 +129,15 @@ echo "Su usuario es: `whoami`"
 echo "Su directorio actual es:"
 ```
 
+</td><td>
+
 ![image](https://user-images.githubusercontent.com/55964635/232369884-42f534c8-975e-4053-997a-ad86ffdada50.png)
+</td>
+
+</table>
+
+
+
 
 
 
