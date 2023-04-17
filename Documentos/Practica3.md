@@ -386,9 +386,12 @@ Evaluación de expresione
 
 ## 13) Ejercicio
 
-Uso de las estructuras de control:
+Uso de las estructuras de control
+
 #### **(a)** Realizar un script que visualice por pantalla los números del 1 al 100 así como sus cuadrados.
 
+| ![](2023-04-17-15-57-34.png) | ![](2023-04-17-15-58-03.png) |
+| --- | --- |
 
 #### (b) Crear un script que muestre 3 opciones al usuario: Listar, DondeEstoy y QuienEsta. Según la opción elegida se le debe mostrar:
 - Listar: lista el contenido del directoria actual.
