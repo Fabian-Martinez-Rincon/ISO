@@ -324,11 +324,12 @@ No es fuertemente tipado, y no requiere una declaración explícita de tipo vari
 | arreglo=() | Definir Arreglo vacio |
 | arreglo[0]="valor1" | Asignación |
 | arreglo=("valor1", "valor2") | Definir con valores |
-| read - arreglo | leer desde teclado <br> tiene que estar definido arriba |
+| read -a arreglo | leer desde teclado <br> tiene que estar definido arriba |
 | ${arreglo[0]} | retorna "valor1" |
 | ${arreglo[*]} | Retorna todos los elementos del array |
 | ${arreglo[@]} | Retorna todos los elementos del array |
 | ${#arreglo[@]} | Retorna 2, si contiene valor1 y valor2 |
+| ![](2023-04-17-13-17-44.png) | ![](2023-04-17-13-17-14.png) |
 
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
