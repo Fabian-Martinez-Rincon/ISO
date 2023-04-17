@@ -128,23 +128,12 @@ echo "Su usuario es: `whoami`"
 echo "Su directorio actual es:"
 ```
 
-
-
 ![image](https://user-images.githubusercontent.com/55964635/232369884-42f534c8-975e-4053-997a-ad86ffdada50.png)
-
-
-
-
-
-
-
 
 #### **(a)** Asignar al archivo creado los permisos necesarios de manera que pueda ejecutarlo
 #### **(b)** Ejecutar el archivo creado de la siguiente manera: ./mostrar
 #### **(c)** ¿Qué resultado visualiza?
 ![image](https://user-images.githubusercontent.com/55964635/232370167-cc259f97-9771-4169-958f-31ce04e94529.png)
-
-
 
 #### **(d)** Las backquotes (`) entre el comando whoami ilustran el uso de la sustitución de comandos. ¿Qué significa esto?
 Son para poder ejecutar comando cuando se encuentran dentro de un string 
@@ -154,10 +143,6 @@ Son para poder ejecutar comando cuando se encuentran dentro de un string
 ![](2023-04-17-00-45-05.png) 
 
 ![](2023-04-17-00-40-25.png) 
-
-
-
-
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
@@ -205,6 +190,27 @@ En la consola se mostrara un número de 0 a 255.
 ## 6) Ejercicio
 
 El comando **expr** permite la evaluación de expresiones. Su sintaxis es: **expr arg1 op arg2**, donde **arg1 y arg2** representan argumentos y op la operación de la expresión. Investigar que tipo de operaciones se pueden utilizar
+
+- Se puede utilizar 
+   - suma
+   - resta
+   - multiplicación (/*)
+   - división (/). 
+- Y devuelve solo la parte entera.: 
+- expr 10 + 10 -> 20, expr 14 % 9 -> 5.
+
+También se puede utilizar para:
+
+- Cálculo de la longitud de la cadena: 
+   - expr length “esto es un test” > 
+   - devuelve la cantidad de caracteres: 15
+- Cadena de rastreo:
+   - expr substr “esto es un test” 3 5 > 
+   - te devuelve el texto desde la pos 3 y 5 lugares: to es
+- La cadena numérica primera posición de rastreo personaje que aparece: 
+   - expr index “esto es un test” s 
+   - te devuelve el índice de la letra pasado por parámetro en la cadena (la primera aparición). 
+
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
