@@ -44,38 +44,66 @@
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-## 1) Ejercicio
+## 1) ¿Qué es el Shell Scripting? ¿A qué tipos de tareas están orientados los script?  ¿Los scripts deben compilarse? ¿Por qué?
 
-¿Qué es el Shell Scripting? ¿A qué tipos de tareas están orientados los script?  ¿Los scripts deben compilarse? ¿Por qué?
- Interprete de comandos
-- Interactivo
-- En sistemas operativos *nix es configurable
-- Proveen estructuras de control que permiten programar Shell scripts
-Están orientados para:
-   - Automatizacion de tareas
-   - Aplicaciones interactivas
-   - Aplicaciones con interfaz grafica (con el comando zenity, por
-   ejemplo)
+La Shell provee estructuras de control que permiten programar shell scripts. 
+
+El Shell Scripting es la técnica (habilidad / destreza) de diseñar y crear Script (archivo de automatización de tareas) mediante un Shell (preferiblemente) de un Sistema Operativo, o un
+
+Editor de Texto (Gráfico o Terminal). Este es un tipo de lenguaje de programación que generalmente es interpretado.
+
+Está orientado a diferentes tareas:
+- Automatización de tareas
+- Aplicaciones interactivas
+- Aplicaciones con interfaz gráfica (con el comando zenity, por ejemplo). 
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-## 2) Ejercicio
+## 2) Investigar la funcionalidad de los comandos echo y read
 
-Investigar la funcionalidad de los comandos echo y read/
-- `Echo:` Se utiliza en los scripts de Bash y en los archivos por lotes para mostrar el texto de estado en un archivo o en tu pantalla. 
-- `Read:` se trata del input desde teclado
+- `Echo:` Es un comando para la impresión de un texto en pantalla. El comando para imprimir el contenido de la variable es: `echo $nombreVar `
+- `Read:` El comando read lee su entrada estándar y asigna las palabras leídas en la(s) variable(s) cuyo nombre se pasa como argumento. Se trata del input desde teclado. 
+
+![](/Practicas/Practica3/Imagenes/1.png)
+
+---
+
+#### (a) ¿Como se indican los comentarios dentro de un script? 
+
+Los comentarios tienen que comenzar con el símbolo \#
+
+---
+
+#### (b) ¿Cómo se declaran y se hace referencia a variables dentro de un script?
+
+No necesita declarar una variable. Se creará sólo con asignarle un valor a su referencia. Luego se referencia con el símbolo $ Ejemplo
 
 
-- (a) ¿Como se indican los comentarios dentro de un script? Los comentarios tienen que comenzar con el símbolo #
-- (b) ¿Cómo se declaran y se hace referencia a variables dentro de un script? No necesita declarar una variable. Se creará sólo con asignarle un valor a su referencia. Luego se referencia con el símbolo $
-Ejemplo
+
+Para hacer un script:
+- `Paso 1` en la consola usar el comando: `touch script.sh` para crear el directorio.
+- `Paso 2` Ver si se creo el directorio con el comando `ls`
+- `Paso 3` Ingresar al archivo `script.sh` con el editor de texto vi de la siguiente manera 
+   - `vim script.sh `
+   - DENTRO DEL EDITOR VIM:
+   - Ingresar la letra i para estar en modo insertar y Escribir
+   ```bash
+   #!/bin/bash 
+   CAD="¡Hola Mundo!"
+   echo $CAD
+   ```
+   - `ESC` (para salir del modo editor)
+   - `:wq` (para guardar los cambios)
+   - Salimos del editor vi e ingresamos a la consola
+- `Paso 4:` Damos permiso de ejecución con el comando:
+   - `chmod u+x script.sh`
+   - Si ponemos el comando ls vamos a ver que el directorio .sh cambio de color.
+- `Paso 5:` Con el comando `./script.sh` vamos a ver el contenido de ese script en cosola.
+- `Paso 6:` Si queremos borrar ese directorio con script solo es necesario poner en consola el comando `rm script.sh`
+
+Tambien podes ejecutar el script con el comando `bash script.sh`
 
 
-```bash
-#!/bin/bash 
-CAD="¡Hola Mundo!"
-echo $CAD
-```
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
@@ -92,17 +120,29 @@ echo "Introduzca su nombre y apellido:"
 read nombre apellido
 echo "Fecha y hora actual:"
 date
-echo "Su apellido y nombre es:
+echo "Su apellido y nombre es:"
 echo "$apellido $nombre"
 echo "Su usuario es: `whoami`"
 echo "Su directorio actual es:"
 ```
 
-- **(a)** Asignar al archivo creado los permisos necesarios de manera que pueda ejecutarlo
-- **(b)** Ejecutar el archivo creado de la siguiente manera: ./mostrar
-- **(c)** ¿Qué resultado visualiza?
-- **(d)** Las backquotes (`) entre el comando whoami ilustran el uso de la sustitución de comandos. ¿Qué significa esto?
-- **(e)** Realizar modificaciones al script anteriormente creado de manera de poder mostrar distintos resultados (cuál es su directorio personal, el contenido de un directorio en particular, el espacio libre en disco, etc.). Pida que se introduzcan por teclado (entrada estándar) otros datos.
+![image](https://user-images.githubusercontent.com/55964635/232369884-42f534c8-975e-4053-997a-ad86ffdada50.png)
+
+
+
+#### **(a)** Asignar al archivo creado los permisos necesarios de manera que pueda ejecutarlo
+#### **(b)** Ejecutar el archivo creado de la siguiente manera: ./mostrar
+#### **(c)** ¿Qué resultado visualiza?
+![image](https://user-images.githubusercontent.com/55964635/232370167-cc259f97-9771-4169-958f-31ce04e94529.png)
+
+
+
+#### **(d)** Las backquotes (`) entre el comando whoami ilustran el uso de la sustitución de comandos. ¿Qué significa esto?
+Son para poder ejecutar comando cuando se encuentran dentro de un string 
+
+#### **(e)** Realizar modificaciones al script anteriormente creado de manera de poder mostrar distintos resultados (cuál es su directorio personal, el contenido de un directorio en particular, el espacio libre en disco, etc.). Pida que se introduzcan por teclado (entrada estándar) otros datos.
+
+![](2023-04-17-00-40-25.png)
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
