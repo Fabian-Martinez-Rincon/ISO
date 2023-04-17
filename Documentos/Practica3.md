@@ -153,6 +153,17 @@ Son para poder ejecutar comando cuando se encuentran dentro de un string
 
 Parametrización: ¿Cómo se acceden a los parámetros enviados al script al momento de su invocación? ¿Qué información contienen las variables `$#, $*, $?` y `$HOME` dentro de un script?
 
+- Los scripts pueden recibir argumentos en su invocación. Para accederlos, se utilizan variables especiales:
+- `$0` contiene la invocación al script. (nombre del script)
+- `$1, $2, $3,...` contienen cada uno de los argumentos.
+- `$#` contiene la cantidad de argumentos recibidos.
+- `$*` contiene la lista de todos los argumentos separados por espacios.
+- `$?` contiene en todo momento el valor de retorno del ultimo comando ejecutado.(si el valor es 0 se ejecuto correctamente, en caso de que haya habido algún error dará un valor entre 1 y 255).
+
+![](2023-04-17-01-04-44.png)
+
+![](2023-04-17-01-05-38.png)
+
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## 5) Ejercicio
