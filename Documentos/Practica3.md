@@ -429,9 +429,9 @@ Comandos ejecutados
 - Despues 
 - bash 14.sh prueba -b Ej 
 
-| Codigo |  |
-| --- | --- |
 | ![](2023-04-18-10-02-10.png) |  ![](2023-04-18-10-00-03.png) |
+| --- | --- |
+
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
