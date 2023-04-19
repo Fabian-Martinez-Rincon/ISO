@@ -138,28 +138,12 @@ echo "Su directorio actual es:"
 #### **(c)** ¿Qué resultado visualiza?
 ![image](https://user-images.githubusercontent.com/55964635/232370167-cc259f97-9771-4169-958f-31ce04e94529.png)
 
-
-
 #### **(d)** Las backquotes (`) entre el comando whoami ilustran el uso de la sustitución de comandos. ¿Qué significa esto?
 Son para poder ejecutar comando cuando se encuentran dentro de un string 
 
 #### **(e)** Realizar modificaciones al script anteriormente creado de manera de poder mostrar distintos resultados (cuál es su directorio personal, el contenido de un directorio en particular, el espacio libre en disco, etc.). Pida que se introduzcan por teclado (entrada estándar) otros datos.
 
-```bash
-#!/bin/bash
-
-echo "Nombre y apellido"
-read nombre apellido
-echo "Fecha y hora actual: `date`"
-echo $nombre $apellido
-echo "Su usuario es: `whoami`"
-echo "su directorio actual es :`pwd`"
-echo "su directorio personal es : `$HOME`"
-echo "Nombre de un directorio:"
-echo contenido
-echo "Contenido de $contenido es `ls $contenido`"
-echo "Espacio libre en el disco `df`"
-```
+![](2023-04-17-00-45-05.png) 
 ![](2023-04-17-00-40-25.png) 
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
@@ -175,18 +159,8 @@ Parametrización: ¿Cómo se acceden a los parámetros enviados al script al mom
 - `$*` contiene la lista de todos los argumentos separados por espacios.
 - `$?` contiene en todo momento el valor de retorno del ultimo comando ejecutado.(si el valor es 0 se ejecuto correctamente, en caso de que haya habido algún error dará un valor entre 1 y 255).
 
-
-```bash
-#!/bin/bash
-echo "$0"
-echo "$1 $3"
-echo "$#"
-echo "$*"
-echo "$HOME"
-```
- 
-![](2023-04-17-01-05-38.png)
-
+| ![](2023-04-17-01-04-44.png) | ![](2023-04-17-01-05-38.png) |
+| --- | --- |
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
@@ -238,32 +212,8 @@ También se puede utilizar para:
    - expr index “esto es un test” s 
    - te devuelve el índice de la letra pasado por parámetro en la cadena (la primera aparición). 
 
-![](2023-04-17-02-23-27.png) 
-```bash
-#!/bin/bash/
-
-SUMA=`expr 10 + 5`
-RESTA=$(expr 10 - 5)
-MULTIPLICACION=$(expr 10 \* 5)
-DIVISION=$(expr 10 / 5)
-MODULO=$(expr 10 % 5)
-LONGITUD="Fabian "$(expr length "Fabian")
-SUBSTR="Fabian 1 6: "$(expr substr "Fabian" 1 6)
-INDICE="Fabian b: "$(expr index "Fabian" b)
-
-echo "var1 = 10, var2 = 5"
-echo "SUMA $SUMA"
-echo "RESTA $RESTA"
-echo "MULTIPLICACION $MULTIPLICACION"
-echo "DIVISION $DIVISION"
-echo "MODULO $MODULO"
-echo "LONGITUD $LONGITUD"
-echo "SUBSTR $SUBSTR"
-echo "INDICE $INDICE"
-```
-
-![](2023-04-17-02-25-09.png) 
-
+| ![](2023-04-17-02-23-27.png) | ![](2023-04-17-02-25-09.png) |
+| --- | --- |
 
 
 
