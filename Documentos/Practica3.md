@@ -116,7 +116,7 @@ Tambien podes ejecutar el script con el comando `bash script.sh`
 Crear dentro del directorio personal del usuario logueado un directorio llamado practicashell-script y dentro de él un archivo llamado mostrar.sh cuyo contenido sea el siguiente:
 
 
-```s
+```sh
 #!/bin/bash
 # Comentarios acerca de lo que hace el script
 # Siempre comento mis scripts, si no hoy lo hago
@@ -144,7 +144,38 @@ Son para poder ejecutar comando cuando se encuentran dentro de un string
 #### **(e)** Realizar modificaciones al script anteriormente creado de manera de poder mostrar distintos resultados (cuál es su directorio personal, el contenido de un directorio en particular, el espacio libre en disco, etc.). Pida que se introduzcan por teclado (entrada estándar) otros datos.
 
 ![](2023-04-17-00-45-05.png) 
+
+
+<table>
+<td>
+
+```sh
+#!/bin/bash
+
+echo "Nombre y apellido"
+read nombre apellido
+echo "Fecha y hora actual: `date`"
+echo $nombre $apellido
+echo "Su usuario es: `whoami`"
+echo "su directorio actual es :`pwd`"
+echo "su directorio personal es : `$HOME`"
+echo "Nombre de un directorio:"
+echo contenido
+echo "Contenido de $contenido es `ls $contenido`"
+echo "Espacio libre en el disco `df`"
+```
+
+</td><td>
+
 ![](2023-04-17-00-40-25.png) 
+
+</td></table>
+
+
+
+
+
+
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
@@ -161,6 +192,8 @@ Parametrización: ¿Cómo se acceden a los parámetros enviados al script al mom
 
 | ![](2023-04-17-01-04-44.png) | ![](2023-04-17-01-05-38.png) |
 | --- | --- |
+
+<table><td></td><td></td></table>
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
@@ -215,7 +248,7 @@ También se puede utilizar para:
 | ![](2023-04-17-02-23-27.png) | ![](2023-04-17-02-25-09.png) |
 | --- | --- |
 
-
+<table><td></td><td></td></table>
 
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
@@ -230,6 +263,8 @@ El comando test posee dos sintaxis: **test expresión** y **[ expresión ]**, do
 
 ![](2023-04-17-03-24-27.png)
 ![](2023-04-17-03-25-59.png)
+
+<table><td></td><td></td></table>
 
 ### Valores a tener en cuenta
 
@@ -284,7 +319,7 @@ Estructuras de control. Investigue la sintaxis de las siguientes estructuras de 
 | select | resultado |
 | ![](2023-04-17-12-09-15.png) | ![](2023-04-17-12-08-38.png) |
 
-
+<table><td></td><td></td></table>
 
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
@@ -298,6 +333,8 @@ Estructuras de control. Investigue la sintaxis de las siguientes estructuras de 
 
 | ![](2023-04-17-12-32-14.png) | ![](2023-04-17-12-31-44.png) |
 | --- | --- |
+
+<table><td></td><td></td></table>
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
@@ -359,6 +396,8 @@ Para definir variables locales podemos usar la palabra clave `local var1`
 | ![](2023-04-17-13-28-17.png) | ![](2023-04-17-13-30-12.png) |
 | --- | --- |
 
+<table><td></td><td></td></table>
+
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## 12) Ejercicio
@@ -370,17 +409,21 @@ Evaluación de expresione
 | ![](2023-04-17-13-48-57.png) | ![](2023-04-17-13-48-29.png) |
 | --- | --- |
 
+<table><td></td><td></td></table>
+
 #### **(b)** Modificar el script creado en el inciso anterior para que los números sean recibidos como parámetros. El script debe controlar que los dos parámetros sean enviados.
 
 | ![](2023-04-17-15-27-16.png) | ![](2023-04-17-15-26-52.png) |
 | --- | --- |
+
+<table><td></td><td></td></table>
 
 #### **(c)** Realizar una calculadora que ejecute las 4 operaciones básicas: +, - ,*, %. Esta calculadora debe funcionar recibiendo la operación y los números como parámetros
 
 | ![](2023-04-17-15-47-45.png) | ![](2023-04-17-15-45-51.png) |
 | --- | --- |
 
-
+<table><td></td><td></td></table>
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
@@ -393,6 +436,8 @@ Uso de las estructuras de control
 | ![](2023-04-17-15-57-34.png) | ![](2023-04-17-15-58-03.png) |
 | --- | --- |
 
+<table><td></td><td></td></table>
+
 #### (b) Crear un script que muestre 3 opciones al usuario: Listar, DondeEstoy y QuienEsta. Según la opción elegida se le debe mostrar:
 - Listar: lista el contenido del directoria actual.
 - DondeEstoy: muestra el directorio donde me encuentro ubicado.
@@ -401,10 +446,14 @@ Uso de las estructuras de control
 | ![](2023-04-17-16-21-50.png) | ![](2023-04-17-16-22-17.png) |
 | --- | --- |
 
+<table><td></td><td></td></table>
+
 #### (c) Crear un script que reciba como parámetro el nombre de un archivo e informe si el mismo existe o no, y en caso afirmativo indique si es un directorio o un archivo. En caso de que no exista el archivo/directorio cree un directorio con el nombre recibido como parámetro
 
 ![](2023-04-17-16-38-58.png)
 ![](2023-04-17-16-38-34.png)
+
+<table><td></td><td></td></table>
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
