@@ -570,11 +570,26 @@ Si, se pueden definir funciones dentro de un script.
 
 Para definir variables locales podemos usar la palabra clave `local var1`
 
+<table><td>
 
-| ![](2023-04-17-13-28-17.png) | ![](2023-04-17-13-30-12.png) |
-| --- | --- |
+```sh
+#!/bin/bash
+sumar(){
+  return $(( $1 + $2 ))
+}
+cadena(){
+  echo "Hola $1, como estas"
+}
 
-<table><td></td><td></td></table>
+sumar 2 3
+echo $?
+mensaje=$(cadena "Juan")
+echo $mensaje
+```
+</td><td>
+
+![](2023-04-17-13-30-12.png)
+</td></table>
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
