@@ -182,12 +182,6 @@ echo "Espacio libre en el disco `df`"
 
 </td></table>
 
-
-
-
-
-
-
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## 4) Ejercicio
@@ -268,12 +262,38 @@ También se puede utilizar para:
    - te devuelve el texto desde la pos 3 y 5 lugares: to es
 - La cadena numérica primera posición de rastreo personaje que aparece: 
    - expr index “esto es un test” s 
-   - te devuelve el índice de la letra pasado por parámetro en la cadena (la primera aparición). 
+   - te devuelve el índice de la letra pasado por parámetro en la cadena (la primera aparición).
 
-| ![](2023-04-17-02-23-27.png) | ![](2023-04-17-02-25-09.png) |
-| --- | --- |
+<table><td>
 
-<table><td></td><td></td></table>
+```sh
+#!/bin/bash/
+
+SUMA=`expr 10 + 5`
+RESTA=$(expr 10 - 5)
+MULTIPLICACION=$(expr 10 \* 5)
+DIVISION=$(expr 10 / 5)
+MODULO=$(expr 10 % 5)
+LONGITUD="Fabian "$(expr length "Fabian")
+SUBSTR="Fabian 1 6: "$(expr substr "Fabian" 1 6)
+INDICE="Fabian b: "$(expr index "Fabian" b)
+
+echo "var1 = 10, var2 = 5"
+echo "SUMA $SUMA"
+echo "RESTA $RESTA"
+echo "MULTIPLICACION $MULTIPLICACION"
+echo "DIVISION $DIVISION"
+echo "MODULO $MODULO"
+echo "LONGITUD $LONGITUD"
+echo "SUBSTR $SUBSTR"
+echo "INDICE $INDICE"
+```
+
+</td><td>
+
+![](2023-04-17-02-25-09.png)
+
+</td></table>
 
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
@@ -287,9 +307,30 @@ Este comando tiene un código de retorno igual a 0 cuando el test es positivo, y
 El comando test posee dos sintaxis: **test expresión** y **[ expresión ]**, donde **expresión** representa el test que se debe efectuar
 
 ![](2023-04-17-03-24-27.png)
+
+
+<table><td>
+
+```sh
+#!/bin/bash
+
+var1=10
+var2=5
+
+if [ -e 7.sh ]; then echo "existe"; else echo "no existe"; fi
+if (( $var1 % $var2 == 0 )); then echo "Es Par"; else echo "Es Impar"; fi
+if (( $var1 > $var2 )); then echo "Es Mayor"; else echo "Es Menor"; fi
+if [ -r 7.sh -a -w 7.sh -a -x 7.sh ]; then echo "Todos los permisos"
+else echo "no tiene todos los permisos"; fi
+if [ -r 7.sh -o -w 7.sh -o -x 7.sh ]; then echo "algun permiso"
+else echo "no tiene todos los permisos"; fi
+```
+
+</td><td>
+
 ![](2023-04-17-03-25-59.png)
 
-<table><td></td><td></td></table>
+</td></table>
 
 ### Valores a tener en cuenta
 
