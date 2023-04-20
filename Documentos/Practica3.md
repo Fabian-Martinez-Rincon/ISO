@@ -940,8 +940,6 @@ pepE
 Maria
 Si ejecuto: ./ejercicio17
 ```
-
-
 Obtendré como resultado
 
 ```
@@ -951,6 +949,22 @@ mRI
 ```
 
 **Ayuda**: Investigar el comando **tr**
+
+```sh
+#!/bin/bash
+
+archivos=$(ls)
+for i in $archivos
+do
+  nuevo=$(echo $i | tr '[:lower:][:upper:]' '[:upper:][:lower:]' | tr -d 'aA')
+  echo $nuevo
+done
+```
+
+Tambien podemos eliminar de la siguiente manera
+- `nuevo_nombre=${archivo//a}`
+- `nuevo_nombre=${archivo^^}` Todo a mayuscula
+- `nuevo_nombre=${archivo,,}` Todo a minuscula
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
