@@ -911,6 +911,23 @@ sys
 Realizar un script que reciba como parámetro una extensión y haga un reporte con 2
 columnas, el nombre de usuario y la cantidad de archivos que posee con esa extensión. Se debe guardar el resultado en un archivo llamado **reporte.txt**
 
+
+Funciona un toque raro el find
+```sh
+#!/bin/bash
+
+if [ $# -ne 1 ]; then echo "error"; exit 1; fi
+
+cadena=""
+for i in $(cat /etc/passwd) 
+do
+  usuario=$(echo $i | cut -d: -f1)
+  path=$(echo $i | cut -d: -f6)  
+  cadena+="$usuario $(find $path -name "*$1" | wc -l) \n"
+done
+echo -e "$cadena" > reporte.txt
+```
+
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## 17) Ejercicio
