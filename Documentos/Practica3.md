@@ -432,6 +432,33 @@ Comandos ejecutados
 | ![](2023-04-18-10-02-10.png) | ![](2023-04-18-10-12-13.png) |
 | --- | --- |
 
+```s
+#!/bin/bash
+if [ $# -ne 3 ]; then 
+  echo  -e "
+  Parametros: \n
+  Path \n
+  -a/-b \n
+  sufijo/prefijo
+"; exit;fi
+
+if ! [ -e $1 ]; then 
+  echo "El path ingresado no existe"
+  exit
+fi
+cd $1
+archivos="$(ls)"
+ls -1
+if [ $2 = "-a" ];then
+  for i in ${archivos[*]};do mv $i $i$3;done
+elif [ $2 = "-b" ];then
+  for i in ${archivos[*]};do mv $i $3$i;done
+else
+  echo "Tiene que ingresar -a o -b"
+fi
+echo "Despues de todo:"
+ls -1
+```
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
