@@ -429,8 +429,9 @@ Comandos ejecutados
 - Despues 
 - bash 14.sh prueba -b Ej 
 
-| ![](2023-04-18-10-02-10.png) | ![](2023-04-18-10-12-13.png) |
-| --- | --- |
+
+<table>
+<td>
 
 ```sh
 #!/bin/bash
@@ -459,6 +460,16 @@ fi
 echo "Despues de todo:"
 ls -1
 ```
+
+</td>
+<td>
+
+![](2023-04-18-10-12-13.png)
+
+</td>
+</table>
+
+
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
