@@ -872,7 +872,6 @@ O también permite seleccionar un carácter final y seleccionar el resto de cara
    es f
    ```
 - Capturar texto a partir de un delimitador y fijando el campo que queremos mostrar
-
 - Si únicamente queremos mostrar la tercera palabra:
 - `a)` Cada palabra esta separada por un espacio. Por lo tanto tendremos que fijar el espacio como delimitador. Para fijar el espacio como delimitador lo haré con la opción
 - `-d ' '`
