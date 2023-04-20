@@ -972,6 +972,28 @@ Tambien podemos eliminar de la siguiente manera
 
 Crear un script que verifique cada 10 segundos si un usuario se ha loqueado en el sistema (el nombre del usuario será pasado por parámetro). Cuando el usuario finalmente se loguee, el programa deberá mostrar el mensaje ”Usuario XXX logueado en el sistema” y salir.
 
+```sh
+#!/bin/bash
+
+if [ $# -ne 1 ]; then 
+  echo "Parametros incorrectos"; exit 1; 
+fi
+
+usuarios=$(cat /etc/passwd | cut -d: -f1 | grep -w $1 | wc -l)
+if [ $usuarios -eq 0 ]; then
+  echo "El usuario pasado no existe"; exit 2;
+fi
+
+while true
+do
+  sleep 10
+  if [ $(users | grep -w $1 | wc -l) -eq 1 ]; then
+    echo "usuario $1 logueado en el sistema"
+    exit
+  fi
+done
+```
+
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## 19) Ejercicio
