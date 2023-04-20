@@ -670,10 +670,26 @@ fi
 
 #### **(c)** Realizar una calculadora que ejecute las 4 operaciones básicas: +, - ,*, %. Esta calculadora debe funcionar recibiendo la operación y los números como parámetros
 
-| ![](2023-04-17-15-47-45.png) | ![](2023-04-17-15-45-51.png) |
-| --- | --- |
+<table><td>
 
-<table><td></td><td></td></table>
+```sh
+#!/bin/bash
+select operacion in Multiplicacion Suma Resta CualEsMayor Cerrar
+do
+  case $operacion in
+    Multiplicacion) echo "MULTIPLICACION: $(( $1 * $2 ))" ;;
+    Suma) echo "SUMA: $(( $1 + $2 ))" ;;
+    Resta) echo "RESTA: $(( $1 - $2 ))" ;;
+    CualEsMayor) if [ $1 -gt $2 ]; then echo "es mayor el $1";
+      else echo "es mayor el $2" ;fi;;
+    Cerrar|*) exit ;;
+  esac  
+done
+```
+</td><td>
+
+![](2023-04-17-15-45-51.png)
+</td></table>
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
