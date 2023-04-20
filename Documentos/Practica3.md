@@ -1097,11 +1097,48 @@ print
 
 Dada la siguiente declaración al comienzo de un script: num=(10 3 5 7 9 3 5 4) (la cantidad de elementos del arreglo puede variar). Implemente la función productoria dentro de este script, cuya tarea sea multiplicar todos los números del arreglo
 
+```sh
+#!/bin/bash
+
+num=(10 3 5 7 9 3 5 4)
+productora(){
+  let resultado=1
+  for i in ${num[*]}
+  do
+    resultado=$(($i * $resultado))
+  done
+  echo $resultado
+}
+
+productora
+```
+
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## 23) Ejercicio
 
 Implemente un script que recorra un arreglo compuesto por números e imprima en pantalla sólo los números pares y que cuente sólo los números impares y los informe en pantalla al finalizar el recorrido
+
+```sh
+#!/bin/bash
+nros=(10 3 5 7 9 3 5 4)
+
+imprimir(){
+  let nro
+  for i in ${nros[*]}
+  do
+    echo $i
+    if (( $i % 2 == 0 )); then
+      echo "Par: "$i
+    else
+      let impares++
+    fi
+  done
+  echo "Nros Impares: "$impares
+}
+
+imprimir
+```
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
