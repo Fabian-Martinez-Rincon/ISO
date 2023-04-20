@@ -91,7 +91,7 @@ Para hacer un script:
    - `vim script.sh `
    - DENTRO DEL EDITOR VIM:
    - Ingresar la letra i para estar en modo insertar y Escribir
-   ```bash
+   ```vim
    #!/bin/bash 
    CAD="¡Hola Mundo!"
    echo $CAD
