@@ -676,14 +676,16 @@ fi
 #!/bin/bash
 select operacion in Multiplicacion Suma Resta CualEsMayor Cerrar
 do
-  case $operacion in
-    Multiplicacion) echo "MULTIPLICACION: $(( $1 * $2 ))" ;;
-    Suma) echo "SUMA: $(( $1 + $2 ))" ;;
-    Resta) echo "RESTA: $(( $1 - $2 ))" ;;
-    CualEsMayor) if [ $1 -gt $2 ]; then echo "es mayor el $1";
-      else echo "es mayor el $2" ;fi;;
-    Cerrar|*) exit ;;
-  esac  
+   case $operacion in
+      Multiplicacion) echo "MULTIPLICACION: $(( $1 * $2 ))" ;;
+      Suma) echo "SUMA: $(( $1 + $2 ))" ;;
+      Resta) echo "RESTA: $(( $1 - $2 ))" ;;
+      CualEsMayor) 
+         if [ $1 -gt $2 ]; then echo "es mayor el $1";
+         else echo "es mayor el $2" ;fi
+         ;;
+      Cerrar|*) exit ;;
+   esac  
 done
 ```
 </td><td>
@@ -699,27 +701,65 @@ Uso de las estructuras de control
 
 #### **(a)** Realizar un script que visualice por pantalla los números del 1 al 100 así como sus cuadrados.
 
-| ![](2023-04-17-15-57-34.png) | ![](2023-04-17-15-58-03.png) |
-| --- | --- |
 
-<table><td></td><td></td></table>
+<table><td>
+
+```sh
+#!/bin/bash
+for i in {1..100}
+do
+  echo "$i La potencia es: $(($i * $i))"
+done
+```
+</td><td>
+
+![](2023-04-17-15-58-03.png)
+</td></table>
 
 #### (b) Crear un script que muestre 3 opciones al usuario: Listar, DondeEstoy y QuienEsta. Según la opción elegida se le debe mostrar:
 - Listar: lista el contenido del directoria actual.
 - DondeEstoy: muestra el directorio donde me encuentro ubicado.
 - QuienEsta: muestra los usuarios conectados al sistema.
 
-| ![](2023-04-17-16-21-50.png) | ![](2023-04-17-16-22-17.png) |
-| --- | --- |
+<table><td>
 
-<table><td></td><td></td></table>
+```sh
+#!/bin/bash
+select opcion in Listar DondeEstoy QuienEsta
+do
+  case $opcion in
+    Listar) echo $(ls) ;;
+    DondeEstoy) echo $(pwd);;
+    QuienEsta) echo $(who);;
+    *) exit;;
+  esac
+done
+```
+</td><td>
+
+![](2023-04-17-16-22-17.png)
+</td></table>
 
 #### (c) Crear un script que reciba como parámetro el nombre de un archivo e informe si el mismo existe o no, y en caso afirmativo indique si es un directorio o un archivo. En caso de que no exista el archivo/directorio cree un directorio con el nombre recibido como parámetro
 
-![](2023-04-17-16-38-58.png)
-![](2023-04-17-16-38-34.png)
+<table><tr><td>
 
-<table><td></td><td></td></table>
+```sh
+#!/bin/bash
+if (( $# != 1 )); then exit; fi
+
+fi [ -e $1 ]; then
+   echo "El archivo $1 existe"
+   fi [ -f $1 ]; then echo "Y es un archivo"; fi
+   fi [ -d $1 ]; then echo "Y es un directorio"; fi
+   exit
+fi
+mkdir $1
+```
+</td></tr><tr><td>
+
+![](2023-04-17-16-38-34.png)
+</td></tr></table>
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 

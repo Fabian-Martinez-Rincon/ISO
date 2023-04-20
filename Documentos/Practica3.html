@@ -1,0 +1,1245 @@
+<!DOCTYPE html><html><head>
+      <title>Practica3</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\fabian\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.8\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 align="center"> &#x1F4DA; Practica 3</h1>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<div align="center">
+<p><a href="Practica4.md">Siguiente</a><br><br>
+<a href="Practica2.md">Anterior</a></p>
+</div>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<ul>
+<li><a href="#1-ejercicio">1) &#xBF;Qu&#xE9; es el Shell Scripting? &#xBF;A qu&#xE9; tipos de tareas est&#xE1;n orientados los script?</a></li>
+<li><a href="#2-ejercicio">2) Investigar la funcionalidad de los comandos echo y read</a></li>
+<li><a href="#3-ejercicio">3) Crear dentro del directorio personal del usuario logueado un directorio</a></li>
+<li><a href="#4-ejercicio">4) Parametrizaci&#xF3;n</a></li>
+<li><a href="#5-ejercicio">5) &#xBF;Cual es la funcionalidad de comando exit?</a></li>
+<li><a href="#6-ejercicio">6) El comando expr permite la evaluaci&#xF3;n de expresiones</a></li>
+<li><a href="#7-ejercicio">7) El comando &#x201C;test expresi&#xF3;n&#x201D; permite evaluar expresiones</a></li>
+<li><a href="#8-ejercicio">8) Estructuras de control</a></li>
+<li><a href="#9-ejercicio">9) &#xBF;Qu&#xE9; acciones realizan las sentencias break y continue dentro de un bucle?</a></li>
+<li><a href="#10-ejercicio">10) &#xBF;Qu&#xE9; tipo de variables existen? &#xBF;Es shell script fuertemente tipado?</a></li>
+<li><a href="#11-ejercicio">11) &#xBF;Pueden definirse funciones dentro de un script? &#xBF;C&#xF3;mo?</a></li>
+<li><a href="#12-ejercicio">12) Evaluaci&#xF3;n de expresiones</a></li>
+<li><a href="#13-ejercicio">13) Uso de las estructuras de control</a></li>
+<li><a href="#14-ejercicio">14) Renombrando Archivos: haga un script que renombre solo archivos</a></li>
+<li><a href="#15-ejercicio">15) Comando cut</a></li>
+<li><a href="#16-ejercicio">16) Realizar un script que reciba como par&#xE1;metro una extensi&#xF3;n</a></li>
+<li><a href="#17-ejercicio">17) Escribir un script que al ejecutarse imprima en pantalla los nombre</a></li>
+<li><a href="#18-ejercicio">18) Crear un script que verifique cada 10 segundos si un usuario se ha</a></li>
+<li><a href="#19-ejercicio">19) Escribir un Programa de &#x201C;Menu de Comandos Amigable con el Usuario&#x201D;</a></li>
+<li><a href="#20-ejercicio">20) Realice un script que simule el comportamiento de una estructura de PILA</a></li>
+<li><a href="#21-ejercicio">21) Dentro del mismo script y utilizando las funciones implementadas</a></li>
+<li><a href="#23-ejercicio">22) Dada la siguiente declaraci&#xF3;n al comienzo de un script</a></li>
+<li><a href="#23-ejercicio">23) Implemente un script que recorra un arreglo compuesto por n&#xFA;meros</a></li>
+<li><a href="#24-ejercicio">24) Dada la definici&#xF3;n de 2 vectores del mismo tama&#xF1;o y cuyas</a></li>
+<li><a href="#25-ejercicio">25) Realice un script que agregue en un arreglo todos los nombres</a></li>
+<li><a href="#26-ejercicio">26) Escriba un script que reciba una cantidad desconocida de par&#xE1;metros</a></li>
+<li><a href="#27-ejercicio">27) Realice un script que implemente a trav&#xE9;s de la utilizaci&#xF3;n</a></li>
+<li><a href="#28-ejercicio">28) Realice un script que reciba como par&#xE1;metro el nombre de un directorio</a></li>
+<li><a href="#29-ejercicio">29) Implemente un script que agregue a un arreglo todos los archivos</a></li>
+<li><a href="#30-ejercicio">30) Realice un script que mueva todos los programas del directorio actual</a></li>
+</ul>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="1-ejercicio">1) Ejercicio</h2>
+
+<p>&#xBF;Qu&#xE9; es el Shell Scripting? &#xBF;A qu&#xE9; tipos de tareas est&#xE1;n orientados los script?  &#xBF;Los scripts deben compilarse? &#xBF;Por qu&#xE9;?</p>
+<p>La Shell provee estructuras de control que permiten programar shell scripts.</p>
+<p>El Shell Scripting es la t&#xE9;cnica (habilidad / destreza) de dise&#xF1;ar y crear Script (archivo de automatizaci&#xF3;n de tareas) mediante un Shell (preferiblemente) de un Sistema Operativo, o un</p>
+<p>Editor de Texto (Gr&#xE1;fico o Terminal). Este es un tipo de lenguaje de programaci&#xF3;n que generalmente es interpretado.</p>
+<p>Est&#xE1; orientado a diferentes tareas:</p>
+<ul>
+<li>Automatizaci&#xF3;n de tareas</li>
+<li>Aplicaciones interactivas</li>
+<li>Aplicaciones con interfaz gr&#xE1;fica (con el comando zenity, por ejemplo).</li>
+</ul>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="2-ejercicio">2) Ejercicio</h2>
+
+<p>Investigar la funcionalidad de los comandos echo y read</p>
+<ul>
+<li><code>Echo:</code> Es un comando para la impresi&#xF3;n de un texto en pantalla. El comando para imprimir el contenido de la variable es:</li>
+<li><code>echo $nombreVar</code></li>
+<li><code>Read:</code> El comando read lee su entrada est&#xE1;ndar y asigna las palabras le&#xED;das en la(s) variable(s) cuyo nombre se pasa como argumento. Se trata del input desde teclado.</li>
+</ul>
+<p><img src="..\Practicas\Practica3\Imagenes\1.png" alt></p>
+<hr>
+<h4 class="mume-header" id="a-como-se-indican-los-comentarios-dentro-de-un-script">(a) &#xBF;Como se indican los comentarios dentro de un script?</h4>
+
+<p>Los comentarios tienen que comenzar con el s&#xED;mbolo #</p>
+<hr>
+<h4 class="mume-header" id="b-c%C3%B3mo-se-declaran-y-se-hace-referencia-a-variables-dentro-de-un-script">(b) &#xBF;C&#xF3;mo se declaran y se hace referencia a variables dentro de un script?</h4>
+
+<p>No necesita declarar una variable. Se crear&#xE1; s&#xF3;lo con asignarle un valor a su referencia. Luego se referencia con el s&#xED;mbolo $ Ejemplo</p>
+<p>Para hacer un script:</p>
+<ul>
+<li><code>Paso 1</code> en la consola usar el comando: <code>touch script.sh</code> para crear el directorio.</li>
+<li><code>Paso 2</code> Ver si se creo el directorio con el comando <code>ls</code></li>
+<li><code>Paso 3</code> Ingresar al archivo <code>script.sh</code> con el editor de texto vi de la siguiente manera
+<ul>
+<li><code>vim script.sh</code></li>
+<li>DENTRO DEL EDITOR VIM:</li>
+<li>Ingresar la letra i para estar en modo insertar y Escribir</li>
+</ul>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token shebang important">#!/bin/bash </span>
+<span class="token assign-left variable">CAD</span><span class="token operator">=</span><span class="token string">&quot;&#xA1;Hola Mundo!&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">$CAD</span>
+</pre><ul>
+<li><code>ESC</code> (para salir del modo editor)</li>
+<li><code>:wq</code> (para guardar los cambios)</li>
+<li>Salimos del editor vi e ingresamos a la consola</li>
+</ul>
+</li>
+<li><code>Paso 4:</code> Damos permiso de ejecuci&#xF3;n con el comando:
+<ul>
+<li><code>chmod u+x script.sh</code></li>
+<li>Si ponemos el comando ls vamos a ver que el directorio .sh cambio de color.</li>
+</ul>
+</li>
+<li><code>Paso 5:</code> Con el comando <code>./script.sh</code> vamos a ver el contenido de ese script en cosola.</li>
+<li><code>Paso 6:</code> Si queremos borrar ese directorio con script solo es necesario poner en consola el comando <code>rm script.sh</code></li>
+</ul>
+<p>Tambien podes ejecutar el script con el comando <code>bash script.sh</code></p>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="3-ejercicio">3) Ejercicio</h2>
+
+<p>Crear dentro del directorio personal del usuario logueado un directorio llamado practicashell-script y dentro de &#xE9;l un archivo llamado <a href="http://mostrar.sh">mostrar.sh</a> cuyo contenido sea el siguiente:</p>
+<table>
+<tbody><tr><td>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+<span class="token comment"># Comentarios acerca de lo que hace el script</span>
+<span class="token comment"># Siempre comento mis scripts, si no hoy lo hago</span>
+<span class="token comment"># y ma&#xF1;ana ya no me acuerdo de lo que quise hacer</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Introduzca su nombre y apellido:&quot;</span>
+<span class="token builtin class-name">read</span> nombre apellido
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Fecha y hora actual:&quot;</span>
+<span class="token function">date</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Su apellido y nombre es:&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable">$apellido</span> <span class="token variable">$nombre</span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Su usuario es: <span class="token variable"><span class="token variable">`</span><span class="token function">whoami</span><span class="token variable">`</span></span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Su directorio actual es:&quot;</span>
+</pre></td>
+<td>
+<p><img src="https://user-images.githubusercontent.com/55964635/232369884-42f534c8-975e-4053-997a-ad86ffdada50.png" alt="image"></p>
+</td>
+</tr></tbody></table>
+<h4 class="mume-header" id="a-asignar-al-archivo-creado-los-permisos-necesarios-de-manera-que-pueda-ejecutarlo"><strong>(a)</strong> Asignar al archivo creado los permisos necesarios de manera que pueda ejecutarlo</h4>
+
+<h4 class="mume-header" id="b-ejecutar-el-archivo-creado-de-la-siguiente-manera-mostrar"><strong>(b)</strong> Ejecutar el archivo creado de la siguiente manera: ./mostrar</h4>
+
+<h4 class="mume-header" id="c-qu%C3%A9-resultado-visualiza"><strong>(c)</strong> &#xBF;Qu&#xE9; resultado visualiza?</h4>
+
+<p><img src="https://user-images.githubusercontent.com/55964635/232370167-cc259f97-9771-4169-958f-31ce04e94529.png" alt="image"></p>
+<h4 class="mume-header" id="d-las-backquotes--entre-el-comando-whoami-ilustran-el-uso-de-la-sustituci%C3%B3n-de-comandos-qu%C3%A9-significa-esto"><strong>(d)</strong> Las backquotes (`) entre el comando whoami ilustran el uso de la sustituci&#xF3;n de comandos. &#xBF;Qu&#xE9; significa esto?</h4>
+
+<p>Son para poder ejecutar comando cuando se encuentran dentro de un string</p>
+<h4 class="mume-header" id="e-realizar-modificaciones-al-script-anteriormente-creado-de-manera-de-poder-mostrar-distintos-resultados-cu%C3%A1l-es-su-directorio-personal-el-contenido-de-un-directorio-en-particular-el-espacio-libre-en-disco-etc-pida-que-se-introduzcan-por-teclado-entrada-est%C3%A1ndar-otros-datos"><strong>(e)</strong> Realizar modificaciones al script anteriormente creado de manera de poder mostrar distintos resultados (cu&#xE1;l es su directorio personal, el contenido de un directorio en particular, el espacio libre en disco, etc.). Pida que se introduzcan por teclado (entrada est&#xE1;ndar) otros datos.</h4>
+
+<table>
+<tbody><tr><td>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Nombre y apellido&quot;</span>
+<span class="token builtin class-name">read</span> nombre apellido
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Fecha y hora actual: <span class="token variable"><span class="token variable">`</span><span class="token function">date</span><span class="token variable">`</span></span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">$nombre</span> <span class="token variable">$apellido</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Su usuario es: <span class="token variable"><span class="token variable">`</span><span class="token function">whoami</span><span class="token variable">`</span></span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;su directorio actual es :<span class="token variable"><span class="token variable">`</span><span class="token builtin class-name">pwd</span><span class="token variable">`</span></span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;su directorio personal es : <span class="token variable"><span class="token variable">`</span><span class="token environment constant">$HOME</span><span class="token variable">`</span></span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Nombre de un directorio:&quot;</span>
+<span class="token builtin class-name">echo</span> contenido
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Contenido de <span class="token variable">$contenido</span> es <span class="token variable"><span class="token variable">`</span><span class="token function">ls</span> $contenido<span class="token variable">`</span></span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Espacio libre en el disco <span class="token variable"><span class="token variable">`</span><span class="token function">df</span><span class="token variable">`</span></span>&quot;</span>
+</pre></td><td>
+<p><img src="2023-04-17-00-40-25.png" alt></p>
+</td></tr></tbody></table>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="4-ejercicio">4) Ejercicio</h2>
+
+<p>Parametrizaci&#xF3;n: &#xBF;C&#xF3;mo se acceden a los par&#xE1;metros enviados al script al momento de su invocaci&#xF3;n? &#xBF;Qu&#xE9; informaci&#xF3;n contienen las variables <code>$#, $*, $?</code> y <code>$HOME</code> dentro de un script?</p>
+<ul>
+<li>Los scripts pueden recibir argumentos en su invocaci&#xF3;n. Para accederlos, se utilizan variables especiales:</li>
+<li><code>$0</code> contiene la invocaci&#xF3;n al script. (nombre del script)</li>
+<li><code>$1, $2, $3,...</code> contienen cada uno de los argumentos.</li>
+<li><code>$#</code> contiene la cantidad de argumentos recibidos.</li>
+<li><code>$*</code> contiene la lista de todos los argumentos separados por espacios.</li>
+<li><code>$?</code> contiene en todo momento el valor de retorno del ultimo comando ejecutado.(si el valor es 0 se ejecuto correctamente, en caso de que haya habido alg&#xFA;n error dar&#xE1; un valor entre 1 y 255).</li>
+</ul>
+<table><tbody><tr><td>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable">$0</span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable">$1</span> <span class="token variable">$3</span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable">$#</span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable">$*</span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token environment constant">$HOME</span>&quot;</span>
+</pre></td><td>
+<p><img src="2023-04-17-01-05-38.png" alt></p>
+</td></tr></tbody></table>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="5-ejercicio">5) Ejercicio</h2>
+
+<p>&#xBF;Cual es la funcionalidad de comando exit? &#xBF;Qu&#xE9; valores recibe como par&#xE1;metro y cual es su significado?</p>
+<p>El comando exit finaliza un script. Incluso, puede arrojar un valor de terminaci&#xF3;n, el cual estar&#xE1; disponible para su proceso padre.</p>
+<p>Todo comando posee un estado de terminaci&#xF3;n (exit status). Un comando que se ejecut&#xF3; satisfactoriamente arrojar&#xE1; un valor de 0, mientras que un comando que no se proces&#xF3; de manera correcta, finalizar&#xE1; con un n&#xFA;mero diferente de 0.</p>
+<p>Al igual que un comando, un script posee su propio estado de terminaci&#xF3;n, el cual ser&#xE1; determinado por la &#xFA;ltima instrucci&#xF3;n ejecutada por el script.</p>
+<p>Dentro de un script, el comando exit puede arrojar un n&#xFA;mero dentro de un rango de 0 a 255.</p>
+<p>Se puede consultar el exit status imprimiendo la variable <code>$?</code> de la siguiente manera:</p>
+<ul>
+<li>Ingresamos al editor VIM con el archivo <a href="http://mostrar.sh">mostrar.sh</a></li>
+<li>Una vez hecho el bin bash, como &#xFA;ltima l&#xED;nea y dentro de insertar ingresamos el siguiente comando: echo $?</li>
+<li>ESC</li>
+<li>:exit</li>
+</ul>
+<p>En la consola se mostrara un n&#xFA;mero de 0 a 255.</p>
+<p><img src="2023-04-17-01-20-45.png" alt></p>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="6-ejercicio">6) Ejercicio</h2>
+
+<p>El comando <strong>expr</strong> permite la evaluaci&#xF3;n de expresiones. Su sintaxis es: <strong>expr arg1 op arg2</strong>, donde <strong>arg1 y arg2</strong> representan argumentos y op la operaci&#xF3;n de la expresi&#xF3;n. Investigar que tipo de operaciones se pueden utilizar</p>
+<ul>
+<li>Se puede utilizar
+<ul>
+<li>suma</li>
+<li>resta</li>
+<li>multiplicaci&#xF3;n (/*)</li>
+<li>divisi&#xF3;n (/).</li>
+</ul>
+</li>
+<li>Y devuelve solo la parte entera.:</li>
+<li>expr 10 + 10 -&gt; 20, expr 14 % 9 -&gt; 5.</li>
+</ul>
+<p>Tambi&#xE9;n se puede utilizar para:</p>
+<ul>
+<li>C&#xE1;lculo de la longitud de la cadena:
+<ul>
+<li>expr length &#x201C;esto es un test&#x201D; &gt;</li>
+<li>devuelve la cantidad de caracteres: 15</li>
+</ul>
+</li>
+<li>Cadena de rastreo:
+<ul>
+<li>expr substr &#x201C;esto es un test&#x201D; 3 5 &gt;</li>
+<li>te devuelve el texto desde la pos 3 y 5 lugares: to es</li>
+</ul>
+</li>
+<li>La cadena num&#xE9;rica primera posici&#xF3;n de rastreo personaje que aparece:
+<ul>
+<li>expr index &#x201C;esto es un test&#x201D; s</li>
+<li>te devuelve el &#xED;ndice de la letra pasado por par&#xE1;metro en la cadena (la primera aparici&#xF3;n).</li>
+</ul>
+</li>
+</ul>
+<table><tbody><tr><td>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash/</span>
+
+<span class="token assign-left variable">SUMA</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">expr</span> <span class="token number">10</span> + <span class="token number">5</span><span class="token variable">`</span></span>
+<span class="token assign-left variable">RESTA</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">expr</span> <span class="token number">10</span> - <span class="token number">5</span><span class="token variable">)</span></span>
+<span class="token assign-left variable">MULTIPLICACION</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">expr</span> <span class="token number">10</span> <span class="token punctuation">\</span>* <span class="token number">5</span><span class="token variable">)</span></span>
+<span class="token assign-left variable">DIVISION</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">expr</span> <span class="token number">10</span> / <span class="token number">5</span><span class="token variable">)</span></span>
+<span class="token assign-left variable">MODULO</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">expr</span> <span class="token number">10</span> % <span class="token number">5</span><span class="token variable">)</span></span>
+<span class="token assign-left variable">LONGITUD</span><span class="token operator">=</span><span class="token string">&quot;Fabian &quot;</span><span class="token variable"><span class="token variable">$(</span><span class="token function">expr</span> length <span class="token string">&quot;Fabian&quot;</span><span class="token variable">)</span></span>
+<span class="token assign-left variable">SUBSTR</span><span class="token operator">=</span><span class="token string">&quot;Fabian 1 6: &quot;</span><span class="token variable"><span class="token variable">$(</span><span class="token function">expr</span> substr <span class="token string">&quot;Fabian&quot;</span> <span class="token number">1</span> <span class="token number">6</span><span class="token variable">)</span></span>
+<span class="token assign-left variable">INDICE</span><span class="token operator">=</span><span class="token string">&quot;Fabian b: &quot;</span><span class="token variable"><span class="token variable">$(</span><span class="token function">expr</span> index <span class="token string">&quot;Fabian&quot;</span> b<span class="token variable">)</span></span>
+
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;var1 = 10, var2 = 5&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;SUMA <span class="token variable">$SUMA</span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;RESTA <span class="token variable">$RESTA</span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;MULTIPLICACION <span class="token variable">$MULTIPLICACION</span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;DIVISION <span class="token variable">$DIVISION</span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;MODULO <span class="token variable">$MODULO</span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;LONGITUD <span class="token variable">$LONGITUD</span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;SUBSTR <span class="token variable">$SUBSTR</span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;INDICE <span class="token variable">$INDICE</span>&quot;</span>
+</pre></td><td>
+<p><img src="2023-04-17-02-25-09.png" alt></p>
+</td></tr></tbody></table>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="7-ejercicio">7) Ejercicio</h2>
+
+<p>El comando <strong>&#x201C;test expresi&#xF3;n&#x201D;</strong> permite evaluar expresiones y generar un valor de retorno, true o false. Este comando puede ser reemplazado por el uso de corchetes de la siguiente manera <strong>[ expresi&#xF3;n ]</strong>. Investigar que tipo de expresiones pueden ser usadas con el comando test. Tenga en cuenta operaciones para: evaluaci&#xF3;n de archivos, evaluaci&#xF3;n de cadenas de caracteres y evaluaciones num&#xE9;ricas.</p>
+<p>Este comando tiene un c&#xF3;digo de retorno igual a 0 cuando el test es positivo, y diferente de cero en caso contrario</p>
+<p>El comando test posee dos sintaxis: <strong>test expresi&#xF3;n</strong> y <strong>[ expresi&#xF3;n ]</strong>, donde <strong>expresi&#xF3;n</strong> representa el test que se debe efectuar</p>
+<table><tbody><tr><td>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+
+<span class="token assign-left variable">var1</span><span class="token operator">=</span><span class="token number">10</span>
+<span class="token assign-left variable">var2</span><span class="token operator">=</span><span class="token number">5</span>
+
+<span class="token keyword keyword-if">if</span> <span class="token punctuation">[</span> -e <span class="token number">7</span>.sh <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword keyword-then">then</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;existe&quot;</span><span class="token punctuation">;</span> <span class="token keyword keyword-else">else</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;no existe&quot;</span><span class="token punctuation">;</span> <span class="token keyword keyword-fi">fi</span>
+
+<span class="token keyword keyword-if">if</span> <span class="token variable"><span class="token punctuation">((</span> $var1 <span class="token operator">%</span> $var2 <span class="token operator">==</span> <span class="token number">0</span> <span class="token punctuation">))</span></span><span class="token punctuation">;</span> <span class="token keyword keyword-then">then</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;Es Par&quot;</span><span class="token punctuation">;</span> <span class="token keyword keyword-else">else</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;Es Impar&quot;</span><span class="token punctuation">;</span> <span class="token keyword keyword-fi">fi</span>
+
+<span class="token keyword keyword-if">if</span> <span class="token variable"><span class="token punctuation">((</span> $var1 <span class="token operator">&gt;</span> $var2 <span class="token punctuation">))</span></span><span class="token punctuation">;</span> <span class="token keyword keyword-then">then</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;Es Mayor&quot;</span><span class="token punctuation">;</span> <span class="token keyword keyword-else">else</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;Es Menor&quot;</span><span class="token punctuation">;</span> <span class="token keyword keyword-fi">fi</span>
+
+<span class="token keyword keyword-if">if</span> <span class="token punctuation">[</span> -r <span class="token number">7</span>.sh -a -w <span class="token number">7</span>.sh -a -x <span class="token number">7</span>.sh <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword keyword-then">then</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;Todos los permisos&quot;</span>
+<span class="token keyword keyword-else">else</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;no tiene todos los permisos&quot;</span><span class="token punctuation">;</span> <span class="token keyword keyword-fi">fi</span>
+
+<span class="token keyword keyword-if">if</span> <span class="token punctuation">[</span> -r <span class="token number">7</span>.sh -o -w <span class="token number">7</span>.sh -o -x <span class="token number">7</span>.sh <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword keyword-then">then</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;algun permiso&quot;</span>
+<span class="token keyword keyword-else">else</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;no tiene todos los permisos&quot;</span><span class="token punctuation">;</span> <span class="token keyword keyword-fi">fi</span>
+</pre></td><td> 
+<p><img src="2023-04-17-03-25-59.png" alt></p>
+</td></tr></tbody></table>
+<h3 class="mume-header" id="valores-a-tener-en-cuenta">Valores a tener en cuenta</h3>
+
+<table>
+<tbody><tr><td>
+<table>
+<thead>
+<tr>
+<th>Parametro</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-r</td>
+<td>Si es de Lectura</td>
+</tr>
+<tr>
+<td>-w</td>
+<td>Si es de escritura</td>
+</tr>
+<tr>
+<td>-x</td>
+<td>Si es de ejecuci&#xF3;n</td>
+</tr>
+<tr>
+<td>-a</td>
+<td>and</td>
+</tr>
+<tr>
+<td>-o</td>
+<td>or</td>
+</tr>
+<tr>
+<td>-e</td>
+<td>Si existe</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>Si es un directorio</td>
+</tr>
+<tr>
+<td>-f</td>
+<td>Si es un archivo</td>
+</tr>
+<tr>
+<td>-n</td>
+<td>No es cadena vacia</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Con Strings</th>
+<th>Con n&#xFA;meros</th>
+<th>Operaciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Igualdad</td>
+<td>[ $nombre = &quot;Maria&quot; ]</td>
+<td>[ $edad -eq 20 ]</td>
+<td>$(( 2 == 2 ))</td>
+</tr>
+<tr>
+<td>Desigualdad</td>
+<td>[ $nombre != &quot;Maria&quot; ]</td>
+<td>[ $edad -ne 20 ]</td>
+<td>$(( 3 != 4 ))</td>
+</tr>
+<tr>
+<td>Mayor</td>
+<td>[ A &gt; Z ]</td>
+<td>[ 5 -gt 20 ]</td>
+<td>$(( 3 &gt; 1 ))</td>
+</tr>
+<tr>
+<td>Mayor o Igual</td>
+<td>[ A &gt;= Z ]</td>
+<td>[ 5 -ge 20 ]</td>
+<td>$( 2 &gt;= 1 ))</td>
+</tr>
+<tr>
+<td>Menor</td>
+<td>[ A &lt; Z ]</td>
+<td>[ 5 -lt 20 ]</td>
+<td>$(( 1 &lt; 10 ))</td>
+</tr>
+<tr>
+<td>Menor o Igual</td>
+<td>[ A &lt;= Z ]</td>
+<td>[ 5 -le 20 ]</td>
+<td>$(( 3 &lt;= 5 ))</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr></tbody></table>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="8-ejercicio">8) Ejercicio</h2>
+
+<p>Estructuras de control. Investigue la sintaxis de las siguientes estructuras de control incluidas en shell scripting:</p>
+<table>
+<tbody><tr>
+<td>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+<span class="token keyword keyword-if">if</span> <span class="token punctuation">[</span> <span class="token number">3</span> -eq <span class="token number">3</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword keyword-then">then</span>
+  <span class="token builtin class-name">echo</span> <span class="token string">&quot;Son iguales&quot;</span>
+<span class="token keyword keyword-else">else</span>
+  <span class="token builtin class-name">echo</span> <span class="token string">&quot;Son distintos&quot;</span>
+<span class="token keyword keyword-fi">fi</span>
+</pre></td>
+<td>
+<p><img src="2023-04-17-04-59-47.png" alt></p>
+</td>
+</tr>
+<tr>
+<td>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Ingrese un caracter&quot;</span>
+<span class="token builtin class-name">read</span> letra
+<span class="token keyword keyword-case">case</span> <span class="token variable">$letra</span> <span class="token keyword keyword-in">in</span>
+  <span class="token punctuation">[</span>a-z<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;Es una minuscula&quot;</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">[</span>A-Z<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;Es una mayuscula&quot;</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">[</span><span class="token number">0</span>-9<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;Es un nro&quot;</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+  *<span class="token punctuation">)</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;Ingreso un caracter invalida&quot;</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-esac">esac</span>
+</pre></td>
+<td>
+<p><img src="2023-04-17-04-32-55.png" alt></p>
+</td>
+</tr>
+<tr>
+<td>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+<span class="token assign-left variable">var1</span><span class="token operator">=</span><span class="token number">0</span>
+<span class="token keyword keyword-while">while</span> <span class="token punctuation">[</span> <span class="token variable">$var1</span> -le <span class="token number">5</span> <span class="token punctuation">]</span>
+<span class="token keyword keyword-do">do</span>
+  <span class="token builtin class-name">echo</span> <span class="token string">&quot;Hola mundo&quot;</span>
+  <span class="token assign-left variable">var1</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$((</span>var1<span class="token operator">+</span><span class="token number">1</span><span class="token variable">))</span></span>
+<span class="token keyword keyword-done">done</span>
+</pre></td>
+<td>
+<p><img src="2023-04-17-04-15-06.png" alt></p>
+</td>
+</tr>
+<tr>
+<td>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+<span class="token keyword keyword-for">for</span> <span class="token for-or-select variable">var</span> <span class="token keyword keyword-in">in</span> <span class="token number">1</span> <span class="token number">2</span> <span class="token number">3</span> <span class="token number">4</span> <span class="token number">5</span>
+<span class="token keyword keyword-do">do</span>
+  <span class="token builtin class-name">echo</span> <span class="token variable">$var</span>
+<span class="token keyword keyword-done">done</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;--------&quot;</span>
+<span class="token keyword keyword-for">for</span> <span class="token for-or-select variable">var2</span> <span class="token keyword keyword-in">in</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">..</span><span class="token number">5</span><span class="token punctuation">}</span>
+<span class="token keyword keyword-do">do</span>
+  <span class="token builtin class-name">echo</span> <span class="token variable">$var2</span>
+<span class="token keyword keyword-done">done</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;--------&quot;</span>
+<span class="token keyword keyword-for">for</span> <span class="token variable"><span class="token punctuation">((</span>i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">&lt;=</span><span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">))</span></span>
+<span class="token keyword keyword-do">do</span>
+  <span class="token builtin class-name">echo</span> <span class="token variable">$i</span>
+<span class="token keyword keyword-done">done</span>
+</pre></td>
+<td>
+<p><img src="2023-04-17-04-47-29.png" alt></p>
+</td>
+</tr>
+<tr>
+<td>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+<span class="token keyword keyword-select">select</span> <span class="token for-or-select variable">opcion</span> <span class="token keyword keyword-in">in</span> opcion1 opcion2
+<span class="token keyword keyword-do">do</span>
+  <span class="token keyword keyword-case">case</span> <span class="token variable">$opcion</span> <span class="token keyword keyword-in">in</span>
+    opcion1<span class="token punctuation">)</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;Opcion1&quot;</span> <span class="token punctuation">;</span><span class="token punctuation">;</span>
+    opcion2<span class="token punctuation">)</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;Opcion2&quot;</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+    *<span class="token punctuation">)</span> <span class="token builtin class-name">exit</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-esac">esac</span>
+<span class="token keyword keyword-done">done</span>
+</pre></td>
+<td>
+<p><img src="2023-04-17-12-08-38.png" alt></p>
+</td>
+</tr>
+</tbody></table>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="9-ejercicio">9) Ejercicio</h2>
+
+<p>&#xBF;Qu&#xE9; acciones realizan las sentencias break y continue dentro de un bucle? &#xBF;Qu&#xE9; par&#xE1;metros reciben?</p>
+<ul>
+<li><strong><code>break [n]</code></strong> Corta la ejecuci&#xF3;n de <code>n</code> niveles de loops.</li>
+<li><strong><code>continue [n]</code></strong> salta a la siguiente iteraci&#xF3;n del en&#xE9;simo loop que contiene esta instrucci&#xF3;n</li>
+</ul>
+<table><tbody><tr><td>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash/</span>
+<span class="token assign-left variable">contador</span><span class="token operator">=</span><span class="token number">0</span>
+<span class="token keyword keyword-while">while</span> <span class="token boolean">true</span>
+<span class="token keyword keyword-do">do</span>
+  <span class="token builtin class-name">let</span> contador++
+  <span class="token keyword keyword-if">if</span> <span class="token punctuation">[</span> <span class="token variable">$contador</span> -eq <span class="token number">10</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword keyword-then">then</span>
+    <span class="token builtin class-name">break</span>
+  <span class="token keyword keyword-elif">elif</span> <span class="token punctuation">[</span> <span class="token variable">$contador</span> -eq <span class="token number">5</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword keyword-then">then</span>
+    <span class="token builtin class-name">continue</span>
+  <span class="token keyword keyword-fi">fi</span>
+  <span class="token builtin class-name">echo</span> <span class="token variable">$contador</span>
+<span class="token keyword keyword-done">done</span>
+</pre></td><td>
+<p><img src="2023-04-17-12-31-44.png" alt></p>
+</td></tr></tbody></table>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="10-ejercicio">10) Ejercicio</h2>
+
+<p>&#xBF;Qu&#xE9; tipo de variables existen? &#xBF;Es shell script fuertemente tipado? &#xBF;Se pueden definir arreglos? &#xBF;C&#xF3;mo?</p>
+<p>bash soporta <code>strings</code> y <code>arrays</code></p>
+<ul>
+<li>Los nombres son case sensitive</li>
+<li>Para crear una variable:
+<ul>
+<li>NOMBRE=&quot;pepe&quot; # SIN espacios alrededor del =</li>
+</ul>
+</li>
+<li>Para accederla se usa $:
+<ul>
+<li>echo $NOMBRE</li>
+</ul>
+</li>
+</ul>
+<p>Para evitar ambig&#xFC;edades se pueden usar llaves:</p>
+<ul>
+<li>Esto no accede a $NOMBRE</li>
+<li>echo $NOMBREesto_no_es_parte_de_la_variable</li>
+<li>Esto s&#xED;</li>
+<li>echo ${NOMBRE}esto_no_es_parte_de_la_variable<br>
+Los nombres de las variables pueden contener may&#xFA;sculas, min&#xFA;sculas, n&#xFA;meros y el s&#xED;mbolo (underscore), pero no pueden empezar con un n&#xFA;mero.</li>
+</ul>
+<p>No es fuertemente tipado, y no requiere una declaraci&#xF3;n expl&#xED;cita de tipo variables.</p>
+<h3 class="mume-header" id="todo-sobre-los-arreglos">Todo sobre los arreglos</h3>
+
+<table>
+<thead>
+<tr>
+<th>Bash</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>arreglo=()</td>
+<td>Definir Arreglo vacio</td>
+</tr>
+<tr>
+<td>arreglo[0]=&quot;valor1&quot;</td>
+<td>Asignaci&#xF3;n</td>
+</tr>
+<tr>
+<td>arreglo=(&quot;valor1&quot;, &quot;valor2&quot;)</td>
+<td>Definir con valores</td>
+</tr>
+<tr>
+<td>read -a arreglo</td>
+<td>leer desde teclado <br> tiene que estar definido arriba</td>
+</tr>
+<tr>
+<td>${arreglo[0]}</td>
+<td>retorna &quot;valor1&quot;</td>
+</tr>
+<tr>
+<td>${arreglo[*]}</td>
+<td>Retorna todos los elementos del array</td>
+</tr>
+<tr>
+<td>${arreglo[@]}</td>
+<td>Retorna todos los elementos del array</td>
+</tr>
+<tr>
+<td>${#arreglo[@]}</td>
+<td>Retorna 2, si contiene valor1 y valor2</td>
+</tr>
+</tbody>
+</table>
+<h4 class="mume-header" id="codigo-de-ejemplo">Codigo de ejemplo</h4>
+
+<table><tbody><tr><td>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+<span class="token assign-left variable">array</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token builtin class-name">read</span> -a array
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Array pelado&quot;</span> <span class="token variable">$array</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;index 3&quot;</span> <span class="token variable">${array<span class="token punctuation">[</span>3<span class="token punctuation">]</span>}</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Todos los elementos&quot;</span> <span class="token variable">${array<span class="token punctuation">[</span>*<span class="token punctuation">]</span>}</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Cantidad de elementos&quot;</span> <span class="token variable">${<span class="token operator">#</span>array<span class="token punctuation">[</span>*<span class="token punctuation">]</span>}</span>
+</pre></td><td>
+<p><img src="2023-04-17-13-17-14.png" alt></p>
+</td>
+</tr></tbody></table>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="11-ejercicio">11) Ejercicio</h2>
+
+<p>&#xBF;Pueden definirse funciones dentro de un script? &#xBF;C&#xF3;mo? &#xBF;C&#xF3;mo se maneja el pasaje de par&#xE1;metros de una funci&#xF3;n a la otra?</p>
+<p>Si, se pueden definir funciones dentro de un script.</p>
+<ul>
+<li>Las funciones permiten modularizar el comportamiento de los scripts.</li>
+<li>Se pueden declarar de 2 formas:<pre data-role="codeBlock" data-info class="language-"><code>function nombre { block }
+nombre() { block }
+</code></pre></li>
+<li>Con la sentencia return se retorna un valor entre 0 y 255</li>
+<li>El valor de retorno se puede evaluar mediante la variable $?</li>
+<li>Reciben argumentos en las variables <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">1,</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mpunct">,</span></span></span></span>2, etc</li>
+</ul>
+<p>Para definir variables locales podemos usar la palabra clave <code>local var1</code></p>
+<table><tbody><tr><td>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+<span class="token function-name function">sumar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token builtin class-name">return</span> <span class="token variable"><span class="token variable">$((</span> $<span class="token number">1</span> <span class="token operator">+</span> $<span class="token number">2</span> <span class="token variable">))</span></span>
+<span class="token punctuation">}</span>
+<span class="token function-name function">cadena</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token builtin class-name">echo</span> <span class="token string">&quot;Hola <span class="token variable">$1</span>, como estas&quot;</span>
+<span class="token punctuation">}</span>
+
+sumar <span class="token number">2</span> <span class="token number">3</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">$?</span>
+<span class="token assign-left variable">mensaje</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span>cadena <span class="token string">&quot;Juan&quot;</span><span class="token variable">)</span></span>
+<span class="token builtin class-name">echo</span> <span class="token variable">$mensaje</span>
+</pre></td><td>
+<p><img src="2023-04-17-13-30-12.png" alt></p>
+</td></tr></tbody></table>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="12-ejercicio">12) Ejercicio</h2>
+
+<p>Evaluaci&#xF3;n de expresione</p>
+<h4 class="mume-header" id="a-realizar-un-script-que-le-solicite-al-usuario-2-n%C3%BAmeros-los-lea-de-la-entrada-standard-e-imprima-la-multiplicaci%C3%B3n-suma-resta-y-cual-es-el-mayor-de-los-n%C3%BAmeros-le%C3%ADdos"><strong>(a)</strong> Realizar un script que le solicite al usuario 2 n&#xFA;meros, los lea de la entrada Standard e imprima la multiplicaci&#xF3;n, suma, resta y cual es el mayor de los n&#xFA;meros le&#xED;dos.</h4>
+
+<table><tbody><tr><td>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Ingrese dos nros&quot;</span>
+<span class="token builtin class-name">read</span> nro1 nro2
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;MULTIPLICACION: <span class="token variable"><span class="token variable">$((</span> $nro1 <span class="token operator">*</span> $nro2 <span class="token variable">))</span></span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;SUMA: <span class="token variable"><span class="token variable">$((</span> $nro1 <span class="token operator">+</span> $nro2 <span class="token variable">))</span></span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;RESTA: <span class="token variable"><span class="token variable">$((</span> $nro1 <span class="token operator">-</span> $nro2 <span class="token variable">))</span></span>&quot;</span>
+
+<span class="token keyword keyword-if">if</span> <span class="token punctuation">[</span> <span class="token variable">$nro1</span> -gt <span class="token variable">$nro2</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword keyword-then">then</span>
+  <span class="token builtin class-name">echo</span> <span class="token string">&quot;es mayor el <span class="token variable">$nro1</span>&quot;</span>
+<span class="token keyword keyword-else">else</span> 
+  <span class="token builtin class-name">echo</span> <span class="token string">&quot;es mayor el <span class="token variable">$nro2</span>&quot;</span>
+<span class="token keyword keyword-fi">fi</span>
+</pre></td><td>
+<p><img src="2023-04-17-13-48-29.png" alt></p>
+</td></tr></tbody></table>
+<h4 class="mume-header" id="b-modificar-el-script-creado-en-el-inciso-anterior-para-que-los-n%C3%BAmeros-sean-recibidos-como-par%C3%A1metros-el-script-debe-controlar-que-los-dos-par%C3%A1metros-sean-enviados"><strong>(b)</strong> Modificar el script creado en el inciso anterior para que los n&#xFA;meros sean recibidos como par&#xE1;metros. El script debe controlar que los dos par&#xE1;metros sean enviados.</h4>
+
+<table><tbody><tr><td>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+
+<span class="token keyword keyword-if">if</span> <span class="token variable"><span class="token punctuation">((</span> $# <span class="token operator">!=</span> <span class="token number">2</span> <span class="token punctuation">))</span></span><span class="token punctuation">;</span> <span class="token keyword keyword-then">then</span> <span class="token builtin class-name">exit</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token keyword keyword-fi">fi</span>
+
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;MULTIPLICACION: <span class="token variable"><span class="token variable">$((</span> $<span class="token number">1</span> <span class="token operator">*</span> $<span class="token number">2</span> <span class="token variable">))</span></span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;SUMA: <span class="token variable"><span class="token variable">$((</span> $<span class="token number">1</span> <span class="token operator">+</span> $<span class="token number">2</span> <span class="token variable">))</span></span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;RESTA: <span class="token variable"><span class="token variable">$((</span> $<span class="token number">1</span> <span class="token operator">-</span> $<span class="token number">2</span> <span class="token variable">))</span></span>&quot;</span>
+
+<span class="token keyword keyword-if">if</span> <span class="token punctuation">[</span> <span class="token variable">$1</span> -gt <span class="token variable">$2</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword keyword-then">then</span>
+  <span class="token builtin class-name">echo</span> <span class="token string">&quot;es mayor el <span class="token variable">$1</span>&quot;</span>
+<span class="token keyword keyword-else">else</span> 
+  <span class="token builtin class-name">echo</span> <span class="token string">&quot;es mayor el <span class="token variable">$2</span>&quot;</span>
+<span class="token keyword keyword-fi">fi</span>
+</pre></td><td>
+<p><img src="2023-04-17-15-26-52.png" alt></p>
+</td></tr></tbody></table>
+<h4 class="mume-header" id="c-realizar-una-calculadora-que-ejecute-las-4-operaciones-b%C3%A1sicas------esta-calculadora-debe-funcionar-recibiendo-la-operaci%C3%B3n-y-los-n%C3%BAmeros-como-par%C3%A1metros"><strong>(c)</strong> Realizar una calculadora que ejecute las 4 operaciones b&#xE1;sicas: +, - ,*, %. Esta calculadora debe funcionar recibiendo la operaci&#xF3;n y los n&#xFA;meros como par&#xE1;metros</h4>
+
+<table><tbody><tr><td>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+<span class="token keyword keyword-select">select</span> <span class="token for-or-select variable">operacion</span> <span class="token keyword keyword-in">in</span> Multiplicacion Suma Resta CualEsMayor Cerrar
+<span class="token keyword keyword-do">do</span>
+   <span class="token keyword keyword-case">case</span> <span class="token variable">$operacion</span> <span class="token keyword keyword-in">in</span>
+      Multiplicacion<span class="token punctuation">)</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;MULTIPLICACION: <span class="token variable"><span class="token variable">$((</span> $<span class="token number">1</span> <span class="token operator">*</span> $<span class="token number">2</span> <span class="token variable">))</span></span>&quot;</span> <span class="token punctuation">;</span><span class="token punctuation">;</span>
+      Suma<span class="token punctuation">)</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;SUMA: <span class="token variable"><span class="token variable">$((</span> $<span class="token number">1</span> <span class="token operator">+</span> $<span class="token number">2</span> <span class="token variable">))</span></span>&quot;</span> <span class="token punctuation">;</span><span class="token punctuation">;</span>
+      Resta<span class="token punctuation">)</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;RESTA: <span class="token variable"><span class="token variable">$((</span> $<span class="token number">1</span> <span class="token operator">-</span> $<span class="token number">2</span> <span class="token variable">))</span></span>&quot;</span> <span class="token punctuation">;</span><span class="token punctuation">;</span>
+      CualEsMayor<span class="token punctuation">)</span> 
+         <span class="token keyword keyword-if">if</span> <span class="token punctuation">[</span> <span class="token variable">$1</span> -gt <span class="token variable">$2</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword keyword-then">then</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;es mayor el <span class="token variable">$1</span>&quot;</span><span class="token punctuation">;</span>
+         <span class="token keyword keyword-else">else</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;es mayor el <span class="token variable">$2</span>&quot;</span> <span class="token punctuation">;</span><span class="token keyword keyword-fi">fi</span>
+         <span class="token punctuation">;</span><span class="token punctuation">;</span>
+      Cerrar<span class="token operator">|</span>*<span class="token punctuation">)</span> <span class="token builtin class-name">exit</span> <span class="token punctuation">;</span><span class="token punctuation">;</span>
+   <span class="token keyword keyword-esac">esac</span>  
+<span class="token keyword keyword-done">done</span>
+</pre></td><td>
+<p><img src="2023-04-17-15-45-51.png" alt></p>
+</td></tr></tbody></table>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="13-ejercicio">13) Ejercicio</h2>
+
+<p>Uso de las estructuras de control</p>
+<h4 class="mume-header" id="a-realizar-un-script-que-visualice-por-pantalla-los-n%C3%BAmeros-del-1-al-100-as%C3%AD-como-sus-cuadrados"><strong>(a)</strong> Realizar un script que visualice por pantalla los n&#xFA;meros del 1 al 100 as&#xED; como sus cuadrados.</h4>
+
+<table><tbody><tr><td>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+<span class="token keyword keyword-for">for</span> <span class="token for-or-select variable">i</span> <span class="token keyword keyword-in">in</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">..</span><span class="token number">100</span><span class="token punctuation">}</span>
+<span class="token keyword keyword-do">do</span>
+  <span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable">$i</span> La potencia es: <span class="token variable"><span class="token variable">$((</span>$i <span class="token operator">*</span> $i<span class="token variable">))</span></span>&quot;</span>
+<span class="token keyword keyword-done">done</span>
+</pre></td><td>
+<p><img src="2023-04-17-15-58-03.png" alt></p>
+</td></tr></tbody></table>
+<h4 class="mume-header" id="b-crear-un-script-que-muestre-3-opciones-al-usuario-listar-dondeestoy-y-quienesta-seg%C3%BAn-la-opci%C3%B3n-elegida-se-le-debe-mostrar">(b) Crear un script que muestre 3 opciones al usuario: Listar, DondeEstoy y QuienEsta. Seg&#xFA;n la opci&#xF3;n elegida se le debe mostrar:</h4>
+
+<ul>
+<li>Listar: lista el contenido del directoria actual.</li>
+<li>DondeEstoy: muestra el directorio donde me encuentro ubicado.</li>
+<li>QuienEsta: muestra los usuarios conectados al sistema.</li>
+</ul>
+<table><tbody><tr><td>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+<span class="token keyword keyword-select">select</span> <span class="token for-or-select variable">opcion</span> <span class="token keyword keyword-in">in</span> Listar DondeEstoy QuienEsta
+<span class="token keyword keyword-do">do</span>
+  <span class="token keyword keyword-case">case</span> <span class="token variable">$opcion</span> <span class="token keyword keyword-in">in</span>
+    Listar<span class="token punctuation">)</span> <span class="token builtin class-name">echo</span> <span class="token variable"><span class="token variable">$(</span><span class="token function">ls</span><span class="token variable">)</span></span> <span class="token punctuation">;</span><span class="token punctuation">;</span>
+    DondeEstoy<span class="token punctuation">)</span> <span class="token builtin class-name">echo</span> <span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">pwd</span><span class="token variable">)</span></span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+    QuienEsta<span class="token punctuation">)</span> <span class="token builtin class-name">echo</span> <span class="token variable"><span class="token variable">$(</span><span class="token function">who</span><span class="token variable">)</span></span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+    *<span class="token punctuation">)</span> <span class="token builtin class-name">exit</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-esac">esac</span>
+<span class="token keyword keyword-done">done</span>
+</pre></td><td>
+<p><img src="2023-04-17-16-22-17.png" alt></p>
+</td></tr></tbody></table>
+<h4 class="mume-header" id="c-crear-un-script-que-reciba-como-par%C3%A1metro-el-nombre-de-un-archivo-e-informe-si-el-mismo-existe-o-no-y-en-caso-afirmativo-indique-si-es-un-directorio-o-un-archivo-en-caso-de-que-no-exista-el-archivodirectorio-cree-un-directorio-con-el-nombre-recibido-como-par%C3%A1metro">(c) Crear un script que reciba como par&#xE1;metro el nombre de un archivo e informe si el mismo existe o no, y en caso afirmativo indique si es un directorio o un archivo. En caso de que no exista el archivo/directorio cree un directorio con el nombre recibido como par&#xE1;metro</h4>
+
+<p><img src="2023-04-17-16-38-58.png" alt><br>
+<img src="2023-04-17-16-38-34.png" alt></p>
+<table><tbody><tr><td></td><td></td></tr></tbody></table>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h1 class="mume-header" id="14-ejercicio">14) Ejercicio</h1>
+
+<p>Renombrando Archivos: haga un script que renombre solo archivos de un directorio pasado como parametro agregandole una CADENA, contemplando las opciones:</p>
+<ul>
+<li><strong>&#x201C;-a CADENA&#x201D;:</strong> renombra el fichero concatenando CADENA al final del nombre del archivo</li>
+<li><strong>&#x201C;-b CADENA&#x201D;:</strong> renombra el fichero concantenado CADENA al principio del nombre<br>
+del archivo</li>
+</ul>
+<p>Ejemplo:</p>
+<ul>
+<li>Si tengo los siguientes archivos: /tmp/a /tmp/b</li>
+<li>Al ejecutar: ./renombra /tmp/ -a EJ</li>
+<li>Obtendr&#xE9; como resultado: /tmp/aEJ /tmp/bEJ</li>
+<li>Y si ejecuto: ./renombra /tmp/ -b EJ</li>
+<li>El resultado ser&#xE1;: /tmp/EJa /tmp/EJb</li>
+</ul>
+<p>Comandos ejecutados</p>
+<ul>
+<li>bash <a href="http://14.sh">14.sh</a> prueba -a Ej</li>
+<li>Despues</li>
+<li>bash <a href="http://14.sh">14.sh</a> prueba -b Ej</li>
+</ul>
+<table>
+<tbody><tr><td>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+<span class="token keyword keyword-if">if</span> <span class="token punctuation">[</span> <span class="token variable">$#</span> -ne <span class="token number">3</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword keyword-then">then</span> 
+  <span class="token builtin class-name">echo</span>  -e <span class="token string">&quot;
+  Parametros: <span class="token entity" title="\n">\n</span>
+  Path <span class="token entity" title="\n">\n</span>
+  -a/-b <span class="token entity" title="\n">\n</span>
+  sufijo/prefijo
+&quot;</span><span class="token punctuation">;</span> <span class="token builtin class-name">exit</span><span class="token punctuation">;</span><span class="token keyword keyword-fi">fi</span>
+
+<span class="token keyword keyword-if">if</span> <span class="token operator">!</span> <span class="token punctuation">[</span> -e <span class="token variable">$1</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword keyword-then">then</span> 
+  <span class="token builtin class-name">echo</span> <span class="token string">&quot;El path ingresado no existe&quot;</span>
+  <span class="token builtin class-name">exit</span>
+<span class="token keyword keyword-fi">fi</span>
+<span class="token builtin class-name">cd</span> <span class="token variable">$1</span>
+<span class="token assign-left variable">archivos</span><span class="token operator">=</span><span class="token string">&quot;<span class="token variable"><span class="token variable">$(</span><span class="token function">ls</span><span class="token variable">)</span></span>&quot;</span>
+<span class="token function">ls</span> -1
+<span class="token keyword keyword-if">if</span> <span class="token punctuation">[</span> <span class="token variable">$2</span> <span class="token operator">=</span> <span class="token string">&quot;-a&quot;</span> <span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword keyword-then">then</span>
+  <span class="token keyword keyword-for">for</span> <span class="token for-or-select variable">i</span> <span class="token keyword keyword-in">in</span> <span class="token variable">${archivos<span class="token punctuation">[</span>*<span class="token punctuation">]</span>}</span><span class="token punctuation">;</span><span class="token keyword keyword-do">do</span> <span class="token function">mv</span> <span class="token variable">$i</span> <span class="token variable">$i</span><span class="token variable">$3</span><span class="token punctuation">;</span><span class="token keyword keyword-done">done</span>
+<span class="token keyword keyword-elif">elif</span> <span class="token punctuation">[</span> <span class="token variable">$2</span> <span class="token operator">=</span> <span class="token string">&quot;-b&quot;</span> <span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword keyword-then">then</span>
+  <span class="token keyword keyword-for">for</span> <span class="token for-or-select variable">i</span> <span class="token keyword keyword-in">in</span> <span class="token variable">${archivos<span class="token punctuation">[</span>*<span class="token punctuation">]</span>}</span><span class="token punctuation">;</span><span class="token keyword keyword-do">do</span> <span class="token function">mv</span> <span class="token variable">$i</span> <span class="token variable">$3</span><span class="token variable">$i</span><span class="token punctuation">;</span><span class="token keyword keyword-done">done</span>
+<span class="token keyword keyword-else">else</span>
+  <span class="token builtin class-name">echo</span> <span class="token string">&quot;Tiene que ingresar -a o -b&quot;</span>
+<span class="token keyword keyword-fi">fi</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Despues de todo:&quot;</span>
+<span class="token function">ls</span> -1
+</pre></td>
+<td>
+<p><img src="2023-04-18-10-12-13.png" alt></p>
+</td>
+</tr></tbody></table>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="15-ejercicio">15) Ejercicio</h2>
+
+<p><strong>Comando cut</strong>. El comando cut nos permite procesar la l&#xED;neas de la entrada que reciba<br>
+(archivo, entrada est&#xE1;ndar, resultado de otro comando, etc) y cortar columnas o campos,<br>
+siendo posible indicar cual es el delimitador de las mismas. Investigue los par&#xE1;metros que puede recibir este comando y cite ejemplos de uso.</p>
+<p>Comando cut : Su principal utilidad es la de borrar secciones, campos o caracteres de la salida de<br>
+un comando o de cada una de las l&#xED;neas de un fichero de texto.<br>
+Ejemplos de uso:<br>
+&#xF0B7; Mostrar los caracteres que nos interesen en una l&#xED;nea de texto o en un conjunto de<br>
+l&#xED;neas<br>
+Imaginemos que tenemos un fichero de texto con el nombre geekland.txt que tiene el<br>
+siguiente contenido:<br>
+la utilidad<br>
+es f&#xE1;cil de usar y es &#xFA;til<br>
+Si &#xFA;nicamente queremos mostrar el cuarto car&#xE1;cter de cada una de las l&#xED;neas lo haremos<br>
+con la opci&#xF3;n -c 4.<br>
+cut -c 4 geekland.txt<br>
+u<br>
+f<br>
+Si ahora queremos mostrar los caracteres del 2 al 6:<br>
+cut -c 2-6 geekland.txt<br>
+a uti<br>
+s f&#xE1;<br>
+Si finalmente queremos mostrar los caracteres 1,2,3 y 5,6,7 y 8 de cada una de las l&#xED;neas<br>
+de un fichero de texto:<br>
+cut -c 1-3,5-8 geekland.txt<br>
+la tili<br>
+es &#xE1;ci<br>
+Cut tambi&#xE9;n ofrece la posibilidad de seleccionar un car&#xE1;cter inicial y seleccionar el resto de<br>
+caracteres hasta el final. Por ejemplo para seleccionar el texto a partir del car&#xE1;cter 5 hasta<br>
+el final usaremos la opci&#xF3;n -c 5- del siguiente modo:<br>
+cut -c 5- geekland.txt<br>
+tilidad cut<br>
+&#xE1;cil de usar y es &#xFA;til<br>
+Introducci&#xF3;n a los Sistemas Operativos<br>
+Practica 3<br>
+16<br>
+O tambi&#xE9;n permite seleccionar un car&#xE1;cter final y seleccionar el resto de caracteres hasta<br>
+el inicio de la frase o fichero. Por lo tanto para mostrar desde el car&#xE1;cter 4 hasta el inicio<br>
+de la frase lo haremos del siguiente modo:<br>
+cut -c -4 geekland.txt<br>
+la u<br>
+es f<br>
+&#xF0B7; Capturar texto a partir de un delimitador y fijando el campo que queremos mostrar<br>
+Si &#xFA;nicamente queremos mostrar la tercera palabra:<br>
+a. Cada palabra esta separada por un espacio. Por lo tanto tendremos que fijar el<br>
+espacio como delimitador. Para fijar el espacio como delimitador lo har&#xE9; con la opci&#xF3;n<br>
+-d &apos; &apos;.<br>
+b. A continuaci&#xF3;n hay que definir la palabra que queremos mostrar. si queremos<br>
+mostrar la tercera palabra lo haremos con la opci&#xF3;n &#x2013;f2. La opci&#xF3;n &#x2013;f2 hace que se<br>
+muestre la palabra que hay entre el segundo y tercer delimitador.<br>
+cut -d &apos; &apos; &#x2013;f2<br>
+utilidad<br>
+f&#xE1;cil<br>
+Ahora imaginemos que la salida del comando cat /etc/passwd es la siguiente:<br>
+cat /etc/passwd<br>
+root&#x274C;0:0:root:/root:/bin/bash<br>
+daemon&#x274C;1:1:daemon:/usr/sbin:/usr/sbin/nologin<br>
+bin&#x274C;2:2:bin:/bin:/usr/sbin/nologin<br>
+sys&#x274C;3:3:sys:/dev:/usr/sbin/nologin<br>
+...<br>
+Si &#xFA;nicamente queremos mostrar los usuarios podemos fijar que el delimitador sea : y a posteriori<br>
+definir que se muestre el primer campo. Para hacer lo que acabo de mencionar podemos usar el<br>
+siguiente comando:<br>
+cut -d &apos;:&apos; -f1 /etc/passwd<br>
+root<br>
+daemon<br>
+bin<br>
+sys<br>
+...</p>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="16-ejercicio">16) Ejercicio</h2>
+
+<p>Realizar un script que reciba como par&#xE1;metro una extensi&#xF3;n y haga un reporte con 2<br>
+columnas, el nombre de usuario y la cantidad de archivos que posee con esa extensi&#xF3;n. Se<br>
+debe guardar el resultado en un archivo llamado <strong>reporte.txt</strong></p>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="17-ejercicio">17) Ejercicio</h2>
+
+<p>Escribir un script que al ejecutarse imprima en pantalla los nombre de los archivos que se encuentran en el directorio actual, intercambiando min&#xFA;sculas por may&#xFA;sculas, adem&#xE1;s de eliminar la letra a (may&#xFA;scula o min&#xFA;scula). Ejemplo, directorio actual:</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">IsO
+pepE
+Maria
+Si ejecuto: ./ejercicio17
+</pre><p>Obtendr&#xE9; como resultado</p>
+<pre data-role="codeBlock" data-info class="language-"><code>iSo
+PEPe
+mRI
+</code></pre><p><strong>Ayuda</strong>: Investigar el comando <strong>tr</strong></p>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="18-ejercicio">18) Ejercicio</h2>
+
+<p>Crear un script que verifique cada 10 segundos si un usuario se ha loqueado en el sistema (el nombre del usuario ser&#xE1; pasado por par&#xE1;metro). Cuando el usuario finalmente se loguee, el programa deber&#xE1; mostrar el mensaje &#x201D;Usuario XXX logueado en el sistema&#x201D; y salir.</p>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="19-ejercicio">19) Ejercicio</h2>
+
+<p>Escribir un Programa de &#x201C;Menu de Comandos Amigable con el Usuario&#x201D; llamado menu, el cual, al ser invocado, mostrar&#xE1; un men&#xFA; con la selecci&#xF3;n para cada uno de los scripts creados en esta pr&#xE1;ctica. Las instrucciones de como proceder deben mostrarse junto con el men&#xFA;. El men&#xFA; deber&#xE1; iniciarse y permanecer activo hasta que se seleccione Salir. Por ejemplo:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>MENU DE COMANDOS
+03. Ejercicio 3
+12. Evaluar Expresiones
+13. Probar estructuras de control
+...
+Ingrese la opci&#xF3;n a ejecutar: 03
+</code></pre><img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="20-ejercicio">20) Ejercicio</h2>
+
+<p>Realice un scrip que simule el comportamiento de una estructura de PILA e implemente las siguientes funciones aplicables sobre una estructura global definida en el script:</p>
+<ul>
+<li><strong>push:</strong> Recibe un par&#xE1;metro y lo agrega en la pila</li>
+<li><strong>pop:</strong> Saca un elemento de la pila</li>
+<li><strong>lenght:</strong> Devuelve la longitud de la pila</li>
+<li><strong>print:</strong> Imprime todos elementos de la pila</li>
+</ul>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="21-ejercicio">21) Ejercicio</h2>
+
+<ul>
+<li>Agregue 10 elementos a la pila.</li>
+<li>Saque 3 de ellos.</li>
+<li>Imprima la longitud de la cola.</li>
+<li>Luego imprima la totalidad de los elementos que en ella se encuentan.</li>
+</ul>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="22-ejercicio">22) Ejercicio</h2>
+
+<p>Dada la siguiente declaraci&#xF3;n al comienzo de un script: num=(10 3 5 7 9 3 5 4) (la cantidad de elementos del arreglo puede variar). Implemente la funci&#xF3;n productoria dentro de este script, cuya tarea sea multiplicar todos los n&#xFA;meros del arreglo</p>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="23-ejercicio">23) Ejercicio</h2>
+
+<p>Implemente un script que recorra un arreglo compuesto por n&#xFA;meros e imprima en pantalla s&#xF3;lo los n&#xFA;meros pares y que cuente s&#xF3;lo los n&#xFA;meros impares y los informe en pantalla al finalizar el recorrido</p>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="24-ejercicio">24) Ejercicio</h2>
+
+<p>Dada la definici&#xF3;n de 2 vectores del mismo tama&#xF1;o y cuyas longitudes no se conocen</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token assign-left variable">vector1</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token number">1</span> <span class="token punctuation">..</span> N<span class="token punctuation">)</span>
+<span class="token assign-left variable">vector2</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token number">7</span> <span class="token punctuation">..</span> N<span class="token punctuation">)</span>
+Por ejemplo:
+<span class="token assign-left variable">vector1</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token number">1</span> <span class="token number">80</span> <span class="token number">65</span> <span class="token number">35</span> <span class="token number">2</span> <span class="token punctuation">)</span>
+y
+<span class="token assign-left variable">vector2</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token number">5</span> <span class="token number">98</span> <span class="token number">3</span> <span class="token number">41</span> <span class="token number">8</span> <span class="token punctuation">)</span>.
+</pre><p>Complete este script de manera tal de implementar la suma elemento a elemento entre<br>
+ambos vectores y que la misma sea impresa en pantalla de la siguiente manera:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>La suma de los elementos de la posici&#xF3;n 0 de los vectores es 6
+La suma de los elementos de la posici&#xF3;n 1 de los vectores es 178
+...
+La suma de los elementos de la posici&#xF3;n 4 de los vectores es 10
+</code></pre><img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="25-ejercicio">25) Ejercicio</h2>
+
+<p>Realice un script que agregue en un arreglo todos los nombres de los usuarios del sistema<br>
+pertenecientes al grupo &#x201C;users&#x201D;. Adicionalmente el script puede recibir como parametro:</p>
+<ul>
+<li><strong>&#x201C;-b n&#x201D;</strong>: Retorna el elemento de la posici&#xF3;n n del arreglo si el mismo existe. Caso contrario, un mensaje de error.</li>
+<li><strong>&#x201C;-l&#x201D;:</strong> Devuelve la longitud del arreglo</li>
+<li><strong>&#x201C;-i&#x201D;:</strong> Imprime todos los elementos del arreglo en pantalla</li>
+</ul>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="26-ejercicio">26) Ejercicio</h2>
+
+<p>Escriba un script que reciba una cantidad desconocida de par&#xE1;metros al momento de su invocaci&#xF3;n (debe validar que al menos se reciba uno). Cada par&#xE1;metro representa la ruta absoluta de un archivo o directorio en el sistema. El script deber&#xE1; iterar por todos los par&#xE1;metros recibidos, y solo para aquellos par&#xE1;metros que se encuentren en posiciones impares (el primero, el tercero, el qverificar si el archivo o directorio existen en el sistema, imprimiendo en pantalla que tipo de objeto es (archivo o directorio). Adem&#xE1;s, deber&#xE1; informar la cantidad de archivos o<br>
+directorios inexistentes en el sistema.</p>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="27-ejercicio">27) Ejercicio</h2>
+
+<p>Realice un script que implemente a trav&#xE9;s de la utilizaci&#xF3;n de funciones las operaciones<br>
+b&#xE1;sicas sobre arreglos:</p>
+<ul>
+<li>inicializar: Crea un arreglo llamado array vac&#xED;o</li>
+<li>agregar_elem &lt;parametro1&gt;: Agrega al final del arreglo el par&#xE1;metro recibido</li>
+<li>eliminar_elem &lt;parametro1&gt;: Elimina del arreglo el elemento que se encuentra en la<br>
+posici&#xF3;n recibida como par&#xE1;metro. Debe validar que se reciba una posici&#xF3;n v&#xE1;lida</li>
+<li>longitud: Imprime la longitud del arreglo en pantalla</li>
+<li>imprimir: Imprime todos los elementos del arreglo en pantalla</li>
+<li>inicializar_Con_Valores &lt;parametro1&gt;&lt;parametro2&gt;: Crea un arreglo con longitud<br>
+&lt;parametro1&gt;y en todas las posiciones asigna el valor &lt;parametro2&gt;</li>
+</ul>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="28-ejercicio">28) Ejercicio</h2>
+
+<p>Realice un script que reciba como par&#xE1;metro el nombre de un directorio. Deber&#xE1; validar que<br>
+el mismo exista y de no existir causar la terminaci&#xF3;n del script con c&#xF3;digo de error 4. Si el<br>
+directorio existe deber&#xE1; contar por separado la cantidad de archivos que en &#xE9;l se encuentran<br>
+para los cuales el usuario que ejecuta el script tiene permiso de lectura y escritura, e informar<br>
+dichos valores en pantalla. En caso de encontrar subdirectorios, no deber&#xE1;n procesarse, y<br>
+tampoco deber&#xE1;n ser tenidos en cuenta para la suma a informar.</p>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="29-ejercicio">29) Ejercicio</h2>
+
+<p>Implemente un script que agregue a un arreglo todos los archivos del directorio /home cuya terminaci&#xF3;n sea .doc. Adicionalmente, implemente las siguientes funciones que le permitan acceder a la estructura creada:</p>
+<ul>
+<li>verArchivo &lt;nombre_de_archivo&gt;: Imprime el archivo en pantalla si el mismo se<br>
+encuentra en el arreglo. Caso contrario imprime el mensaje de error &#x201C;Archivo no encontrado&#x201D; y devuelve como valor de retorno 5</li>
+<li>cantidadArchivos: Imprime la cantidad de archivos del /home con terminaci&#xF3;n .doc</li>
+<li>borrarArchivo &lt;nombre_de_archivo&gt;: Consulta al usuario si quiere eliminar el archivo l&#xF3;gicamente. Si el usuario responde Si, elimina el elemento solo del arreglo. Si el usuario responde No, elimina el archivo del arreglo y tambi&#xE9;n del FileSystem. Debe validar que el archivo exista en el arreglo. En caso de no existir, imprime el mensaje de error &#x201C;Archivo no encontrado&#x201D; y devuelve como valor de retorno 10</li>
+</ul>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<h2 class="mume-header" id="30-ejercicio">30) Ejercicio</h2>
+
+<p>Realice un script que mueva todos los programas del directorio actual (archivos ejecutables) hacia el subdirectorio &#x201C;bin&#x201D; del directorio HOME del usuario actualmente logueado. El script debe imprimir en pantalla los nombres de los que mueve, e indicar cu&#xE1;ntos ha movido, o que no ha movido ninguno. Si el directorio &#x201C;bin&#x201D; no existe,deber&#xE1; ser creado.</p>
+<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
