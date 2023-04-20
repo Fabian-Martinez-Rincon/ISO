@@ -306,8 +306,6 @@ Este comando tiene un código de retorno igual a 0 cuando el test es positivo, y
 
 El comando test posee dos sintaxis: **test expresión** y **[ expresión ]**, donde **expresión** representa el test que se debe efectuar
 
-
-
 <table><td>
 
 ```sh
@@ -830,84 +828,88 @@ ls -1
 
 ## 15) Ejercicio
 
-**Comando cut**. El comando cut nos permite procesar la líneas de la entrada que reciba
-(archivo, entrada estándar, resultado de otro comando, etc) y cortar columnas o campos,
-siendo posible indicar cual es el delimitador de las mismas. Investigue los parámetros que puede recibir este comando y cite ejemplos de uso.
+**Comando cut**. El comando cut nos permite procesar la líneas de la entrada que reciba (archivo, entrada estándar, resultado de otro comando, etc) y cortar columnas o campos, siendo posible indicar cual es el delimitador de las mismas. Investigue los parámetros que puede recibir este comando y cite ejemplos de uso.
 
-Comando cut : Su principal utilidad es la de borrar secciones, campos o caracteres de la salida de
-un comando o de cada una de las líneas de un fichero de texto.
+Comando cut : Su principal utilidad es la de borrar secciones, campos o caracteres de la salida de un comando o de cada una de las líneas de un fichero de texto.
+
 Ejemplos de uso:
- Mostrar los caracteres que nos interesen en una línea de texto o en un conjunto de
-líneas
- Imaginemos que tenemos un fichero de texto con el nombre geekland.txt que tiene el
-siguiente contenido:
- la utilidad
- es fácil de usar y es útil
-Si únicamente queremos mostrar el cuarto carácter de cada una de las líneas lo haremos
-con la opción -c 4.
-cut -c 4 geekland.txt
-u
-f
-Si ahora queremos mostrar los caracteres del 2 al 6:
-cut -c 2-6 geekland.txt
-a uti
-s fá
-Si finalmente queremos mostrar los caracteres 1,2,3 y 5,6,7 y 8 de cada una de las líneas
-de un fichero de texto:
-cut -c 1-3,5-8 geekland.txt
-la tili
-es áci
-Cut también ofrece la posibilidad de seleccionar un carácter inicial y seleccionar el resto de
-caracteres hasta el final. Por ejemplo para seleccionar el texto a partir del carácter 5 hasta
-el final usaremos la opción -c 5- del siguiente modo:
-cut -c 5- geekland.txt
-tilidad cut
-ácil de usar y es útil
-Introducción a los Sistemas Operativos
-Practica 3
-16
-O también permite seleccionar un carácter final y seleccionar el resto de caracteres hasta
-el inicio de la frase o fichero. Por lo tanto para mostrar desde el carácter 4 hasta el inicio
-de la frase lo haremos del siguiente modo:
-cut -c -4 geekland.txt
-la u
-es f
- Capturar texto a partir de un delimitador y fijando el campo que queremos mostrar
-Si únicamente queremos mostrar la tercera palabra:
-a. Cada palabra esta separada por un espacio. Por lo tanto tendremos que fijar el
-espacio como delimitador. Para fijar el espacio como delimitador lo haré con la opción
--d ' '.
-b. A continuación hay que definir la palabra que queremos mostrar. si queremos
+- Mostrar los caracteres que nos interesen en una línea de texto o en un conjunto de líneas
+- Imaginemos que tenemos un fichero de texto con el nombre `geekland.txt` que tiene el siguiente contenido:
+   ``` 
+   la utilidad
+   es fácil de usar y es útil
+   ```
+- Si únicamente queremos mostrar el cuarto carácter de cada una de las líneas lo haremos con la opción `-c 4`
+- `cut -c 4 geekland.txt`
+   ```
+   u
+   f
+   ```
+- Si ahora queremos mostrar los caracteres del 2 al 6:
+- `cut -c 2-6 geekland.txt`
+   ```
+   a uti
+   s fá
+   ```
+- Si finalmente queremos mostrar los caracteres 1,2,3 y 5,6,7 y 8 de cada una de las líneas de un fichero de texto:
+- `cut -c 1-3,5-8 geekland.txt`
+   ```
+   la tili
+   es áci
+   ```
+
+Cut también ofrece la posibilidad de seleccionar un carácter inicial y seleccionar el resto de caracteres hasta el final. Por ejemplo para seleccionar el texto a partir del carácter 5 hasta el final usaremos la opción `-c 5-` del siguiente modo:
+- `cut -c 5- geekland.txt`
+   ```
+   tilidad cut
+   ácil de usar y es útil
+   ```
+
+O también permite seleccionar un carácter final y seleccionar el resto de caracteres hasta el inicio de la frase o fichero. Por lo tanto para mostrar desde el carácter 4 hasta el inicio de la frase lo haremos del siguiente modo:
+- `cut -c -4 geekland.txt`
+   ```
+   la u
+   es f
+   ```
+- Capturar texto a partir de un delimitador y fijando el campo que queremos mostrar
+
+- Si únicamente queremos mostrar la tercera palabra:
+- `a)` Cada palabra esta separada por un espacio. Por lo tanto tendremos que fijar el espacio como delimitador. Para fijar el espacio como delimitador lo haré con la opción
+- `-d ' '`
+- `b)` A continuación hay que definir la palabra que queremos mostrar. si queremos
 mostrar la tercera palabra lo haremos con la opción –f2. La opción –f2 hace que se
 muestre la palabra que hay entre el segundo y tercer delimitador.
-cut -d ' ' –f2
-utilidad
-fácil
-Ahora imaginemos que la salida del comando cat /etc/passwd es la siguiente:
-cat /etc/passwd
-root:x:0:0:root:/root:/bin/bash
-daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
-bin:x:2:2:bin:/bin:/usr/sbin/nologin
-sys:x:3:3:sys:/dev:/usr/sbin/nologin
-...
-Si únicamente queremos mostrar los usuarios podemos fijar que el delimitador sea : y a posteriori
-definir que se muestre el primer campo. Para hacer lo que acabo de mencionar podemos usar el
-siguiente comando:
-cut -d ':' -f1 /etc/passwd
+- `cut -d ' ' –f2`
+   ```
+   utilidad
+   fácil
+   ```
+- Ahora imaginemos que la salida del comando cat /etc/passwd es la siguiente:
+- `cat /etc/passwd`
+   ```
+   root:x:0:0:root:/root:/bin/bash
+   daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+   bin:x:2:2:bin:/bin:/usr/sbin/nologin
+   sys:x:3:3:sys:/dev:/usr/sbin/nologin
+   ...
+   ```
+
+Si únicamente queremos mostrar los usuarios podemos fijar que el delimitador sea : y a posteriori definir que se muestre el primer campo. Para hacer lo que acabo de mencionar podemos usar el siguiente comando:
+- `cut -d ':' -f1 /etc/passwd`
+```
 root
 daemon
 bin
 sys
 ... 
-
+```
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## 16) Ejercicio
 
 Realizar un script que reciba como parámetro una extensión y haga un reporte con 2
-columnas, el nombre de usuario y la cantidad de archivos que posee con esa extensión. Se
-debe guardar el resultado en un archivo llamado **reporte.txt**
+columnas, el nombre de usuario y la cantidad de archivos que posee con esa extensión. Se debe guardar el resultado en un archivo llamado **reporte.txt**
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
