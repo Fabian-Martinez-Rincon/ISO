@@ -442,13 +442,11 @@ do
   echo $var
 done
 echo "--------"
-
 for var2 in {1..5}
 do
   echo $var2
 done
 echo "--------"
-
 for ((i=1; i<=5; i++))
 do
   echo $i
@@ -481,26 +479,8 @@ done
 ![](2023-04-17-12-08-38.png)
 
 </td>
-
 </tr>
-
 </table>
-
-
-
-| if | Resultado |
-| --- | --- |
-| ![](2023-04-17-04-30-21.png) | |
-| case | Resultado |
-| ![](2023-04-17-04-03-28.png) |  |
-| while | Resultado |
-| ![](2023-04-17-04-14-06.png) |  |
-| for | Resultado |
-| ![](2023-04-17-04-46-40.png) |  |
-| select | resultado |
-| ![](2023-04-17-12-09-15.png) |  |
-
-
 
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
@@ -512,10 +492,27 @@ done
 - **`break [n]`** Corta la ejecución de `n` niveles de loops.
 - **`continue [n]`** salta a la siguiente iteración del enésimo loop que contiene esta instrucción
 
-| ![](2023-04-17-12-32-14.png) | ![](2023-04-17-12-31-44.png) |
-| --- | --- |
+<table><td>
 
-<table><td></td><td></td></table>
+```sh
+#!/bin/bash/
+contador=0
+while true
+do
+  let contador++
+  if [ $contador -eq 10 ]; then
+    break
+  elif [ $contador -eq 5 ]; then
+    continue
+  fi
+  echo $contador
+done
+```
+</td><td>
+
+![](2023-04-17-12-31-44.png)
+
+</td></table>
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
