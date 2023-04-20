@@ -317,10 +317,14 @@ var1=10
 var2=5
 
 if [ -e 7.sh ]; then echo "existe"; else echo "no existe"; fi
+
 if (( $var1 % $var2 == 0 )); then echo "Es Par"; else echo "Es Impar"; fi
+
 if (( $var1 > $var2 )); then echo "Es Mayor"; else echo "Es Menor"; fi
+
 if [ -r 7.sh -a -w 7.sh -a -x 7.sh ]; then echo "Todos los permisos"
 else echo "no tiene todos los permisos"; fi
+
 if [ -r 7.sh -o -w 7.sh -o -x 7.sh ]; then echo "algun permiso"
 else echo "no tiene todos los permisos"; fi
 ```
@@ -599,17 +603,52 @@ Evaluación de expresione
 
 #### **(a)** Realizar un script que le solicite al usuario 2 números, los lea de la entrada Standard e imprima la multiplicación, suma, resta y cual es el mayor de los números leídos.
 
-| ![](2023-04-17-13-48-57.png) | ![](2023-04-17-13-48-29.png) |
-| --- | --- |
 
-<table><td></td><td></td></table>
+<table><td>
+
+```sh
+#!/bin/bash
+
+echo "Ingrese dos nros"
+read nro1 nro2
+echo "MULTIPLICACION: $(( $nro1 * $nro2 ))"
+echo "SUMA: $(( $nro1 + $nro2 ))"
+echo "RESTA: $(( $nro1 - $nro2 ))"
+
+if [ $nro1 -gt $nro2 ]; then
+  echo "es mayor el $nro1"
+else 
+  echo "es mayor el $nro2"
+fi
+```
+</td><td>
+
+![](2023-04-17-13-48-29.png)
+</td></table>
 
 #### **(b)** Modificar el script creado en el inciso anterior para que los números sean recibidos como parámetros. El script debe controlar que los dos parámetros sean enviados.
 
-| ![](2023-04-17-15-27-16.png) | ![](2023-04-17-15-26-52.png) |
-| --- | --- |
+<table><td>
 
-<table><td></td><td></td></table>
+```sh
+#!/bin/bash
+
+if (( $# != 2 )); then exit 0; fi
+
+echo "MULTIPLICACION: $(( $1 * $2 ))"
+echo "SUMA: $(( $1 + $2 ))"
+echo "RESTA: $(( $1 - $2 ))"
+
+if [ $1 -gt $2 ]; then
+  echo "es mayor el $1"
+else 
+  echo "es mayor el $2"
+fi
+```
+</td><td>
+
+![](2023-04-17-15-26-52.png)
+</td></table>
 
 #### **(c)** Realizar una calculadora que ejecute las 4 operaciones básicas: +, - ,*, %. Esta calculadora debe funcionar recibiendo la operación y los números como parámetros
 
