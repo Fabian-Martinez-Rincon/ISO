@@ -1011,14 +1011,12 @@ Ingrese la opción a ejecutar: 03
 ```sh
 #!/bin/bash
 
-select opcion in 03 12 13 Salir
+scripts=$(ls | grep "\.sh")
+select opcion in Salir $scripts
 do
-  echo $opcion
   case $opcion in
-    03) source 3e.sh;;
-    12) source 12a.sh;;
-    13) source 13.sh;;
     Salir) exit;;
+    *) source $opcion;;
   esac
 done
 ```
@@ -1034,6 +1032,24 @@ Realice un scrip que simule el comportamiento de una estructura de PILA e implem
 - **lenght:** Devuelve la longitud de la pila
 - **print:** Imprime todos elementos de la pila
 
+```sh
+#!/bin/bash
+pila=()
+
+push (){
+  pila+=($1)
+}
+pop (){
+  unset pila[${#pila[@]}-1]
+}
+lenght (){
+  echo ${#pila[*]}
+}
+print(){
+  echo ${pila[*]}
+}
+```
+
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## 21) Ejercicio
@@ -1042,6 +1058,38 @@ Realice un scrip que simule el comportamiento de una estructura de PILA e implem
 - Saque 3 de ellos.
 - Imprima la longitud de la cola.
 - Luego imprima la totalidad de los elementos que en ella se encuentan.
+
+```sh
+#!/bin/bash
+pila=()
+
+push (){
+  pila+=($1)
+}
+pop (){
+  unset pila[${#pila[@]}-1]
+}
+lenght (){
+  echo ${#pila[*]}
+}
+print(){
+  echo ${pila[*]}
+}
+
+for i in {1..10}
+do
+   push $i
+done
+
+for i in {1..3}
+do
+   pop $i
+done
+
+echo "$(lenght)"
+print
+
+```
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
