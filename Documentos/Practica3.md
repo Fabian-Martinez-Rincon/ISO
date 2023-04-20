@@ -306,8 +306,7 @@ Este comando tiene un código de retorno igual a 0 cuando el test es positivo, y
 
 El comando test posee dos sintaxis: **test expresión** y **[ expresión ]**, donde **expresión** representa el test que se debe efectuar
 
-![](2023-04-17-03-24-27.png)
-![](2023-04-17-03-25-59.png)
+
 
 <table><td>
 
@@ -373,19 +372,135 @@ else echo "no tiene todos los permisos"; fi
 
 Estructuras de control. Investigue la sintaxis de las siguientes estructuras de control incluidas en shell scripting:
 
+<table>
+
+<tr>
+<td>
+
+```sh
+#!/bin/bash
+if [ 3 -eq 3 ]; then
+  echo "Son iguales"
+else
+  echo "Son distintos"
+fi
+```
+</td>
+<td>
+
+![](2023-04-17-04-59-47.png) 
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+#!/bin/bash
+echo "Ingrese un caracter"
+read letra
+case $letra in
+  [a-z]) echo "Es una minuscula";;
+  [A-Z]) echo "Es una mayuscula";;
+  [0-9]) echo "Es un nro";;
+  *) echo "Ingreso un caracter invalida";;
+esac
+```
+</td>
+<td>
+
+![](2023-04-17-04-32-55.png)
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+#!/bin/bash
+var1=0
+while [ $var1 -le 5 ]
+do
+  echo "Hola mundo"
+  var1=$((var1+1))
+done
+```
+</td>
+<td>
+
+![](2023-04-17-04-15-06.png)
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+#!/bin/bash
+for var in 1 2 3 4 5
+do
+  echo $var
+done
+echo "--------"
+
+for var2 in {1..5}
+do
+  echo $var2
+done
+echo "--------"
+
+for ((i=1; i<=5; i++))
+do
+  echo $i
+done
+```
+</td>
+<td>
+
+![](2023-04-17-04-47-29.png)
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+#!/bin/bash
+select opcion in opcion1 opcion2
+do
+  case $opcion in
+    opcion1) echo "Opcion1" ;;
+    opcion2) echo "Opcion2";;
+    *) exit;;
+  esac
+done
+```
+</td>
+<td>
+
+![](2023-04-17-12-08-38.png)
+
+</td>
+
+</tr>
+
+</table>
+
+
+
 | if | Resultado |
 | --- | --- |
-| ![](2023-04-17-04-30-21.png) | ![](2023-04-17-04-59-47.png) |
+| ![](2023-04-17-04-30-21.png) | |
 | case | Resultado |
-| ![](2023-04-17-04-03-28.png) | ![](2023-04-17-04-32-55.png) |
+| ![](2023-04-17-04-03-28.png) |  |
 | while | Resultado |
-| ![](2023-04-17-04-14-06.png) | ![](2023-04-17-04-15-06.png) |
+| ![](2023-04-17-04-14-06.png) |  |
 | for | Resultado |
-| ![](2023-04-17-04-46-40.png) | ![](2023-04-17-04-47-29.png) |
+| ![](2023-04-17-04-46-40.png) |  |
 | select | resultado |
-| ![](2023-04-17-12-09-15.png) | ![](2023-04-17-12-08-38.png) |
+| ![](2023-04-17-12-09-15.png) |  |
 
-<table><td></td><td></td></table>
+
 
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
