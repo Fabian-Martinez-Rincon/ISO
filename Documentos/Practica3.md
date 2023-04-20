@@ -986,11 +986,11 @@ fi
 
 while true
 do
-  sleep 10
   if [ $(users | grep -w $1 | wc -l) -eq 1 ]; then
     echo "usuario $1 logueado en el sistema"
     exit
-  fi
+  fi  
+  sleep 10
 done
 ```
 
@@ -1007,6 +1007,21 @@ MENU DE COMANDOS
 13. Probar estructuras de control
 ...
 Ingrese la opción a ejecutar: 03
+```
+
+```sh
+#!/bin/bash
+
+select opcion in 03 12 13 Salir
+do
+  echo $opcion
+  case $opcion in
+    03) source 3e.sh;;
+    12) source 12a.sh;;
+    13) source 13.sh;;
+    Salir) exit;;
+  esac
+done
 ```
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
