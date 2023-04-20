@@ -552,8 +552,26 @@ No es fuertemente tipado, y no requiere una declaración explícita de tipo vari
 | ${arreglo[*]} | Retorna todos los elementos del array |
 | ${arreglo[@]} | Retorna todos los elementos del array |
 | ${#arreglo[@]} | Retorna 2, si contiene valor1 y valor2 |
-| ![](2023-04-17-13-17-44.png) | ![](2023-04-17-13-17-14.png) |
 
+#### Codigo de ejemplo
+
+<table><td>
+
+```sh
+#!/bin/bash
+array=()
+
+read -a array
+echo "Array pelado" $array
+echo "index 3" ${array[3]}
+echo "Todos los elementos" ${array[*]}
+echo "Cantidad de elementos" ${#array[*]}
+```
+</td><td>
+
+![](2023-04-17-13-17-14.png)
+</td>
+</table>
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
