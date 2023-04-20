@@ -432,7 +432,7 @@ Comandos ejecutados
 | ![](2023-04-18-10-02-10.png) | ![](2023-04-18-10-12-13.png) |
 | --- | --- |
 
-```s
+```sh
 #!/bin/bash
 if [ $# -ne 3 ]; then 
   echo  -e "
