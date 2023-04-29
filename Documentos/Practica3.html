@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="file:///c:\Users\fabian\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.8\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
       
       
       
@@ -970,9 +970,20 @@ sumar <span class="token number">2</span> <span class="token number">3</span>
 </td></tr></tbody></table>
 <h4 class="mume-header" id="c-crear-un-script-que-reciba-como-par%C3%A1metro-el-nombre-de-un-archivo-e-informe-si-el-mismo-existe-o-no-y-en-caso-afirmativo-indique-si-es-un-directorio-o-un-archivo-en-caso-de-que-no-exista-el-archivodirectorio-cree-un-directorio-con-el-nombre-recibido-como-par%C3%A1metro">(c) Crear un script que reciba como par&#xE1;metro el nombre de un archivo e informe si el mismo existe o no, y en caso afirmativo indique si es un directorio o un archivo. En caso de que no exista el archivo/directorio cree un directorio con el nombre recibido como par&#xE1;metro</h4>
 
-<p><img src="2023-04-17-16-38-58.png" alt><br>
-<img src="2023-04-17-16-38-34.png" alt></p>
-<table><tbody><tr><td></td><td></td></tr></tbody></table>
+<table><tbody><tr><td>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+<span class="token keyword keyword-if">if</span> <span class="token variable"><span class="token punctuation">((</span> $# <span class="token operator">!=</span> <span class="token number">1</span> <span class="token punctuation">))</span></span><span class="token punctuation">;</span> <span class="token keyword keyword-then">then</span> <span class="token builtin class-name">exit</span><span class="token punctuation">;</span> <span class="token keyword keyword-fi">fi</span>
+
+<span class="token keyword keyword-fi">fi</span> <span class="token punctuation">[</span> -e <span class="token variable">$1</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword keyword-then">then</span>
+   <span class="token builtin class-name">echo</span> <span class="token string">&quot;El archivo <span class="token variable">$1</span> existe&quot;</span>
+   <span class="token keyword keyword-fi">fi</span> <span class="token punctuation">[</span> -f <span class="token variable">$1</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword keyword-then">then</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;Y es un archivo&quot;</span><span class="token punctuation">;</span> <span class="token keyword keyword-fi">fi</span>
+   <span class="token keyword keyword-fi">fi</span> <span class="token punctuation">[</span> -d <span class="token variable">$1</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword keyword-then">then</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;Y es un directorio&quot;</span><span class="token punctuation">;</span> <span class="token keyword keyword-fi">fi</span>
+   <span class="token builtin class-name">exit</span>
+<span class="token keyword keyword-fi">fi</span>
+<span class="token function">mkdir</span> <span class="token variable">$1</span>
+</pre></td></tr><tr><td>
+<p><img src="2023-04-17-16-38-34.png" alt></p>
+</td></tr></tbody></table>
 <img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
 <h1 class="mume-header" id="14-ejercicio">14) Ejercicio</h1>
 
@@ -1031,81 +1042,84 @@ del archivo</li>
 <img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
 <h2 class="mume-header" id="15-ejercicio">15) Ejercicio</h2>
 
-<p><strong>Comando cut</strong>. El comando cut nos permite procesar la l&#xED;neas de la entrada que reciba<br>
-(archivo, entrada est&#xE1;ndar, resultado de otro comando, etc) y cortar columnas o campos,<br>
-siendo posible indicar cual es el delimitador de las mismas. Investigue los par&#xE1;metros que puede recibir este comando y cite ejemplos de uso.</p>
-<p>Comando cut : Su principal utilidad es la de borrar secciones, campos o caracteres de la salida de<br>
-un comando o de cada una de las l&#xED;neas de un fichero de texto.<br>
-Ejemplos de uso:<br>
-&#xF0B7; Mostrar los caracteres que nos interesen en una l&#xED;nea de texto o en un conjunto de<br>
-l&#xED;neas<br>
-Imaginemos que tenemos un fichero de texto con el nombre geekland.txt que tiene el<br>
-siguiente contenido:<br>
-la utilidad<br>
-es f&#xE1;cil de usar y es &#xFA;til<br>
-Si &#xFA;nicamente queremos mostrar el cuarto car&#xE1;cter de cada una de las l&#xED;neas lo haremos<br>
-con la opci&#xF3;n -c 4.<br>
-cut -c 4 geekland.txt<br>
-u<br>
-f<br>
-Si ahora queremos mostrar los caracteres del 2 al 6:<br>
-cut -c 2-6 geekland.txt<br>
-a uti<br>
-s f&#xE1;<br>
-Si finalmente queremos mostrar los caracteres 1,2,3 y 5,6,7 y 8 de cada una de las l&#xED;neas<br>
-de un fichero de texto:<br>
-cut -c 1-3,5-8 geekland.txt<br>
-la tili<br>
-es &#xE1;ci<br>
-Cut tambi&#xE9;n ofrece la posibilidad de seleccionar un car&#xE1;cter inicial y seleccionar el resto de<br>
-caracteres hasta el final. Por ejemplo para seleccionar el texto a partir del car&#xE1;cter 5 hasta<br>
-el final usaremos la opci&#xF3;n -c 5- del siguiente modo:<br>
-cut -c 5- geekland.txt<br>
-tilidad cut<br>
-&#xE1;cil de usar y es &#xFA;til<br>
-Introducci&#xF3;n a los Sistemas Operativos<br>
-Practica 3<br>
-16<br>
-O tambi&#xE9;n permite seleccionar un car&#xE1;cter final y seleccionar el resto de caracteres hasta<br>
-el inicio de la frase o fichero. Por lo tanto para mostrar desde el car&#xE1;cter 4 hasta el inicio<br>
-de la frase lo haremos del siguiente modo:<br>
-cut -c -4 geekland.txt<br>
-la u<br>
-es f<br>
-&#xF0B7; Capturar texto a partir de un delimitador y fijando el campo que queremos mostrar<br>
-Si &#xFA;nicamente queremos mostrar la tercera palabra:<br>
-a. Cada palabra esta separada por un espacio. Por lo tanto tendremos que fijar el<br>
-espacio como delimitador. Para fijar el espacio como delimitador lo har&#xE9; con la opci&#xF3;n<br>
--d &apos; &apos;.<br>
-b. A continuaci&#xF3;n hay que definir la palabra que queremos mostrar. si queremos<br>
+<p><strong>Comando cut</strong>. El comando cut nos permite procesar la l&#xED;neas de la entrada que reciba (archivo, entrada est&#xE1;ndar, resultado de otro comando, etc) y cortar columnas o campos, siendo posible indicar cual es el delimitador de las mismas. Investigue los par&#xE1;metros que puede recibir este comando y cite ejemplos de uso.</p>
+<p>Comando cut : Su principal utilidad es la de borrar secciones, campos o caracteres de la salida de un comando o de cada una de las l&#xED;neas de un fichero de texto.</p>
+<p>Ejemplos de uso:</p>
+<ul>
+<li>Mostrar los caracteres que nos interesen en una l&#xED;nea de texto o en un conjunto de l&#xED;neas</li>
+<li>Imaginemos que tenemos un fichero de texto con el nombre <code>geekland.txt</code> que tiene el siguiente contenido:<pre data-role="codeBlock" data-info class="language-"><code>la utilidad
+es f&#xE1;cil de usar y es &#xFA;til
+</code></pre></li>
+<li>Si &#xFA;nicamente queremos mostrar el cuarto car&#xE1;cter de cada una de las l&#xED;neas lo haremos con la opci&#xF3;n <code>-c 4</code></li>
+<li><code>cut -c 4 geekland.txt</code><pre data-role="codeBlock" data-info class="language-"><code>u
+f
+</code></pre></li>
+<li>Si ahora queremos mostrar los caracteres del 2 al 6:</li>
+<li><code>cut -c 2-6 geekland.txt</code><pre data-role="codeBlock" data-info class="language-"><code>a uti
+s f&#xE1;
+</code></pre></li>
+<li>Si finalmente queremos mostrar los caracteres 1,2,3 y 5,6,7 y 8 de cada una de las l&#xED;neas de un fichero de texto:</li>
+<li><code>cut -c 1-3,5-8 geekland.txt</code><pre data-role="codeBlock" data-info class="language-"><code>la tili
+es &#xE1;ci
+</code></pre></li>
+</ul>
+<p>Cut tambi&#xE9;n ofrece la posibilidad de seleccionar un car&#xE1;cter inicial y seleccionar el resto de caracteres hasta el final. Por ejemplo para seleccionar el texto a partir del car&#xE1;cter 5 hasta el final usaremos la opci&#xF3;n <code>-c 5-</code> del siguiente modo:</p>
+<ul>
+<li><code>cut -c 5- geekland.txt</code><pre data-role="codeBlock" data-info class="language-"><code>tilidad cut
+&#xE1;cil de usar y es &#xFA;til
+</code></pre></li>
+</ul>
+<p>O tambi&#xE9;n permite seleccionar un car&#xE1;cter final y seleccionar el resto de caracteres hasta el inicio de la frase o fichero. Por lo tanto para mostrar desde el car&#xE1;cter 4 hasta el inicio de la frase lo haremos del siguiente modo:</p>
+<ul>
+<li><code>cut -c -4 geekland.txt</code><pre data-role="codeBlock" data-info class="language-"><code>la u
+es f
+</code></pre></li>
+<li>Capturar texto a partir de un delimitador y fijando el campo que queremos mostrar</li>
+<li>Si &#xFA;nicamente queremos mostrar la tercera palabra:</li>
+<li><code>a)</code> Cada palabra esta separada por un espacio. Por lo tanto tendremos que fijar el espacio como delimitador. Para fijar el espacio como delimitador lo har&#xE9; con la opci&#xF3;n</li>
+<li><code>-d &apos; &apos;</code></li>
+<li><code>b)</code> A continuaci&#xF3;n hay que definir la palabra que queremos mostrar. si queremos<br>
 mostrar la tercera palabra lo haremos con la opci&#xF3;n &#x2013;f2. La opci&#xF3;n &#x2013;f2 hace que se<br>
-muestre la palabra que hay entre el segundo y tercer delimitador.<br>
-cut -d &apos; &apos; &#x2013;f2<br>
-utilidad<br>
-f&#xE1;cil<br>
-Ahora imaginemos que la salida del comando cat /etc/passwd es la siguiente:<br>
-cat /etc/passwd<br>
-root&#x274C;0:0:root:/root:/bin/bash<br>
-daemon&#x274C;1:1:daemon:/usr/sbin:/usr/sbin/nologin<br>
-bin&#x274C;2:2:bin:/bin:/usr/sbin/nologin<br>
-sys&#x274C;3:3:sys:/dev:/usr/sbin/nologin<br>
-...<br>
-Si &#xFA;nicamente queremos mostrar los usuarios podemos fijar que el delimitador sea : y a posteriori<br>
-definir que se muestre el primer campo. Para hacer lo que acabo de mencionar podemos usar el<br>
-siguiente comando:<br>
-cut -d &apos;:&apos; -f1 /etc/passwd<br>
-root<br>
-daemon<br>
-bin<br>
-sys<br>
-...</p>
-<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+muestre la palabra que hay entre el segundo y tercer delimitador.</li>
+<li><code>cut -d &apos; &apos; &#x2013;f2</code><pre data-role="codeBlock" data-info class="language-"><code>utilidad
+f&#xE1;cil
+</code></pre></li>
+<li>Ahora imaginemos que la salida del comando cat /etc/passwd es la siguiente:</li>
+<li><code>cat /etc/passwd</code><pre data-role="codeBlock" data-info class="language-"><code>root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+...
+</code></pre></li>
+</ul>
+<p>Si &#xFA;nicamente queremos mostrar los usuarios podemos fijar que el delimitador sea : y a posteriori definir que se muestre el primer campo. Para hacer lo que acabo de mencionar podemos usar el siguiente comando:</p>
+<ul>
+<li><code>cut -d &apos;:&apos; -f1 /etc/passwd</code></li>
+</ul>
+<pre data-role="codeBlock" data-info class="language-"><code>root
+daemon
+bin
+sys
+... 
+</code></pre><img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
 <h2 class="mume-header" id="16-ejercicio">16) Ejercicio</h2>
 
 <p>Realizar un script que reciba como par&#xE1;metro una extensi&#xF3;n y haga un reporte con 2<br>
-columnas, el nombre de usuario y la cantidad de archivos que posee con esa extensi&#xF3;n. Se<br>
-debe guardar el resultado en un archivo llamado <strong>reporte.txt</strong></p>
-<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+columnas, el nombre de usuario y la cantidad de archivos que posee con esa extensi&#xF3;n. Se debe guardar el resultado en un archivo llamado <strong>reporte.txt</strong></p>
+<p>Funciona un toque raro el find</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+
+<span class="token keyword keyword-if">if</span> <span class="token punctuation">[</span> <span class="token variable">$#</span> -ne <span class="token number">1</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword keyword-then">then</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;error&quot;</span><span class="token punctuation">;</span> <span class="token builtin class-name">exit</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token keyword keyword-fi">fi</span>
+
+<span class="token assign-left variable">cadena</span><span class="token operator">=</span><span class="token string">&quot;&quot;</span>
+<span class="token keyword keyword-for">for</span> <span class="token for-or-select variable">i</span> <span class="token keyword keyword-in">in</span> <span class="token variable"><span class="token variable">$(</span><span class="token function">cat</span> /etc/passwd<span class="token variable">)</span></span> 
+<span class="token keyword keyword-do">do</span>
+  <span class="token assign-left variable">usuario</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">echo</span> $i <span class="token operator">|</span> <span class="token function">cut</span> -d: -f1<span class="token variable">)</span></span>
+  <span class="token assign-left variable">path</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">echo</span> $i <span class="token operator">|</span> <span class="token function">cut</span> -d: -f6<span class="token variable">)</span></span>  
+  <span class="token assign-left variable">cadena</span><span class="token operator">+=</span><span class="token string">&quot;<span class="token variable">$usuario</span> <span class="token variable"><span class="token variable">$(</span><span class="token function">find</span> $path -name <span class="token string">&quot;*<span class="token variable">$1</span>&quot;</span> <span class="token operator">|</span> <span class="token function">wc</span> -l<span class="token variable">)</span></span> <span class="token entity" title="\n">\n</span>&quot;</span>
+<span class="token keyword keyword-done">done</span>
+<span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token variable">$cadena</span>&quot;</span> <span class="token operator">&gt;</span> reporte.txt
+</pre><img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
 <h2 class="mume-header" id="17-ejercicio">17) Ejercicio</h2>
 
 <p>Escribir un script que al ejecutarse imprima en pantalla los nombre de los archivos que se encuentran en el directorio actual, intercambiando min&#xFA;sculas por may&#xFA;sculas, adem&#xE1;s de eliminar la letra a (may&#xFA;scula o min&#xFA;scula). Ejemplo, directorio actual:</p>
@@ -1118,11 +1132,45 @@ Si ejecuto: ./ejercicio17
 PEPe
 mRI
 </code></pre><p><strong>Ayuda</strong>: Investigar el comando <strong>tr</strong></p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+
+<span class="token assign-left variable">archivos</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">ls</span><span class="token variable">)</span></span>
+<span class="token keyword keyword-for">for</span> <span class="token for-or-select variable">i</span> <span class="token keyword keyword-in">in</span> <span class="token variable">$archivos</span>
+<span class="token keyword keyword-do">do</span>
+  <span class="token assign-left variable">nuevo</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">echo</span> $i <span class="token operator">|</span> <span class="token function">tr</span> <span class="token string">&apos;[:lower:][:upper:]&apos;</span> <span class="token string">&apos;[:upper:][:lower:]&apos;</span> <span class="token operator">|</span> <span class="token function">tr</span> -d <span class="token string">&apos;aA&apos;</span><span class="token variable">)</span></span>
+  <span class="token builtin class-name">echo</span> <span class="token variable">$nuevo</span>
+<span class="token keyword keyword-done">done</span>
+</pre><p>Tambien podemos eliminar de la siguiente manera</p>
+<ul>
+<li><code>nuevo_nombre=${archivo//a}</code></li>
+<li><code>nuevo_nombre=${archivo^^}</code> Todo a mayuscula</li>
+<li><code>nuevo_nombre=${archivo,,}</code> Todo a minuscula</li>
+<li>echo $i | tr [a-zA-Z] [A-Za-z] | tr -d &apos;aA&apos;</li>
+</ul>
 <img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
 <h2 class="mume-header" id="18-ejercicio">18) Ejercicio</h2>
 
 <p>Crear un script que verifique cada 10 segundos si un usuario se ha loqueado en el sistema (el nombre del usuario ser&#xE1; pasado por par&#xE1;metro). Cuando el usuario finalmente se loguee, el programa deber&#xE1; mostrar el mensaje &#x201D;Usuario XXX logueado en el sistema&#x201D; y salir.</p>
-<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+
+<span class="token keyword keyword-if">if</span> <span class="token punctuation">[</span> <span class="token variable">$#</span> -ne <span class="token number">1</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword keyword-then">then</span> 
+  <span class="token builtin class-name">echo</span> <span class="token string">&quot;Parametros incorrectos&quot;</span><span class="token punctuation">;</span> <span class="token builtin class-name">exit</span> <span class="token number">1</span><span class="token punctuation">;</span> 
+<span class="token keyword keyword-fi">fi</span>
+
+<span class="token assign-left variable">usuarios</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">cat</span> /etc/passwd <span class="token operator">|</span> <span class="token function">cut</span> -d: -f1 <span class="token operator">|</span> <span class="token function">grep</span> -w $1 <span class="token operator">|</span> <span class="token function">wc</span> -l<span class="token variable">)</span></span>
+<span class="token keyword keyword-if">if</span> <span class="token punctuation">[</span> <span class="token variable">$usuarios</span> -eq <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword keyword-then">then</span>
+  <span class="token builtin class-name">echo</span> <span class="token string">&quot;El usuario pasado no existe&quot;</span><span class="token punctuation">;</span> <span class="token builtin class-name">exit</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-fi">fi</span>
+
+<span class="token keyword keyword-while">while</span> <span class="token boolean">true</span>
+<span class="token keyword keyword-do">do</span>
+  <span class="token keyword keyword-if">if</span> <span class="token punctuation">[</span> <span class="token variable"><span class="token variable">$(</span><span class="token function">users</span> <span class="token operator">|</span> <span class="token function">grep</span> -w $1 <span class="token operator">|</span> <span class="token function">wc</span> -l<span class="token variable">)</span></span> -eq <span class="token number">1</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword keyword-then">then</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">&quot;usuario <span class="token variable">$1</span> logueado en el sistema&quot;</span>
+    <span class="token builtin class-name">exit</span>
+  <span class="token keyword keyword-fi">fi</span>  
+  <span class="token function">sleep</span> <span class="token number">10</span>
+<span class="token keyword keyword-done">done</span>
+</pre><img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
 <h2 class="mume-header" id="19-ejercicio">19) Ejercicio</h2>
 
 <p>Escribir un Programa de &#x201C;Menu de Comandos Amigable con el Usuario&#x201D; llamado menu, el cual, al ser invocado, mostrar&#xE1; un men&#xFA; con la selecci&#xF3;n para cada uno de los scripts creados en esta pr&#xE1;ctica. Las instrucciones de como proceder deben mostrarse junto con el men&#xFA;. El men&#xFA; deber&#xE1; iniciarse y permanecer activo hasta que se seleccione Salir. Por ejemplo:</p>
@@ -1132,7 +1180,17 @@ mRI
 13. Probar estructuras de control
 ...
 Ingrese la opci&#xF3;n a ejecutar: 03
-</code></pre><img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+</code></pre><pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+
+<span class="token assign-left variable">scripts</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">ls</span> <span class="token operator">|</span> <span class="token function">grep</span> <span class="token string">&quot;\.sh&quot;</span><span class="token variable">)</span></span>
+<span class="token keyword keyword-select">select</span> <span class="token for-or-select variable">opcion</span> <span class="token keyword keyword-in">in</span> Salir <span class="token variable">$scripts</span>
+<span class="token keyword keyword-do">do</span>
+  <span class="token keyword keyword-case">case</span> <span class="token variable">$opcion</span> <span class="token keyword keyword-in">in</span>
+    Salir<span class="token punctuation">)</span> <span class="token builtin class-name">exit</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+    *<span class="token punctuation">)</span> <span class="token builtin class-name">source</span> <span class="token variable">$opcion</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-esac">esac</span>
+<span class="token keyword keyword-done">done</span>
+</pre><img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
 <h2 class="mume-header" id="20-ejercicio">20) Ejercicio</h2>
 
 <p>Realice un scrip que simule el comportamiento de una estructura de PILA e implemente las siguientes funciones aplicables sobre una estructura global definida en el script:</p>
@@ -1142,7 +1200,22 @@ Ingrese la opci&#xF3;n a ejecutar: 03
 <li><strong>lenght:</strong> Devuelve la longitud de la pila</li>
 <li><strong>print:</strong> Imprime todos elementos de la pila</li>
 </ul>
-<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+<span class="token assign-left variable">pila</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token function-name function">push</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token assign-left variable">pila</span><span class="token operator">+=</span><span class="token punctuation">(</span><span class="token variable">$1</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token function-name function">pop</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token builtin class-name">unset</span> pila<span class="token punctuation">[</span><span class="token variable">${<span class="token operator">#</span>pila<span class="token punctuation">[</span>@<span class="token punctuation">]</span>}</span>-1<span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+<span class="token function-name function">lenght</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token builtin class-name">echo</span> <span class="token variable">${<span class="token operator">#</span>pila<span class="token punctuation">[</span>*<span class="token punctuation">]</span>}</span>
+<span class="token punctuation">}</span>
+<span class="token function-name function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token builtin class-name">echo</span> <span class="token variable">${pila<span class="token punctuation">[</span>*<span class="token punctuation">]</span>}</span>
+<span class="token punctuation">}</span>
+</pre><img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
 <h2 class="mume-header" id="21-ejercicio">21) Ejercicio</h2>
 
 <ul>
@@ -1151,15 +1224,60 @@ Ingrese la opci&#xF3;n a ejecutar: 03
 <li>Imprima la longitud de la cola.</li>
 <li>Luego imprima la totalidad de los elementos que en ella se encuentan.</li>
 </ul>
-<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+
+<span class="token assign-left variable">pila</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function-name function">push</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token assign-left variable">pila</span><span class="token operator">+=</span><span class="token punctuation">(</span><span class="token variable">$1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token function-name function">pop</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token builtin class-name">unset</span> pila<span class="token punctuation">[</span><span class="token variable">${<span class="token operator">#</span>pila<span class="token punctuation">[</span>@<span class="token punctuation">]</span>}</span>-1<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token function-name function">lenght</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token builtin class-name">echo</span> <span class="token variable">${<span class="token operator">#</span>pila<span class="token punctuation">[</span>*<span class="token punctuation">]</span>}</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token function-name function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token builtin class-name">echo</span> <span class="token variable">${pila<span class="token punctuation">[</span>*<span class="token punctuation">]</span>}</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+push <span class="token number">2</span>
+push <span class="token number">4</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable"><span class="token variable">$(</span>lenght<span class="token variable">)</span></span>&quot;</span>
+print
+pop
+print
+</pre><img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
 <h2 class="mume-header" id="22-ejercicio">22) Ejercicio</h2>
 
 <p>Dada la siguiente declaraci&#xF3;n al comienzo de un script: num=(10 3 5 7 9 3 5 4) (la cantidad de elementos del arreglo puede variar). Implemente la funci&#xF3;n productoria dentro de este script, cuya tarea sea multiplicar todos los n&#xFA;meros del arreglo</p>
-<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+
+<span class="token assign-left variable">num</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">10</span> <span class="token number">3</span> <span class="token number">5</span> <span class="token number">7</span> <span class="token number">9</span> <span class="token number">3</span> <span class="token number">5</span> <span class="token number">4</span><span class="token punctuation">)</span>
+<span class="token function-name function">productora</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token builtin class-name">let</span> <span class="token assign-left variable">resultado</span><span class="token operator">=</span><span class="token number">1</span>
+  <span class="token keyword keyword-for">for</span> <span class="token for-or-select variable">i</span> <span class="token keyword keyword-in">in</span> <span class="token variable">${num<span class="token punctuation">[</span>*<span class="token punctuation">]</span>}</span>
+  <span class="token keyword keyword-do">do</span>
+    <span class="token assign-left variable">resultado</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$((</span>$i <span class="token operator">*</span> $resultado<span class="token variable">))</span></span>
+  <span class="token keyword keyword-done">done</span>
+  <span class="token builtin class-name">echo</span> <span class="token variable">$resultado</span>
+<span class="token punctuation">}</span>
+
+productora
+</pre><img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
 <h2 class="mume-header" id="23-ejercicio">23) Ejercicio</h2>
 
 <p>Implemente un script que recorra un arreglo compuesto por n&#xFA;meros e imprima en pantalla s&#xF3;lo los n&#xFA;meros pares y que cuente s&#xF3;lo los n&#xFA;meros impares y los informe en pantalla al finalizar el recorrido</p>
-<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+<span class="token assign-left variable">nros</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">10</span> <span class="token number">3</span> <span class="token number">5</span> <span class="token number">7</span> <span class="token number">9</span> <span class="token number">3</span> <span class="token number">5</span> <span class="token number">4</span><span class="token punctuation">)</span>
+
+<span class="token function-name function">imprimir</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token builtin class-name">let</span> nro
+  <span class="token keyword keyword-for">for</span> <span class="token for-or-select variable">i</span> <span class="token keyword keyword-in">in</span> <span class="token variable">${nros<span class="token punctuation">[</span>*<span class="token punctuation">]</span>}</span>
+  <span class="token keyword keyword-do">do</span>
+    <span class="token builtin class-name">echo</span> <span class="token variable">$i</span>
+    <span class="token keyword keyword-if">if</span> <span class="token variable"><span class="token punctuation">((</span> $i <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token punctuation">))</span></span><span class="token punctuation">;</span> <span class="token keyword keyword-then">then</span>
+      <span class="token builtin class-name">echo</span> <span class="token string">&quot;Par: &quot;</span><span class="token variable">$i</span>
+    <span class="token keyword keyword-else">else</span>
+      <span class="token builtin class-name">let</span> impares++
+    <span class="token keyword keyword-fi">fi</span>
+  <span class="token keyword keyword-done">done</span>
+  <span class="token builtin class-name">echo</span> <span class="token string">&quot;Nros Impares: &quot;</span><span class="token variable">$impares</span>
+<span class="token punctuation">}</span>
+
+imprimir
+</pre><img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
 <h2 class="mume-header" id="24-ejercicio">24) Ejercicio</h2>
 
 <p>Dada la definici&#xF3;n de 2 vectores del mismo tama&#xF1;o y cuyas longitudes no se conocen</p>
@@ -1175,7 +1293,17 @@ ambos vectores y que la misma sea impresa en pantalla de la siguiente manera:</p
 La suma de los elementos de la posici&#xF3;n 1 de los vectores es 178
 ...
 La suma de los elementos de la posici&#xF3;n 4 de los vectores es 10
-</code></pre><img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+</code></pre><pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+<span class="token assign-left variable">vector1</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token number">80</span> <span class="token number">65</span> <span class="token number">35</span> <span class="token number">2</span> <span class="token punctuation">)</span>
+<span class="token assign-left variable">vector2</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">5</span> <span class="token number">98</span> <span class="token number">3</span> <span class="token number">41</span> <span class="token number">8</span> <span class="token punctuation">)</span>
+<span class="token assign-left variable">long</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">expr</span> $<span class="token punctuation">{</span>#vector1<span class="token punctuation">[</span>*<span class="token punctuation">]</span><span class="token punctuation">}</span> - <span class="token number">1</span><span class="token variable">`</span></span>
+
+<span class="token keyword keyword-for">for</span> <span class="token for-or-select variable">i</span> <span class="token keyword keyword-in">in</span> <span class="token variable"><span class="token variable">$(</span><span class="token function">seq</span> <span class="token number">0</span> $long<span class="token variable">)</span></span>
+<span class="token keyword keyword-do">do</span>
+  <span class="token assign-left variable">resultado</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">expr</span> $<span class="token punctuation">{</span>vector1<span class="token punctuation">[</span>$i<span class="token punctuation">]</span><span class="token punctuation">}</span> + $<span class="token punctuation">{</span>vector2<span class="token punctuation">[</span>$i<span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token variable">`</span></span>
+  <span class="token builtin class-name">echo</span> <span class="token string">&quot;La suma de los elementos de la posicion <span class="token variable">$i</span> de los vectores es <span class="token variable">$resultado</span>&quot;</span>
+<span class="token keyword keyword-done">done</span>
+</pre><img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
 <h2 class="mume-header" id="25-ejercicio">25) Ejercicio</h2>
 
 <p>Realice un script que agregue en un arreglo todos los nombres de los usuarios del sistema<br>
@@ -1185,11 +1313,33 @@ pertenecientes al grupo &#x201C;users&#x201D;. Adicionalmente el script puede re
 <li><strong>&#x201C;-l&#x201D;:</strong> Devuelve la longitud del arreglo</li>
 <li><strong>&#x201C;-i&#x201D;:</strong> Imprime todos los elementos del arreglo en pantalla</li>
 </ul>
-<img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
+<pre data-role="codeBlock" data-info="sh" class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+
+<span class="token comment"># En grupo, me quedo con la columna 4 que tiene</span>
+<span class="token comment"># Los usuarios del grupo</span>
+<span class="token comment"># Uso el grep para filtrar por grupo aunque puede haber un usuario con nombre</span>
+<span class="token comment"># users pero bueno</span>
+<span class="token comment"># Cambiamos el separador de , por un espacio para agregarlo al array</span>
+
+<span class="token keyword keyword-if">if</span> <span class="token punctuation">[</span> <span class="token variable">$#</span> -ne <span class="token number">1</span> <span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">[</span> <span class="token variable">$#</span> -ne <span class="token number">2</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword keyword-then">then</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;Parametros Invalidos&quot;</span><span class="token punctuation">;</span> <span class="token builtin class-name">exit</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token keyword keyword-fi">fi</span> 
+<span class="token assign-left variable">grupo</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">cat</span> /etc/group <span class="token operator">|</span> <span class="token function">grep</span> -w <span class="token string">&quot;users&quot;</span> <span class="token operator">|</span><span class="token function">cut</span> -d: -f4 <span class="token operator">|</span> <span class="token function">tr</span> <span class="token string">&quot;,&quot;</span> <span class="token string">&quot; &quot;</span><span class="token variable">)</span></span>
+<span class="token assign-left variable">usuarios</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token variable">$grupo</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-case">case</span> <span class="token variable">$1</span> <span class="token keyword keyword-in">in</span>
+  -b<span class="token punctuation">)</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">[</span> <span class="token variable">$2</span> -lt <span class="token variable">${<span class="token operator">#</span>usuarios<span class="token punctuation">[</span>*<span class="token punctuation">]</span>}</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword keyword-then">then</span>
+      <span class="token builtin class-name">echo</span> <span class="token variable">${usuarios<span class="token punctuation">[</span>$2<span class="token punctuation">]</span>}</span>
+    <span class="token keyword keyword-else">else</span>
+      <span class="token builtin class-name">echo</span> <span class="token string">&quot;Parametro fuera de rango&quot;</span>
+      <span class="token builtin class-name">exit</span> <span class="token number">1</span>
+    <span class="token keyword keyword-fi">fi</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+  -l<span class="token punctuation">)</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;Longitud: <span class="token variable">${<span class="token operator">#</span>usuarios}</span>&quot;</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+  -i<span class="token punctuation">)</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;Todos: <span class="token variable">${usuarios<span class="token punctuation">[</span>*<span class="token punctuation">]</span>}</span>&quot;</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-esac">esac</span>
+</pre><img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
 <h2 class="mume-header" id="26-ejercicio">26) Ejercicio</h2>
 
-<p>Escriba un script que reciba una cantidad desconocida de par&#xE1;metros al momento de su invocaci&#xF3;n (debe validar que al menos se reciba uno). Cada par&#xE1;metro representa la ruta absoluta de un archivo o directorio en el sistema. El script deber&#xE1; iterar por todos los par&#xE1;metros recibidos, y solo para aquellos par&#xE1;metros que se encuentren en posiciones impares (el primero, el tercero, el qverificar si el archivo o directorio existen en el sistema, imprimiendo en pantalla que tipo de objeto es (archivo o directorio). Adem&#xE1;s, deber&#xE1; informar la cantidad de archivos o<br>
-directorios inexistentes en el sistema.</p>
+<p>Escriba un script que reciba una cantidad desconocida de par&#xE1;metros al momento de su invocaci&#xF3;n (debe validar que al menos se reciba uno). Cada par&#xE1;metro representa la ruta absoluta de un archivo o directorio en el sistema. El script deber&#xE1; iterar por todos los par&#xE1;metros recibidos, y solo para aquellos par&#xE1;metros que se encuentren en posiciones impares (el primero, el tercero, el qverificar si el archivo o directorio existen en el sistema, imprimiendo en pantalla que tipo de objeto es (archivo o directorio). Adem&#xE1;s, deber&#xE1; informar la cantidad de archivos o directorios inexistentes en el sistema.</p>
 <img src="https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif" height="20" width="100%">
 <h2 class="mume-header" id="27-ejercicio">27) Ejercicio</h2>
 

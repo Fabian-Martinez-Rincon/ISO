@@ -964,6 +964,7 @@ Tambien podemos eliminar de la siguiente manera
 - `nuevo_nombre=${archivo//a}`
 - `nuevo_nombre=${archivo^^}` Todo a mayuscula
 - `nuevo_nombre=${archivo,,}` Todo a minuscula
+- echo $i | tr [a-zA-Z] [A-Za-z] | tr -d 'aA'
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
@@ -1061,34 +1062,19 @@ print(){
 
 ```sh
 #!/bin/bash
+
 pila=()
+push (){ pila+=($1); }
+pop (){ unset pila[${#pila[@]}-1]; }
+lenght (){ echo ${#pila[*]}; }
+print(){ echo ${pila[*]}; }
 
-push (){
-  pila+=($1)
-}
-pop (){
-  unset pila[${#pila[@]}-1]
-}
-lenght (){
-  echo ${#pila[*]}
-}
-print(){
-  echo ${pila[*]}
-}
-
-for i in {1..10}
-do
-   push $i
-done
-
-for i in {1..3}
-do
-   pop $i
-done
-
+push 2
+push 4
 echo "$(lenght)"
 print
-
+pop
+print
 ```
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
@@ -1218,8 +1204,22 @@ esac
 
 ## 26) Ejercicio
 
-Escriba un script que reciba una cantidad desconocida de parámetros al momento de su invocación (debe validar que al menos se reciba uno). Cada parámetro representa la ruta absoluta de un archivo o directorio en el sistema. El script deberá iterar por todos los parámetros recibidos, y solo para aquellos parámetros que se encuentren en posiciones impares (el primero, el tercero, el qverificar si el archivo o directorio existen en el sistema, imprimiendo en pantalla que tipo de objeto es (archivo o directorio). Además, deberá informar la cantidad de archivos o
-directorios inexistentes en el sistema.
+Escriba un script que reciba una cantidad desconocida de parámetros al momento de su invocación (debe validar que al menos se reciba uno). Cada parámetro representa la ruta absoluta de un archivo o directorio en el sistema. El script deberá iterar por todos los parámetros recibidos, y solo para aquellos parámetros que se encuentren en posiciones impares (el primero, el tercero, el qverificar si el archivo o directorio existen en el sistema, imprimiendo en pantalla que tipo de objeto es (archivo o directorio). Además, deberá informar la cantidad de archivos o directorios inexistentes en el sistema.
+
+```bash
+#!/bin/bash
+if [ $# -le  0 ]; then exit 1;fi
+
+let existen
+for ((i=0 ; i<=$cantidad ; i+=2));
+do
+  actual=${elementos[$i]}
+  if [ -d $actual ]; then echo "es un directorio";
+  elif [ -f $actual ]; then echo "es un archivo";
+  else let existen++;fi
+done
+echo "La cantidad de archivos que no existen es" $existen
+```
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
@@ -1228,21 +1228,59 @@ directorios inexistentes en el sistema.
 Realice un script que implemente a través de la utilización de funciones las operaciones
 básicas sobre arreglos:
 
-- inicializar: Crea un arreglo llamado array vacío
-- agregar_elem \<parametro1>: Agrega al final del arreglo el parámetro recibido
-- eliminar_elem \<parametro1>: Elimina del arreglo el elemento que se encuentra en la
+- **inicializar:** Crea un arreglo llamado array vacío
+- **agregar_elem \<parametro1>:** Agrega al final del arreglo el parámetro recibido
+- **eliminar_elem \<parametro1>:** Elimina del arreglo el elemento que se encuentra en la
 posición recibida como parámetro. Debe validar que se reciba una posición válida
-- longitud: Imprime la longitud del arreglo en pantalla
-- imprimir: Imprime todos los elementos del arreglo en pantalla
-- inicializar_Con_Valores \<parametro1>\<parametro2>: Crea un arreglo con longitud
+- **longitud:** Imprime la longitud del arreglo en pantalla
+- **imprimir:** Imprime todos los elementos del arreglo en pantalla
+- **inicializar_Con_Valores \<parametro1>\<parametro2>:** Crea un arreglo con longitud
 \<parametro1>y en todas las posiciones asigna el valor \<parametro2>
+
+
+```shell
+#!/bin/bash
+
+inicializar(){
+  array=()
+  echo "vecto pa"
+}
+agregar_elem(){
+  array+=($1)
+}
+eliminar_elem(){
+  unset array[$1]
+}
+imprimir(){
+  echo ${array[*]}
+}
+longitud(){
+  echo ${#array[*]}
+}
+inicializar_Con_Valores(){
+  for ((i=0; i<$1; i++));
+  do
+    array+=($2)
+  done
+}
+
+select opcion in  inicializar agregar_elem eliminar_elem longitud imprimir inicializar_Con_Valores
+do  
+  case $opcion in
+    inicializar) inicializar;;
+    agregar_elem) agregar_elem 9;;
+    eliminar_elem) eliminar_elem 0;;
+    longitud) longitud ;;
+    inicializar_Con_Valores) inicializar_Con_Valores 10 4 ;;
+    imprimir) imprimir;;
+  esac
+done
+```
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ## 28) Ejercicio
-Realice un script que reciba como parámetro el nombre de un directorio. Deberá validar que
-el mismo exista y de no existir causar la terminación del script con código de error 4. Si el
-directorio existe deberá contar por separado la cantidad de archivos que en él se encuentran
+Realice un script que reciba como parámetro el nombre de un directorio. Deberá validar que el mismo exista y de no existir causar la terminación del script con código de error 4. Si el directorio existe deberá contar por separado la cantidad de archivos que en él se encuentran
 para los cuales el usuario que ejecuta el script tiene permiso de lectura y escritura, e informar
 dichos valores en pantalla. En caso de encontrar subdirectorios, no deberán procesarse, y
 tampoco deberán ser tenidos en cuenta para la suma a informar.
