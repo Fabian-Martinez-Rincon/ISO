@@ -1287,6 +1287,7 @@ Realice un script que reciba como parámetro el nombre de un directorio. Deberá
 
 if [ $# -ne 1 ]; then echo "Ingrese un parametro"; exit 1; fi
 if ! [ -e $1 ] && ! [ -d $1 ] ; then exit 4; fi
+
 archivos=($(ls))
 let contador=0
 for i in ${archivos[*]} 
@@ -1306,6 +1307,47 @@ Implemente un script que agregue a un arreglo todos los archivos del directorio 
 encuentra en el arreglo. Caso contrario imprime el mensaje de error “Archivo no encontrado” y devuelve como valor de retorno 5
 - cantidadArchivos: Imprime la cantidad de archivos del /home con terminación .doc
 - borrarArchivo \<nombre_de_archivo>: Consulta al usuario si quiere eliminar el archivo lógicamente. Si el usuario responde Si, elimina el elemento solo del arreglo. Si el usuario responde No, elimina el archivo del arreglo y también del FileSystem. Debe validar que el archivo exista en el arreglo. En caso de no existir, imprime el mensaje de error “Archivo no encontrado” y devuelve como valor de retorno 10
+
+```sh
+#!/bin/bash
+
+archivos_doc=$( ls $HOME | grep '\.doc$' )
+
+verArchivo(){
+  encontro=false
+  for i in ${archivos_doc[*]}
+  do
+    if [ $1 = $i ]; then 
+      echo $(cat "$HOME/$1")
+      encontro=true
+    fi
+  done
+  if [ $encontro = false ]; then echo "No se encontro" ;return 5; fi
+}
+
+cantidadArchivos(){
+  echo ${#archivos_doc[*]}
+}
+
+borrarArchivo(){
+  echo "Ingrese un archivo"
+  if ! [ -e "$HOME/$1" ]; then echo "Archivo no encontrado"; return 10; fi
+  echo "Quiere eliminar el archivo logicamente? SI O NO"
+  select desicion in SI NO SALIR  
+  do
+    case $desicion in
+      SI) unset "$archivos_doc[$1]"; echo "Elementos ${archivos_doc[*]}" ;;
+      NO) rm "$HOME/$1" ;;
+      SALIR) break;;
+    esac
+  done
+}
+
+verArchivo "ejercio292.doc"
+cantidadArchivos
+borrarArchivo "ejercio9.doc"
+echo $?
+```
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
