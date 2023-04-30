@@ -1355,4 +1355,20 @@ echo $?
 
 Realice un script que mueva todos los programas del directorio actual (archivos ejecutables) hacia el subdirectorio “bin” del directorio HOME del usuario actualmente logueado. El script debe imprimir en pantalla los nombres de los que mueve, e indicar cuántos ha movido, o que no ha movido ninguno. Si el directorio “bin” no existe,deberá ser creado.
 
+```sh
+#!/bin/bash
+
+# El -F agrega un indicador al final para saber que permisos tiene
+# / para directorios
+# * para archivos ejecutables
+
+archivos=$(ls -F | grep "*$")
+if [ -n ${archivos[*]} ];then exit 1; fi
+echo ${archivos[*]}
+bin="$HOME/bin"
+if ! [ -e $bin ]; then mkdir $bin; fi
+
+mv ${archivos[*]} $bin
+```
+
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
