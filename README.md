@@ -22,7 +22,7 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 
 # 🪓 Practicas
 
-- [1️⃣ Practica 1 Conceptos básicos del sistema operativo](#-practica-1)
+- ### [1️⃣ Practica 1 Conceptos básicos del sistema operativo](#-practica-1)
   - [1) Características de GNU/Linux](#1-características-de-gnulinux)
   - [2) Distribuciones de GNU/Linux](#2-distribuciones-de-gnulinux)
   - [3) Estructura de GNU/Linux](#3-estructura-de-gnulinux)
@@ -35,7 +35,7 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
   - [10) Indique qué comando es necesario utilizar para realizar cada una de las siguientes acciones.](#10-indique-qué-comando-es-necesario-utilizar-para-realizar-cada-una-de-las-siguientes-acciones-investigue-su-funcionamiento-y-parámetros-más-importantes)
   - [11) Investigue su funcionamiento y parámetros más importantes](#11-nvestigue-su-funcionamiento-y-parámetros-más-importantes)
   - [12) Investigue su funcionamiento y parámetros más importantes](#12-nvestigue-su-funcionamiento-y-parámetros-más-importantes)
-- [2️⃣ Practica 2 Pocesos, usuarios, filesystems, permisos](/Documentos/Practica2.md)
+- ### [2️⃣ Practica 2 Pocesos, usuarios, filesystems, permisos](/Documentos/Practica2.md)
   - [1) Editor de textos](#1-editor-de-textos)
   - [2) Proceso de Arranque SystemV](#2-proceso-de-arranque-systemv)
   - [3) Usuarios](#3-usuarios)
@@ -49,7 +49,7 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
   - [11) Indique qué acción realiza cada uno de los comandos indicados a continuación....](#11-ejercicio)
   - [12) Cree una estructura desde el directorio /home que incluya varios directorios....](#12-ejercicio)
   - [13) Indique qué comando/s es necesario para realizar cada una de las acciones de la siguiente secuencia de paso](#13-indique-qué-comandos-es-necesario-para-realizar-cada-una-de-las-acciones-de-la-siguiente-secuencia-de-pasos-considerando-su-orden-de-aparición)
-- [3️⃣ Practica 3 Shell Scripting](/Documentos/Practica3.md)
+- ### [3️⃣ Practica 3 Shell Scripting](/Documentos/Practica3.md)
   - [1) ¿Qué es el Shell Scripting? ¿A qué tipos de tareas están orientados los script?](#1-ejercicio)
   - [2) Investigar la funcionalidad de los comandos echo y read](#2-ejercicio)
   - [3) Crear dentro del directorio personal del usuario logueado un directorio](#3-ejercicio)
@@ -80,7 +80,7 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
   - [28) Realice un script que reciba como parámetro el nombre de un directorio](#28-ejercicio)
   - [29) Implemente un script que agregue a un arreglo todos los archivos](#29-ejercicio)
   - [30) Realice un script que mueva todos los programas del directorio actual](#30-ejercicio)
-- [4️⃣ Practica 4 Planificación de proceso](/Documentos/Practica4.md)
+- ### [4️⃣ Practica 4 Planificación de proceso](/Documentos/Practica4.md)
   - [Ejercicio 1 Responda en forma sintética sobre los siguientes conceptos](#1-responda-en-forma-sintética-sobre-los-siguientes-conceptos)
   - [Ejercicio 2 Procesos](#2procesos)
   - [Ejercicio 3 Para los siguientes algoritmos de scheduling](#3-para-los-siguientes-algoritmos-de-scheduling)
@@ -106,8 +106,8 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
   - [Ejercicio 23 Asumiendo el caso de procesadores homogéneos](#23-asumiendo-el-caso-de-procesadores-homogéneos)
   - [Ejercicio 24 Indique brevemente a que hacen referencia los siguientes conceptos](#24-indique-brevemente-a-que-hacen-referencia-los-siguientes-conceptos)
   - [Ejercicio 25 Si a la tabla del ejercicio 6 la modificamos de la siguiente manera](#25-si-a-la-tabla-del-ejercicio-6-la-modificamos-de-la-siguiente-manera-y-considerando-que-el)
-- [5️⃣ Practica 5 Administración de la Memoria Principal ](/Documentos/Practica5.md)
-- [6️⃣ Practica 6 Planificación de E/S y de discos](/Documentos/Practica6.md)
+- ### [5️⃣ Practica 5 Administración de la Memoria Principal ](/Documentos/Practica5.md)
+- ### [6️⃣ Practica 6 Planificación de E/S y de discos](/Documentos/Practica6.md)
 - [Comandos Importantes](/Documentos/Comandos.md)
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
