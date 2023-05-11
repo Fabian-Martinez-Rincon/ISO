@@ -21,9 +21,9 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 - [Repaso Primer Parcial de Promoción](/Documentos/RepasoPrimerParcialPromocion.md)
 - [Primer Parcial de Promoción](/Documentos/PrimerParcialPromocion.md)
 - [Notion de Iñaki con Practicas](https://nova-calcium-fbd.notion.site/Introducci-n-a-Sistemas-Operativos-78eceb443ac04f919bdf3394bbe22d27)
-- [Practica 1](/Documentos/Practica1.md)
-- [Practica 2](/Documentos/Practica2.md)
-- [Practica 3](/Documentos/Practica3.md)
+- [Practica 1 Conceptos básicos del sistema operativo](/Documentos/Practica1.md)
+- [Practica 2 Pocesos, usuarios, filesystems, permisos](/Documentos/Practica2.md)
+- [Practica 3 Shell Scripting](/Documentos/Practica3.md)
 - [Practica 4](/Documentos/Practica4.md)
 - [Practica 5](/Documentos/Practica5.md)
 - [Practica 6](/Documentos/Practica6.md)
@@ -36,14 +36,6 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-<div align="center">
-
-[Siguiente](/Documentos/Practica2.md)<br>
-[Anterior](/Documentos/Practica6.md)
-
-</div>
-
-<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 El objetivo de esta práctica es que el alumno se familiarice con los conceptos básicos del sistema
 operativo GNU/Linux, así como con su entorno y comandos principales.
@@ -869,14 +861,7 @@ El directorio /bin es un directorio estático y es donde se almacenan todos los 
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-<div align="center">
 
-[Siguiente](/Documentos/Practica3.md)<br>
-[Anterior](/Documentos/Practica1.md)
-
-</div>
-
-<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 El objetivo de esta práctica es que el alumno comprenda los aspectos principales acerca de la estructura del sistema Operativo GNU/Linux en lo que respecta a procesos, usuarios, filesystems,
 permisos, etc
@@ -2162,14 +2147,6 @@ Con el comando `Date`
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-<div align="center">
-
-[Siguiente](/Documentos/Practica4.md)<br>
-[Anterior](/Documentos/Practica2.md)
-
-</div>
-
-<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 - [1) ¿Qué es el Shell Scripting? ¿A qué tipos de tareas están orientados los script?](#1-ejercicio)
 - [2) Investigar la funcionalidad de los comandos echo y read](#2-ejercicio)
