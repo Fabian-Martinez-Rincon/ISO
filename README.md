@@ -22,7 +22,7 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 
 # 🪓 Practicas
 
-- [1️⃣ Practica 1 Conceptos básicos del sistema operativo](/Documentos/Practica1.md)
+- [1️⃣ Practica 1 Conceptos básicos del sistema operativo](#-practica-1)
 - [2️⃣ Practica 2 Pocesos, usuarios, filesystems, permisos](/Documentos/Practica2.md)
 - [3️⃣ Practica 3 Shell Scripting](/Documentos/Practica3.md)
 - [4️⃣ Practica 4 Planificación de proceso](/Documentos/Practica4.md)
@@ -32,8 +32,11 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-<h1 align="center"> 📒 Practica 1
-</h1>
+<div align="center"> 
+
+# 📒 Practica 1
+
+</div>
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
