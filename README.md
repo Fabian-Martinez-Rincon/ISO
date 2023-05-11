@@ -23,7 +23,32 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 # 🪓 Practicas
 
 - [1️⃣ Practica 1 Conceptos básicos del sistema operativo](#-practica-1)
+  - [1) Características de GNU/Linux](#1-características-de-gnulinux)
+  - [2) Distribuciones de GNU/Linux](#2-distribuciones-de-gnulinux)
+  - [3) Estructura de GNU/Linux](#3-estructura-de-gnulinux)
+  - [4) Kernel](#4-kernel)
+  - [5) Intérprete de comandos (Shell)](#5-intérprete-de-comandos-shell)
+  - [6) Sistema de Archivos (File System)](#6-sistema-de-archivos-file-system)
+  - [7) Particiones](#7-particiones)
+  - [8) Arranque (bootstrap) de un Sistema Operativo](#8-arranque-bootstrap-de-un-sistema-operativo)
+  - [9) Archivos](#9-archivos)
+  - [10) Indique qué comando es necesario utilizar para realizar cada una de las siguientes acciones.](#10-indique-qué-comando-es-necesario-utilizar-para-realizar-cada-una-de-las-siguientes-acciones-investigue-su-funcionamiento-y-parámetros-más-importantes)
+  - [11) Investigue su funcionamiento y parámetros más importantes](#11-nvestigue-su-funcionamiento-y-parámetros-más-importantes)
+  - [12) Investigue su funcionamiento y parámetros más importantes](#12-nvestigue-su-funcionamiento-y-parámetros-más-importantes)
 - [2️⃣ Practica 2 Pocesos, usuarios, filesystems, permisos](/Documentos/Practica2.md)
+  - [1) Editor de textos](#1-editor-de-textos)
+  - [2) Proceso de Arranque SystemV](#2-proceso-de-arranque-systemv)
+  - [3) Usuarios](#3-usuarios)
+  - [4) FileSystem](#4-filesystem)
+  - [5) Procesos](#5-procesos)
+  - [6) Otros comandos de Linux](#6-otros-comandos-de-linux-indique-funcionalidad-y-parámetros)
+  - [7) Indique qué acción realiza cada uno de los comandos...](#7-ejercicio)
+  - [8) Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones](#8-indique-qué-comando-sería-necesario-ejecutar-para-realizar-cada-una-de-las-siguientes-acciones)
+  - [9) Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones](#9-indique-qué-comando-sería-necesario-ejecutar-para-realizar-cada-una-de-las-siguientes-acciones)
+  - [10) Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones](#10-indique-qué-comando-sería-necesario-ejecutar-para-realizar-cada-una-de-las-siguientes-acciones)
+  - [11) Indique qué acción realiza cada uno de los comandos indicados a continuación....](#11-ejercicio)
+  - [12) Cree una estructura desde el directorio /home que incluya varios directorios....](#12-ejercicio)
+  - [13) Indique qué comando/s es necesario para realizar cada una de las acciones de la siguiente secuencia de paso](#13-indique-qué-comandos-es-necesario-para-realizar-cada-una-de-las-acciones-de-la-siguiente-secuencia-de-pasos-considerando-su-orden-de-aparición)
 - [3️⃣ Practica 3 Shell Scripting](/Documentos/Practica3.md)
 - [4️⃣ Practica 4 Planificación de proceso](/Documentos/Practica4.md)
 - [5️⃣ Practica 5 Administración de la Memoria Principal ](/Documentos/Practica5.md)
@@ -43,19 +68,6 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 
 El objetivo de esta práctica es que el alumno se familiarice con los conceptos básicos del sistema
 operativo GNU/Linux, así como con su entorno y comandos principales.
-- [Preguntas/Dudas]()
-- [1) Características de GNU/Linux](#1-características-de-gnulinux)
-- [2) Distribuciones de GNU/Linux](#2-distribuciones-de-gnulinux)
-- [3) Estructura de GNU/Linux](#3-estructura-de-gnulinux)
-- [4) Kernel](#4-kernel)
-- [5) Intérprete de comandos (Shell)](#5-intérprete-de-comandos-shell)
-- [6) Sistema de Archivos (File System)](#6-sistema-de-archivos-file-system)
-- [7) Particiones](#7-particiones)
-- [8) Arranque (bootstrap) de un Sistema Operativo](#8-arranque-bootstrap-de-un-sistema-operativo)
-- [9) Archivos](#9-archivos)
-- [10) Indique qué comando es necesario utilizar para realizar cada una de las siguientes acciones.](#10-indique-qué-comando-es-necesario-utilizar-para-realizar-cada-una-de-las-siguientes-acciones-investigue-su-funcionamiento-y-parámetros-más-importantes)
-- [11) Investigue su funcionamiento y parámetros más importantes](#11-nvestigue-su-funcionamiento-y-parámetros-más-importantes)
-- [12) Investigue su funcionamiento y parámetros más importantes](#12-nvestigue-su-funcionamiento-y-parámetros-más-importantes)
 
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
@@ -860,8 +872,11 @@ El directorio /bin es un directorio estático y es donde se almacenan todos los 
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-<h1 align="center"> 📓 Practica 2
-</h1>
+<div align="center"> 
+
+# 📓 Practica 2
+
+</div>
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
@@ -869,21 +884,6 @@ El directorio /bin es un directorio estático y es donde se almacenan todos los 
 
 El objetivo de esta práctica es que el alumno comprenda los aspectos principales acerca de la estructura del sistema Operativo GNU/Linux en lo que respecta a procesos, usuarios, filesystems,
 permisos, etc
-
-
-- [1) Editor de textos](#1-editor-de-textos)
-- [2) Proceso de Arranque SystemV](#2-proceso-de-arranque-systemv)
-- [3) Usuarios](#3-usuarios)
-- [4) FileSystem](#4-filesystem)
-- [5) Procesos](#5-procesos)
-- [6) Otros comandos de Linux](#6-otros-comandos-de-linux-indique-funcionalidad-y-parámetros)
-- [7) Indique qué acción realiza cada uno de los comandos...](#7-ejercicio)
-- [8) Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones](#8-indique-qué-comando-sería-necesario-ejecutar-para-realizar-cada-una-de-las-siguientes-acciones)
-- [9) Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones](#9-indique-qué-comando-sería-necesario-ejecutar-para-realizar-cada-una-de-las-siguientes-acciones)
-- [10) Indique qué comando sería necesario ejecutar para realizar cada una de las siguientes acciones](#10-indique-qué-comando-sería-necesario-ejecutar-para-realizar-cada-una-de-las-siguientes-acciones)
-- [11) Indique qué acción realiza cada uno de los comandos indicados a continuación....](#11-ejercicio)
-- [12) Cree una estructura desde el directorio /home que incluya varios directorios....](#12-ejercicio)
-- [13) Indique qué comando/s es necesario para realizar cada una de las acciones de la siguiente secuencia de paso](#13-indique-qué-comandos-es-necesario-para-realizar-cada-una-de-las-acciones-de-la-siguiente-secuencia-de-pasos-considerando-su-orden-de-aparición)
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
@@ -2147,7 +2147,12 @@ tar xvfz misLogs.tar.gz -C 2
 
 Con el comando `Date`
 
-<h1 align="center"> 📚 Practica 3</h1>
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+
+
+<div align="center"> 
+
+# 📚 Practica 3</div>
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
