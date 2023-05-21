@@ -2212,8 +2212,8 @@ Con el comando `Date`
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-## 1) Ejercicio
-¿Qué es el Shell Scripting? ¿A qué tipos de tareas están orientados los script?  ¿Los scripts deben compilarse? ¿Por qué?
+## 1) ¿Qué es el Shell Scripting?
+¿A qué tipos de tareas están orientados los script?  ¿Los scripts deben compilarse? ¿Por qué?
 
 La Shell provee estructuras de control que permiten programar shell scripts. 
 
@@ -2228,9 +2228,7 @@ Está orientado a diferentes tareas:
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-## 2) Ejercicio
-
-Investigar la funcionalidad de los comandos echo y read
+## 2) Investigar la funcionalidad de los comandos echo y read
 
 - `Echo:` Es un comando para la impresión de un texto en pantalla. El comando para imprimir el contenido de la variable es:
 - `echo $nombreVar `
@@ -2279,9 +2277,7 @@ Tambien podes ejecutar el script con el comando `bash script.sh`
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-## 3) Ejercicio
-
-Crear dentro del directorio personal del usuario logueado un directorio llamado practicashell-script y dentro de él un archivo llamado mostrar.sh cuyo contenido sea el siguiente:
+## 3) Crear dentro del directorio personal del usuario logueado un directorio llamado practicashell-script y dentro de él un archivo llamado mostrar.sh cuyo contenido sea el siguiente:
 
 <table>
 <td>
@@ -2352,9 +2348,8 @@ echo "Espacio libre en el disco `df`"
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-## 4) Ejercicio
-
-Parametrización: ¿Cómo se acceden a los parámetros enviados al script al momento de su invocación? ¿Qué información contienen las variables `$#, $*, $?` y `$HOME` dentro de un script?
+## 4) Parametrización
+¿Cómo se acceden a los parámetros enviados al script al momento de su invocación? ¿Qué información contienen las variables `$#, $*, $?` y `$HOME` dentro de un script?
 
 - Los scripts pueden recibir argumentos en su invocación. Para accederlos, se utilizan variables especiales:
 - `$0` contiene la invocación al script. (nombre del script)
@@ -2384,9 +2379,9 @@ echo "$HOME"
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-## 5) Ejercicio
+## 5) ¿Cual es la funcionalidad de comando exit? 
 
-¿Cual es la funcionalidad de comando exit? ¿Qué valores recibe como parámetro y cual es su significado?
+¿Qué valores recibe como parámetro y cual es su significado?
 
 El comando exit finaliza un script. Incluso, puede arrojar un valor de terminación, el cual estará disponible para su proceso padre.
 
@@ -2408,9 +2403,9 @@ En la consola se mostrara un número de 0 a 255.
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-## 6) Ejercicio
+## 6) El comando **expr** permite la evaluación de expresiones.
 
-El comando **expr** permite la evaluación de expresiones. Su sintaxis es: **expr arg1 op arg2**, donde **arg1 y arg2** representan argumentos y op la operación de la expresión. Investigar que tipo de operaciones se pueden utilizar
+Su sintaxis es: **expr arg1 op arg2**, donde **arg1 y arg2** representan argumentos y op la operación de la expresión. Investigar que tipo de operaciones se pueden utilizar
 
 - Se puede utilizar 
    - suma
@@ -2466,9 +2461,9 @@ echo "INDICE $INDICE"
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-## 7) Ejercicio
+## 7) El comando **“test expresión”** permite evaluar expresiones y generar un valor de retorno, true o false.
 
-El comando **“test expresión”** permite evaluar expresiones y generar un valor de retorno, true o false. Este comando puede ser reemplazado por el uso de corchetes de la siguiente manera **[ expresión ]**. Investigar que tipo de expresiones pueden ser usadas con el comando test. Tenga en cuenta operaciones para: evaluación de archivos, evaluación de cadenas de caracteres y evaluaciones numéricas.
+Este comando puede ser reemplazado por el uso de corchetes de la siguiente manera **[ expresión ]**. Investigar que tipo de expresiones pueden ser usadas con el comando test. Tenga en cuenta operaciones para: evaluación de archivos, evaluación de cadenas de caracteres y evaluaciones numéricas.
 
 Este comando tiene un código de retorno igual a 0 cuando el test es positivo, y diferente de cero en caso contrario
 
@@ -2538,9 +2533,9 @@ else echo "no tiene todos los permisos"; fi
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-## 8) Ejercicio
+## 8) Estructuras de control. 
 
-Estructuras de control. Investigue la sintaxis de las siguientes estructuras de control incluidas en shell scripting:
+Investigue la sintaxis de las siguientes estructuras de control incluidas en shell scripting:
 
 <table>
 
@@ -2655,9 +2650,9 @@ done
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-## 9) Ejercicio
+## 9) ¿Qué acciones realizan las sentencias break y continue dentro de un bucle?
 
-¿Qué acciones realizan las sentencias break y continue dentro de un bucle? ¿Qué parámetros reciben?
+¿Qué parámetros reciben?
 
 - **`break [n]`** Corta la ejecución de `n` niveles de loops.
 - **`continue [n]`** salta a la siguiente iteración del enésimo loop que contiene esta instrucción
@@ -2686,8 +2681,9 @@ done
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-## 10) Ejercicio
-¿Qué tipo de variables existen? ¿Es shell script fuertemente tipado? ¿Se pueden definir arreglos? ¿Cómo?
+## 10) ¿Qué tipo de variables existen?
+
+¿Es shell script fuertemente tipado? ¿Se pueden definir arreglos? ¿Cómo?
 
 bash soporta `strings` y `arrays`
 - Los nombres son case sensitive
@@ -2741,9 +2737,9 @@ echo "Cantidad de elementos" ${#array[*]}
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-## 11) Ejercicio
+## 11) ¿Pueden definirse funciones dentro de un script?
 
-¿Pueden definirse funciones dentro de un script? ¿Cómo? ¿Cómo se maneja el pasaje de parámetros de una función a la otra?
+¿Cómo? ¿Cómo se maneja el pasaje de parámetros de una función a la otra?
 
 Si, se pueden definir funciones dentro de un script.
 - Las funciones permiten modularizar el comportamiento de los scripts. 
