@@ -190,22 +190,164 @@ int main ( void ) {
 </td></table>
 
 
-#### i. ¿Qué valores se muestran por consola?.
+#### i. ¿Qué valores se muestran por consola?. ⚠️⚠️
+
+Es un 1 por cada proceso 
+
 #### ii. ¿Todas las líneas tendrán el mismo valor o algunas líneas tendrán valores distin- tos?.
+
+Todas tendrán el mismo, ya que no se hace fork luego de modificar p
+
 #### iii. ¿Cuál es el valor (o valores) que aparece?. Ejecute el programa y compruebe si su respuesta es correcta, Modifique el valor del bucle for y el lugar dónde se incrementa la variable p y compruebe los nuevos resultados.
+
+Siempre será 1, sin importar c
 
 ---
 
-- `(d)` Comunicación entre procesos
-    - i. Investigue la forma de comunicación entre procesos a través de pipes.
-    - ii. ¿Cómo se crea un pipe en C?.
-    - iii. ¿Qué parametro es necesario para la creación de un pipe?. Explique para que se utiliza.
-    - iv. ¿Qué tipo de comunicación es posible con pipes?
-- `(e)` ¿Cuál es la información mínima que el SO debe tener sobre un proceso?¿En que es- tructura de datos asociada almacena dicha información?
-- `(f)` ¿Qué significa que un proceso sea “CPU Bound” y “I/O Bound”?
-- `(g)` ¿Cuáles son los estados posibles por los que puede atravesar un proceso?
-- `(h)` Explique mediante un diagrama las posibles transiciones entre los estados.
-- `(i)` ¿Que scheduler de los mencionados en 1 f se encarga de las transiciones?
+#### `(d)` Comunicación entre procesos
+#### i. Investigue la forma de comunicación entre procesos a través de pipes.
+
+```c
+// C program to demonstrate use of fork() and pipe()
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <unistd.h>
+ 
+int main()
+{
+    // We use two pipes
+    // First pipe to send input string from parent
+    // Second pipe to send concatenated string from child
+ 
+    int fd1[2]; // Used to store two ends of first pipe
+    int fd2[2]; // Used to store two ends of second pipe
+ 
+    char fixed_str[] = "forgeeks.org";
+    char input_str[100];
+    pid_t p;
+ 
+    if (pipe(fd1) == -1) {
+        fprintf(stderr, "Pipe Failed");
+        return 1;
+    }
+    if (pipe(fd2) == -1) {
+        fprintf(stderr, "Pipe Failed");
+        return 1;
+    }
+ 
+    scanf("%s", input_str);
+    p = fork();
+ 
+    if (p < 0) {
+        fprintf(stderr, "fork Failed");
+        return 1;
+    }
+ 
+    // Parent process
+    else if (p > 0) {
+        char concat_str[100];
+ 
+        close(fd1[0]); // Close reading end of first pipe
+ 
+        // Write input string and close writing end of first
+        // pipe.
+        write(fd1[1], input_str, strlen(input_str) + 1);
+        close(fd1[1]);
+ 
+        // Wait for child to send a string
+        wait(NULL);
+ 
+        close(fd2[1]); // Close writing end of second pipe
+ 
+        // Read string from child, print it and close
+        // reading end.
+        read(fd2[0], concat_str, 100);
+        printf("Concatenated string %s\n", concat_str);
+        close(fd2[0]);
+    }
+ 
+    // child process
+    else {
+        close(fd1[1]); // Close writing end of first pipe
+ 
+        // Read a string using first pipe
+        char concat_str[100];
+        read(fd1[0], concat_str, 100);
+ 
+        // Concatenate a fixed string with it
+        int k = strlen(concat_str);
+        int i;
+        for (i = 0; i < strlen(fixed_str); i++)
+            concat_str[k++] = fixed_str[i];
+ 
+        concat_str[k] = '\0'; // string ends with '\0'
+ 
+        // Close both reading ends
+        close(fd1[0]);
+        close(fd2[0]);
+ 
+        // Write concatenated string and close writing end
+        write(fd2[1], concat_str, strlen(concat_str) + 1);
+        close(fd2[1]);
+ 
+        exit(0);
+    }
+}
+```
+
+
+#### ii. ¿Cómo se crea un pipe en C?.
+
+- pipe(int fd[2]) → Creamos un pipe que va a usar **`fd[0]`** para el reading end y **`fd[1]`** para writing end 
+- Para usarlo uno de los lados, vamos a tener que cerrar el otro (con **`close(fd[X])`**)
+- No se puede reabrir un end
+- El close se hace para marcar EOF en la comunicación por medio de ese end y permitir que la comunicación por ese medio finalice (caso contrario no termina nunca)
+
+#### iii. ¿Qué parametro es necesario para la creación de un pipe?. Explique para que se utiliza.
+
+Un arreglo de enteros con 2 posiciones, el cual controlará el estado open/closed de cada lado (r/w) del pipe.
+
+#### iv. ¿Qué tipo de comunicación es posible con pipes?
+
+- Puede comunicar procesos en modo lectura o escritura
+- write(fd[1], String1, **strlen**(String1) + 1)
+- read(fd[0], String1, **strlen**(String1) + 1)
+
+---
+
+#### `(e)` ¿Cuál es la información mínima que el SO debe tener sobre un proceso?¿En que es- tructura de datos asociada almacena dicha información?
+
+- PID, PPID, Estado, Prioridad, PC, Registros de CPU, Estado de E/S, Datos de Contexto y Datos de Accounting.
+- Se guardan en la PCB
+
+---
+
+#### `(f)` ¿Qué significa que un proceso sea “CPU Bound” y “I/O Bound”?
+
+- Los procesos CPU Bound son los que utilizan mayormente CPU, no mucha E/S, necesitan un TR rápido
+- Los procesos I/O Bound son los que utilizan mayormente E/S, necesitan una respuesta rápida a la E/S
+
+---
+
+#### `(g)` ¿Cuáles son los estados posibles por los que puede atravesar un proceso?
+
+Puede pasar por New, Ready, Ready/Suspend, Executing, Waiting, Blocked, Blocked/Suspend,Exit
+
+---
+
+#### `(h)` Explique mediante un diagrama las posibles transiciones entre los estados.
+
+![](2023-05-22-12-32-24.png)
+
+---
+
+#### `(i)` ¿Que scheduler de los mencionados en 1 f se encarga de las transiciones?
+
+
+
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
