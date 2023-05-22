@@ -361,9 +361,43 @@ El Medium Term Scheduler.
 
 ***Realice***
 
+---
+
 #### `(a)` Explique su funcionamiento mediante un ejemplo.
+
+#### FCFS (Fisrt Coome First Served)
+
+| Procesos | Llegada | Cpu | Prioridad | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 |  | TE | TR |
+| -------- | ------- | --- | --------- | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - |
+| P1       | 0       | Cpu | Prioridad | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 |  | TE | TR |
+| P2       | 1       | Cpu | Prioridad | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 |  | TE | TR |
+| P3       | 2       | Cpu | Prioridad | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 |  | TE | TR |
+| P4       | 3       | Cpu | Prioridad | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 |  | TE | TR |
+| FCFS     |         | Cpu | Prioridad | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 |  | TE | TR |
+
+#### SJF (Shortest Job First)
+
+
+
+#### Round Robin
+
+
+
+#### Prioridades
+
+
+
+
+---
+
 #### `(b)` ¿Alguno de ellos requiere algún parámetro para su funcionamiento?
+
+---
+
 #### `(c)` Cual es el mas adecuado según los tipos de procesos y/o SO.
+
+---
+
 #### `(d)` Cite ventajas y desventajas de su uso
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
