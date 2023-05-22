@@ -346,7 +346,7 @@ Puede pasar por New, Ready, Ready/Suspend, Executing, Waiting, Blocked, Blocked/
 
 #### `(i)` ¿Que scheduler de los mencionados en 1 f se encarga de las transiciones?
 
-
+El Medium Term Scheduler.
 
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
@@ -361,10 +361,10 @@ Puede pasar por New, Ready, Ready/Suspend, Executing, Waiting, Blocked, Blocked/
 
 ***Realice***
 
-- `(a)` Explique su funcionamiento mediante un ejemplo.
-- `(b)` ¿Alguno de ellos requiere algún parámetro para su funcionamiento?
-- `(c)` Cual es el mas adecuado según los tipos de procesos y/o SO.
-- `(d)` Cite ventajas y desventajas de su uso
+#### `(a)` Explique su funcionamiento mediante un ejemplo.
+#### `(b)` ¿Alguno de ellos requiere algún parámetro para su funcionamiento?
+#### `(c)` Cual es el mas adecuado según los tipos de procesos y/o SO.
+#### `(d)` Cite ventajas y desventajas de su uso
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
