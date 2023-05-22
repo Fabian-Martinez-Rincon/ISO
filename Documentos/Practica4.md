@@ -56,98 +56,146 @@ que se encuentra en cátedras virtuales
 
 ---
 
-**`(b)`** Defina Tiempo de retorno (TR) y Tiempo de espera (TE) para un Job.
+#### **`(b)`** Defina Tiempo de retorno (TR) y Tiempo de espera (TE) para un Job.
+
+**Tiempo de Retorno (TR):** Tiempo transcurrido entre que un proceso llega al sistema y la finalización de su ejecución.
+
+**Tiempo de Espera (TE)**: Tiempo dentro de TR en el que el proceso se encuentra esperando (fuera de ejecución). Se puede definir como *TE = (TR - Tcpu)*.
 
 ---
 
-**`(c)`** Defina Tiempo Promedio de Retorno (TPR) y Tiempo promedio de espera (TPE) para un lote de JOBS.
+#### **`(c)`** Defina Tiempo Promedio de Retorno (TPR) y Tiempo promedio de espera (TPE) para un lote de JOBS.
+
+**Tiempo Promedio de Retorno (TPR)**: Es el promedio de todos los TR en un conjunto de procesos, se vería como sum(TR)/cantP
+
+**Tiempo Promedio de Espera (TPE):**  Es el promedio de todos los TE en un conjunto de procesos, se vería como sum(TE)/cantP
+
+> Tratamos en estos casos con conjuntos de procesos, no con un sólo proceso como en TE y TR
 
 ---
 
-**`(d)`** ¿Qué es el Quantum?
+#### **`(d)`** ¿Qué es el Quantum?
+
+Quantum: Utilizado en el algoritmo de scheduling Round Robin (RR), es una medida que determina cuánto tiempo puede usar la CPU cada proceso.
 
 ---
 
-**`(e)`** ¿Qué significa que un algoritmo de scheduling sea apropiativo o no apropiativo (Preem-ptive o Non-Preemptive)?
+#### **`(e)`** ¿Qué significa que un algoritmo de scheduling sea apropiativo o no apropiativo?
+
+**Apropiativo (Preemptive)**: Un proceso en ejecución puede ser interrumpido y llevado a la cola de listos.
+
+**No Apropiativo (Non-Preemptive)**: Una vez que un proceso ingresa a ejecución, continúa hasta que termina o se bloquea por algún evento (I/O, orden del SO, etc…)
 
 ---
 
-**`(f)`** ¿Qué tareas realizan?:
+#### **`(f)`** ¿Qué tareas realizan?:
+
+i. **Short Term Scheduler**: Determina qué proceso pasa a ejecutarse. 
+
+ii. **Long Term Scheduler**: Admite nuevos procesos a memoria, controlando el grado de multiprogramación.
+
+iii. **Medium Term Scheduler**: Realiza el swapping entre disco y memoria cuando el SO lo determina, puede disminuír el grado de multiprogramación.
 
 ---
 
-  - i. Short Term Scheduler
+#### **`(g)`** ¿Qué tareas realiza el Dispatcher?
 
----
-
-  - ii. Long Term Scheduler
-
----
-
-  - iii. Medium Term Scheduler
-
----
-
-**`(g)`** ¿Qué tareas realiza el Dispatcher?
+Dispatcher: Módulo que otorga control de la CPU al proceso seleccionado por el short term scheduler. Es independiente del scheduler y no tiene algoritmo específico para su implementacion. Se encarga del Context switch, cambio a modo usuario y salto a la instrucción adecuada en la vuelta de un proceso.
 
 ---
 
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-### 2.Procesos
+## 2.Procesos
 
-- `a)` Investigue y detalle para que sirve cada uno de los siguientes comandos. (Puede que algún comando no venga por defecto en su distribución por lo que deberá instalarlo)
-    - `i)` top
-    - `ii)` htop
-    - `iii)` ps
-    - `iv)` pstree
-    - `v)` kill
-    - `vi)` pgreppkillkillall
-    - `vii)` killall
-    - `viii)` renice
-    - `ix)` xkill
-    - `x)` atop
-- `b)` Observe detenidamente el siguiente código. Intente entender lo que hace sin necesidad de ejecutarlo. <br><br>
-    ```c
-    #include <stdio.h>
-    #include <sys/types.h>
-    #include <unistd.h>
-    int main ( void ) {
-        int c;
-        pid_t pid;
-        printf (" Comienzo . : \n " ) ;
-        for ( c = 0; c < 3 ; c++ ){
-            pid = fork ( ) ;
-            }
-        printf(" Proceso \n " ) ;
-        return 0;
-    }
-    ```
-    - i. ¿Cuántas líneas con la palabra “Proceso” aparecen al final de la ejecución de este programa?.
-    - ii. ¿El número de líneas es el número de procesos que han estado en ejecución?.
-Ejecute el programa y compruebe si su respuesta es correcta, Modifique el valor
-del bucle for y compruebe los nuevos resultados
-- `c)` Vamos a tomar una variante del programa anterior. Ahora, además de un mensaje, vamos a añadir una variable y, al final del programa vamos a mostrar su valor. El nuevo código del programa se muestra a continuación. <br><br>
-    ```c
-    #include <stdio.h>
-    #include <sys/types.h>
-    #include <unistd.h>
-    int main ( void ) {
-        int c ;
-        int p=0;
-        pid_t pid ;
-        for ( c = 0; c < 3 ; c++ ){
-            pid = fork ( ) ;
+#### `a)` Investigue y detalle para que sirve cada uno de los siguientes comandos. (Puede que algún comando no venga por defecto en su distribución por lo que deberá instalarlo)
+- `top` Muestra información en tiempo real sobre los procesos en ejecución y su consumo de recursos.
+- `htop` Versión mejorada de top con una interfaz más amigable y colorida para monitorear y administrar procesos.
+- `ps` Muestra una instantánea de los procesos en ejecución en el sistema.
+- `pstree` Muestra una representación jerárquica de los procesos en ejecución en forma de árbol.
+- `kill`  Envía una señal a un proceso para solicitar su terminación.
+- `pgrep, pkill, killall` Herramientas para buscar y terminar procesos por su nombre o características.
+- `renice` Cambia la prioridad de ejecución de un proceso en ejecución.
+- `xkill` Proporciona una interfaz gráfica para terminar aplicaciones en entornos gráficos.
+- `atop` Herramienta avanzada de monitoreo del sistema que proporciona información detallada sobre el rendimiento del sistema.
+
+Algunos de estos comandos pueden requerir instalación adicional en tu distribución de Linux.
+
+---
+
+#### `b)` Observe detenidamente el siguiente código. Intente entender lo que hace sin necesidad de ejecutarlo. 
+<table><td>
+
+```c
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+int main ( void ) {
+    int c;
+    pid_t pid;
+    printf (" Comienzo . : \n " ) ;
+    for ( c = 0; c < 3 ; c++ ){
+        pid = fork ( ) ;
         }
-        p++;
-        printf (" Proceso %d \n " , p ) ;
-        return 0;
+    printf(" Proceso \n " ) ;
+    return 0;
+}
+```
+
+</td><td>
+
+![](2023-05-22-10-49-36.png)
+
+</td>
+</table>
+
+##### i. ¿Cuántas líneas con la palabra “Proceso” aparecen al final de la ejecución de este programa?. Tengo dudas aca ⚠️
+
+El número de líneas con la palabra "Proceso" al final de la ejecución de este programa depende del número de veces que se haya ejecutado la función fork() en el bucle for. En este caso, el bucle for se ejecuta tres veces, lo que significa que se crearán tres procesos hijos. Por lo tanto, se imprimirá la línea "Proceso" una vez por cada proceso hijo creado.
+
+##### ii. ¿El número de líneas es el número de procesos que han estado en ejecución?.
+
+El número de líneas con la palabra "Proceso" al final de la ejecución del programa no es necesariamente igual al número de procesos que han estado en ejecución. Cada vez que se llama a la función fork(), se crea un nuevo proceso hijo, pero no significa que todos los procesos estén en ejecución simultáneamente. Los procesos pueden ejecutarse en diferentes momentos y en diferentes órdenes, dependiendo del sistema operativo y la planificación de procesos.
+
+- [El codigo se puede testear aca](https://www.onlinegdb.com/online_c_compiler)
+
+---
+
+#### `c)` Vamos a tomar una variante del programa anterior. Ahora, además de un mensaje, vamos a añadir una variable y, al final del programa vamos a mostrar su valor. El nuevo código del programa se muestra a continuación. 
+
+<table><td>
+
+```c
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+int main ( void ) {
+    int c ;
+    int p=0;
+    pid_t pid ;
+    for ( c = 0; c < 3 ; c++ ){
+        pid = fork ( ) ;
     }
-    ```
-    - i. ¿Qué valores se muestran por consola?.
-    - ii. ¿Todas las líneas tendrán el mismo valor o algunas líneas tendrán valores distin- tos?.
-    - iii. ¿Cuál es el valor (o valores) que aparece?. Ejecute el programa y compruebe si su respuesta es correcta, Modifique el valor del bucle for y el lugar dónde se incrementa la variable p y compruebe los nuevos resultados.
+    p++;
+    printf (" Proceso %d \n " , p ) ;
+    return 0;
+}
+```
+
+</td><td>
+
+![](2023-05-22-10-52-40.png)
+
+</td></table>
+
+
+##### i. ¿Qué valores se muestran por consola?.
+##### ii. ¿Todas las líneas tendrán el mismo valor o algunas líneas tendrán valores distin- tos?.
+##### iii. ¿Cuál es el valor (o valores) que aparece?. Ejecute el programa y compruebe si su respuesta es correcta, Modifique el valor del bucle for y el lugar dónde se incrementa la variable p y compruebe los nuevos resultados.
+
+---
+
 - `(d)` Comunicación entre procesos
     - i. Investigue la forma de comunicación entre procesos a través de pipes.
     - ii. ¿Cómo se crea un pipe en C?.
@@ -160,6 +208,7 @@ del bucle for y compruebe los nuevos resultados
 - `(i)` ¿Que scheduler de los mencionados en 1 f se encarga de las transiciones?
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+
 
 ### 3. Para los siguientes algoritmos de scheduling:
 
@@ -261,7 +310,7 @@ del bucle for y compruebe los nuevos resultados
 - `(b)` ¿Cuál/es de los algoritmos vistos puede provocarla?
 - `(c)` ¿Existe alguna técnica que evite la inanición para el/los algoritmos mencionados en b?
 
-<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%"
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ### 10. Los procesos, durante su ciclo de vida, pueden realizar operaciones de I/O como lecturas o escrituras a disco, cintas, uso de impresoras, etc.
 
@@ -295,7 +344,7 @@ Y suponiendo que la cola de listos de todos los dispositivos se administra media
     | 3 | (R2, 2, 3) |
     | 4 | (R1, 1, 2) |
 
-<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%"
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ### 11. Algunos algoritmos pueden presentar ciertas desventajas cuando en el sistema se cuenta con procesos ligados a CPU y procesos ligados a entrada salida. Analice las mismas para los siguientes algoritmos:
 - `(a)` Round Robin
@@ -374,7 +423,7 @@ Suponiendo que las colas de cada dispositivo se administran a trabes de FCFS y q
 - `(a)` Asumiendo que NO hay apropiación entre los procesos.
 - `(b)` Asumiendo que hay apropiación entre los procesos.
 
-<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%"
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ### Ejercicio 17
 
