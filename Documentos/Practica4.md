@@ -150,11 +150,11 @@ int main ( void ) {
 </td>
 </table>
 
-##### i. ¿Cuántas líneas con la palabra “Proceso” aparecen al final de la ejecución de este programa?. Tengo dudas aca ⚠️
+#### i. ¿Cuántas líneas con la palabra “Proceso” aparecen al final de la ejecución de este programa?. Tengo dudas aca ⚠️
 
 El número de líneas con la palabra "Proceso" al final de la ejecución de este programa depende del número de veces que se haya ejecutado la función fork() en el bucle for. En este caso, el bucle for se ejecuta tres veces, lo que significa que se crearán tres procesos hijos. Por lo tanto, se imprimirá la línea "Proceso" una vez por cada proceso hijo creado.
 
-##### ii. ¿El número de líneas es el número de procesos que han estado en ejecución?.
+#### ii. ¿El número de líneas es el número de procesos que han estado en ejecución?.
 
 El número de líneas con la palabra "Proceso" al final de la ejecución del programa no es necesariamente igual al número de procesos que han estado en ejecución. Cada vez que se llama a la función fork(), se crea un nuevo proceso hijo, pero no significa que todos los procesos estén en ejecución simultáneamente. Los procesos pueden ejecutarse en diferentes momentos y en diferentes órdenes, dependiendo del sistema operativo y la planificación de procesos.
 
@@ -190,9 +190,9 @@ int main ( void ) {
 </td></table>
 
 
-##### i. ¿Qué valores se muestran por consola?.
-##### ii. ¿Todas las líneas tendrán el mismo valor o algunas líneas tendrán valores distin- tos?.
-##### iii. ¿Cuál es el valor (o valores) que aparece?. Ejecute el programa y compruebe si su respuesta es correcta, Modifique el valor del bucle for y el lugar dónde se incrementa la variable p y compruebe los nuevos resultados.
+#### i. ¿Qué valores se muestran por consola?.
+#### ii. ¿Todas las líneas tendrán el mismo valor o algunas líneas tendrán valores distin- tos?.
+#### iii. ¿Cuál es el valor (o valores) que aparece?. Ejecute el programa y compruebe si su respuesta es correcta, Modifique el valor del bucle for y el lugar dónde se incrementa la variable p y compruebe los nuevos resultados.
 
 ---
 
