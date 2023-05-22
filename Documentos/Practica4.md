@@ -46,17 +46,52 @@ que se encuentra en cátedras virtuales
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-### 1. Responda en forma sintética sobre los siguientes conceptos:
-- **`(a)`** Programa y Proceso
-- **`(b)`** Defina Tiempo de retorno (TR) y Tiempo de espera (TE) para un Job.
-- **`(c)`** Defina Tiempo Promedio de Retorno (TPR) y Tiempo promedio de espera (TPE) para un lote de JOBS.
-- **`(d)`** ¿Qué es el Quantum?
-- **`(e)`** ¿Qué significa que un algoritmo de scheduling sea apropiativo o no apropiativo (Preem-ptive o Non-Preemptive)?
-- **`(f)`** ¿Qué tareas realizan?:
-    - i. Short Term Scheduler
-    - ii. Long Term Scheduler
-    - iii. Medium Term Scheduler
-- **`(g)`** ¿Qué tareas realiza el Dispatcher?
+## 1. Responda en forma sintética sobre los siguientes conceptos:
+
+#### **`(a)`** Programa y Proceso
+
+- **Programa**: Estático, sin PC, existe desde que se edita hasta que se borra.
+- **Proceso**: Dinámico, con PC, vive desde que se lo ejecuta hasta que termina su ejecución.
+
+
+---
+
+**`(b)`** Defina Tiempo de retorno (TR) y Tiempo de espera (TE) para un Job.
+
+---
+
+**`(c)`** Defina Tiempo Promedio de Retorno (TPR) y Tiempo promedio de espera (TPE) para un lote de JOBS.
+
+---
+
+**`(d)`** ¿Qué es el Quantum?
+
+---
+
+**`(e)`** ¿Qué significa que un algoritmo de scheduling sea apropiativo o no apropiativo (Preem-ptive o Non-Preemptive)?
+
+---
+
+**`(f)`** ¿Qué tareas realizan?:
+
+---
+
+  - i. Short Term Scheduler
+
+---
+
+  - ii. Long Term Scheduler
+
+---
+
+  - iii. Medium Term Scheduler
+
+---
+
+**`(g)`** ¿Qué tareas realiza el Dispatcher?
+
+---
+
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
