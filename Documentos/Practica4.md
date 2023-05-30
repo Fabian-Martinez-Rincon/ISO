@@ -371,7 +371,23 @@ El Medium Term Scheduler.
 
 #### SJF (Shortest Job First)
 
+- La prioridad no la usamos
+- Lo ideal primero es marcar las llegadas
+- Despues vamos pensando que es lo que pasa en cada instante de tiempo. 
+
+Por ejemplo, en el instante `0` llega el proceso 1, lo encolamos, lo voy a seleccionar ya que es el unico que esta en la cola y como no es apropiativo ejecuto los 9 tiempos del cpu.
+
+- Como ya se encolaron todos cuando se termino de ejecutar el proceso 1, elijo el que tiene la siguiente rafaga de cpu mas corta. 
+- Se ejecuta el proceso 3, despues el 2 y por ultimo el 4.
+- El TR, es el tiempo que llega a la cola de listos, hasta que termina completamente
+- Es el tiempo que tuvo que esperar el proceso, antes de que se le asigne CPU
+o con la formula de `TR - CPU`
+
+![](/Practicas/Practica4/Imagenes/3sjf.jpg)
+
 #### Round Robin
+
+![](/Practicas/Practica4/Imagenes/3RR4.jpg)
 
 #### Prioridades
 
