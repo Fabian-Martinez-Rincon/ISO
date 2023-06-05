@@ -367,7 +367,15 @@ El Medium Term Scheduler.
 
 #### FCFS (Fisrt Coome First Served)
 
+- Marcamos las llegadas
+- En el instante 0 lo unico que pasa es que llega el proceso 1
+- Como no es apropiativo, se va a ejecutar hasta que termine
+- Cuando termino de ejecutarse el proceso 1, ya se encolaron todos los otros procesos
+
+
 ![](/Practicas/Practica4/Imagenes/3.jpg)
+
+---
 
 #### SJF (Shortest Job First)
 
@@ -385,15 +393,42 @@ o con la formula de `TR - CPU`
 
 ![](/Practicas/Practica4/Imagenes/3sjf.jpg)
 
+---
+
 #### Round Robin
+
+Este tiene timer variable
+
+- Marcamos las llegadas de todos los procesos
+- Nos detenemos en cada quantum
+- En el isntante 0, se encola el proceso 1 en la cola de listos
+- Pasa a estado runing y este se ejecuta al menos 4 veces
+- A medida que el proceso se ejecuto, se encolaron los demas procesos.
+- Cuando sale del estado de runig y vuelve al estado de listo, se vuelve a encolar
+- Como no tenemos nada que se este ejecutando, vamos a la cola y esta al tener un clock, vamos por orden de llegada, y volvemos a hacer lo mismo con el proceso 2
+- Como es un RR de tiempo variable, no nos cambia nada que el proceso 3 haya ejecutado 3 tiempo y no 4
+
 
 ![](/Practicas/Practica4/Imagenes/3RR4.jpg)
 
+---
+
 #### Prioridades
+
+- Por cada prioridad distinta, genero una cola nueva
+- Marcamos las llegadas como siempre
+- En el momento 0 va a llegar el proceso 1 con cpu 9 y prioridad 3
+- En general se descencolar se descencolan de las colas superiories hacia abajo (Si tienen algun proceso, en caso contrario continua con la siguiente cola). Primero la cola 1, despues la 2 y por ultimo la 3. En caso de que los procesos tengan la misma prioridad, se descencolan por orden de llegada
+- El algoritmo es apropiativo, esto quiere decir que si durante la ejecución del proceso 1, entra otro con mayor prioridad, se va a sacar y vuelve a la cola de listos
+- Cuando el proceso no termino de cpu, enconces se vuelve a encolar en su respectiva cola.
+
+![](/Practicas/Practica4/Imagenes/3Prioridad.jpg)
 
 ---
 
 #### `(b)` ¿Alguno de ellos requiere algún parámetro para su funcionamiento?
+
+RR requiere recibir el valor del Quantum asignado
 
 ---
 
