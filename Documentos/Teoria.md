@@ -5,22 +5,23 @@
 # Sistemas Operativos
 
 - [Sistema Operativo](#sistema-operativo)
-- [Funciones principales]()
-- [Problemas que debe evitar]()
-- [Componentes]()
-  - [Kernel (Núcleo)]()
-    - [Monolítico]()
-    - [Microkernel]()
-    - [Monolítico Vs. Microkernel]()
-- [Servicios]()
-  - [Apoyo del Hardware]()
-  - [Modos de ejecución]()
-  - [Protección]()
-    - [Protección de la memoria]()
-    - [Protección de la E/S]()
-    - [Protección de la CPU]()
-  - [System Calls]()
-- [Elementos Básicos de una computadora]()
+- [Funciones principales](#funciones-principales)
+- [Problemas que debe evitar](#problemas-que-debe-evitar-un-so)
+- [Componentes](#componentes)
+  - [Kernel (Núcleo)](#kernel-nucleo)
+    - [Monolítico](#monolitico)
+    - [Microkernel](#microkernel)
+    - [Monolítico Vs. Microkernel](#monolitico-vs-microkernel)
+- [Servicios](#servicios)
+  - [Apoyo del Hardware](#apoyo-del-hardware)
+  - [Modos de ejecución](#modos-de-ejecución)
+  - [Protección](#protecciones)
+    - [Protección de la memoria](#protección-de-la-memoria)
+    - [Protección de la E/S](#protección-de-la-es)
+    - [Protección de la CPU](#protección-de-la-cpu)
+  - [System Calls](#system-calls)
+- [Elementos Básicos de una computadora](#elementos-basicos-de-una-computadora)
+
 
 ---
 
@@ -317,8 +318,6 @@ Mas ejemplos
 - habilita/deshabilita Interrupciones 
 - Indica el modo de ejecución (Supervisor/usuario)
 
-
-
 ### Ciclo de Instrucción
 
 Dos pasos
@@ -335,7 +334,48 @@ Dos pasos
 
 ![](2023-06-04-16-55-20.png)
 
+---
 
+![](2023-06-04-16-23-31.png)
+
+## Interrupciones
+
+- Interrumpen el secuenciamiento del procesador durante la ejecución de un proceso
+- Dispositivos de E/S más lentos que el procesador (Procesador debe esperar al dispositivo)
+
+| Flujo de control SIN  interrupciones | Flujo de control CON  interrupciones |
+| --- | --- |
+| ![](2023-06-05-01-03-14.png) | ![](2023-06-05-01-04-37.png) |
+
+### Interrupt Handler
+
+- Programa (o rutina) que determina la naturaleza de una interrupción y realiza lo necesario para atenderla
+  - Por ejemplo, para un dispositivo particular de E/S
+- Generalemente es parte del SO
+
+Suspende la secuencia normal de ejecución
+
+![](2023-06-05-01-10-21.png)
+
+Ciclo de interrupción
+
+![](2023-06-05-01-13-38.png)
+
+- El procesador chequea la existencia de interrupciones. 
+- Si no existen interrupciones, la próxima instrucción del programa es ejecutada
+- Si hay pendiente alguna interrupción, se suspende la ejecución del progama actual y se ejecuta la rutina de manejo de interrupciones
+
+Simple Interrupt Processing
+
+![](2023-06-05-01-14-47.png)
+
+Multiples Interrupciones
+
+Deshabilitar las interrupciones mientras una interrupción está siendo procesada.
+
+
+| ![](2023-06-05-01-15-22.png) | ![](2023-06-05-01-16-24.png) |
+| --- | --- |
 
 ---
 
@@ -348,6 +388,3 @@ Dos pasos
   - Monitor / teclado / mouse
 - Bus Sistema
   - comunicación entre procesadores, memoria, dispositivos de E/S
-
-![](2023-06-04-16-23-31.png)
-
