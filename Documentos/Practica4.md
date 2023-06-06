@@ -434,12 +434,34 @@ RR requiere recibir el valor del Quantum asignado
 
 #### `(c)` Cual es el mas adecuado según los tipos de procesos y/o SO.
 
+**FCFS (Fisrt Come First Served/FIFO)** → No beneficia a ninguno, CPU Bound terminan en primera ráfaga, I/O bound no.
+
+**SJF (Shortest Job First)** → No favorece a ninguno en particular, funciona similar a FIFO, puede causar starvation y afectar los tiempos de respuesta.
+
+**Round Robin** → Favorece I/O Bound.
+
+**Prioridades** → No favorece a ninguno en particular, si tuviéramos alta prioridad para CPU Bound, se ejecutarían ellos; si fuera para I/O Bound se ejecutarian ellos; si tuviéramos prioridades diferentes para diferentes procesos en particular, también podría personalizarse.
+
+**SRTF (Shortest Remaining Time First)** → Favorece I/O Boud.
+
+**Colas Multinivel** → No favorece a ninguno en particular, puede personalizarse para hacerlo.
+
+**VRR (Virtual Round Robin)** → Favorece a I/O Bound y tiene un tiempo de respuesta muy bueno. Busca de todas formas un sistema balanceado.
+
 ---
 
 #### `(d)` Cite ventajas y desventajas de su uso
 
-<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+**FCFS (Fisrt Come First Served / FIFO)** → Es el más simple, no lleva mucha lógica ni costos, pero limita mucho la capacidad de decisión sobre la planificación. No produce inanición ni tiene procesos beneficiados.
 
+**SJF (Shortest Job First)** → Es también simple, tampoco lleva mucha lógica o costos (aunque mayores que FIFO), puede causar starvation.
+
+**Round Robin** → Conserva cierta simplicidad, beneficia I/O, no puede causar starvation. Posee variantes (TF/TV).
+
+**Prioridades** → Puede causar starvation, aumenta la libertad de seleccion de procesos beneficiados. Puede causar starvation, pero con diferentes políticas (como aging/penalty o burbujeo).
+
+
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ### 4. Para el algoritmo Round Robin, existen 2 variantes:
 
@@ -448,12 +470,27 @@ RR requiere recibir el valor del Quantum asignado
 
 ***Realice***
 
-- `(a)` ¿Qué significan estas 2 variantes?
-- `(b)` Explique mediante un ejemplo sus diferencias.
-- `(c)` En cada variante ¿Dónde debería residir la información del Quantum?
+#### `(a)` ¿Qué significan estas 2 variantes?
+
+**Timer Fijo** El contador del Q no se modifica, cada Q tiempos de CPU el STS seleccionará un nuevo proceso.
+
+**Timer Variable** El contador del Q se reinicia cada vez que entra un proceso nuevo a la CPU.
+
+---
+
+####  `(b)` Explique mediante un ejemplo sus diferencias.
+
+![](2023-06-06-12-29-17.png)
+
+---
+
+####  `(c)` En cada variante ¿Dónde debería residir la información del Quantum?
+
+**Timer Fijo** Variable global del Algoritmo.
+
+**Timer Variable** Variable local del proceso.
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
-
 
 ### 5. Se tiene el siguiente lote de procesos que arriban al sistema en el instante 0 (cero):
 
