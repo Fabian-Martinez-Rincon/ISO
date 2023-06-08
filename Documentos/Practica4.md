@@ -503,10 +503,30 @@ RR requiere recibir el valor del Quantum asignado
 | 5 | 9 |
 
 - `(a)` Realice los diagramas de Gantt según los siguientes algoritmos de scheduling:
-    - i. FCFS (First Come, First Served)
-    - ii. SJF (Shortest Job First)
-    - iii. Round Robin con quantum = 4 y Timer Fijo
-    - iv. Round Robin con quantum = 4 y Timer Variable
+#### i. FCFS (First Come, First Served)
+
+![](/Practicas/Practica4/Imagenes/5FCFS.jpg)
+
+---
+
+#### ii. SJF (Shortest Job First)
+
+![](/Practicas/Practica4/Imagenes/5sjf.jpg)
+
+---
+
+#### iii. Round Robin con quantum = 4 y Timer Fijo
+
+![](/Practicas/Practica4/Imagenes/5RR.jpg)
+
+---
+
+#### iv. Round Robin con quantum = 4 y Timer Variable
+
+
+
+---
+
 - `(b)` Para cada algoritmo calcule el TR y TE para cada job así como el TPR y el TPE.
 - `(c)` En base a los tiempos calculados compare los diferentes algoritmos.
 
