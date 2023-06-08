@@ -523,7 +523,7 @@ RR requiere recibir el valor del Quantum asignado
 
 #### iv. Round Robin con quantum = 4 y Timer Variable
 
-
+![](/Practicas/Practica4/Imagenes/5TimerVariable.jpg)
 
 ---
 
@@ -542,10 +542,24 @@ RR requiere recibir el valor del Quantum asignado
     | 3 | 3 | 4 |
     | 4 | 6 | 5 |
     | 5 | 8 | 2 |
-    - i. FCFS (First Come, First Served)
-    - ii. SJF (Shortest Job First)
-    - iii. Round Robin con quantum = 1 y Timer Variable
-    - iv. Round Robin con quantum = 6 y Timer Variable
+#### i. FCFS (First Come, First Served)
+
+![](/Practicas/Practica4/Imagenes/6FCFS.jpg)
+
+---
+
+#### ii. SJF (Shortest Job First)
+
+---
+
+#### iii. Round Robin con quantum = 1 y Timer Variable
+
+---
+
+#### iv. Round Robin con quantum = 6 y Timer Variable
+
+
+
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
