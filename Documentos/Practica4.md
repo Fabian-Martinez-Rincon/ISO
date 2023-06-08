@@ -550,9 +550,13 @@ RR requiere recibir el valor del Quantum asignado
 
 #### ii. SJF (Shortest Job First)
 
+![](/Practicas/Practica4/Imagenes/6SJF.jpg)
+
 ---
 
 #### iii. Round Robin con quantum = 1 y Timer Variable
+
+![](/Practicas/Practica4/Imagenes/6RRQ1.jpg)
 
 ---
 
