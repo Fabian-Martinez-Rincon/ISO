@@ -562,7 +562,7 @@ RR requiere recibir el valor del Quantum asignado
 
 #### iv. Round Robin con quantum = 6 y Timer Variable
 
-
+![](/Practicas/Practica4/Imagenes/6RRQ6.jpg)
 
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
