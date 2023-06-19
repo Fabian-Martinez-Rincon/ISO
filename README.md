@@ -40,7 +40,7 @@ Primero, para todos los ejercicios, hacemos lo siguiente:
 - `TR` (Tiempo de Retorno) = `TF` - `Llegada`
 - `TE` (Tiempo de Espera) = `TR` - `Tcpu`
 - Seleccionamos procesos a medida que van llegando, para esto tenemos varias formas
-  - **FCFS** (No es apropiativo)
+  - **`FCFS`** (No es apropiativo)
     - **`1)`** Selecciona los procesos en orden de llegada (El mas viejo)
     - **`2)`** Si no tiene E/S se ejecuta hasta el final
 
