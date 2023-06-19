@@ -40,6 +40,8 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 - **`TPR`** Tiempo Promedio de Retorno
 - **`TPE`** Tiempo Promedio de Espera
 
+---
+
 #### Tenemos que pensar la ejecución de la siguiente forma.
 - Nos detenemos en cada Quantum y pensar que es lo que ocurre en cada uno de los tiempos
 - Por ejemplo
@@ -49,6 +51,7 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
   - Aca decidimos cuales de la cola van a ser seleccionados para ejecutarse
   - Se ejecutan en orden de llegada
 
+---
 
 #### Primero, para todos los ejercicios, hacemos lo siguiente:
 - Primero marcamos todas las llegadas
@@ -68,10 +71,10 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 
 
 
----
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ### 💾 Resumen Practica 5 Administración de Memoria Principal
 
----
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ### 💿 Administraci ́on de E/S - Discos
