@@ -64,11 +64,12 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 - *`No Apropiativos`* Se ejecutan hasta el final (Si no hay E/S)
   - **`FCFS`** Selecciona los procesos en orden de llegada (El mas viejo)
   - **`SJF`** Elige el que tiene la siguiente rafaga de CPU mas corta
-  - **`RR TV/TF Q=N`** 
-  - *TIMER VARIABLE*
-    - Siempre se ejecuta `Ntiempos` si al final, no se termino, vuelve a la cola de listos
+- *`Apropiativos`*
+  - **`Round Robin`** (RR TV/TF Q=N)
+    - **`Timer Variable`** Siempre se ejecuta `Ntiempos` sino termina antes
+    - **`Timer Fijo`** Cada `Nquantums` voy a cambiar de proceso (un context switch) Esto lo marcamos en el grafico
     - Se ejecuta en orden de llegada 
-
+    - Si no termino, vuelve a la cola de listos
 
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
