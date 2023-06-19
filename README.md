@@ -29,6 +29,12 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 ### 📁 Resumen Practica 4 Administración de Procesos
 
 #### Algunas abreviaturas
+- **`FCFS`** First come first served
+- **`SJF`** Shortest Job First
+- **`RR`** Round Robin
+  - **`TV`** Timer Variable
+  - **`TF`** Timer Fijo
+- **`Q`** Quantum
 - **`TR`** Tiempo de Retorno
 - **`TE`** Tiempo de Espera
 - **`TPR`** Tiempo Promedio de Retorno
@@ -55,7 +61,8 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 - *`No Apropiativos`* Se ejecutan hasta el final (Si no hay E/S)
   - **`FCFS`** Selecciona los procesos en orden de llegada (El mas viejo)
   - **`SJF`** Elige el que tiene la siguiente rafaga de CPU mas corta
-  - **`RR TV Q=N`** 
+  - **`RR TV/TF Q=N`** 
+  - *TIMER VARIABLE*
     - Siempre se ejecuta `Ntiempos` si al final, no se termino, vuelve a la cola de listos
     - Se ejecuta en orden de llegada 
 
