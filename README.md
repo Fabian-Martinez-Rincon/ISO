@@ -28,13 +28,23 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 
 ### 📁 Resumen Practica 4 Administración de Procesos
 
-Algunas abreviaturas
+#### Algunas abreviaturas
 - **`TR`** Tiempo de Retorno
 - **`TE`** Tiempo de Espera
 - **`TPR`** Tiempo Promedio de Retorno
 - **`TPE`** Tiempo Promedio de Espera
 
-Primero, para todos los ejercicios, hacemos lo siguiente:
+#### Tenemos que pensar la ejecución de la siguiente forma.
+- Nos detenemos en cada Quantum y pensar que es lo que ocurre en cada uno de los tiempos
+- Por ejemplo
+- En el tiempo 0, lo unico que pasa es que se encola P1
+- Luego de agregar a la cola de listos el proceso que llego
+- Pasamos a la etapa de ejecución
+  - Aca decidimos cuales de la cola van a ser seleccionados para ejecutarse
+  - Se ejecutan en orden de llegada
+
+
+#### Primero, para todos los ejercicios, hacemos lo siguiente:
 - Primero marcamos todas las llegadas
 - La cantidad de columnas es la suma total de los `Tcpu`
 - `TR` = `Tfinal` - `Llegada`
@@ -42,10 +52,13 @@ Primero, para todos los ejercicios, hacemos lo siguiente:
 - `TE` = `TR` - `Tcpu`
 - `TPE` = `Σ TEn` / `Cantidad de procesos`
 - Seleccionamos procesos a medida que van llegando, para esto tenemos varias formas
-- *`No Apropiativos`*
+- *`No Apropiativos`* Se ejecutan hasta el final (Si no hay E/S)
   - **`FCFS`** Selecciona los procesos en orden de llegada (El mas viejo)
   - **`SJF`** Elige el que tiene la siguiente rafaga de CPU mas corta
-  - Si no tiene E/S se ejecuta hasta el final
+  - **`RR TV Q=N`** 
+    - Siempre se ejecuta `Ntiempos` si al final, no se termino, vuelve a la cola de listos
+    - Se ejecuta en orden de llegada 
+
 
 
 ---
