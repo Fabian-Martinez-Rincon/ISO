@@ -28,8 +28,21 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 
 ### Resumen Practica 4 Administración de Procesos
 
-Para trabajar con los procesos contamos con distintos algoritmos como
+Algunas abreviaturas
+- **`TR`** Tiempo de Retorno
+- **`TE`** Tiempo de Espera
+- **`TPR`** Tiempo Promedio de Retorno
+- **`TPE`** Tiempo Promedio de Espera
 
+Primero, para todos los ejercicios, hacemos lo siguiente:
+- Primero marcamos todas las llegadas
+- La cantidad de columnas es la suma total de los `Tcpu`
+- `TR` (Tiempo de Retorno) = `TF` - `Llegada`
+- `TE` (Tiempo de Espera) = `TR` - `Tcpu`
+- Seleccionamos procesos a medida que van llegando, para esto tenemos varias formas
+  - **FCFS** (No es apropiativo)
+    - **`1)`** Selecciona los procesos en orden de llegada (El mas viejo)
+    - **`2)`** Si no tiene E/S se ejecuta hasta el final
 
 
 
