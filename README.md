@@ -54,15 +54,6 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 
 </td></tr></table>
 
-#### Algunas abreviaturas
-
-
----
-
-#### Tenemos que pensar la ejecución de la siguiente forma.
-
-
----
 
 #### Primero, para todos los ejercicios, hacemos lo siguiente:
 - Primero marcamos todas las llegadas
