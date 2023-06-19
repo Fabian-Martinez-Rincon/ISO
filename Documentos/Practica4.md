@@ -534,15 +534,25 @@ RR requiere recibir el valor del Quantum asignado
 
 ### 6. Se tiene el siguiente lote de procesos
 
-- `(a)` Realice los diagramas de Gantt según los siguientes algoritmos de scheduling: <br><br>
-    | Job | Llegada | Unidades de CPU |
-    | --- | --- | --- |
-    | 1 | 0 | 4 |
-    | 2 | 2 | 6 |
-    | 3 | 3 | 4 |
-    | 4 | 6 | 5 |
-    | 5 | 8 | 2 |
+#### `(a)` Realice los diagramas de Gantt según los siguientes algoritmos de scheduling:
+
+| Job | Llegada | Unidades de CPU |
+| --- | --- | --- |
+| 1 | 0 | 4 |
+| 2 | 2 | 6 |
+| 3 | 3 | 4 |
+| 4 | 6 | 5 |
+| 5 | 8 | 2 |
+
 #### i. FCFS (First Come, First Served)
+
+| Job | Llegada | CPU | Te | Tr |
+| --- | ------- | --- | -- | -- |
+| 1   | 0       | 4   | 0  | 4  |
+| 2   | 2       | 6   | 2  | 8  |
+| 3   | 3       | 4   | 7  | 11 |
+| 4   | 6       | 5   | 8  | 13 |
+| 5   | 8       | 2   | 11 | 13 |
 
 ![](/Practicas/Practica4/Imagenes/6FCFS.jpg)
 
@@ -564,13 +574,34 @@ RR requiere recibir el valor del Quantum asignado
 
 ![](/Practicas/Practica4/Imagenes/6RRQ6.jpg)
 
+Recien me doy cuenta que me olvide de restar el tiempo de llegada en los tiempos de retorno
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 
 ### 7. Una variante al algoritmo SJF es el algoritmo SJF apropiativo o SRTF (Shortest Remaining Time First):
-- `(a)` Realice el diagrama del Gantt para este algoritmo según el lote de trabajos del ejercicio 6.
-- `(b)` ¿Nota alguna ventaja frente a otros algoritmos?
+####  `(a)` Realice el diagrama del Gantt para este algoritmo según el lote de trabajos del ejercicio 6.
+
+![](/Practicas/Practica4/Imagenes/Ejercicio%207.jpg)
+
+####  `(b)` ¿Nota alguna ventaja frente a otros algoritmos?
+
+El TPR es considerablemente alto (el más alto de todos), mientras que el TPE es el bastante mejor (el más bajo de todos). Tiene esa ventaja al parecer, El tiempo de respuesta puede ser promedio, no parece beneficiar a I/O ni a CPU Bound.
+
+#### Ejemplo de SRTF 
+
+Se selecciona el siguiente proceso, cuya siguiente rafaga de CPU, sea la mas corta entre todos los que esten encolados en la cola de listos. Es la version apropiativa del SJF. 
+- Primero marcamos las llegadas
+- Cuando llega el proceso 1 en el instante cero, lo encolamos, cuando se ejecute el proceso 1, en el instante 0, va a tener 8 de cpu
+- En el tiempo 1, ingresa el proceso 2 que tiene 5 de cpu, que es menor al proceso1 que tiene 8 de cpu, este queda con 4 de cpu
+- En el tiempo 2, pasa lo mismo, ya que el proceso3 tiene 3 de cpu y el proceso2 se queda con 4, y este se ejecuta completo ya que no va a encontrar otro con menor rafaga de cpu que ese.
+- Tachamos el proceso 3 ya que termino y buscamos entre los restantes, cual es que tiene menor tiempo de cpu 
+- Entonces al proceso 1 = 8 de CPU, al proceso 2 = 4 de CPU y al proceso 4 = 7 de CPU
+- Ejecutamos por completo el proceso 2
+- Ejecutamos por completo el proceso 4 que tiene 6 de CPU
+- Y por ultimo vamos a ejecutar el proceso 1 hasta el final
+
+![](/Practicas/Practica4/Imagenes/Ejemplo7.jpg)
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
@@ -585,9 +616,18 @@ RR requiere recibir el valor del Quantum asignado
 | 4 | 1 |
 | 5 | 2 |
 
-- `(a)` Realice el diagrama de Gantt correspondiente al algoritmo de planificación por prioridades según las variantes:
-    - i. No Apropiativa
-    - ii. Apropiativa
+`(a)` Realice el diagrama de Gantt correspondiente al algoritmo de planificación por prioridades según las variantes:
+
+#### i. No Apropiativa
+
+![](/Practicas/Practica4/Imagenes/Ejercicio8.jpg)
+
+---
+
+#### ii. Apropiativa
+
+---
+
 - `(b)` Calcule el TR y TE para cada job así como el TPR y el TPE.
 - `(c)` ¿Nota alguna ventaja frente a otros algoritmos? Bajo que circunstancias lo utilizaría y ante que situaciones considera que la implementación de prioridades podría no ser de mayor relevancia?
 
@@ -595,9 +635,20 @@ RR requiere recibir el valor del Quantum asignado
 
 
 ### 9. Inanición (Starvation)
-- `(a)` ¿Qué significa?
-- `(b)` ¿Cuál/es de los algoritmos vistos puede provocarla?
-- `(c)` ¿Existe alguna técnica que evite la inanición para el/los algoritmos mencionados en b?
+#### `(a)` ¿Qué significa?
+
+Se da cuando un proceso queda ocioso de uso de la CPU, ya que otros la ocupan previamente de forma constante y no le permiten hacer su uso. Es entonces el estado de un proceso que no está recibiendo tiempo de CPU por un lapso temporal prolongado.
+
+
+#### `(b)` ¿Cuál/es de los algoritmos vistos puede provocarla?
+
+SJF, Prioridades y SRTF
+
+#### `(c)` ¿Existe alguna técnica que evite la inanición para el/los algoritmos mencionados en b?
+
+Aging y la tácnica de “burbujeo” pueden evitarlo.
+- **Aging**: penaliza a los procesos con mucho tiempo de CPU acumulado en su ciclo de vida.
+- **Burbujeo**: sube la prioridad de los procesos que llevan mucho tiempo ociosos.
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
@@ -636,8 +687,16 @@ Y suponiendo que la cola de listos de todos los dispositivos se administra media
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ### 11. Algunos algoritmos pueden presentar ciertas desventajas cuando en el sistema se cuenta con procesos ligados a CPU y procesos ligados a entrada salida. Analice las mismas para los siguientes algoritmos:
-- `(a)` Round Robin
-- `(b)` SRTF (Shortest Remaining Time First)
+
+#### `(a)` Round Robin
+
+Es casi ideal paraI I/O ound si establecemos un Q bajo (una cola larga puede afectar el tiempo de respuesta de un proceso). No beneficia a ninguno en particular, Q alto puede afectar tiempo de respuesta y Q bajo puede afectar eficiencia para CPU Bound. Suele utilizarse para I/O Bound.
+
+---
+
+#### `(b)` SRTF (Shortest Remaining Time First)
+
+Puede llegar a afectar tiempos de respuesta y causar starvation. No es del todo malo para CPU Bound, y favorece a I/O bound, pero no llega a ser del todo apropiado para procesos interactivos.
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
@@ -653,6 +712,8 @@ Y suponiendo que la cola de listos de todos los dispositivos se administra media
 ### Ejercicio 13
 
 Suponga que un SO utiliza un algoritmo de VRR con Timer Variable para el planificar sus procesos. Para ello, el quantum es representado por un contador, que es decrementado en 1 unidad cada vez que ocurre una interrupción de reloj. ¿Bajo este esquema, puede suceder que el quantum de un proceso nunca llegue a 0 (cero)? Justifique su respuesta.
+
+Sí, poodría no ocurrir, si tuviéramos sólo procesos con tiempo de uso de CPU menor al Quantum asignado, entonces el contador nunca llegaría a 0. Fuera de ese caso no, ya que los procesos siempre vuelven de E/S a terminar su Quantum asignado, llegando este en algún momento a 0.
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
@@ -676,6 +737,7 @@ Donde:
 ![image](https://user-images.githubusercontent.com/55964635/224461090-3b4464d1-ce37-4cb4-95e9-85e0254596e2.png)
     Con 0 〈 α 〈 1.
 - `(b)` Analice para que valores de α se tienen en cuenta los casos mas recientes.
+    - Para valores de α mayores se da mayor importancia al caso real más reciente, y se da menor a los promedios anteriores, en la fórmula anterior era al revés, se dava importancia inversa, donde la importancia al más reciente perdía cada vez más porcentaje conforme la cantidad de ráfagas n aumente.
 - `(c)` Para la situación planteada en a) calcule que valores se obtendrían si se utiliza la formula 2 con α = 0,2; α = 0,5 y α = 0,8.
 - `(d)` Para todas las estimaciones realizadas en a y c ¿Cuál es la que mas se asemeja a las
 ráfagas de CPU reales del proceso?
