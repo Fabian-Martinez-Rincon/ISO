@@ -17,10 +17,26 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 - [Teoria](/Documentos/Teoria.md)
 - [Repaso Primer Parcial de Promoción](/Documentos/RepasoPrimerParcialPromocion.md)
 - [Primer Parcial de Promoción](/Documentos/PrimerParcialPromocion.md)
-- [Practica 1](/Documentos/Practica1.md)
-- [Practica 2](/Documentos/Practica2.md)
-- [Practica 3](/Documentos/Practica3.md)
-- [Practica 4](/Documentos/Practica4.md)
+- [Practica 1 Conceptos Generales](/Documentos/Practica1.md)
+- [Practica 2 Introducción a GNU/Linux](/Documentos/Practica2.md)
+- [Practica 3 Shell scripting](/Documentos/Practica3.md)
+- [Practica 4 Administración de Procesos](/Documentos/Practica4.md)
 
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+
+
+### Resumen Practica 4 Administración de Procesos
+
+Para trabajar con los procesos contamos con distintos algoritmos como
+
+
+
+
+---
+
+### Resumen Practica 5 Administración de Memoria Principal
+
+---
+
+### Administraci ́on de E/S - Discos
