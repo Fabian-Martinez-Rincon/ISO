@@ -28,7 +28,9 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 
 ### 📁 Resumen Practica 4 Administración de Procesos
 
-#### Algunas abreviaturas
+
+<table><tr><td>Abreviaturas</td><td>Forma de Pensarlo</td></tr><tr><td>
+
 - **`FCFS`** First come first served
 - **`SJF`** Shortest Job First
 - **`RR`** Round Robin
@@ -40,16 +42,25 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 - **`TPR`** Tiempo Promedio de Retorno
 - **`TPE`** Tiempo Promedio de Espera
 
+</td><td>
+
+- Nos detenemos en cada Quantum (Que ocurre en cada Tiempo?) 
+- Por ejemplo:
+  - En el tiempo 0, lo unico que pasa es que se encola P1
+  - Luego de agregar a la cola de listos el proceso que llego
+  - Pasamos a la etapa de ejecución
+    - Aca decidimos cual va a ser seleccionado para ejecutarse
+    - fin
+
+</td></tr></table>
+
+#### Algunas abreviaturas
+
+
 ---
 
 #### Tenemos que pensar la ejecución de la siguiente forma.
-- Nos detenemos en cada Quantum y pensar que es lo que ocurre en cada uno de los tiempos
-- Por ejemplo
-- En el tiempo 0, lo unico que pasa es que se encola P1
-- Luego de agregar a la cola de listos el proceso que llego
-- Pasamos a la etapa de ejecución
-  - Aca decidimos cuales de la cola van a ser seleccionados para ejecutarse
-  - Se ejecutan en orden de llegada
+
 
 ---
 
@@ -64,12 +75,11 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 - *`No Apropiativos`* Se ejecutan hasta el final (Si no hay E/S)
   - **`FCFS`** Selecciona los procesos en orden de llegada (El mas viejo)
   - **`SJF`** Elige el que tiene la siguiente rafaga de CPU mas corta
-- *`Apropiativos`*
-  - **`Round Robin`** (RR TV/TF Q=N)
-    - **`Timer Variable`** Siempre se ejecuta `Ntiempos` sino termina antes
+- *`Apropiativos`* Se puede cortar la ejecución del proceso
+  - **`Round Robin`** (RR TV/TF Q=N) Se ejecuta en orden de llegada y si no termino, vuelve a la cola de listos
+    - **`Timer Variable`** Siempre se ejecuta `Ntiempos` (sino termina antes)
     - **`Timer Fijo`** Cada `Nquantums` voy a cambiar de proceso (un context switch) Esto lo marcamos en el grafico
-    - Se ejecuta en orden de llegada 
-    - Si no termino, vuelve a la cola de listos
+  
 
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
