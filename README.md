@@ -26,7 +26,7 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 
-### Resumen Practica 4 Administración de Procesos
+### 📁 Resumen Practica 4 Administración de Procesos
 
 Algunas abreviaturas
 - **`TR`** Tiempo de Retorno
@@ -37,19 +37,21 @@ Algunas abreviaturas
 Primero, para todos los ejercicios, hacemos lo siguiente:
 - Primero marcamos todas las llegadas
 - La cantidad de columnas es la suma total de los `Tcpu`
-- `TR` (Tiempo de Retorno) = `TF` - `Llegada`
-- `TE` (Tiempo de Espera) = `TR` - `Tcpu`
+- `TR` = `Tfinal` - `Llegada`
+- `TPR` = `Σ TRn` / `Cantidad de procesos`
+- `TE` = `TR` - `Tcpu`
+- `TPE` = `Σ TEn` / `Cantidad de procesos`
 - Seleccionamos procesos a medida que van llegando, para esto tenemos varias formas
-  - **`FCFS`** (No es apropiativo)
-    - **`1)`** Selecciona los procesos en orden de llegada (El mas viejo)
-    - **`2)`** Si no tiene E/S se ejecuta hasta el final
-
+- *`No Apropiativos`*
+  - **`FCFS`** Selecciona los procesos en orden de llegada (El mas viejo)
+  - **`SJF`** Elige el que tiene la siguiente rafaga de CPU mas corta
+  - Si no tiene E/S se ejecuta hasta el final
 
 
 ---
 
-### Resumen Practica 5 Administración de Memoria Principal
+### 💾 Resumen Practica 5 Administración de Memoria Principal
 
 ---
 
-### Administraci ́on de E/S - Discos
+### 💿 Administraci ́on de E/S - Discos
