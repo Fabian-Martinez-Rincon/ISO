@@ -214,6 +214,8 @@ Estos ejemplos fueron sacados de @agusrnf
     - Como el P1 no termino, se vuelve a la cola 3
   - **`SRFT`** Es la versión apropiativa del SJF
 
+## Voy a rezar para que no tomen AFINIDAD
+
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ### 💾 Resumen Practica 5 Administración de Memoria Principal
