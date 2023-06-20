@@ -54,6 +54,8 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 
 </td></tr></table>
 
+---
+
 ### Ejemplos
 
 <details>
@@ -92,6 +94,8 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 
 ![](2023-06-20-08-57-11.png)
 </details>
+
+---
 
 #### Primero, para todos los ejercicios, hacemos lo siguiente:
 - Primero marcamos todas las llegadas
