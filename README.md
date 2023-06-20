@@ -66,7 +66,7 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 | P4 | 3 | 7 | 2 |
 
 
-<details open>
+<details>
 <summary> FCFS (First come first served) </summary>
 
 ![](/Ejemplos/2023-06-20-08-55-08.png)
@@ -106,6 +106,23 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 ---
 
 ### Ejemplos I/O BOUND
+
+Explicación
+
+
+| job | Llegada | Tcpu | E/S (rec, inst, dur) |
+| :---: | :---: | :---: | :---: |
+| P1 | 0 | 5 | (R1, 3, 2) |
+| P2 | 1 | 4 | (R2, 2, 2) |
+| P3 | 2 | 3 | (R3, 2, 3) |
+
+- **rec** Nombre del recurso
+- **inst** el instante en donde va a tener que ejecutar la E/S
+- **dur** duración de la E/S
+
+Ejemplo en FCFS
+- Primero llegaria el **P1**, ejecuta **3 rafagas** de CPU y su **4ta rafaga** es de E/S durante **2 tiempos**
+- Tenemos una cola por cada recurso distinto
 
 ---
 #### Primero, para todos los ejercicios, hacemos lo siguiente:
