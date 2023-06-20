@@ -58,7 +58,15 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 
 ### Ejemplos CPU BOUND
 
-<details>
+| Proceso | Llegada | Tcpu | Prioridad |
+| :---: | :---: | :---: | :---: |
+| P1 | 0 | 9 | 3 |
+| P2 | 1 | 5 | 2 |
+| P3 | 2 | 3 | 1 |
+| P4 | 3 | 7 | 2 |
+
+
+<details open>
 <summary> FCFS (First come first served) </summary>
 
 ![](/Ejemplos/2023-06-20-08-55-08.png)
