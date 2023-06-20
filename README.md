@@ -58,17 +58,9 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 
 ### Ejemplos
 
-<details>
-<summary> FCFS (First come first served) </summary>
 
-![](2023-06-20-08-55-08.png)
-</details>
 
-<details>
-<summary> SJF (Shortest Job First) </summary>
 
-![](2023-06-20-08-54-00.png)
-</details>
 
 <details>
 <summary> Round Robin (Timer Variable) </summary>
@@ -107,15 +99,19 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 - Seleccionamos procesos a medida que van llegando, para esto tenemos varias formas
 - *`No Apropiativos`* Se ejecutan hasta el final (Si no hay E/S)
   - **`FCFS`** Selecciona los procesos en orden de llegada (El mas viejo)
+  - <details><summary> Ejemplo </summary> <img src='2023-06-20-08-55-08.png'></details>
   - **`SJF`** Elige el que tiene la siguiente rafaga de CPU mas corta
+  - <details><summary> Ejemplo </summary> <img src='2023-06-20-08-54-00.png'></details>
 - *`Apropiativos`* Se puede cortar la ejecución del proceso
-  - **`Round Robin`** (RR TV/TF Q=N) Se ejecuta en orden de llegada y si no termino, vuelve a la cola de listos
+  - **`Round Robin`** 
+    - Se ejecuta en orden de llegada y si no termino, vuelve a la cola de listos
     - **`Timer Variable`** Siempre se ejecuta `Ntiempos` (sino termina antes)
     - **`Timer Fijo`** Cada `Nquantums` voy a cambiar de proceso (un context switch) Esto lo marcamos en el grafico
   - **`Prioridades`** Por cada prioridad distinta, tenemos una cola nueva
     - Siempre se descencola el de la cola 1 y 2, si no hay, se descencola el de la cola 3 y 4
     - En el instante 2 llega el P2, y como tiene mayor prioridad que el P1(con prioridad 3), se ejecuta primero
-    - Como el P1 no termino, se vuelve a la cola 3 
+    - Como el P1 no termino, se vuelve a la cola 3
+  - **`SRFT`** Es la versión apropiativa del SJF
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
