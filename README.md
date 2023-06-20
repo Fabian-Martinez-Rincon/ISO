@@ -56,7 +56,7 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 
 ---
 
-### Ejemplos
+### Ejemplos CPU BOUND
 
 <details>
 <summary> FCFS (First come first served) </summary>
@@ -97,6 +97,9 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 
 ---
 
+### Ejemplos I/O BOUND
+
+---
 #### Primero, para todos los ejercicios, hacemos lo siguiente:
 - Primero marcamos todas las llegadas
 - La cantidad de columnas es la suma total de los `Tcpu`
