@@ -61,38 +61,38 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 <details>
 <summary> FCFS (First come first served) </summary>
 
-![](2023-06-20-08-55-08.png)
+![](/Ejemplos/2023-06-20-08-55-08.png)
 </details>
 
 <details>
 <summary> SJF (Shortest Job First) </summary>
 
-![](2023-06-20-08-54-00.png)
+![](/Ejemplos/2023-06-20-08-54-00.png)
 </details>
 
 <details>
 <summary> Round Robin (Timer Variable) </summary>
 
-![](2023-06-20-08-52-26.png)
+![](/Ejemplos/2023-06-20-08-52-26.png)
 
 </details>
 
 <details>
 <summary> Round Robin (Timer Fijo)</summary>
 
-![](2023-06-20-08-51-34.png)
+![](/Ejemplos/2023-06-20-08-51-34.png)
 </details>
 
 <details>
 <summary> Prioridades </summary>
 
-![](2023-06-20-08-46-27.png)
+![](/Ejemplos/2023-06-20-08-46-27.png)
 </details>
 
 <details>
 <summary> SRTF (Shortest Remaining Time First perteneciente) </summary>
 
-![](2023-06-20-08-57-11.png)
+![](/Ejemplos/2023-06-20-08-57-11.png)
 </details>
 
 ---
