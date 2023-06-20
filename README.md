@@ -109,7 +109,6 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 
 Explicación
 
-
 | job | Llegada | Tcpu | E/S (rec, inst, dur) |
 | :---: | :---: | :---: | :---: |
 | P1 | 0 | 5 | (R1, 3, 2) |
@@ -123,6 +122,75 @@ Explicación
 Ejemplo en FCFS
 - Primero llegaria el **P1**, ejecuta **3 rafagas** de CPU y su **4ta rafaga** es de E/S durante **2 tiempos**
 - Tenemos una cola por cada recurso distinto
+- En caso de tener recursos iguales en distintos procesos, tenemos que esperar a que termine el pricero que se ejecuto para poder ejecutarse.
+
+---
+
+Estos ejemplos fueron sacados de @agusrnf
+
+<details>
+<summary> FCFS (First come first served) </summary>
+
+- No tengo que hacer una cola por cada Recurso?
+
+![](/Ejemplos/2023-06-20-12-35-22.png)
+
+- Tiene *R* de donde saca R????
+
+![](/Ejemplos/2023-06-20-12-36-47.png)
+</details>
+
+<details>
+<summary> SJF (Shortest Job First) </summary>
+
+
+</details>
+
+<details>
+<summary> Round Robin (Timer Variable) </summary>
+
+
+![](/Ejemplos/2023-06-20-12-39-35.png)
+![](/Ejemplos/2023-06-20-12-40-06.png)
+![](/Ejemplos/2023-06-20-12-54-39.png)
+
+</details>
+
+<details>
+<summary> Round Robin (Timer Fijo)</summary>
+
+
+</details>
+
+<details>
+<summary> Prioridades </summary>
+
+
+
+| Job | Llegada | CPU | I/O (rec,ins,dur) | Prioridad |
+|:---:|:-------:|:---:|:----------------:|:---------:|
+|  1  |    0    |  9  | (R1, 4, 2) (R2, 6, 3) (R1, 8, 3) |     1     |
+|  2  |    1    |  5  |     (R3, 3, 2) (R3, 4, 2)     |     2     |
+|  3  |    2    |  5  |         (R1, 4, 1)          |     3     |
+|  4  |    3    |  7  |     (R2, 1, 2) (R2, 5, 3)     |     2     |
+|  5  |    5    |  5  |     (R1, 2, 3) (R3, 4, 3)     |     1     |
+
+
+#### No Apropiativo
+
+![](2023-06-20-12-55-51.png)
+
+#### Apropiativo
+
+![](2023-06-20-12-57-55.png)
+
+</details>
+
+<details>
+<summary> SRTF (Shortest Remaining Time First perteneciente) </summary>
+
+
+</details>
 
 ---
 #### Primero, para todos los ejercicios, hacemos lo siguiente:
