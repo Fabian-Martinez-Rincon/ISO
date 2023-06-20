@@ -54,6 +54,44 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 
 </td></tr></table>
 
+### Ejemplos
+
+<details>
+<summary> FCFS (First come first served) </summary>
+
+![](2023-06-20-08-55-08.png)
+</details>
+
+<details>
+<summary> SJF (Shortest Job First) </summary>
+
+![](2023-06-20-08-54-00.png)
+</details>
+
+<details>
+<summary> Round Robin (Timer Variable) </summary>
+
+![](2023-06-20-08-52-26.png)
+
+</details>
+
+<details>
+<summary> Round Robin (Timer Fijo)</summary>
+
+![](2023-06-20-08-51-34.png)
+</details>
+
+<details>
+<summary> Prioridades </summary>
+
+![](2023-06-20-08-46-27.png)
+</details>
+
+<details>
+<summary> SRTF (Shortest Remaining Time First perteneciente) </summary>
+
+![](2023-06-20-08-57-11.png)
+</details>
 
 #### Primero, para todos los ejercicios, hacemos lo siguiente:
 - Primero marcamos todas las llegadas
@@ -70,8 +108,10 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
   - **`Round Robin`** (RR TV/TF Q=N) Se ejecuta en orden de llegada y si no termino, vuelve a la cola de listos
     - **`Timer Variable`** Siempre se ejecuta `Ntiempos` (sino termina antes)
     - **`Timer Fijo`** Cada `Nquantums` voy a cambiar de proceso (un context switch) Esto lo marcamos en el grafico
-  
-
+  - **`Prioridades`** Por cada prioridad distinta, tenemos una cola nueva
+    - Siempre se descencola el de la cola 1 y 2, si no hay, se descencola el de la cola 3 y 4
+    - En el instante 2 llega el P2, y como tiene mayor prioridad que el P1(con prioridad 3), se ejecuta primero
+    - Como el P1 no termino, se vuelve a la cola 3 
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
