@@ -178,11 +178,11 @@ Estos ejemplos fueron sacados de @agusrnf
 
 #### No Apropiativo
 
-![](2023-06-20-12-55-51.png)
+![](/Ejemplos/2023-06-20-12-55-51.png)
 
 #### Apropiativo
 
-![](2023-06-20-12-57-55.png)
+![](/Ejemplos/2023-06-20-12-57-55.png)
 
 </details>
 
@@ -220,6 +220,8 @@ Estos ejemplos fueron sacados de @agusrnf
 
 ### 💾 Resumen Practica 5 Administración de Memoria Principal
 
+
+
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-### 💿 Administraci ́on de E/S - Discos
+### 💿 Resumen Practica 6 Administración de E/S - Discos
