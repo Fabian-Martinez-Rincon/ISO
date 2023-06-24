@@ -221,6 +221,7 @@ Estos ejemplos fueron sacados de @agusrnf
 
 # 💾 Resumen Practica 5 Administración de Memoria Principal
 
+### Ejemplo 1
 
 #### De Logica a Fisica
 - **Nro Pagina** = Dirección Logica / Tamaño de la Pagina
@@ -237,6 +238,14 @@ Ejemplo Si no nos dan los bits para saber si esta en memoria
 - Enumeramos todos los marcos y asignamos la pagina con su respectiva direción logica
 - El tamaño de pagina es de 512 bytes
 - El proceso tiene 2000 bytes por eso llega hastas los 1999 la dirección logica
+
+#### Fragmentación 
+
+La fragmentación interna es un tipo de fragmentación que tiene lugar cuando se asigna una memoria más grande a un programa en lugar de la requerida. [Fuente](https://diferenciario.com/fragmentacion-interna-y-fragmentacion-externa/)
+
+- **Fragmentación** = Suma de los tamaños de los 4 marcos - Tamaño del archivo
+- **Fragmentación** = 2048 - 2000 = 48 bytes
+
 
 <table><tr><td> 
 
@@ -282,8 +291,7 @@ Ejemplo Si no nos dan los bits para saber si esta en memoria
 - **Desplazamiento** = 1500 % 512 = 476
 - Buscamos el nro de Marco y sacamos la Base del Marco
 - En el marco 2, con la pagina nro 2, la base es 1024
-
-**Dirección Logica** = (2 * 512) + 476 = 1500
+- **Dirección Logica** = (2 * 512) + 476 = 1500
 </td><td>
 
 - Dir Fisica invalida (509)
@@ -293,6 +301,9 @@ Ejemplo Si no nos dan los bits para saber si esta en memoria
 </td></tr>
 </table>
 
+---
+
+### Ejemplo 2
 
 
 
