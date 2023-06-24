@@ -282,12 +282,7 @@ En la pagina 0, con el marco nro 3, la base es 1536
 La pagina no existe
 </td></tr>
 
-<tr><td></td><td></td></tr>
-</table>
-
-
-
-
+<tr><td>
 
 #### Ejemplo de dirección Fisica valida (1500)
 
@@ -300,6 +295,7 @@ Buscamos el nro de Marco y sacamos la Base del Marco
 En el marco 2, con la pagina nro 2, la base es 1024
 
 **Dirección Logica** = (2 * 512) + 476 = 1500
+</td><td>
 
 #### Ejemplo de dirección Fisica invalida (509)
 
@@ -308,6 +304,16 @@ En el marco 2, con la pagina nro 2, la base es 1024
 **Desplazamiento** = 509 % 512 = 509
 
 El marco 0, no existe
+</td></tr>
+</table>
+
+
+
+
+
+
+
+
 
 
 
