@@ -21,12 +21,13 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 - [Practica 2 Introducción a GNU/Linux](/Documentos/Practica2.md)
 - [Practica 3 Shell scripting](/Documentos/Practica3.md)
 - [Practica 4 Administración de Procesos](/Documentos/Practica4.md)
-
+- [Practica 5 Administración de Memoria Principal](/Documentos/Practica5.md)
+- [Administración de E/S - Discos](/Documentos/Practica6.md)
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 
-### 📁 Resumen Practica 4 Administración de Procesos
+# 📁 Resumen Practica 4 Administración de Procesos
 
 
 <table><tr><td>Abreviaturas</td><td>Forma de Pensarlo</td></tr><tr><td>
@@ -218,10 +219,10 @@ Estos ejemplos fueron sacados de @agusrnf
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-### 💾 Resumen Practica 5 Administración de Memoria Principal
+# 💾 Resumen Practica 5 Administración de Memoria Principal
 
 
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-### 💿 Resumen Practica 6 Administración de E/S - Discos
+# 💿 Resumen Practica 6 Administración de E/S - Discos
