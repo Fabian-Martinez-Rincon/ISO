@@ -260,50 +260,36 @@ Ejemplo Si no nos dan los bits para saber si esta en memoria
 </td></tr>
 <tr><td>
 
-#### Ejemplo de dirección Logica valida (35)
-**Nro Pagina** = 35 / 512 = 0
-
-**Desplazamiento** = 35 % 35 = 35
-
-Buscamos el nro de Pagina y sacamos la Base del Marco
-
-En la pagina 0, con el marco nro 3, la base es 1536
-
-**Dirección Fisica** = 1536 + 35 = 1571
+- Dir Logica valida (35)
+- **Nro Pagina** = 35 / 512 = 0
+- **Desplazamiento** = 35 % 35 = 35
+- Buscamos el nro de Pagina y sacamos la Base del Marco
+- En la pagina 0, con el marco nro 3, la base es 1536
+- **Dirección Fisica** = 1536 + 35 = 1571
 
 </td><td>
 
-#### Ejemplo de dirección Logica invalida (2051)
-
-**Nro Pagina** = 2051 / 512 = 4 (Esta pagina no existe)
-
-**Desplazamiento** = 2051 % 512 = 3
-
-La pagina no existe
+- Dir Logica invalida (2051)
+- **Nro Pagina** = 2051 / 512 = 4 (Esta pagina no existe)
+- **Desplazamiento** = 2051 % 512 = 3
+- La pagina no existe
 </td></tr>
 
 <tr><td>
 
-#### Ejemplo de dirección Fisica valida (1500)
-
-**Nro Marco** = 1500 / 512 = 2
-
-**Desplazamiento** = 1500 % 512 = 476
-
-Buscamos el nro de Marco y sacamos la Base del Marco
-
-En el marco 2, con la pagina nro 2, la base es 1024
+- Dir Fisica valida (1500)
+- **Nro Marco** = 1500 / 512 = 2
+- **Desplazamiento** = 1500 % 512 = 476
+- Buscamos el nro de Marco y sacamos la Base del Marco
+- En el marco 2, con la pagina nro 2, la base es 1024
 
 **Dirección Logica** = (2 * 512) + 476 = 1500
 </td><td>
 
-#### Ejemplo de dirección Fisica invalida (509)
-
-**Nro Marco** = 509 / 512 = 0
-
-**Desplazamiento** = 509 % 512 = 509
-
-El marco 0, no existe
+- Dir Fisica invalida (509)
+- **Nro Marco** = 509 / 512 = 0
+- **Desplazamiento** = 509 % 512 = 509
+- El marco 0, no existe
 </td></tr>
 </table>
 
