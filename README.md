@@ -229,12 +229,16 @@ Estos ejemplos fueron sacados de @agusrnf
 
 #### De Fisica a Logica
 - **Nro Marco** = Dirección física / Tamaño del Marco 
-- **Desplazamiento** = Dirección física % Tam Marco
-- **Dirección Logica** = (Nro página * tamaño de página) + Desplazamiento
+- **Desplazamiento** = Dirección física % Tamaño del Marco
+- **Dirección Logica** = (Nro página * Tamaño de página) + Desplazamiento
 
 Ejemplo Si no nos dan los bits para saber si esta en memoria
 
-<table><td> 
+- Enumeramos todos los marcos y asignamos la pagina con su respectiva direción logica
+- El tamaño de pagina es de 512 bytes
+- El proceso tiene 2000 bytes por eso llega hastas los 1999 la dirección logica
+
+<table><tr><td> 
 
 | Pagina | Marco |
 |--------|-------|
@@ -249,14 +253,62 @@ Ejemplo Si no nos dan los bits para saber si esta en memoria
 | o      | -       | -                | 0.511            |
 | 1      | -       | -                | 512..1023        |
 | 2      | 2       | 1024..1535       | 1024..1535       |
-| 3      | o       | 0.511            | 1536..2047       |
-| a      | -       | -                | 2048..2559       |
+| 3      | 0       | 0.511            | 1536..2047       |
+| 4      | -       | -                | 2048..2559       |
 | 5      | 1       | 512..1023        | 2560..3071       |
 | 6      | 3       | 1536..1999       | 3072..3583       |
-</td></table>
+</td></tr>
+<tr><td>
 
-Ejemplo de dirección valida
-- 
+#### Ejemplo de dirección Logica valida (35)
+**Nro Pagina** = 35 / 512 = 0
+
+**Desplazamiento** = 35 % 35 = 35
+
+Buscamos el nro de Pagina y sacamos la Base del Marco
+
+En la pagina 0, con el marco nro 3, la base es 1536
+
+**Dirección Fisica** = 1536 + 35 = 1571
+
+</td><td>
+
+#### Ejemplo de dirección Logica invalida (2051)
+
+**Nro Pagina** = 2051 / 512 = 4 (Esta pagina no existe)
+
+**Desplazamiento** = 2051 % 512 = 3
+
+La pagina no existe
+</td></tr>
+
+<tr><td></td><td></td></tr>
+</table>
+
+
+
+
+
+#### Ejemplo de dirección Fisica valida (1500)
+
+**Nro Marco** = 1500 / 512 = 2
+
+**Desplazamiento** = 1500 % 512 = 476
+
+Buscamos el nro de Marco y sacamos la Base del Marco
+
+En el marco 2, con la pagina nro 2, la base es 1024
+
+**Dirección Logica** = (2 * 512) + 476 = 1500
+
+#### Ejemplo de dirección Fisica invalida (509)
+
+**Nro Marco** = 509 / 512 = 0
+
+**Desplazamiento** = 509 % 512 = 509
+
+El marco 0, no existe
+
 
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
