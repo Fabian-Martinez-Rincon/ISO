@@ -222,6 +222,42 @@ Estos ejemplos fueron sacados de @agusrnf
 # 💾 Resumen Practica 5 Administración de Memoria Principal
 
 
+#### De Logica a Fisica
+- **Nro Pagina** = Dirección Logica / Tamaño de la Pagina
+- **Desplazamiento** = Dirección Logica % Tamaño de la Pagina
+- **Dirección Fisica** = Base del Frame + Desplazamiento
+
+#### De Fisica a Logica
+- **Nro Marco** = Dirección física / Tamaño del Marco 
+- **Desplazamiento** = Dirección física % Tam Marco
+- **Dirección Logica** = (Nro página * tamaño de página) + Desplazamiento
+
+Ejemplo Si no nos dan los bits para saber si esta en memoria
+
+<table><td> 
+
+| Pagina | Marco |
+|--------|-------|
+| 0      | 3     |
+| 1      | 5     |
+| 2      | 2     |
+| 3      | 6     |
+</td><td>
+
+| HMarco | HPagina | Direccion Virtual | Direccion Fisica |
+|--------|---------|------------------|------------------|
+| o      | -       | -                | 0.511            |
+| 1      | -       | -                | 512..1023        |
+| 2      | 2       | 1024..1535       | 1024..1535       |
+| 3      | o       | 0.511            | 1536..2047       |
+| a      | -       | -                | 2048..2559       |
+| 5      | 1       | 512..1023        | 2560..3071       |
+| 6      | 3       | 1536..1999       | 3072..3583       |
+</td></table>
+
+Ejemplo de dirección valida
+- 
+
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
