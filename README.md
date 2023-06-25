@@ -314,12 +314,7 @@ La fragmentación interna es un tipo de fragmentación que tiene lugar cuando se
 | 3       | 5000    |
 
 
-- Dir Fisica - Dir Logica
-- segmento ,pagina ,desplazamiento
-- **i)** (2,1,1) = 1500 + 20 + 1 = 1521
-- **ii)** (1,3,15) = 500 + 60 + 15 = 575
-- **iii)** (3,1,10) = 500 + 120 + 10 = 5130
-- **iv)** (2,3,5) = 1500 + 0 + 5 = 1505
+
 
 </td><td>
 
@@ -327,9 +322,14 @@ La fragmentación interna es un tipo de fragmentación que tiene lugar cuando se
 
 </td></table>
 
+Indicar las direcciones físicas correspondientes a las siguientes direcciones lógicas
+(segmento,pagina,desplazamiento):
+- **i)** (2,1,1) = 1500 + 20 + 1 = 1521
+- **ii)** (1,3,15) = 500 + 60 + 15 = 575
+- **iii)** (3,1,10) = 500 + 120 + 10 = 5130
+- **iv)** (2,3,5) = 1500 + 0 + 5 = 1505
 
-
-
+---
 
 
 
