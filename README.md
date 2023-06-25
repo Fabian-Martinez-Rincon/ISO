@@ -221,7 +221,7 @@ Estos ejemplos fueron sacados de @agusrnf
 
 # 💾 Resumen Practica 5 Administración de Memoria Principal
 
-### Ejemplo 1
+### Ejemplo 1. Suponga un sistema donde la memoria es administrada mediante la técnica de paginación
 
 #### De Logica a Fisica
 - **Nro Pagina** = Dirección Logica / Tamaño de la Pagina
@@ -303,7 +303,7 @@ La fragmentación interna es un tipo de fragmentación que tiene lugar cuando se
 
 ---
 
-### Ejemplo 2
+### Ejemplo 2. Dado un S.O. que administra la memoria por medio de segmentación paginada
 
 <table><td>
 
@@ -331,7 +331,22 @@ Indicar las direcciones físicas correspondientes a las siguientes direcciones l
 
 ---
 
+### Ejemplo 3. Direcciones
 
+Si se dispone de una espacio de direcciones virtuales de 32 bits, donde cada dirección
+referencia 1 byte:
+- ¿Cuál es el tamaño máximo de un proceso (recordar “espacio virtual”)? 
+  - 2^32 direcciones máximas * 1 byte = 2^ 32 bytes 
+  - 4.294.967.296 bytes
+- Si el tamaño de pagina es de 512KB. ¿Cuál es el número máximo de paginas que puede
+tener un proceso?
+  - 4.294.967.296 / 1024 = 4194304 KB
+  - 4194304 / 512 = 8192
+- Si el tamaño de pagina es de 512KB. y se disponen de 256 MB. De memoria real ¿Cuál es el número de marcos que puede haber?
+  - 256 * 1024 = 262144 KB
+  - 262144 / 512 = 512
+- Si se utilizaran 2 KB. para cada entrada en la tabla de páginas de un proceso: ¿Cuál sería el tamaño máximo de la tabla de páginas de cada proceso?
+  - 8192 * 2 KB = 16384 KB = 16 MB
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
