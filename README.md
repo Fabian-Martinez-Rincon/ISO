@@ -367,7 +367,9 @@ tener un proceso?
 
 Asumiendo que:
 ➢ El tamaño de la página es de 512 bytes
+
 ➢ Cada dirección de memoria referencia 1 byte
+
 ➢ Los marcos se encuentras contiguos y en orden en memoria (0, 1, 2.. ) a partir de la dirección real 0.
 </td></table>
 
