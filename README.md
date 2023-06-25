@@ -523,9 +523,14 @@ Aca tenemos 5 Frames y dejamos el 5to para descarga asincronica, este frame se a
 En este ejemplo
 
 - La m significa que cuando es referenciada, se modifica algun valor de esa pagina. Es la misma pagina, pero en ese momento se modifica. 
-- Cuando la pagina victica es una pagina modificada, damos vuelta y asignamos el frame de la descarga sincronica, a la nueva pagina que se tiene que cargar
+- Cuando la pagina victima es una pagina modificada, damos vuelta y asignamos el frame de la descarga sincronica, a la nueva pagina que se tiene que cargar
 - Mientras tanto, esa pagina modificada es cargada al dispositivo de paginación
-- Cuando aparece la pagina 5, la pagina victima es la 1, pero como la 1 fue modificada, la pagina 5 es cargada en el 5to frame que era el de descarga sincronica y en un instante posterior
+- Cuando aparece la pagina 5, la pagina victima es la 1
+- Pero como la 1 fue modificada, la pagina 5 es cargada en el 5to frame que era el de descarga sincronica
+- Y en un instante posterior, marcamos como frame de descarga sincronica al frame 1
+- Cuando se tiene que cargar la pagina 7, vemos que la pagina victima, es la pagina 3, como esta fue modificada, por lo tanto el marco 7 va a parar al frame de descarga sincronica que es el 1
+
+> Espero haberme explicado bien :D
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
