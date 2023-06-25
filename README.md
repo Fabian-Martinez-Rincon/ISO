@@ -366,6 +366,7 @@ tener un proceso?
 </td><td>
 
 Asumiendo que:
+
 ➢ El tamaño de la página es de 512 bytes
 
 ➢ Cada dirección de memoria referencia 1 byte
