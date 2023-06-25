@@ -323,11 +323,11 @@ La fragmentación interna es un tipo de fragmentación que tiene lugar cuando se
 </td></table>
 
 Indicar las direcciones físicas correspondientes a las siguientes direcciones lógicas
-(segmento,pagina,desplazamiento):
-- **i)** (2,1,1) = 1500 + 20 + 1 = 1521
-- **ii)** (1,3,15) = 500 + 60 + 15 = 575
-- **iii)** (3,1,10) = 500 + 120 + 10 = 5130
-- **iv)** (2,3,5) = 1500 + 0 + 5 = 1505
+- segmento, pagina, desplazamiento
+- (2,1,1) = 1500 + 20 + 1 = 1521
+- (1,3,15) = 500 + 60 + 15 = 575
+- (3,1,10) = 500 + 120 + 10 = 5130
+- (2,3,5) = 1500 + 0 + 5 = 1505
 
 ---
 
@@ -347,6 +347,30 @@ tener un proceso?
   - 262144 / 512 = 512
 - Si se utilizaran 2 KB. para cada entrada en la tabla de páginas de un proceso: ¿Cuál sería el tamaño máximo de la tabla de páginas de cada proceso?
   - 8192 * 2 KB = 16384 KB = 16 MB
+
+---
+
+### Ejemplo 4
+
+<table><td>
+
+| Pagina | Bit V | Bit R | Bit M | Marco |
+|--------|-------|-------|-------|-------|
+| 0      | 1     | 1     | 0     | 4     |
+| 1      | 1     | 1     | 1     | 7     |
+| 2      | 0     | 0     | 0     | -     |
+| 3      | 1     | 0     | 0     | 2     |
+| 4      | 0     | 0     | 0     | -     |
+| 5      | 1     | 0     | 1     | 0     |
+
+</td><td>
+
+Asumiendo que:
+➢ El tamaño de la página es de 512 bytes
+➢ Cada dirección de memoria referencia 1 byte
+➢ Los marcos se encuentras contiguos y en orden en memoria (0, 1, 2.. ) a partir de la
+dirección real 0.
+</td></table>
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
