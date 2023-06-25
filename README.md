@@ -514,6 +514,19 @@ Cuando entra el 4, el 2 tiene mas tiempo sin referencias ya que el 1, fue refere
 
 ---
 
+### Ejemplo 7 Descarga Asincronica de Paginas
+
+Aca tenemos 5 Frames y dejamos el 5to para descarga asincronica, este frame se adecua de acuerdo a las necesidades.
+
+![image](https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/b69cbc72-5bc8-4511-b715-d9c14f2858ff)
+
+En este ejemplo
+
+- La m significa que cuando es referenciada, se modifica algun valor de esa pagina. Es la misma pagina, pero en ese momento se modifica. 
+- Cuando la pagina victica es una pagina modificada, damos vuelta y asignamos el frame de la descarga sincronica, a la nueva pagina que se tiene que cargar
+- Mientras tanto, esa pagina modificada es cargada al dispositivo de paginación
+- Cuando aparece la pagina 5, la pagina victima es la 1, pero como la 1 fue modificada, la pagina 5 es cargada en el 5to frame que era el de descarga sincronica y en un instante posterior
+
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 # 💿 Resumen Practica 6 Administración de E/S - Discos
