@@ -409,6 +409,20 @@ a) 1052 b) 2221  c) 5499 d) 3101
 - **Nro Pagina** = 3101 / 512 = 6
 - Igual al de arriba
 
+---
+
+### Ejemplo 5 Reparto Equitativo y Reparto Proporcional
+
+Dada la siguiente tabla de procesos y las páginas que ellos ocupan, y teniéndose 40
+marcos en la memoria principal, cuantos marcos le corresponderían a cada proceso si se usa la técnica de Asignación Fija
+
+| Proceso | Total de Páginas Usadas |
+|---------|-----------------------|
+| 1       | 15                    |
+| 2       | 20                    |
+| 3       | 20                    |
+| 4       | 8                     |
+
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 # 💿 Resumen Practica 6 Administración de E/S - Discos
