@@ -416,12 +416,45 @@ a) 1052 b) 2221  c) 5499 d) 3101
 Dada la siguiente tabla de procesos y las páginas que ellos ocupan, y teniéndose 40
 marcos en la memoria principal, cuantos marcos le corresponderían a cada proceso si se usa la técnica de Asignación Fija
 
+<table><td> 
+
 | Proceso | Total de Páginas Usadas |
 |---------|-----------------------|
 | 1       | 15                    |
 | 2       | 20                    |
 | 3       | 20                    |
 | 4       | 8                     |
+
+</td><td>
+
+- **M** = 40 (marcos)
+- **P** = 4 (procesos)
+- **VP** = Paginas usadas por proceso
+- **VT** = 15 + 20 + 20 + 8 = 63
+- **MP** Marco por proceso
+
+</td></table>
+<table>
+
+Tenemos dos formas de repartir los marcos
+
+<tr><td>Reparto Equitativo</td><td>Reparto Proporcional</td></tr><tr><td>
+
+- MP = M / P 
+- MP = 40 / 4
+- MP = 10
+
+</td><td>
+
+- VP * M / VT
+- **Proceso 1** = 15 * 40 / 63 ≈ 10
+- **Proceso 2** = 20 * 40 / 63 ≈ 13
+- **Proceso 3** = 20 * 40 / 63 ≈ 13
+- **Proceso 4** = 8 * 40 / 63 ≈ 5
+</td></tr>
+</table>
+
+---
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
