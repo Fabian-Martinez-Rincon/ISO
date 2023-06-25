@@ -456,6 +456,52 @@ Tenemos dos formas de repartir los marcos
 
 ---
 
+### Ejemplo 6 Algoritmos de Planificación
+
+Considere la siguiente secuencia de referencias a páginas: 1, 2, 15, 4, 6, 2, 1, 5, 6, 10, 4, 6, 7, 9, 1, 6, 12, 11, 12, 2, 3, 1, 8, 1, 13, 14, 15, 3, 8
+
+Si se dispone de 5 marcos. ¿Cuántos fallos de página se producirán si se utilizan las siguientes técnicas de selección de víctima? (Considere una política de Asignación Dinámica y Reemplazo Global)
+
+#### Explicación
+
+- Cada vez que hay que alocar una pagina en un marco, se produce un fallo de pagina (page fault) → hard page fault
+- ¿Que sucede si es necesario alocar una pagina y ya no hay espacio disponible?
+- Se debe seleccionar una pagina victima, para lo cual existen diversos algoritmos
+
+
+<details><summary>Optimo</summary>
+
+![image](https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/9495fce2-7eb8-45a7-ae57-b888ab46cdf5)
+
+
+</details>
+
+<details><summary>Segunda Chance (Cola circular con Bit R ó *)</summary>
+
+![image](https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/d104ca61-9944-47d9-baff-c0bbda225aba)
+
+
+</details>
+
+<details><summary>FIFO (Cola circular)</summary>
+
+![image](https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/e29878b9-9676-40bb-83e7-f8f9a7f452e0)
+
+
+</details>
+
+<details><summary>LRU (Clock)</summary>
+
+![image](https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/a7626026-4b57-44c1-b175-53116f3b088a)
+
+
+
+</details>
+
+
+
+---
+
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 # 💿 Resumen Practica 6 Administración de E/S - Discos
