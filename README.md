@@ -390,16 +390,24 @@ a) 1052 b) 2221  c) 5499 d) 3101
 #### a) 1052
 
 - **Nro Pagina** = 1052 / 512 = 2
-- **Desplazamiento** = 1052 % 512 = 20
+- **Desplazamiento** = 1052 % 512 = 28
 - Page Fault ya que el bit V esta en 0
 
 #### b) 2221
 
 - **Nro Pagina** = 2221 / 512 = 4
+- **Desplazamiento** = 2221 % 512 = 173
+- Page Fault ya que el bit V esta en 0
 
-- **Desplazamiento** = 2221 % 512 = 461
+#### c) 5499
 
-- **Dirección Fisica** = 4 * 512 + 461 = 2565
+- **Nro Pagina** = 5499 / 512 = 10
+- Direccion invalida ya que el nro de pagina es mayor a la cantidad de paginas
+
+#### d) 3101
+
+- **Nro Pagina** = 3101 / 512 = 6
+- Igual al de arriba
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
