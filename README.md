@@ -471,12 +471,18 @@ Si se dispone de 5 marcos. ¿Cuántos fallos de página se producirán si se uti
 
 <details><summary>Optimo</summary>
 
+Busca que pagina que no se utiliza en el futuro (Una fumada)
+
+> Por ejemplo, cuando entra el 4, al marco que es remplazado es el 2, ya que no se vuelve a hacer referencia en un futuro
+
 ![image](https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/9495fce2-7eb8-45a7-ae57-b888ab46cdf5)
 
 
 </details>
 
-<details><summary>Segunda Chance (Cola circular con Bit R ó *)</summary>
+<details ><summary>Segunda Chance (Cola circular con Bit R ó *)</summary>
+
+Es igual al fifo (Agarramos el mas viejo) Si la pagina que elegimos tiene el bit R en 1, lo ponemos en 0, y elegimos la siguiente pagina mas vieja
 
 ![image](https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/d104ca61-9944-47d9-baff-c0bbda225aba)
 
@@ -485,12 +491,18 @@ Si se dispone de 5 marcos. ¿Cuántos fallos de página se producirán si se uti
 
 <details><summary>FIFO (Cola circular)</summary>
 
+Simplemente remplazo con el marco mas viejo
+
 ![image](https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/e29878b9-9676-40bb-83e7-f8f9a7f452e0)
 
 
 </details>
 
 <details><summary>LRU (Clock)</summary>
+
+Elegimos la pagina que no fue referenciada por mas tiempo
+
+Cuando entra el 4, el 2 tiene mas tiempo sin referencias ya que el 1, fue referenciado despues de que entro el 2 y el marco 3 entro despues del marco 2.
 
 ![image](https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/a7626026-4b57-44c1-b175-53116f3b088a)
 
