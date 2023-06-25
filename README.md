@@ -374,6 +374,33 @@ Asumiendo que:
 ➢ Los marcos se encuentras contiguos y en orden en memoria (0, 1, 2.. ) a partir de la dirección real 0.
 </td></table>
 
+¿Qué dirección física, si existe, correspondería a cada una de las siguientes
+direcciones virtuales? (No gestione ningún fallo de página, si se produce)
+
+> el bit de control V, que indica si la página se encuentra o no cargada en memoria principal
+
+Usamos las formulas de arriba para la conversión
+
+a) 1052 b) 2221  c) 5499 d) 3101
+
+- **Nro Pagina** = Dirección Logica / Tamaño de la Pagina
+- **Desplazamiento** = Dirección Logica % Tamaño de la Pagina
+- **Dirección Fisica** = Base del Frame + Desplazamiento
+
+#### a) 1052
+
+- **Nro Pagina** = 1052 / 512 = 2
+- **Desplazamiento** = 1052 % 512 = 20
+- Page Fault ya que el bit V esta en 0
+
+#### b) 2221
+
+- **Nro Pagina** = 2221 / 512 = 4
+
+- **Desplazamiento** = 2221 % 512 = 461
+
+- **Dirección Fisica** = 4 * 512 + 461 = 2565
+
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 # 💿 Resumen Practica 6 Administración de E/S - Discos
