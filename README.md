@@ -535,3 +535,22 @@ En este ejemplo
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 # 💿 Resumen Practica 6 Administración de E/S - Discos
+
+### Ejemplo 1 Extraer datos de un HDD (Disco Duro)
+
+<details> <summary>Prefijos - Equivalencias</summary>
+
+![image](https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/d615e624-d492-4935-86e6-c14104ae7f34)
+
+</details>
+
+#### Ejercicio
+
+Supongamos un disco con 6 platos, 2 caras utiles, 1500 pistas por cara y 700 sectores por pista de 256 bytes cada uno. El disco gira a 12600 RPM , tiene un tiempo de posicionamiento (seek) de 2 milisegundos y una velocidad de transferencia de 15 Mib/s (Mebibits por segundo )
+
+<details> <summary>La capacidad total del disco</summary>
+
+- **Tamaño del Disco** = #caras * #pistas cara * #sectores pista * tamaño sector
+- **Tamaño del Disco** = 6 * 2 * 1500 * 700 * 256 bytes
+- **Tamaño del Disco** = 3225600000 bytes
+- **Tamaño del Disco** = 3,00407 GiB(Gibibytes)
