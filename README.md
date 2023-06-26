@@ -554,3 +554,9 @@ Supongamos un disco con 6 platos, 2 caras utiles, 1500 pistas por cara y 700 sec
 - **Tamaño del Disco** = 6 * 2 * 1500 * 700 * 256 bytes
 - **Tamaño del Disco** = 3225600000 bytes
 - **Tamaño del Disco** = 3,00407 GiB(Gibibytes)
+
+</details>
+
+<details> <summary>Cuantas caras ocupara un archivo de 513 Mibytes almacenado de manera contigua a partir del primer sector de la primer pista de una cara determinada</summary> 
+
+</details>
