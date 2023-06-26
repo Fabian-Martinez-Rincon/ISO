@@ -605,7 +605,64 @@ Calculamos los datos que faltan:
 - **Almacenamiento aleatorio** = (seek + latency + tiempo transferencia bloque) * #bloques
 - **Almacenamiento aleatorio** = (2 + 2,3809 + 0,1302) * 4500 = 20299,95 ms
 
-
 </details>
 
 ---
+
+### Ejemplo 2 Algoritmos de planificación sin page faults
+
+- Cantidad de pistas: 200 (0..199)
+- Requerimientos en la cola: {98 , 183 , 37, 122, 14, 124, 65, 67}
+- Viene de: pista 61
+- Ubicación actual del cabezal: pista 53 → derecha-izquierda
+
+<details> <summary>FCFS</summary>
+
+Atiende los requerimientos por orden de llegada
+
+![image](https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/47f96147-076e-4b13-965e-92dcec7369cc)
+
+</details>
+
+<details> <summary>SSTF</summary>
+
+Selecciona el requerimiento que requiere el menor movimiento del cabezal
+
+![image](https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/e0f48098-307e-479b-8856-d7ca1f1e51c7)
+
+</details>
+
+<details> <summary>SCAN</summary>
+
+Barre el disco en una dirección atendiendo los requerimientos pendientes en esa ruta hasta llegar a la ultima pista del disco y cambia la direcci´on. Es importante saber en que pista se est´a y de que pista se viene para determinar el sentido del cabezal
+
+
+![image](https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/975cdfcf-c3c2-43e0-b8cc-a6e26aec1a9c)
+
+</details>
+
+<details> <summary>LOOK</summary>
+
+Se comporta igual que el SCAN pero no llega hasta la ultima pista del disco sobre la dirección actual sino que llega hasta el ultimo requerimiento de la direcci´on actual. Es importante saber en que pista se est´a y de que pista se viene para determinar el sentido del cabezal
+
+![image](https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/21698633-fbbf-49f3-a3c8-bbd3f129c686)
+
+
+</details>
+
+<details> <summary>C-SCAN</summary>
+
+Se comporta igual que el SCAN pero restringe la atención en un solo sentido. Al llegar a la última pista del disco en el sentido actual vuelve a la pista del otro extremo (salto → no se cuentan los movimientos) y sigue barriendo en el mismo sentido
+
+![image](https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/d1277762-b66b-4a98-85de-87c8638e6c36)
+
+</details>
+
+<details> <summary>C-LOOK</summary>
+
+Se comporta igual que el LOOK pero restringe la atención en un solo sentido. Al llegar a la ultima pista de los requerimientos en el sentido actual vuelve a la primer pista más lejana del otro extremo (salto → no se cuentan los movimientos) y sigue barriendo en el mismo sentido
+
+![image](https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/040daa58-afb8-47ca-be30-a8d65aa5968f)
+
+
+</details>
