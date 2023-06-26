@@ -538,16 +538,16 @@ En este ejemplo
 
 ### Ejemplo 1 Extraer datos de un HDD (Disco Duro)
 
+
+
+
+Supongamos un disco con 6 platos, 2 caras utiles, 1500 pistas por cara y 700 sectores por pista de 256 bytes cada uno. El disco gira a 12600 RPM , tiene un tiempo de posicionamiento (seek) de 2 milisegundos y una velocidad de transferencia de 15 Mib/s (Mebibits por segundo )
+
 <details> <summary>Prefijos - Equivalencias</summary>
 
 ![image](https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/d615e624-d492-4935-86e6-c14104ae7f34)
 
 </details>
-
-#### Ejercicio
-
-Supongamos un disco con 6 platos, 2 caras utiles, 1500 pistas por cara y 700 sectores por pista de 256 bytes cada uno. El disco gira a 12600 RPM , tiene un tiempo de posicionamiento (seek) de 2 milisegundos y una velocidad de transferencia de 15 Mib/s (Mebibits por segundo )
-
 <details> <summary>Capacidad</summary>
 
 Si queremos calcular la capacidad total del disco, hacemos:
