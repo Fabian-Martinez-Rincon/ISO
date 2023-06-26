@@ -622,6 +622,8 @@ Atiende los requerimientos por orden de llegada
 
 ![image](https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/47f96147-076e-4b13-965e-92dcec7369cc)
 
+Movimientos: 640
+
 </details>
 
 <details> <summary>SSTF</summary>
@@ -630,23 +632,27 @@ Selecciona el requerimiento que requiere el menor movimiento del cabezal
 
 ![image](https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/e0f48098-307e-479b-8856-d7ca1f1e51c7)
 
+Movimientos: 235
+
 </details>
 
 <details> <summary>SCAN</summary>
 
-Barre el disco en una dirección atendiendo los requerimientos pendientes en esa ruta hasta llegar a la ultima pista del disco y cambia la direcci´on. Es importante saber en que pista se est´a y de que pista se viene para determinar el sentido del cabezal
-
+Barre el disco en una dirección atendiendo los requerimientos pendientes en esa ruta hasta llegar a la ultima pista del disco y cambia la dirección. Es importante saber en que pista se está y de que pista se viene para determinar el sentido del cabezal
 
 ![image](https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/975cdfcf-c3c2-43e0-b8cc-a6e26aec1a9c)
+
+Movimientos: 236
 
 </details>
 
 <details> <summary>LOOK</summary>
 
-Se comporta igual que el SCAN pero no llega hasta la ultima pista del disco sobre la dirección actual sino que llega hasta el ultimo requerimiento de la direcci´on actual. Es importante saber en que pista se est´a y de que pista se viene para determinar el sentido del cabezal
+Se comporta igual que el SCAN pero no llega hasta la ultima pista del disco sobre la dirección actual sino que llega hasta el ultimo requerimiento de la dirección actual. Es importante saber en que pista se está y de que pista se viene para determinar el sentido del cabezal
 
 ![image](https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/21698633-fbbf-49f3-a3c8-bbd3f129c686)
 
+Movimientos: 208
 
 </details>
 
@@ -656,6 +662,8 @@ Se comporta igual que el SCAN pero restringe la atención en un solo sentido. Al
 
 ![image](https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/d1277762-b66b-4a98-85de-87c8638e6c36)
 
+Movimientos: 187
+
 </details>
 
 <details> <summary>C-LOOK</summary>
@@ -664,5 +672,68 @@ Se comporta igual que el LOOK pero restringe la atención en un solo sentido. Al
 
 ![image](https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/040daa58-afb8-47ca-be30-a8d65aa5968f)
 
+Movimientos: 157
+
+</details>
+
+---
+
+### Ejemplo 3 Algoritmos de planificación con page faults
+
+- Cantidad de pistas: 100 (0..99)
+- Requerimientos en la cola: {55 , 75 , **52PF** , 45, 10}. Luego de 30 movimientos {**25PF** , 60} y luego de 10 movimientos más (40 desde el comienzo de la planificación) entra {90, 10}
+- Se se viene de la pista 15
+- Se esta atendiendo la pista 20 → izquierda-derecha
+
+<details> <summary>FCFS</summary>
+
+![image](https://github.com/Fabian-Martinez-Rincon/ISO/assets/55964635/efbb2672-32dd-4640-8028-7902d3371c0a)
+
+Movimientos: 334
+
+</details>
+
+<details> <summary>SSTF</summary>
+
+
+![image](https://github.com/Fabian-Martinez-Rincon/ISO/assets/55964635/b9feed24-875a-457c-87e4-95b1179989a9)
+
+Movimientos: 154
+
+
+</details>
+
+<details> <summary>SCAN</summary>
+
+![image](https://github.com/Fabian-Martinez-Rincon/ISO/assets/55964635/c425f044-295a-4063-904f-b833750c77b7)
+
+
+Movimientos: 174
+
+</details>
+
+<details> <summary>LOOK</summary>
+
+![image](https://github.com/Fabian-Martinez-Rincon/ISO/assets/55964635/f8759396-7f49-4091-8681-dd88c4fe4c28)
+
+Movimientos: 154
+
+</details>
+
+<details> <summary>C-SCAN</summary>
+
+![image](https://github.com/Fabian-Martinez-Rincon/ISO/assets/55964635/5dc49ac0-624f-4fe3-8265-078ca034349b)
+
+
+Movimientos: 143
+
+</details>
+
+<details> <summary>C-LOOK</summary>
+
+![image](https://github.com/Fabian-Martinez-Rincon/ISO/assets/55964635/f02aaad2-2603-424e-8372-4f3e4fb82281)
+
+
+Movimientos: 124
 
 </details>
