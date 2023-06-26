@@ -215,7 +215,7 @@ Estos ejemplos fueron sacados de @agusrnf
     - Como el P1 no termino, se vuelve a la cola 3
   - **`SRFT`** Es la versión apropiativa del SJF
 
-## Voy a rezar para que no tomen AFINIDAD
+>## Voy a rezar para que no tomen AFINIDAD
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
@@ -548,7 +548,9 @@ En este ejemplo
 
 Supongamos un disco con 6 platos, 2 caras utiles, 1500 pistas por cara y 700 sectores por pista de 256 bytes cada uno. El disco gira a 12600 RPM , tiene un tiempo de posicionamiento (seek) de 2 milisegundos y una velocidad de transferencia de 15 Mib/s (Mebibits por segundo )
 
-<details> <summary>La capacidad total del disco</summary>
+<details> <summary>Capacidad</summary>
+
+Si queremos calcular la capacidad total del disco, hacemos:
 
 - **Tamaño del Disco** = #caras * #pistas cara * #sectores pista * tamaño sector
 - **Tamaño del Disco** = 6 * 2 * 1500 * 700 * 256 bytes
@@ -556,7 +558,54 @@ Supongamos un disco con 6 platos, 2 caras utiles, 1500 pistas por cara y 700 sec
 - **Tamaño del Disco** = 3,00407 GiB(Gibibytes)
 
 </details>
+<details> <summary>Ocupación</summary> 
 
-<details> <summary>Cuantas caras ocupara un archivo de 513 Mibytes almacenado de manera contigua a partir del primer sector de la primer pista de una cara determinada</summary> 
+Si queremos cuantas caras ocupará un archivo de 513 Mibytes almacenado de manera contigua a partir del primer sector de la primer pista de una cara determinada:
+
+#### **Calculamos la capacidad de 1 cara**
+
+1500 * 700 * 256 bytes = 268800000 bytes
+
+#### **Dividimos el tamaño del archivo por la capacidad de una cara**
+
+513 MiB= 537919488 bytes
+
+537919488 / 268800000 = 2,00118 → 3 caras
 
 </details>
+
+<details> <summary>Tiempo de acceso</summary> 
+
+Si queremos saber cuantos milisegundos se tardarían en transferir un archivo almacenado de manera contigua y aleatoria de 4500 sectores
+
+Calculamos los datos que faltan:
+
+**Latencia**
+- 12600 vueltas → 1’ = 60 s = 60000 ms
+- 0,5 vueltas → x = 2,3809 ms
+
+**Transferencia**
+- 15 Mibits → 1 s = 1000 ms
+- 256 bytes → x
+
+**Unificamos unidades**
+- 15728640 bits → 1000 ms
+- 2048 bits → x = 0,1302 ms
+
+**Datos obtenidos**
+- **Seek time** 2 ms
+- **Latency time** 2,3809 ms
+- **Tiempo transferencia bloque** 0,1302 ms
+- #bloques: 4500 → eventualmente se tienen que calcular
+
+**Resultados**
+
+- **Almacenamiento secuencial** = seek + latency + tiempo transferencia bloque * #bloques
+- **Almacenamiento secuencial** = 2 + 2,3809 + 0,1302 * 4500 = 590,2809 ms
+- **Almacenamiento aleatorio** = (seek + latency + tiempo transferencia bloque) * #bloques
+- **Almacenamiento aleatorio** = (2 + 2,3809 + 0,1302) * 4500 = 20299,95 ms
+
+
+</details>
+
+---
