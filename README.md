@@ -26,9 +26,6 @@ Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que p
 - [Practica 1 Conceptos Generales](/Documentos/Practica1.md)
 - [Practica 2 Introducción a GNU/Linux](/Documentos/Practica2.md)
 - [Practica 3 Shell scripting](/Documentos/Practica3.md)
-- [Practica 4 Administración de Procesos](/Documentos/Practica4.md)
-- [Practica 5 Administración de Memoria Principal](/Documentos/Practica5.md)
-- [Administración de E/S - Discos](/Documentos/Practica6.md)
 - [Resumen para el segundo Parcial](/Documentos/resumenSegundoParcial.md)
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
