@@ -1,1 +1,0 @@
-## Segundo Parcial de Promoción
