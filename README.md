@@ -6,15 +6,27 @@
 
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=34&duration=1700&pause=800&color=28CDF7&center=true&width=863&lines=Introducción a Sistemas Operativos"/>
- </div>
+ 
+
 
 </div>
 
-<a title="" href="https://cafecito.app/ei-materias"><img src="/Documentos/Cafecito.png" alt="" /></a>
 
-Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que puedas instalar y configurar a tu gusto el editor para hacer las practicas. Tambien dejo links de los teoricos
+<a title="" href="https://youtu.be/2T3r2OZ-onc?si=tIWr3_QlJJIN1wR-"><img src="/Documentos/image.png" alt="" /></a>
+
+> [!IMPORTANT]  
+> Si encuentran algun link roto o tienen alguna duda, no duden en decirme por mail fabianmartinezrincon.123@gmail.com
+
+
+ 
+
+
+
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+
+> [!NOTE]
+> Antes de empezar la materia te recomiendo que mires mi blog sobre vim para que puedas instalar y configurar a tu gusto el editor para hacer las practicas. Tambien dejo links de los teoricos
 
 <p><img width="250" align='right' src="https://media.giphy.com/media/6baW5lF9UxI6lfpc0c/giphy.gif"></p>
 
