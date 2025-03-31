@@ -6,7 +6,8 @@
 
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=34&duration=1700&pause=800&color=28CDF7&center=true&width=863&lines=Introducción a Sistemas Operativos"/>
- 
+
+---
 
 <a title="" href="https://youtu.be/2T3r2OZ-onc?si=tIWr3_QlJJIN1wR-"><img src="/Documentos/image.png" width="550px" /></a>
 </div>
